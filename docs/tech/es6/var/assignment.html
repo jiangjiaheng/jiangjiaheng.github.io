@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>变量的解构赋值 | Landscape</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="私人博客网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.acb31268.css" as="style"><link rel="preload" href="/assets/js/app.eff12663.js" as="script"><link rel="preload" href="/assets/js/2.5e26ad3d.js" as="script"><link rel="preload" href="/assets/js/201.844aaf5e.js" as="script"><link rel="prefetch" href="/assets/js/10.a3484fd9.js"><link rel="prefetch" href="/assets/js/100.9da04773.js"><link rel="prefetch" href="/assets/js/101.a1d60ead.js"><link rel="prefetch" href="/assets/js/102.aadfc603.js"><link rel="prefetch" href="/assets/js/103.d4e5c68e.js"><link rel="prefetch" href="/assets/js/104.1cdf50cd.js"><link rel="prefetch" href="/assets/js/105.2c5bf54c.js"><link rel="prefetch" href="/assets/js/106.0d395a27.js"><link rel="prefetch" href="/assets/js/107.14dbbcc8.js"><link rel="prefetch" href="/assets/js/108.3ef118a5.js"><link rel="prefetch" href="/assets/js/109.559d52a2.js"><link rel="prefetch" href="/assets/js/11.fc9864b2.js"><link rel="prefetch" href="/assets/js/110.1cab0ffc.js"><link rel="prefetch" href="/assets/js/111.278c6060.js"><link rel="prefetch" href="/assets/js/112.fe7b516c.js"><link rel="prefetch" href="/assets/js/113.0fa6c6ef.js"><link rel="prefetch" href="/assets/js/114.e9af8e20.js"><link rel="prefetch" href="/assets/js/115.3dc3c834.js"><link rel="prefetch" href="/assets/js/116.b9dcbc8d.js"><link rel="prefetch" href="/assets/js/117.2059e185.js"><link rel="prefetch" href="/assets/js/118.c8e1e84a.js"><link rel="prefetch" href="/assets/js/119.02ac80a4.js"><link rel="prefetch" href="/assets/js/12.c621be0e.js"><link rel="prefetch" href="/assets/js/120.bc7783aa.js"><link rel="prefetch" href="/assets/js/121.dfa2287f.js"><link rel="prefetch" href="/assets/js/122.fb0a2eb6.js"><link rel="prefetch" href="/assets/js/123.9273db6b.js"><link rel="prefetch" href="/assets/js/124.bbb44b25.js"><link rel="prefetch" href="/assets/js/125.d960c5b1.js"><link rel="prefetch" href="/assets/js/126.231185c2.js"><link rel="prefetch" href="/assets/js/127.b0bca1b4.js"><link rel="prefetch" href="/assets/js/128.cb07313f.js"><link rel="prefetch" href="/assets/js/129.7f4a4122.js"><link rel="prefetch" href="/assets/js/13.b95ad782.js"><link rel="prefetch" href="/assets/js/130.209113c0.js"><link rel="prefetch" href="/assets/js/131.51824c46.js"><link rel="prefetch" href="/assets/js/132.325528f9.js"><link rel="prefetch" href="/assets/js/133.969c5172.js"><link rel="prefetch" href="/assets/js/134.f02de0a9.js"><link rel="prefetch" href="/assets/js/135.0dbcba72.js"><link rel="prefetch" href="/assets/js/136.ef7fcf90.js"><link rel="prefetch" href="/assets/js/137.4a068132.js"><link rel="prefetch" href="/assets/js/138.08683970.js"><link rel="prefetch" href="/assets/js/139.bb302699.js"><link rel="prefetch" href="/assets/js/14.9bd1a114.js"><link rel="prefetch" href="/assets/js/140.f897ccd0.js"><link rel="prefetch" href="/assets/js/141.67aee529.js"><link rel="prefetch" href="/assets/js/142.48cf63c0.js"><link rel="prefetch" href="/assets/js/143.31876752.js"><link rel="prefetch" href="/assets/js/144.a822622c.js"><link rel="prefetch" href="/assets/js/145.3a6c8608.js"><link rel="prefetch" href="/assets/js/146.2722a46b.js"><link rel="prefetch" href="/assets/js/147.09010486.js"><link rel="prefetch" href="/assets/js/148.f0375496.js"><link rel="prefetch" href="/assets/js/149.5b7b6ad7.js"><link rel="prefetch" href="/assets/js/15.1b147ab6.js"><link rel="prefetch" href="/assets/js/150.c90512df.js"><link rel="prefetch" href="/assets/js/151.8bf2ca1e.js"><link rel="prefetch" href="/assets/js/152.b0aa9955.js"><link rel="prefetch" href="/assets/js/153.e3eb9763.js"><link rel="prefetch" href="/assets/js/154.79d8bc49.js"><link rel="prefetch" href="/assets/js/155.55725635.js"><link rel="prefetch" href="/assets/js/156.db7f77ee.js"><link rel="prefetch" href="/assets/js/157.e40fb152.js"><link rel="prefetch" href="/assets/js/158.7451fd6d.js"><link rel="prefetch" href="/assets/js/159.7cb38752.js"><link rel="prefetch" href="/assets/js/16.f7c6acb4.js"><link rel="prefetch" href="/assets/js/160.cd9f888b.js"><link rel="prefetch" href="/assets/js/161.19b6bbe3.js"><link rel="prefetch" href="/assets/js/162.03858a71.js"><link rel="prefetch" href="/assets/js/163.fd6d0f98.js"><link rel="prefetch" href="/assets/js/164.c0327e05.js"><link rel="prefetch" href="/assets/js/165.cc57996d.js"><link rel="prefetch" href="/assets/js/166.85a9ea7a.js"><link rel="prefetch" href="/assets/js/167.7399bec8.js"><link rel="prefetch" href="/assets/js/168.9d651d2b.js"><link rel="prefetch" href="/assets/js/169.54553895.js"><link rel="prefetch" href="/assets/js/17.98573fa2.js"><link rel="prefetch" href="/assets/js/170.6610310f.js"><link rel="prefetch" href="/assets/js/171.ab79b049.js"><link rel="prefetch" href="/assets/js/172.3fe4f72b.js"><link rel="prefetch" href="/assets/js/173.29260cc4.js"><link rel="prefetch" href="/assets/js/174.63590a8e.js"><link rel="prefetch" href="/assets/js/175.0807586c.js"><link rel="prefetch" href="/assets/js/176.91704f4c.js"><link rel="prefetch" href="/assets/js/177.249351b2.js"><link rel="prefetch" href="/assets/js/178.978492af.js"><link rel="prefetch" href="/assets/js/179.ded92884.js"><link rel="prefetch" href="/assets/js/18.125829f4.js"><link rel="prefetch" href="/assets/js/180.a2d68e19.js"><link rel="prefetch" href="/assets/js/181.4df6eb41.js"><link rel="prefetch" href="/assets/js/182.ff16b64a.js"><link rel="prefetch" href="/assets/js/183.3fbd4418.js"><link rel="prefetch" href="/assets/js/184.daa68ba0.js"><link rel="prefetch" href="/assets/js/185.9be000d3.js"><link rel="prefetch" href="/assets/js/186.3d9e4648.js"><link rel="prefetch" href="/assets/js/187.5e9203d0.js"><link rel="prefetch" href="/assets/js/188.209d6308.js"><link rel="prefetch" href="/assets/js/189.74da4659.js"><link rel="prefetch" href="/assets/js/19.82161e3d.js"><link rel="prefetch" href="/assets/js/190.77a8f7bf.js"><link rel="prefetch" href="/assets/js/191.83b3cf4f.js"><link rel="prefetch" href="/assets/js/192.f63c27c5.js"><link rel="prefetch" href="/assets/js/193.ad10c882.js"><link rel="prefetch" href="/assets/js/194.5404e996.js"><link rel="prefetch" href="/assets/js/195.10da6408.js"><link rel="prefetch" href="/assets/js/196.9d53b0ed.js"><link rel="prefetch" href="/assets/js/197.008a3be8.js"><link rel="prefetch" href="/assets/js/198.9c776d81.js"><link rel="prefetch" href="/assets/js/199.c0facbb7.js"><link rel="prefetch" href="/assets/js/20.0a8a8550.js"><link rel="prefetch" href="/assets/js/200.e8f5a041.js"><link rel="prefetch" href="/assets/js/202.dd9e1dbb.js"><link rel="prefetch" href="/assets/js/203.2ccf70e8.js"><link rel="prefetch" href="/assets/js/204.ccd3b368.js"><link rel="prefetch" href="/assets/js/205.bf2a0ebb.js"><link rel="prefetch" href="/assets/js/206.1e89e7af.js"><link rel="prefetch" href="/assets/js/207.0ee96164.js"><link rel="prefetch" href="/assets/js/208.3b79fb4c.js"><link rel="prefetch" href="/assets/js/209.eea89f18.js"><link rel="prefetch" href="/assets/js/21.b314687a.js"><link rel="prefetch" href="/assets/js/210.d9e06ea0.js"><link rel="prefetch" href="/assets/js/211.2bb0a4e9.js"><link rel="prefetch" href="/assets/js/212.a8ef63db.js"><link rel="prefetch" href="/assets/js/213.a342ba58.js"><link rel="prefetch" href="/assets/js/214.e8676d03.js"><link rel="prefetch" href="/assets/js/215.b818fd95.js"><link rel="prefetch" href="/assets/js/216.0748ab97.js"><link rel="prefetch" href="/assets/js/217.eaf96780.js"><link rel="prefetch" href="/assets/js/218.d2565c28.js"><link rel="prefetch" href="/assets/js/219.20b33950.js"><link rel="prefetch" href="/assets/js/22.4e030a71.js"><link rel="prefetch" href="/assets/js/220.ade13317.js"><link rel="prefetch" href="/assets/js/221.1bba5e62.js"><link rel="prefetch" href="/assets/js/222.6a1eefca.js"><link rel="prefetch" href="/assets/js/223.89c39cca.js"><link rel="prefetch" href="/assets/js/224.58d3dd3b.js"><link rel="prefetch" href="/assets/js/225.529a105f.js"><link rel="prefetch" href="/assets/js/226.51ffa992.js"><link rel="prefetch" href="/assets/js/227.3f9b61ce.js"><link rel="prefetch" href="/assets/js/228.b867d123.js"><link rel="prefetch" href="/assets/js/229.d52c02c6.js"><link rel="prefetch" href="/assets/js/23.eff92fa9.js"><link rel="prefetch" href="/assets/js/230.96d44fda.js"><link rel="prefetch" href="/assets/js/231.85964038.js"><link rel="prefetch" href="/assets/js/232.f430e1b5.js"><link rel="prefetch" href="/assets/js/233.ad3497c7.js"><link rel="prefetch" href="/assets/js/234.6edbdf58.js"><link rel="prefetch" href="/assets/js/235.ef2f68ad.js"><link rel="prefetch" href="/assets/js/236.0e3b6e7c.js"><link rel="prefetch" href="/assets/js/237.4debf313.js"><link rel="prefetch" href="/assets/js/238.78e364c6.js"><link rel="prefetch" href="/assets/js/239.71b54391.js"><link rel="prefetch" href="/assets/js/24.34d4785c.js"><link rel="prefetch" href="/assets/js/240.e0b5a5a2.js"><link rel="prefetch" href="/assets/js/241.2b6bfdd9.js"><link rel="prefetch" href="/assets/js/242.00c76423.js"><link rel="prefetch" href="/assets/js/243.af416964.js"><link rel="prefetch" href="/assets/js/244.b2d97b07.js"><link rel="prefetch" href="/assets/js/245.05810d54.js"><link rel="prefetch" href="/assets/js/246.eb485a7c.js"><link rel="prefetch" href="/assets/js/247.23f2035d.js"><link rel="prefetch" href="/assets/js/248.b50ca4cc.js"><link rel="prefetch" href="/assets/js/249.a51e3047.js"><link rel="prefetch" href="/assets/js/25.db12a1cb.js"><link rel="prefetch" href="/assets/js/26.9ae117d2.js"><link rel="prefetch" href="/assets/js/27.8cdfe382.js"><link rel="prefetch" href="/assets/js/28.fbaa879e.js"><link rel="prefetch" href="/assets/js/29.f7ff43e9.js"><link rel="prefetch" href="/assets/js/3.d9d64dfe.js"><link rel="prefetch" href="/assets/js/30.4a628321.js"><link rel="prefetch" href="/assets/js/31.a4fc20b5.js"><link rel="prefetch" href="/assets/js/32.691a44de.js"><link rel="prefetch" href="/assets/js/33.4eda844b.js"><link rel="prefetch" href="/assets/js/34.650e1052.js"><link rel="prefetch" href="/assets/js/35.b7a6934f.js"><link rel="prefetch" href="/assets/js/36.393df10f.js"><link rel="prefetch" href="/assets/js/37.998c2e9d.js"><link rel="prefetch" href="/assets/js/38.bb1da896.js"><link rel="prefetch" href="/assets/js/39.bc01bc6d.js"><link rel="prefetch" href="/assets/js/4.ab263529.js"><link rel="prefetch" href="/assets/js/40.595a2064.js"><link rel="prefetch" href="/assets/js/41.5db688ed.js"><link rel="prefetch" href="/assets/js/42.b7c2ae57.js"><link rel="prefetch" href="/assets/js/43.fff9c36c.js"><link rel="prefetch" href="/assets/js/44.eb0181a0.js"><link rel="prefetch" href="/assets/js/45.4f201826.js"><link rel="prefetch" href="/assets/js/46.eb5bcd1a.js"><link rel="prefetch" href="/assets/js/47.d49ae9d1.js"><link rel="prefetch" href="/assets/js/48.13811aa2.js"><link rel="prefetch" href="/assets/js/49.62751beb.js"><link rel="prefetch" href="/assets/js/5.c16a4c03.js"><link rel="prefetch" href="/assets/js/50.59d9847d.js"><link rel="prefetch" href="/assets/js/51.5f8e882c.js"><link rel="prefetch" href="/assets/js/52.75ab0186.js"><link rel="prefetch" href="/assets/js/53.f7f57015.js"><link rel="prefetch" href="/assets/js/54.20c8d12e.js"><link rel="prefetch" href="/assets/js/55.b6ee6d02.js"><link rel="prefetch" href="/assets/js/56.bc52848c.js"><link rel="prefetch" href="/assets/js/57.b9f887fc.js"><link rel="prefetch" href="/assets/js/58.599adfa9.js"><link rel="prefetch" href="/assets/js/59.58f8cd6f.js"><link rel="prefetch" href="/assets/js/6.d5189c23.js"><link rel="prefetch" href="/assets/js/60.9444abd3.js"><link rel="prefetch" href="/assets/js/61.f1b9106d.js"><link rel="prefetch" href="/assets/js/62.ac54ed01.js"><link rel="prefetch" href="/assets/js/63.b92ee20d.js"><link rel="prefetch" href="/assets/js/64.0b616028.js"><link rel="prefetch" href="/assets/js/65.5f8ddce3.js"><link rel="prefetch" href="/assets/js/66.91f7035c.js"><link rel="prefetch" href="/assets/js/67.e49341c5.js"><link rel="prefetch" href="/assets/js/68.191367f2.js"><link rel="prefetch" href="/assets/js/69.7b06726d.js"><link rel="prefetch" href="/assets/js/7.ff777e38.js"><link rel="prefetch" href="/assets/js/70.38b65056.js"><link rel="prefetch" href="/assets/js/71.562791ec.js"><link rel="prefetch" href="/assets/js/72.9737d383.js"><link rel="prefetch" href="/assets/js/73.b234ecd4.js"><link rel="prefetch" href="/assets/js/74.5fe2926f.js"><link rel="prefetch" href="/assets/js/75.16388aec.js"><link rel="prefetch" href="/assets/js/76.f49c9bcf.js"><link rel="prefetch" href="/assets/js/77.3b9089bf.js"><link rel="prefetch" href="/assets/js/78.8cc0580f.js"><link rel="prefetch" href="/assets/js/79.ac0a5565.js"><link rel="prefetch" href="/assets/js/8.477f7d36.js"><link rel="prefetch" href="/assets/js/80.58bd1e87.js"><link rel="prefetch" href="/assets/js/81.28636461.js"><link rel="prefetch" href="/assets/js/82.51e95b2f.js"><link rel="prefetch" href="/assets/js/83.1a720c76.js"><link rel="prefetch" href="/assets/js/84.90a441d5.js"><link rel="prefetch" href="/assets/js/85.b2d32edd.js"><link rel="prefetch" href="/assets/js/86.eee05a7d.js"><link rel="prefetch" href="/assets/js/87.0f6f283f.js"><link rel="prefetch" href="/assets/js/88.5078beb7.js"><link rel="prefetch" href="/assets/js/89.e2cdaaee.js"><link rel="prefetch" href="/assets/js/9.aaf01cb9.js"><link rel="prefetch" href="/assets/js/90.9e461106.js"><link rel="prefetch" href="/assets/js/91.06f04191.js"><link rel="prefetch" href="/assets/js/92.0898eab5.js"><link rel="prefetch" href="/assets/js/93.acedc6e4.js"><link rel="prefetch" href="/assets/js/94.2e177f5a.js"><link rel="prefetch" href="/assets/js/95.9e8eb809.js"><link rel="prefetch" href="/assets/js/96.26328868.js"><link rel="prefetch" href="/assets/js/97.6c8de727.js"><link rel="prefetch" href="/assets/js/98.0b033595.js"><link rel="prefetch" href="/assets/js/99.60c03a85.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.acb31268.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Landscape</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link router-link-active">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/english/" class="nav-link">
+  English
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link router-link-active">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/english/" class="nav-link">
+  English
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>变量的解构赋值</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/tech/es6/var/assignment.html#数组" class="sidebar-link">数组</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/assignment.html#_1-基本用法-array" class="sidebar-link">1. 基本用法（Array）</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/assignment.html#_2-默认值-array" class="sidebar-link">2. 默认值（Array）</a></li></ul></li><li><a href="/docs/tech/es6/var/assignment.html#对象" class="sidebar-link">对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/assignment.html#_1-基本用法-obj" class="sidebar-link">1. 基本用法（obj）</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/assignment.html#_2-本质" class="sidebar-link">2. 本质</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/assignment.html#_3-嵌套解构" class="sidebar-link">3. 嵌套解构</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/assignment.html#_4-默认值-obj" class="sidebar-link">4. 默认值（obj）</a></li></ul></li><li><a href="/docs/tech/es6/var/assignment.html#函数" class="sidebar-link">函数</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/var/assignment.html#字符串、数值、布尔值" class="sidebar-link">字符串、数值、布尔值</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/assignment.html#_1-字符串" class="sidebar-link">1. 字符串</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/assignment.html#_2-数值、布尔值" class="sidebar-link">2. 数值、布尔值</a></li></ul></li><li><a href="/docs/tech/es6/var/assignment.html#null和undefined" class="sidebar-link">null和undefined</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/var/assignment.html#应用场景" class="sidebar-link">应用场景</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/assignment.html#_1-交换变量值" class="sidebar-link">1. 交换变量值</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/assignment.html#_2-从函数返回多个值" class="sidebar-link">2. 从函数返回多个值</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/assignment.html#_3-函数参数的定义" class="sidebar-link">3. 函数参数的定义</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/assignment.html#_4-提取json数据" class="sidebar-link">4. 提取JSON数据</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/assignment.html#_5-函数参数的默认值" class="sidebar-link">5. 函数参数的默认值</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/assignment.html#_6-遍历map结构" class="sidebar-link">6. 遍历Map结构</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/assignment.html#_7-输入模块的指定方法" class="sidebar-link">7. 输入模块的指定方法</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="变量的解构赋值"><a href="#变量的解构赋值" class="header-anchor">#</a> 变量的解构赋值</h1> <h2 id="数组"><a href="#数组" class="header-anchor">#</a> 数组</h2> <h3 id="_1-基本用法-array"><a href="#_1-基本用法-array" class="header-anchor">#</a> 1. 基本用法（Array）</h3> <p>以前，为变量赋值，只能直接指定值。</p> <div class="language-ar line-numbers-mode"><pre class="language-text"><code>let a = 1;
+let b = 2;
+let c = 3;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>ES6 允许写成下面这样。</p> <div class="language-ar line-numbers-mode"><pre class="language-text"><code>let [a, b, c] = [1, 2, 3];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>本质上，这种写法属于“模式匹配”，只要等号两边的模式相同，左边的变量就会被赋予对应的值。下面是一些使用嵌套数组进行解构的例子。</p> <div class="language-ar line-numbers-mode"><pre class="language-text"><code>let [foo, [[bar], baz]] = [1, [[2], 3]];
+foo // 1
+bar // 2
+baz // 3
+
+let [ , , third] = [&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;];
+third // &quot;baz&quot;
+
+let [x, , y] = [1, 2, 3];
+x // 1
+y // 3
+
+let [head, ...tail] = [1, 2, 3, 4];
+head // 1
+tail // [2, 3, 4]
+
+let [x, y, ...z] = ['a'];
+x // &quot;a&quot;
+y // undefined
+z // []
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>如果解构不成功，变量的值就等于undefined。</p> <div class="language-ar line-numbers-mode"><pre class="language-text"><code>let [foo] = [];
+let [bar, foo] = [1];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_2-默认值-array"><a href="#_2-默认值-array" class="header-anchor">#</a> 2. 默认值（Array）</h3> <p>解构赋值允许指定默认值。</p> <div class="language-ar line-numbers-mode"><pre class="language-text"><code>let [foo = true] = [];
+foo // true
+
+let [x, y = 'b'] = ['a']; // x='a', y='b'
+let [x, y = 'b'] = ['a', undefined]; // x='a', y='b'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>注意，ES6 内部使用严格相等运算符（===），判断一个位置是否有值。所以，只有当一个数组成员严格等于undefined，默认值才会生效。</p> <div class="language-ar line-numbers-mode"><pre class="language-text"><code>let [x = 1] = [undefined];
+x // 1
+
+let [x = 1] = [null];
+x // null
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="对象"><a href="#对象" class="header-anchor">#</a> 对象</h2> <h3 id="_1-基本用法-obj"><a href="#_1-基本用法-obj" class="header-anchor">#</a> 1. 基本用法（obj）</h3> <p>解构不仅可以用于数组，还可以用于对象。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let { foo, bar } = { foo: 'aaa', bar: 'bbb' };
+foo // &quot;aaa&quot;
+bar // &quot;bbb&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>对象的属性没有次序，变量必须与属性同名，才能取到正确的值。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let { bar, foo } = { foo: 'aaa', bar: 'bbb' };
+foo // &quot;aaa&quot;
+bar // &quot;bbb&quot;
+
+let { baz } = { foo: 'aaa', bar: 'bbb' };
+baz // undefined
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>如果解构失败，变量的值等于undefined。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let {foo} = {bar: 'baz'};
+foo // undefined
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_2-本质"><a href="#_2-本质" class="header-anchor">#</a> 2. 本质</h3> <p>如果变量名与属性名不一致，必须写成下面这样。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let { foo: baz } = { foo: 'aaa', bar: 'bbb' };
+baz // &quot;aaa&quot;
+
+let obj = { first: 'hello', last: 'world' };
+let { first: f, last: l } = obj;
+f // 'hello'
+l // 'world'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>这实际上说明，对象的解构赋值是下面形式的简写（参见《对象的扩展》一章）。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let { foo: foo, bar: bar } = { foo: 'aaa', bar: 'bbb' };
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>也就是说，对象的解构赋值的内部机制，是先找到同名属性，然后再赋给对应的变量。真正被赋值的是后者，而不是前者。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let { foo: baz } = { foo: 'aaa', bar: 'bbb' };
+baz // &quot;aaa&quot;
+foo // error: foo is not defined
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>上面代码中，foo是匹配的模式，baz才是变量。真正被赋值的是变量baz，而不是模式foo。</p> <h3 id="_3-嵌套解构"><a href="#_3-嵌套解构" class="header-anchor">#</a> 3. 嵌套解构</h3> <p>与数组一样，解构也可以用于嵌套结构的对象。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let obj = {
+  p: [
+    'Hello',
+    { y: 'World' }
+  ]
+};
+
+let { p: [x, { y }] } = obj;
+x // &quot;Hello&quot;
+y // &quot;World&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>注意，这时p是模式，不是变量，因此不会被赋值。如果p也要作为变量赋值，可以写成下面这样。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let obj = {
+  p: [
+    'Hello',
+    { y: 'World' }
+  ]
+};
+
+let { p, p: [x, { y }] } = obj;
+x // &quot;Hello&quot;
+y // &quot;World&quot;
+p // [&quot;Hello&quot;, {y: &quot;World&quot;}]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h3 id="_4-默认值-obj"><a href="#_4-默认值-obj" class="header-anchor">#</a> 4. 默认值（obj）</h3> <p>对象的解构也可以指定默认值。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>var {x = 3} = {};
+x // 3
+
+var {x, y = 5} = {x: 1};
+x // 1
+y // 5
+
+var {x: y = 3} = {};
+y // 3
+
+var {x: y = 3} = {x: 5};
+y // 5
+
+var { message: msg = 'Something went wrong' } = {};
+msg // &quot;Something went wrong&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>默认值生效的条件是，对象的属性值严格等于undefined。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>var {x = 3} = {x: undefined};
+x // 3
+
+var {x = 3} = {x: null};
+x // null
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="函数"><a href="#函数" class="header-anchor">#</a> 函数</h2> <p>函数的参数也可以使用解构赋值。</p> <div class="language-fun line-numbers-mode"><pre class="language-text"><code>function add([x, y]){
+  return x + y;
+}
+
+add([1, 2]); // 3
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>下面是另一个例子。</p> <div class="language-fun line-numbers-mode"><pre class="language-text"><code>[[1, 2], [3, 4]].map(([a, b]) =&gt; a + b);
+// [ 3, 7 ]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>函数参数的解构也可以使用默认值。</p> <div class="language-fun line-numbers-mode"><pre class="language-text"><code>function move({x = 0, y = 0} = {}) {
+  return [x, y];
+}
+
+move({x: 3, y: 8}); // [3, 8]
+move({x: 3}); // [3, 0]
+move({}); // [0, 0]
+move(); // [0, 0]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>undefined就会触发函数参数的默认值。</p> <div class="language-fun line-numbers-mode"><pre class="language-text"><code>[1, undefined, 3].map((x = 'yes') =&gt; x);
+// [ 1, 'yes', 3 ]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="字符串、数值、布尔值"><a href="#字符串、数值、布尔值" class="header-anchor">#</a> 字符串、数值、布尔值</h2> <h3 id="_1-字符串"><a href="#_1-字符串" class="header-anchor">#</a> 1. 字符串</h3> <p>字符串也可以解构赋值。这是因为此时，字符串被转换成了一个类似数组的对象。</p> <div class="language-var line-numbers-mode"><pre class="language-text"><code>const [a, b, c, d, e] = 'hello';
+a // &quot;h&quot;
+b // &quot;e&quot;
+c // &quot;l&quot;
+d // &quot;l&quot;
+e // &quot;o&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>类似数组的对象都有一个length属性，因此还可以对这个属性解构赋值。</p> <div class="language-va line-numbers-mode"><pre class="language-text"><code>let {length : len} = 'hello';
+len // 5
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_2-数值、布尔值"><a href="#_2-数值、布尔值" class="header-anchor">#</a> 2. 数值、布尔值</h3> <p>解构赋值时，如果等号右边是数值和布尔值，则会先转为对象。</p> <div class="language-va line-numbers-mode"><pre class="language-text"><code>let {toString: s} = 123;
+s === Number.prototype.toString // true
+
+let {toString: s} = true;
+s === Boolean.prototype.toString // true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="null和undefined"><a href="#null和undefined" class="header-anchor">#</a> null和undefined</h2> <p>解构赋值的规则是，只要等号右边的值不是对象或数组，就先将其转为对象。由于undefined和null无法转为对象，所以对它们进行解构赋值，都会报错。</p> <div class="language-var line-numbers-mode"><pre class="language-text"><code>let { prop: x } = undefined; // TypeError
+let { prop: y } = null; // TypeError
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="应用场景"><a href="#应用场景" class="header-anchor">#</a> 应用场景</h2> <h3 id="_1-交换变量值"><a href="#_1-交换变量值" class="header-anchor">#</a> 1. 交换变量值</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> y <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">[</span>x<span class="token punctuation">,</span> y<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>y<span class="token punctuation">,</span> x<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="_2-从函数返回多个值"><a href="#_2-从函数返回多个值" class="header-anchor">#</a> 2. 从函数返回多个值</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 返回一个数组</span>
+
+<span class="token keyword">function</span> <span class="token function">example</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> <span class="token punctuation">[</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">example</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 返回一个对象</span>
+
+<span class="token keyword">function</span> <span class="token function">example</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    foo<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    bar<span class="token operator">:</span> <span class="token number">2</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> <span class="token punctuation">{</span> foo<span class="token punctuation">,</span> bar <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">example</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h3 id="_3-函数参数的定义"><a href="#_3-函数参数的定义" class="header-anchor">#</a> 3. 函数参数的定义</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 参数是一组有次序的值</span>
+<span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">[</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> z<span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span>
+<span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 参数是一组无次序的值</span>
+<span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> z<span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span>
+<span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">{</span>z<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span> y<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> x<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="_4-提取json数据"><a href="#_4-提取json数据" class="header-anchor">#</a> 4. 提取JSON数据</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> jsonData <span class="token operator">=</span> <span class="token punctuation">{</span>
+  id<span class="token operator">:</span> <span class="token number">42</span><span class="token punctuation">,</span>
+  status<span class="token operator">:</span> <span class="token string">&quot;OK&quot;</span><span class="token punctuation">,</span>
+  data<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">867</span><span class="token punctuation">,</span> <span class="token number">5309</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> <span class="token punctuation">{</span> id<span class="token punctuation">,</span> status<span class="token punctuation">,</span> data<span class="token operator">:</span> number <span class="token punctuation">}</span> <span class="token operator">=</span> jsonData<span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> status<span class="token punctuation">,</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 42, &quot;OK&quot;, [867, 5309]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="_5-函数参数的默认值"><a href="#_5-函数参数的默认值" class="header-anchor">#</a> 5. 函数参数的默认值</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code>jQuery<span class="token punctuation">.</span><span class="token function-variable function">ajax</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  async <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">beforeSend</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  cache <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">complete</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  crossDomain <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  global <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token comment">// ... more config</span>
+<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ... do stuff</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h3 id="_6-遍历map结构"><a href="#_6-遍历map结构" class="header-anchor">#</a> 6. 遍历Map结构</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+map<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'first'</span><span class="token punctuation">,</span> <span class="token string">'hello'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+map<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'second'</span><span class="token punctuation">,</span> <span class="token string">'world'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> <span class="token punctuation">[</span>key<span class="token punctuation">,</span> value<span class="token punctuation">]</span> <span class="token keyword">of</span> map<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>key <span class="token operator">+</span> <span class="token string">&quot; is &quot;</span> <span class="token operator">+</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// first is hello</span>
+<span class="token comment">// second is world</span>
+
+<span class="token comment">// 获取键名</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> <span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token keyword">of</span> map<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 获取键值</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> <span class="token punctuation">[</span><span class="token punctuation">,</span>value<span class="token punctuation">]</span> <span class="token keyword">of</span> map<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h3 id="_7-输入模块的指定方法"><a href="#_7-输入模块的指定方法" class="header-anchor">#</a> 7. 输入模块的指定方法</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token punctuation">{</span> SourceMapConsumer<span class="token punctuation">,</span> SourceNode <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;source-map&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.eff12663.js" defer></script><script src="/assets/js/2.5e26ad3d.js" defer></script><script src="/assets/js/201.844aaf5e.js" defer></script>
+  </body>
+</html>

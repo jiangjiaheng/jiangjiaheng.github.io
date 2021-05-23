@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Promise | Landscape</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="私人博客网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.acb31268.css" as="style"><link rel="preload" href="/assets/js/app.eff12663.js" as="script"><link rel="preload" href="/assets/js/2.5e26ad3d.js" as="script"><link rel="preload" href="/assets/js/86.eee05a7d.js" as="script"><link rel="prefetch" href="/assets/js/10.a3484fd9.js"><link rel="prefetch" href="/assets/js/100.9da04773.js"><link rel="prefetch" href="/assets/js/101.a1d60ead.js"><link rel="prefetch" href="/assets/js/102.aadfc603.js"><link rel="prefetch" href="/assets/js/103.d4e5c68e.js"><link rel="prefetch" href="/assets/js/104.1cdf50cd.js"><link rel="prefetch" href="/assets/js/105.2c5bf54c.js"><link rel="prefetch" href="/assets/js/106.0d395a27.js"><link rel="prefetch" href="/assets/js/107.14dbbcc8.js"><link rel="prefetch" href="/assets/js/108.3ef118a5.js"><link rel="prefetch" href="/assets/js/109.559d52a2.js"><link rel="prefetch" href="/assets/js/11.fc9864b2.js"><link rel="prefetch" href="/assets/js/110.1cab0ffc.js"><link rel="prefetch" href="/assets/js/111.278c6060.js"><link rel="prefetch" href="/assets/js/112.fe7b516c.js"><link rel="prefetch" href="/assets/js/113.0fa6c6ef.js"><link rel="prefetch" href="/assets/js/114.e9af8e20.js"><link rel="prefetch" href="/assets/js/115.3dc3c834.js"><link rel="prefetch" href="/assets/js/116.b9dcbc8d.js"><link rel="prefetch" href="/assets/js/117.2059e185.js"><link rel="prefetch" href="/assets/js/118.c8e1e84a.js"><link rel="prefetch" href="/assets/js/119.02ac80a4.js"><link rel="prefetch" href="/assets/js/12.c621be0e.js"><link rel="prefetch" href="/assets/js/120.bc7783aa.js"><link rel="prefetch" href="/assets/js/121.dfa2287f.js"><link rel="prefetch" href="/assets/js/122.fb0a2eb6.js"><link rel="prefetch" href="/assets/js/123.9273db6b.js"><link rel="prefetch" href="/assets/js/124.bbb44b25.js"><link rel="prefetch" href="/assets/js/125.d960c5b1.js"><link rel="prefetch" href="/assets/js/126.231185c2.js"><link rel="prefetch" href="/assets/js/127.b0bca1b4.js"><link rel="prefetch" href="/assets/js/128.cb07313f.js"><link rel="prefetch" href="/assets/js/129.7f4a4122.js"><link rel="prefetch" href="/assets/js/13.b95ad782.js"><link rel="prefetch" href="/assets/js/130.209113c0.js"><link rel="prefetch" href="/assets/js/131.51824c46.js"><link rel="prefetch" href="/assets/js/132.325528f9.js"><link rel="prefetch" href="/assets/js/133.969c5172.js"><link rel="prefetch" href="/assets/js/134.f02de0a9.js"><link rel="prefetch" href="/assets/js/135.0dbcba72.js"><link rel="prefetch" href="/assets/js/136.ef7fcf90.js"><link rel="prefetch" href="/assets/js/137.4a068132.js"><link rel="prefetch" href="/assets/js/138.08683970.js"><link rel="prefetch" href="/assets/js/139.bb302699.js"><link rel="prefetch" href="/assets/js/14.9bd1a114.js"><link rel="prefetch" href="/assets/js/140.f897ccd0.js"><link rel="prefetch" href="/assets/js/141.67aee529.js"><link rel="prefetch" href="/assets/js/142.48cf63c0.js"><link rel="prefetch" href="/assets/js/143.31876752.js"><link rel="prefetch" href="/assets/js/144.a822622c.js"><link rel="prefetch" href="/assets/js/145.3a6c8608.js"><link rel="prefetch" href="/assets/js/146.2722a46b.js"><link rel="prefetch" href="/assets/js/147.09010486.js"><link rel="prefetch" href="/assets/js/148.f0375496.js"><link rel="prefetch" href="/assets/js/149.5b7b6ad7.js"><link rel="prefetch" href="/assets/js/15.1b147ab6.js"><link rel="prefetch" href="/assets/js/150.c90512df.js"><link rel="prefetch" href="/assets/js/151.8bf2ca1e.js"><link rel="prefetch" href="/assets/js/152.b0aa9955.js"><link rel="prefetch" href="/assets/js/153.e3eb9763.js"><link rel="prefetch" href="/assets/js/154.79d8bc49.js"><link rel="prefetch" href="/assets/js/155.55725635.js"><link rel="prefetch" href="/assets/js/156.db7f77ee.js"><link rel="prefetch" href="/assets/js/157.e40fb152.js"><link rel="prefetch" href="/assets/js/158.7451fd6d.js"><link rel="prefetch" href="/assets/js/159.7cb38752.js"><link rel="prefetch" href="/assets/js/16.f7c6acb4.js"><link rel="prefetch" href="/assets/js/160.cd9f888b.js"><link rel="prefetch" href="/assets/js/161.19b6bbe3.js"><link rel="prefetch" href="/assets/js/162.03858a71.js"><link rel="prefetch" href="/assets/js/163.fd6d0f98.js"><link rel="prefetch" href="/assets/js/164.c0327e05.js"><link rel="prefetch" href="/assets/js/165.cc57996d.js"><link rel="prefetch" href="/assets/js/166.85a9ea7a.js"><link rel="prefetch" href="/assets/js/167.7399bec8.js"><link rel="prefetch" href="/assets/js/168.9d651d2b.js"><link rel="prefetch" href="/assets/js/169.54553895.js"><link rel="prefetch" href="/assets/js/17.98573fa2.js"><link rel="prefetch" href="/assets/js/170.6610310f.js"><link rel="prefetch" href="/assets/js/171.ab79b049.js"><link rel="prefetch" href="/assets/js/172.3fe4f72b.js"><link rel="prefetch" href="/assets/js/173.29260cc4.js"><link rel="prefetch" href="/assets/js/174.63590a8e.js"><link rel="prefetch" href="/assets/js/175.0807586c.js"><link rel="prefetch" href="/assets/js/176.91704f4c.js"><link rel="prefetch" href="/assets/js/177.249351b2.js"><link rel="prefetch" href="/assets/js/178.978492af.js"><link rel="prefetch" href="/assets/js/179.ded92884.js"><link rel="prefetch" href="/assets/js/18.125829f4.js"><link rel="prefetch" href="/assets/js/180.a2d68e19.js"><link rel="prefetch" href="/assets/js/181.4df6eb41.js"><link rel="prefetch" href="/assets/js/182.ff16b64a.js"><link rel="prefetch" href="/assets/js/183.3fbd4418.js"><link rel="prefetch" href="/assets/js/184.daa68ba0.js"><link rel="prefetch" href="/assets/js/185.9be000d3.js"><link rel="prefetch" href="/assets/js/186.3d9e4648.js"><link rel="prefetch" href="/assets/js/187.5e9203d0.js"><link rel="prefetch" href="/assets/js/188.209d6308.js"><link rel="prefetch" href="/assets/js/189.74da4659.js"><link rel="prefetch" href="/assets/js/19.82161e3d.js"><link rel="prefetch" href="/assets/js/190.77a8f7bf.js"><link rel="prefetch" href="/assets/js/191.83b3cf4f.js"><link rel="prefetch" href="/assets/js/192.f63c27c5.js"><link rel="prefetch" href="/assets/js/193.ad10c882.js"><link rel="prefetch" href="/assets/js/194.5404e996.js"><link rel="prefetch" href="/assets/js/195.10da6408.js"><link rel="prefetch" href="/assets/js/196.9d53b0ed.js"><link rel="prefetch" href="/assets/js/197.008a3be8.js"><link rel="prefetch" href="/assets/js/198.9c776d81.js"><link rel="prefetch" href="/assets/js/199.c0facbb7.js"><link rel="prefetch" href="/assets/js/20.0a8a8550.js"><link rel="prefetch" href="/assets/js/200.e8f5a041.js"><link rel="prefetch" href="/assets/js/201.844aaf5e.js"><link rel="prefetch" href="/assets/js/202.dd9e1dbb.js"><link rel="prefetch" href="/assets/js/203.2ccf70e8.js"><link rel="prefetch" href="/assets/js/204.ccd3b368.js"><link rel="prefetch" href="/assets/js/205.bf2a0ebb.js"><link rel="prefetch" href="/assets/js/206.1e89e7af.js"><link rel="prefetch" href="/assets/js/207.0ee96164.js"><link rel="prefetch" href="/assets/js/208.3b79fb4c.js"><link rel="prefetch" href="/assets/js/209.eea89f18.js"><link rel="prefetch" href="/assets/js/21.b314687a.js"><link rel="prefetch" href="/assets/js/210.d9e06ea0.js"><link rel="prefetch" href="/assets/js/211.2bb0a4e9.js"><link rel="prefetch" href="/assets/js/212.a8ef63db.js"><link rel="prefetch" href="/assets/js/213.a342ba58.js"><link rel="prefetch" href="/assets/js/214.e8676d03.js"><link rel="prefetch" href="/assets/js/215.b818fd95.js"><link rel="prefetch" href="/assets/js/216.0748ab97.js"><link rel="prefetch" href="/assets/js/217.eaf96780.js"><link rel="prefetch" href="/assets/js/218.d2565c28.js"><link rel="prefetch" href="/assets/js/219.20b33950.js"><link rel="prefetch" href="/assets/js/22.4e030a71.js"><link rel="prefetch" href="/assets/js/220.ade13317.js"><link rel="prefetch" href="/assets/js/221.1bba5e62.js"><link rel="prefetch" href="/assets/js/222.6a1eefca.js"><link rel="prefetch" href="/assets/js/223.89c39cca.js"><link rel="prefetch" href="/assets/js/224.58d3dd3b.js"><link rel="prefetch" href="/assets/js/225.529a105f.js"><link rel="prefetch" href="/assets/js/226.51ffa992.js"><link rel="prefetch" href="/assets/js/227.3f9b61ce.js"><link rel="prefetch" href="/assets/js/228.b867d123.js"><link rel="prefetch" href="/assets/js/229.d52c02c6.js"><link rel="prefetch" href="/assets/js/23.eff92fa9.js"><link rel="prefetch" href="/assets/js/230.96d44fda.js"><link rel="prefetch" href="/assets/js/231.85964038.js"><link rel="prefetch" href="/assets/js/232.f430e1b5.js"><link rel="prefetch" href="/assets/js/233.ad3497c7.js"><link rel="prefetch" href="/assets/js/234.6edbdf58.js"><link rel="prefetch" href="/assets/js/235.ef2f68ad.js"><link rel="prefetch" href="/assets/js/236.0e3b6e7c.js"><link rel="prefetch" href="/assets/js/237.4debf313.js"><link rel="prefetch" href="/assets/js/238.78e364c6.js"><link rel="prefetch" href="/assets/js/239.71b54391.js"><link rel="prefetch" href="/assets/js/24.34d4785c.js"><link rel="prefetch" href="/assets/js/240.e0b5a5a2.js"><link rel="prefetch" href="/assets/js/241.2b6bfdd9.js"><link rel="prefetch" href="/assets/js/242.00c76423.js"><link rel="prefetch" href="/assets/js/243.af416964.js"><link rel="prefetch" href="/assets/js/244.b2d97b07.js"><link rel="prefetch" href="/assets/js/245.05810d54.js"><link rel="prefetch" href="/assets/js/246.eb485a7c.js"><link rel="prefetch" href="/assets/js/247.23f2035d.js"><link rel="prefetch" href="/assets/js/248.b50ca4cc.js"><link rel="prefetch" href="/assets/js/249.a51e3047.js"><link rel="prefetch" href="/assets/js/25.db12a1cb.js"><link rel="prefetch" href="/assets/js/26.9ae117d2.js"><link rel="prefetch" href="/assets/js/27.8cdfe382.js"><link rel="prefetch" href="/assets/js/28.fbaa879e.js"><link rel="prefetch" href="/assets/js/29.f7ff43e9.js"><link rel="prefetch" href="/assets/js/3.d9d64dfe.js"><link rel="prefetch" href="/assets/js/30.4a628321.js"><link rel="prefetch" href="/assets/js/31.a4fc20b5.js"><link rel="prefetch" href="/assets/js/32.691a44de.js"><link rel="prefetch" href="/assets/js/33.4eda844b.js"><link rel="prefetch" href="/assets/js/34.650e1052.js"><link rel="prefetch" href="/assets/js/35.b7a6934f.js"><link rel="prefetch" href="/assets/js/36.393df10f.js"><link rel="prefetch" href="/assets/js/37.998c2e9d.js"><link rel="prefetch" href="/assets/js/38.bb1da896.js"><link rel="prefetch" href="/assets/js/39.bc01bc6d.js"><link rel="prefetch" href="/assets/js/4.ab263529.js"><link rel="prefetch" href="/assets/js/40.595a2064.js"><link rel="prefetch" href="/assets/js/41.5db688ed.js"><link rel="prefetch" href="/assets/js/42.b7c2ae57.js"><link rel="prefetch" href="/assets/js/43.fff9c36c.js"><link rel="prefetch" href="/assets/js/44.eb0181a0.js"><link rel="prefetch" href="/assets/js/45.4f201826.js"><link rel="prefetch" href="/assets/js/46.eb5bcd1a.js"><link rel="prefetch" href="/assets/js/47.d49ae9d1.js"><link rel="prefetch" href="/assets/js/48.13811aa2.js"><link rel="prefetch" href="/assets/js/49.62751beb.js"><link rel="prefetch" href="/assets/js/5.c16a4c03.js"><link rel="prefetch" href="/assets/js/50.59d9847d.js"><link rel="prefetch" href="/assets/js/51.5f8e882c.js"><link rel="prefetch" href="/assets/js/52.75ab0186.js"><link rel="prefetch" href="/assets/js/53.f7f57015.js"><link rel="prefetch" href="/assets/js/54.20c8d12e.js"><link rel="prefetch" href="/assets/js/55.b6ee6d02.js"><link rel="prefetch" href="/assets/js/56.bc52848c.js"><link rel="prefetch" href="/assets/js/57.b9f887fc.js"><link rel="prefetch" href="/assets/js/58.599adfa9.js"><link rel="prefetch" href="/assets/js/59.58f8cd6f.js"><link rel="prefetch" href="/assets/js/6.d5189c23.js"><link rel="prefetch" href="/assets/js/60.9444abd3.js"><link rel="prefetch" href="/assets/js/61.f1b9106d.js"><link rel="prefetch" href="/assets/js/62.ac54ed01.js"><link rel="prefetch" href="/assets/js/63.b92ee20d.js"><link rel="prefetch" href="/assets/js/64.0b616028.js"><link rel="prefetch" href="/assets/js/65.5f8ddce3.js"><link rel="prefetch" href="/assets/js/66.91f7035c.js"><link rel="prefetch" href="/assets/js/67.e49341c5.js"><link rel="prefetch" href="/assets/js/68.191367f2.js"><link rel="prefetch" href="/assets/js/69.7b06726d.js"><link rel="prefetch" href="/assets/js/7.ff777e38.js"><link rel="prefetch" href="/assets/js/70.38b65056.js"><link rel="prefetch" href="/assets/js/71.562791ec.js"><link rel="prefetch" href="/assets/js/72.9737d383.js"><link rel="prefetch" href="/assets/js/73.b234ecd4.js"><link rel="prefetch" href="/assets/js/74.5fe2926f.js"><link rel="prefetch" href="/assets/js/75.16388aec.js"><link rel="prefetch" href="/assets/js/76.f49c9bcf.js"><link rel="prefetch" href="/assets/js/77.3b9089bf.js"><link rel="prefetch" href="/assets/js/78.8cc0580f.js"><link rel="prefetch" href="/assets/js/79.ac0a5565.js"><link rel="prefetch" href="/assets/js/8.477f7d36.js"><link rel="prefetch" href="/assets/js/80.58bd1e87.js"><link rel="prefetch" href="/assets/js/81.28636461.js"><link rel="prefetch" href="/assets/js/82.51e95b2f.js"><link rel="prefetch" href="/assets/js/83.1a720c76.js"><link rel="prefetch" href="/assets/js/84.90a441d5.js"><link rel="prefetch" href="/assets/js/85.b2d32edd.js"><link rel="prefetch" href="/assets/js/87.0f6f283f.js"><link rel="prefetch" href="/assets/js/88.5078beb7.js"><link rel="prefetch" href="/assets/js/89.e2cdaaee.js"><link rel="prefetch" href="/assets/js/9.aaf01cb9.js"><link rel="prefetch" href="/assets/js/90.9e461106.js"><link rel="prefetch" href="/assets/js/91.06f04191.js"><link rel="prefetch" href="/assets/js/92.0898eab5.js"><link rel="prefetch" href="/assets/js/93.acedc6e4.js"><link rel="prefetch" href="/assets/js/94.2e177f5a.js"><link rel="prefetch" href="/assets/js/95.9e8eb809.js"><link rel="prefetch" href="/assets/js/96.26328868.js"><link rel="prefetch" href="/assets/js/97.6c8de727.js"><link rel="prefetch" href="/assets/js/98.0b033595.js"><link rel="prefetch" href="/assets/js/99.60c03a85.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.acb31268.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Landscape</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link router-link-active">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/english/" class="nav-link">
+  English
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link router-link-active">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/english/" class="nav-link">
+  English
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Promise</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/tech/es5/Asynchronous/Promise.html#概述" class="sidebar-link">概述</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/Asynchronous/Promise.html#promise对象的状态" class="sidebar-link">Promise对象的状态</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/Asynchronous/Promise.html#promise构造函数" class="sidebar-link">Promise构造函数</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/Asynchronous/Promise.html#then" class="sidebar-link">then</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/Asynchronous/Promise.html#then-用法解析" class="sidebar-link">then()用法解析</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/Asynchronous/Promise.html#实例-图片加载" class="sidebar-link">实例：图片加载</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/Asynchronous/Promise.html#小结" class="sidebar-link">小结</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/Asynchronous/Promise.html#微任务" class="sidebar-link">微任务</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="promise"><a href="#promise" class="header-anchor">#</a> Promise</h1> <h2 id="概述"><a href="#概述" class="header-anchor">#</a> 概述</h2> <p>Promise 对象是 JavaScript 的异步操作解决方案，为异步操作提供统一接口。它起到代理作用（proxy），充当异步操作与回调函数之间的中介，使得异步操作具备同步操作的接口。Promise 可以让异步操作写起来，就像在写同步操作的流程，而不必一层层地嵌套回调函数。</p> <p>首先，Promise 是一个对象，也是一个构造函数。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>function f1(resolve, reject) {
+  // 异步代码...
+}
+
+var p1 = new Promise(f1);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>Promise 的设计思想是，所有异步任务都返回一个 Promise 实例。Promise 实例有一个then方法，用来指定下一步的回调函数。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>var p1 = new Promise(f1);
+p1.then(f2);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>传统的写法可能需要把f2作为回调函数传入f1，比如写成f1(f2)，异步操作完成后，在f1内部调用f2。Promise 使得f1和f2变成了链式写法。不仅改善了可读性，而且对于多层嵌套的回调函数尤其方便。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>// 传统写法
+step1(function (value1) {
+  step2(value1, function(value2) {
+    step3(value2, function(value3) {
+      step4(value3, function(value4) {
+        // ...
+      });
+    });
+  });
+});
+
+// Promise 的写法
+(new Promise(step1))
+  .then(step2)
+  .then(step3)
+  .then(step4);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h2 id="promise对象的状态"><a href="#promise对象的状态" class="header-anchor">#</a> Promise对象的状态</h2> <p>Promise 对象通过自身的状态，来控制异步操作。Promise 实例具有三种状态。</p> <ul><li><p>异步操作未完成（pending）</p></li> <li><p>异步操作成功（fulfilled）</p></li> <li><p>异步操作失败（rejected）</p></li></ul> <p>上面三种状态里面，fulfilled和rejected合在一起称为resolved（已定型）。</p> <p>这三种的状态的变化途径只有两种。</p> <ul><li><p>从“未完成”到“成功”</p></li> <li><p>从“未完成”到“失败”</p></li></ul> <p>一旦状态发生变化，就凝固了，不会再有新的状态变化。这也是 Promise 这个名字的由来，它的英语意思是“承诺”，一旦承诺成效，就不得再改变了。这也意味着，Promise 实例的状态变化只可能发生一次。</p> <p>因此，Promise 的最终结果只有两种。</p> <ul><li><p>异步操作成功，Promise 实例传回一个值（value），状态变为fulfilled。</p></li> <li><p>异步操作失败，Promise 实例抛出一个错误（error），状态变为rejected。</p></li></ul> <h2 id="promise构造函数"><a href="#promise构造函数" class="header-anchor">#</a> Promise构造函数</h2> <p>JavaScript 提供原生的Promise构造函数，用来生成 Promise 实例。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>var promise = new Promise(function (resolve, reject) {
+  // ...
+
+  if (/* 异步操作成功 */){
+    resolve(value);
+  } else { /* 异步操作失败 */
+    reject(new Error());
+  }
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>上面代码中，Promise构造函数接受一个函数作为参数，该函数的两个参数分别是resolve和reject。它们是两个函数，由 JavaScript 引擎提供，不用自己实现。</p> <p>resolve函数的作用是，将Promise实例的状态从“未完成”变为“成功”（即从pending变为fulfilled），在异步操作成功时调用，并将异步操作的结果，作为参数传递出去。reject函数的作用是，将Promise实例的状态从“未完成”变为“失败”（即从pending变为rejected），在异步操作失败时调用，并将异步操作报出的错误，作为参数传递出去。</p> <p>下面是一个例子。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>function timeout(ms) {
+  return new Promise((resolve, reject) =&gt; {
+    setTimeout(resolve, ms, 'done');
+  });
+}
+
+timeout(100)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>上面代码中，timeout(100)返回一个 Promise 实例。100毫秒以后，该实例的状态会变为fulfilled。</p> <h2 id="then"><a href="#then" class="header-anchor">#</a> then</h2> <p>Promise 实例的then方法，用来添加回调函数。</p> <p>then方法可以接受两个回调函数，第一个是异步操作成功时（变为fulfilled状态）的回调函数，第二个是异步操作失败（变为rejected）时的回调函数（该参数可以省略）。一旦状态改变，就调用相应的回调函数。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>var p1 = new Promise(function (resolve, reject) {
+  resolve('成功');
+});
+p1.then(console.log, console.error);
+// &quot;成功&quot;
+
+var p2 = new Promise(function (resolve, reject) {
+  reject(new Error('失败'));
+});
+p2.then(console.log, console.error);
+// Error: 失败
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>then方法可以链式使用。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>p1
+  .then(step1)
+  .then(step2)
+  .then(step3)
+  .then(
+    console.log,
+    console.error
+  );
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>上面代码中，p1后面有四个then，意味依次有四个回调函数。只要前一步的状态变为fulfilled，就会依次执行紧跟在后面的回调函数。</p> <p>最后一个then方法，回调函数是console.log和console.error，用法上有一点重要的区别。console.log只显示step3的返回值，而console.error可以显示p1、step1、step2、step3之中任意一个发生的错误。举例来说，如果step1的状态变为rejected，那么step2和step3都不会执行了（因为它们是resolved的回调函数）。Promise 开始寻找，接下来第一个为rejected的回调函数，在上面代码中是console.error。这就是说，Promise 对象的报错具有传递性。</p> <h2 id="then-用法解析"><a href="#then-用法解析" class="header-anchor">#</a> then()用法解析</h2> <p>Promise 的用法，简单说就是一句话：使用then方法添加回调函数。但是，不同的写法有一些细微的差别，请看下面四种写法，它们的差别在哪里？</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>// 写法一
+f1().then(function () {
+  return f2();
+});
+
+// 写法二
+f1().then(function () {
+  f2();
+});
+
+// 写法三
+f1().then(f2());
+
+// 写法四
+f1().then(f2);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>为了便于讲解，下面这四种写法都再用then方法接一个回调函数f3。写法一的f3回调函数的参数，是f2函数的运行结果。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>f1().then(function () {
+  return f2();
+}).then(f3);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>写法二的f3回调函数的参数是undefined。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>f1().then(function () {
+  f2();
+  return;
+}).then(f3);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>写法三的f3回调函数的参数，是f2函数返回的函数的运行结果。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>f1().then(f2())
+  .then(f3);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>写法四与写法一只有一个差别，那就是f2会接收到f1()返回的结果。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>f1().then(f2)
+  .then(f3);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="实例-图片加载"><a href="#实例-图片加载" class="header-anchor">#</a> 实例：图片加载</h2> <p>下面是使用 Promise 完成图片的加载。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>var preloadImage = function (path) {
+  return new Promise(function (resolve, reject) {
+    var image = new Image();
+    image.onload  = resolve;
+    image.onerror = reject;
+    image.src = path;
+  });
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>上面代码中，image是一个图片对象的实例。它有两个事件监听属性，onload属性在图片加载成功后调用，onerror属性在加载失败调用。</p> <p>上面的preloadImage()函数用法如下。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>preloadImage('https://example.com/my.jpg')
+  .then(function (e) { document.body.append(e.target) })
+  .then(function () { console.log('加载成功') })
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="小结"><a href="#小结" class="header-anchor">#</a> 小结</h2> <p>Promise 的优点在于，让回调函数变成了规范的链式写法，程序流程可以看得很清楚。它有一整套接口，可以实现许多强大的功能，比如同时执行多个异步操作，等到它们的状态都改变以后，再执行一个回调函数；再比如，为多个回调函数中抛出的错误，统一指定处理方法等等。</p> <p>而且，Promise 还有一个传统写法没有的好处：它的状态一旦改变，无论何时查询，都能得到这个状态。这意味着，无论何时为 Promise 实例添加回调函数，该函数都能正确执行。所以，你不用担心是否错过了某个事件或信号。如果是传统写法，通过监听事件来执行回调函数，一旦错过了事件，再添加回调函数是不会执行的。</p> <p>Promise 的缺点是，编写的难度比传统写法高，而且阅读代码也不是一眼可以看懂。你只会看到一堆then，必须自己在then的回调函数里面理清逻辑。</p> <h2 id="微任务"><a href="#微任务" class="header-anchor">#</a> 微任务</h2> <p>Promise 的回调函数属于异步任务，会在同步任务之后执行。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>new Promise(function (resolve, reject) {
+  resolve(1);
+}).then(console.log);
+
+console.log(2);
+// 2
+// 1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>上面代码会先输出2，再输出1。因为console.log(2)是同步任务，而then的回调函数属于异步任务，一定晚于同步任务执行。</p> <p>但是，Promise 的回调函数不是正常的异步任务，而是微任务（microtask）。它们的区别在于，正常任务追加到下一轮事件循环，微任务追加到本轮事件循环。这意味着，微任务的执行时间一定早于正常任务。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>setTimeout(function() {
+  console.log(1);
+}, 0);
+
+new Promise(function (resolve, reject) {
+  resolve(2);
+}).then(console.log);
+
+console.log(3);
+// 3
+// 2
+// 1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>上面代码的输出结果是321。这说明then的回调函数的执行时间，早于setTimeout(fn, 0)。因为then是本轮事件循环执行，setTimeout(fn, 0)在下一轮事件循环开始时执行。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.eff12663.js" defer></script><script src="/assets/js/2.5e26ad3d.js" defer></script><script src="/assets/js/86.eee05a7d.js" defer></script>
+  </body>
+</html>

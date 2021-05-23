@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>异步遍历器 | Landscape</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="私人博客网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.acb31268.css" as="style"><link rel="preload" href="/assets/js/app.eff12663.js" as="script"><link rel="preload" href="/assets/js/2.5e26ad3d.js" as="script"><link rel="preload" href="/assets/js/184.daa68ba0.js" as="script"><link rel="prefetch" href="/assets/js/10.a3484fd9.js"><link rel="prefetch" href="/assets/js/100.9da04773.js"><link rel="prefetch" href="/assets/js/101.a1d60ead.js"><link rel="prefetch" href="/assets/js/102.aadfc603.js"><link rel="prefetch" href="/assets/js/103.d4e5c68e.js"><link rel="prefetch" href="/assets/js/104.1cdf50cd.js"><link rel="prefetch" href="/assets/js/105.2c5bf54c.js"><link rel="prefetch" href="/assets/js/106.0d395a27.js"><link rel="prefetch" href="/assets/js/107.14dbbcc8.js"><link rel="prefetch" href="/assets/js/108.3ef118a5.js"><link rel="prefetch" href="/assets/js/109.559d52a2.js"><link rel="prefetch" href="/assets/js/11.fc9864b2.js"><link rel="prefetch" href="/assets/js/110.1cab0ffc.js"><link rel="prefetch" href="/assets/js/111.278c6060.js"><link rel="prefetch" href="/assets/js/112.fe7b516c.js"><link rel="prefetch" href="/assets/js/113.0fa6c6ef.js"><link rel="prefetch" href="/assets/js/114.e9af8e20.js"><link rel="prefetch" href="/assets/js/115.3dc3c834.js"><link rel="prefetch" href="/assets/js/116.b9dcbc8d.js"><link rel="prefetch" href="/assets/js/117.2059e185.js"><link rel="prefetch" href="/assets/js/118.c8e1e84a.js"><link rel="prefetch" href="/assets/js/119.02ac80a4.js"><link rel="prefetch" href="/assets/js/12.c621be0e.js"><link rel="prefetch" href="/assets/js/120.bc7783aa.js"><link rel="prefetch" href="/assets/js/121.dfa2287f.js"><link rel="prefetch" href="/assets/js/122.fb0a2eb6.js"><link rel="prefetch" href="/assets/js/123.9273db6b.js"><link rel="prefetch" href="/assets/js/124.bbb44b25.js"><link rel="prefetch" href="/assets/js/125.d960c5b1.js"><link rel="prefetch" href="/assets/js/126.231185c2.js"><link rel="prefetch" href="/assets/js/127.b0bca1b4.js"><link rel="prefetch" href="/assets/js/128.cb07313f.js"><link rel="prefetch" href="/assets/js/129.7f4a4122.js"><link rel="prefetch" href="/assets/js/13.b95ad782.js"><link rel="prefetch" href="/assets/js/130.209113c0.js"><link rel="prefetch" href="/assets/js/131.51824c46.js"><link rel="prefetch" href="/assets/js/132.325528f9.js"><link rel="prefetch" href="/assets/js/133.969c5172.js"><link rel="prefetch" href="/assets/js/134.f02de0a9.js"><link rel="prefetch" href="/assets/js/135.0dbcba72.js"><link rel="prefetch" href="/assets/js/136.ef7fcf90.js"><link rel="prefetch" href="/assets/js/137.4a068132.js"><link rel="prefetch" href="/assets/js/138.08683970.js"><link rel="prefetch" href="/assets/js/139.bb302699.js"><link rel="prefetch" href="/assets/js/14.9bd1a114.js"><link rel="prefetch" href="/assets/js/140.f897ccd0.js"><link rel="prefetch" href="/assets/js/141.67aee529.js"><link rel="prefetch" href="/assets/js/142.48cf63c0.js"><link rel="prefetch" href="/assets/js/143.31876752.js"><link rel="prefetch" href="/assets/js/144.a822622c.js"><link rel="prefetch" href="/assets/js/145.3a6c8608.js"><link rel="prefetch" href="/assets/js/146.2722a46b.js"><link rel="prefetch" href="/assets/js/147.09010486.js"><link rel="prefetch" href="/assets/js/148.f0375496.js"><link rel="prefetch" href="/assets/js/149.5b7b6ad7.js"><link rel="prefetch" href="/assets/js/15.1b147ab6.js"><link rel="prefetch" href="/assets/js/150.c90512df.js"><link rel="prefetch" href="/assets/js/151.8bf2ca1e.js"><link rel="prefetch" href="/assets/js/152.b0aa9955.js"><link rel="prefetch" href="/assets/js/153.e3eb9763.js"><link rel="prefetch" href="/assets/js/154.79d8bc49.js"><link rel="prefetch" href="/assets/js/155.55725635.js"><link rel="prefetch" href="/assets/js/156.db7f77ee.js"><link rel="prefetch" href="/assets/js/157.e40fb152.js"><link rel="prefetch" href="/assets/js/158.7451fd6d.js"><link rel="prefetch" href="/assets/js/159.7cb38752.js"><link rel="prefetch" href="/assets/js/16.f7c6acb4.js"><link rel="prefetch" href="/assets/js/160.cd9f888b.js"><link rel="prefetch" href="/assets/js/161.19b6bbe3.js"><link rel="prefetch" href="/assets/js/162.03858a71.js"><link rel="prefetch" href="/assets/js/163.fd6d0f98.js"><link rel="prefetch" href="/assets/js/164.c0327e05.js"><link rel="prefetch" href="/assets/js/165.cc57996d.js"><link rel="prefetch" href="/assets/js/166.85a9ea7a.js"><link rel="prefetch" href="/assets/js/167.7399bec8.js"><link rel="prefetch" href="/assets/js/168.9d651d2b.js"><link rel="prefetch" href="/assets/js/169.54553895.js"><link rel="prefetch" href="/assets/js/17.98573fa2.js"><link rel="prefetch" href="/assets/js/170.6610310f.js"><link rel="prefetch" href="/assets/js/171.ab79b049.js"><link rel="prefetch" href="/assets/js/172.3fe4f72b.js"><link rel="prefetch" href="/assets/js/173.29260cc4.js"><link rel="prefetch" href="/assets/js/174.63590a8e.js"><link rel="prefetch" href="/assets/js/175.0807586c.js"><link rel="prefetch" href="/assets/js/176.91704f4c.js"><link rel="prefetch" href="/assets/js/177.249351b2.js"><link rel="prefetch" href="/assets/js/178.978492af.js"><link rel="prefetch" href="/assets/js/179.ded92884.js"><link rel="prefetch" href="/assets/js/18.125829f4.js"><link rel="prefetch" href="/assets/js/180.a2d68e19.js"><link rel="prefetch" href="/assets/js/181.4df6eb41.js"><link rel="prefetch" href="/assets/js/182.ff16b64a.js"><link rel="prefetch" href="/assets/js/183.3fbd4418.js"><link rel="prefetch" href="/assets/js/185.9be000d3.js"><link rel="prefetch" href="/assets/js/186.3d9e4648.js"><link rel="prefetch" href="/assets/js/187.5e9203d0.js"><link rel="prefetch" href="/assets/js/188.209d6308.js"><link rel="prefetch" href="/assets/js/189.74da4659.js"><link rel="prefetch" href="/assets/js/19.82161e3d.js"><link rel="prefetch" href="/assets/js/190.77a8f7bf.js"><link rel="prefetch" href="/assets/js/191.83b3cf4f.js"><link rel="prefetch" href="/assets/js/192.f63c27c5.js"><link rel="prefetch" href="/assets/js/193.ad10c882.js"><link rel="prefetch" href="/assets/js/194.5404e996.js"><link rel="prefetch" href="/assets/js/195.10da6408.js"><link rel="prefetch" href="/assets/js/196.9d53b0ed.js"><link rel="prefetch" href="/assets/js/197.008a3be8.js"><link rel="prefetch" href="/assets/js/198.9c776d81.js"><link rel="prefetch" href="/assets/js/199.c0facbb7.js"><link rel="prefetch" href="/assets/js/20.0a8a8550.js"><link rel="prefetch" href="/assets/js/200.e8f5a041.js"><link rel="prefetch" href="/assets/js/201.844aaf5e.js"><link rel="prefetch" href="/assets/js/202.dd9e1dbb.js"><link rel="prefetch" href="/assets/js/203.2ccf70e8.js"><link rel="prefetch" href="/assets/js/204.ccd3b368.js"><link rel="prefetch" href="/assets/js/205.bf2a0ebb.js"><link rel="prefetch" href="/assets/js/206.1e89e7af.js"><link rel="prefetch" href="/assets/js/207.0ee96164.js"><link rel="prefetch" href="/assets/js/208.3b79fb4c.js"><link rel="prefetch" href="/assets/js/209.eea89f18.js"><link rel="prefetch" href="/assets/js/21.b314687a.js"><link rel="prefetch" href="/assets/js/210.d9e06ea0.js"><link rel="prefetch" href="/assets/js/211.2bb0a4e9.js"><link rel="prefetch" href="/assets/js/212.a8ef63db.js"><link rel="prefetch" href="/assets/js/213.a342ba58.js"><link rel="prefetch" href="/assets/js/214.e8676d03.js"><link rel="prefetch" href="/assets/js/215.b818fd95.js"><link rel="prefetch" href="/assets/js/216.0748ab97.js"><link rel="prefetch" href="/assets/js/217.eaf96780.js"><link rel="prefetch" href="/assets/js/218.d2565c28.js"><link rel="prefetch" href="/assets/js/219.20b33950.js"><link rel="prefetch" href="/assets/js/22.4e030a71.js"><link rel="prefetch" href="/assets/js/220.ade13317.js"><link rel="prefetch" href="/assets/js/221.1bba5e62.js"><link rel="prefetch" href="/assets/js/222.6a1eefca.js"><link rel="prefetch" href="/assets/js/223.89c39cca.js"><link rel="prefetch" href="/assets/js/224.58d3dd3b.js"><link rel="prefetch" href="/assets/js/225.529a105f.js"><link rel="prefetch" href="/assets/js/226.51ffa992.js"><link rel="prefetch" href="/assets/js/227.3f9b61ce.js"><link rel="prefetch" href="/assets/js/228.b867d123.js"><link rel="prefetch" href="/assets/js/229.d52c02c6.js"><link rel="prefetch" href="/assets/js/23.eff92fa9.js"><link rel="prefetch" href="/assets/js/230.96d44fda.js"><link rel="prefetch" href="/assets/js/231.85964038.js"><link rel="prefetch" href="/assets/js/232.f430e1b5.js"><link rel="prefetch" href="/assets/js/233.ad3497c7.js"><link rel="prefetch" href="/assets/js/234.6edbdf58.js"><link rel="prefetch" href="/assets/js/235.ef2f68ad.js"><link rel="prefetch" href="/assets/js/236.0e3b6e7c.js"><link rel="prefetch" href="/assets/js/237.4debf313.js"><link rel="prefetch" href="/assets/js/238.78e364c6.js"><link rel="prefetch" href="/assets/js/239.71b54391.js"><link rel="prefetch" href="/assets/js/24.34d4785c.js"><link rel="prefetch" href="/assets/js/240.e0b5a5a2.js"><link rel="prefetch" href="/assets/js/241.2b6bfdd9.js"><link rel="prefetch" href="/assets/js/242.00c76423.js"><link rel="prefetch" href="/assets/js/243.af416964.js"><link rel="prefetch" href="/assets/js/244.b2d97b07.js"><link rel="prefetch" href="/assets/js/245.05810d54.js"><link rel="prefetch" href="/assets/js/246.eb485a7c.js"><link rel="prefetch" href="/assets/js/247.23f2035d.js"><link rel="prefetch" href="/assets/js/248.b50ca4cc.js"><link rel="prefetch" href="/assets/js/249.a51e3047.js"><link rel="prefetch" href="/assets/js/25.db12a1cb.js"><link rel="prefetch" href="/assets/js/26.9ae117d2.js"><link rel="prefetch" href="/assets/js/27.8cdfe382.js"><link rel="prefetch" href="/assets/js/28.fbaa879e.js"><link rel="prefetch" href="/assets/js/29.f7ff43e9.js"><link rel="prefetch" href="/assets/js/3.d9d64dfe.js"><link rel="prefetch" href="/assets/js/30.4a628321.js"><link rel="prefetch" href="/assets/js/31.a4fc20b5.js"><link rel="prefetch" href="/assets/js/32.691a44de.js"><link rel="prefetch" href="/assets/js/33.4eda844b.js"><link rel="prefetch" href="/assets/js/34.650e1052.js"><link rel="prefetch" href="/assets/js/35.b7a6934f.js"><link rel="prefetch" href="/assets/js/36.393df10f.js"><link rel="prefetch" href="/assets/js/37.998c2e9d.js"><link rel="prefetch" href="/assets/js/38.bb1da896.js"><link rel="prefetch" href="/assets/js/39.bc01bc6d.js"><link rel="prefetch" href="/assets/js/4.ab263529.js"><link rel="prefetch" href="/assets/js/40.595a2064.js"><link rel="prefetch" href="/assets/js/41.5db688ed.js"><link rel="prefetch" href="/assets/js/42.b7c2ae57.js"><link rel="prefetch" href="/assets/js/43.fff9c36c.js"><link rel="prefetch" href="/assets/js/44.eb0181a0.js"><link rel="prefetch" href="/assets/js/45.4f201826.js"><link rel="prefetch" href="/assets/js/46.eb5bcd1a.js"><link rel="prefetch" href="/assets/js/47.d49ae9d1.js"><link rel="prefetch" href="/assets/js/48.13811aa2.js"><link rel="prefetch" href="/assets/js/49.62751beb.js"><link rel="prefetch" href="/assets/js/5.c16a4c03.js"><link rel="prefetch" href="/assets/js/50.59d9847d.js"><link rel="prefetch" href="/assets/js/51.5f8e882c.js"><link rel="prefetch" href="/assets/js/52.75ab0186.js"><link rel="prefetch" href="/assets/js/53.f7f57015.js"><link rel="prefetch" href="/assets/js/54.20c8d12e.js"><link rel="prefetch" href="/assets/js/55.b6ee6d02.js"><link rel="prefetch" href="/assets/js/56.bc52848c.js"><link rel="prefetch" href="/assets/js/57.b9f887fc.js"><link rel="prefetch" href="/assets/js/58.599adfa9.js"><link rel="prefetch" href="/assets/js/59.58f8cd6f.js"><link rel="prefetch" href="/assets/js/6.d5189c23.js"><link rel="prefetch" href="/assets/js/60.9444abd3.js"><link rel="prefetch" href="/assets/js/61.f1b9106d.js"><link rel="prefetch" href="/assets/js/62.ac54ed01.js"><link rel="prefetch" href="/assets/js/63.b92ee20d.js"><link rel="prefetch" href="/assets/js/64.0b616028.js"><link rel="prefetch" href="/assets/js/65.5f8ddce3.js"><link rel="prefetch" href="/assets/js/66.91f7035c.js"><link rel="prefetch" href="/assets/js/67.e49341c5.js"><link rel="prefetch" href="/assets/js/68.191367f2.js"><link rel="prefetch" href="/assets/js/69.7b06726d.js"><link rel="prefetch" href="/assets/js/7.ff777e38.js"><link rel="prefetch" href="/assets/js/70.38b65056.js"><link rel="prefetch" href="/assets/js/71.562791ec.js"><link rel="prefetch" href="/assets/js/72.9737d383.js"><link rel="prefetch" href="/assets/js/73.b234ecd4.js"><link rel="prefetch" href="/assets/js/74.5fe2926f.js"><link rel="prefetch" href="/assets/js/75.16388aec.js"><link rel="prefetch" href="/assets/js/76.f49c9bcf.js"><link rel="prefetch" href="/assets/js/77.3b9089bf.js"><link rel="prefetch" href="/assets/js/78.8cc0580f.js"><link rel="prefetch" href="/assets/js/79.ac0a5565.js"><link rel="prefetch" href="/assets/js/8.477f7d36.js"><link rel="prefetch" href="/assets/js/80.58bd1e87.js"><link rel="prefetch" href="/assets/js/81.28636461.js"><link rel="prefetch" href="/assets/js/82.51e95b2f.js"><link rel="prefetch" href="/assets/js/83.1a720c76.js"><link rel="prefetch" href="/assets/js/84.90a441d5.js"><link rel="prefetch" href="/assets/js/85.b2d32edd.js"><link rel="prefetch" href="/assets/js/86.eee05a7d.js"><link rel="prefetch" href="/assets/js/87.0f6f283f.js"><link rel="prefetch" href="/assets/js/88.5078beb7.js"><link rel="prefetch" href="/assets/js/89.e2cdaaee.js"><link rel="prefetch" href="/assets/js/9.aaf01cb9.js"><link rel="prefetch" href="/assets/js/90.9e461106.js"><link rel="prefetch" href="/assets/js/91.06f04191.js"><link rel="prefetch" href="/assets/js/92.0898eab5.js"><link rel="prefetch" href="/assets/js/93.acedc6e4.js"><link rel="prefetch" href="/assets/js/94.2e177f5a.js"><link rel="prefetch" href="/assets/js/95.9e8eb809.js"><link rel="prefetch" href="/assets/js/96.26328868.js"><link rel="prefetch" href="/assets/js/97.6c8de727.js"><link rel="prefetch" href="/assets/js/98.0b033595.js"><link rel="prefetch" href="/assets/js/99.60c03a85.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.acb31268.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Landscape</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link router-link-active">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/english/" class="nav-link">
+  English
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link router-link-active">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/english/" class="nav-link">
+  English
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>异步遍历器</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/tech/es6/Generator/promiseasync.html#同步遍历器的问题" class="sidebar-link">同步遍历器的问题</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/Generator/promiseasync.html#异步遍历的接口" class="sidebar-link">异步遍历的接口</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/Generator/promiseasync.html#for-await-of" class="sidebar-link">for await...of</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/Generator/promiseasync.html#异步-generator-函数" class="sidebar-link">异步 Generator 函数</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/Generator/promiseasync.html#yield-语句" class="sidebar-link">yield* 语句</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="异步遍历器"><a href="#异步遍历器" class="header-anchor">#</a> 异步遍历器</h1> <h2 id="同步遍历器的问题"><a href="#同步遍历器的问题" class="header-anchor">#</a> 同步遍历器的问题</h2> <p>《遍历器》一章说过，Iterator 接口是一种数据遍历的协议，只要调用遍历器对象的next方法，就会得到一个对象，表示当前遍历指针所在的那个位置的信息。next方法返回的对象的结构是{value, done}，其中value表示当前的数据的值，done是一个布尔值，表示遍历是否结束。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function idMaker() {
+  let index = 0;
+
+  return {
+    next: function() {
+      return { value: index++, done: false };
+    }
+  };
+}
+
+const it = idMaker();
+
+it.next().value // 0
+it.next().value // 1
+it.next().value // 2
+// ...
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>上面代码中，变量it是一个遍历器（iterator）。每次调用it.next()方法，就返回一个对象，表示当前遍历位置的信息。</p> <p>这里隐含着一个规定，it.next()方法必须是同步的，只要调用就必须立刻返回值。也就是说，一旦执行it.next()方法，就必须同步地得到value和done这两个属性。如果遍历指针正好指向同步操作，当然没有问题，但对于异步操作，就不太合适了。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function idMaker() {
+  let index = 0;
+
+  return {
+    next: function() {
+      return new Promise(function (resolve, reject) {
+        setTimeout(() =&gt; {
+          resolve({ value: index++, done: false });
+        }, 1000);
+      });
+    }
+  };
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>上面代码中，next()方法返回的是一个 Promise 对象，这样就不行，不符合 Iterator 协议，只要代码里面包含异步操作都不行。也就是说，Iterator 协议里面next()方法只能包含同步操作。</p> <p>目前的解决方法是，将异步操作包装成 Thunk 函数或者 Promise 对象，即next()方法返回值的value属性是一个 Thunk 函数或者 Promise 对象，等待以后返回真正的值，而done属性则还是同步产生的。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function idMaker() {
+  let index = 0;
+
+  return {
+    next: function() {
+      return {
+        value: new Promise(resolve =&gt; setTimeout(() =&gt; resolve(index++), 1000)),
+        done: false
+      };
+    }
+  };
+}
+
+const it = idMaker();
+
+it.next().value.then(o =&gt; console.log(o)) // 1
+it.next().value.then(o =&gt; console.log(o)) // 2
+it.next().value.then(o =&gt; console.log(o)) // 3
+// ...
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>上面代码中，value属性的返回值是一个 Promise 对象，用来放置异步操作。但是这样写很麻烦，不太符合直觉，语义也比较绕。</p> <p>ES2018 引入了“异步遍历器”（Async Iterator），为异步操作提供原生的遍历器接口，即value和done这两个属性都是异步产生。</p> <h2 id="异步遍历的接口"><a href="#异步遍历的接口" class="header-anchor">#</a> 异步遍历的接口</h2> <p>异步遍历器的最大的语法特点，就是调用遍历器的next方法，返回的是一个 Promise 对象。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>asyncIterator
+  .next()
+  .then(
+    ({ value, done }) =&gt; /* ... */
+  );
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>上面代码中，asyncIterator是一个异步遍历器，调用next方法以后，返回一个 Promise 对象。因此，可以使用then方法指定，这个 Promise 对象的状态变为resolve以后的回调函数。回调函数的参数，则是一个具有value和done两个属性的对象，这个跟同步遍历器是一样的。</p> <p>我们知道，一个对象的同步遍历器的接口，部署在Symbol.iterator属性上面。同样地，对象的异步遍历器接口，部署在Symbol.asyncIterator属性上面。不管是什么样的对象，只要它的Symbol.asyncIterator属性有值，就表示应该对它进行异步遍历。</p> <p>下面是一个异步遍历器的例子。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>const asyncIterable = createAsyncIterable(['a', 'b']);
+const asyncIterator = asyncIterable[Symbol.asyncIterator]();
+
+asyncIterator
+.next()
+.then(iterResult1 =&gt; {
+  console.log(iterResult1); // { value: 'a', done: false }
+  return asyncIterator.next();
+})
+.then(iterResult2 =&gt; {
+  console.log(iterResult2); // { value: 'b', done: false }
+  return asyncIterator.next();
+})
+.then(iterResult3 =&gt; {
+  console.log(iterResult3); // { value: undefined, done: true }
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>上面代码中，异步遍历器其实返回了两次值。第一次调用的时候，返回一个 Promise 对象；等到 Promise 对象resolve了，再返回一个表示当前数据成员信息的对象。这就是说，异步遍历器与同步遍历器最终行为是一致的，只是会先返回 Promise 对象，作为中介。</p> <p>由于异步遍历器的next方法，返回的是一个 Promise 对象。因此，可以把它放在await命令后面。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function f() {
+  const asyncIterable = createAsyncIterable(['a', 'b']);
+  const asyncIterator = asyncIterable[Symbol.asyncIterator]();
+  console.log(await asyncIterator.next());
+  // { value: 'a', done: false }
+  console.log(await asyncIterator.next());
+  // { value: 'b', done: false }
+  console.log(await asyncIterator.next());
+  // { value: undefined, done: true }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>上面代码中，next方法用await处理以后，就不必使用then方法了。整个流程已经很接近同步处理了。</p> <p>注意，异步遍历器的next方法是可以连续调用的，不必等到上一步产生的 Promise 对象resolve以后再调用。这种情况下，next方法会累积起来，自动按照每一步的顺序运行下去。下面是一个例子，把所有的next方法放在
+Promise.all方法里面。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>const asyncIterable = createAsyncIterable(['a', 'b']);
+const asyncIterator = asyncIterable[Symbol.asyncIterator]();
+const [{value: v1}, {value: v2}] = await Promise.all([
+  asyncIterator.next(), asyncIterator.next()
+]);
+
+console.log(v1, v2); // a b
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>另一种用法是一次性调用所有的next方法，然后await最后一步操作。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function runner() {
+  const writer = openFile('someFile.txt');
+  writer.next('hello');
+  writer.next('world');
+  await writer.return();
+}
+
+runner();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="for-await-of"><a href="#for-await-of" class="header-anchor">#</a> for await...of</h2> <p>前面介绍过，for...of循环用于遍历同步的 Iterator 接口。新引入的for await...of循环，则是用于遍历异步的 Iterator 接口。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function f() {
+  for await (const x of createAsyncIterable(['a', 'b'])) {
+    console.log(x);
+  }
+}
+// a
+// b
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>上面代码中，createAsyncIterable()返回一个拥有异步遍历器接口的对象，for...of循环自动调用这个对象的异步遍历器的next方法，会得到一个 Promise 对象。await用来处理这个 Promise 对象，一旦resolve，就把得到的值（x）传入for...of的循环体。</p> <p>for await...of循环的一个用途，是部署了 asyncIterable 操作的异步接口，可以直接放入这个循环。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>let body = '';
+
+async function f() {
+  for await(const data of req) body += data;
+  const parsed = JSON.parse(body);
+  console.log('got', parsed);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>上面代码中，req是一个 asyncIterable 对象，用来异步读取数据。可以看到，使用for await...of循环以后，代码会非常简洁。</p> <p>如果next方法返回的 Promise 对象被reject，for await...of就会报错，要用try...catch捕捉。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function () {
+  try {
+    for await (const x of createRejectingIterable()) {
+      console.log(x);
+    }
+  } catch (e) {
+    console.error(e);
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>注意，for await...of循环也可以用于同步遍历器。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>(async function () {
+  for await (const x of ['a', 'b']) {
+    console.log(x);
+  }
+})();
+// a
+// b
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>Node v10 支持异步遍历器，Stream 就部署了这个接口。下面是读取文件的传统写法与异步遍历器写法的差异。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>// 传统写法
+function main(inputFilePath) {
+  const readStream = fs.createReadStream(
+    inputFilePath,
+    { encoding: 'utf8', highWaterMark: 1024 }
+  );
+  readStream.on('data', (chunk) =&gt; {
+    console.log('&gt;&gt;&gt; '+chunk);
+  });
+  readStream.on('end', () =&gt; {
+    console.log('### DONE ###');
+  });
+}
+
+// 异步遍历器写法
+async function main(inputFilePath) {
+  const readStream = fs.createReadStream(
+    inputFilePath,
+    { encoding: 'utf8', highWaterMark: 1024 }
+  );
+
+  for await (const chunk of readStream) {
+    console.log('&gt;&gt;&gt; '+chunk);
+  }
+  console.log('### DONE ###');
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><h2 id="异步-generator-函数"><a href="#异步-generator-函数" class="header-anchor">#</a> 异步 Generator 函数</h2> <p>就像 Generator 函数返回一个同步遍历器对象一样，异步 Generator 函数的作用，是返回一个异步遍历器对象。</p> <p>在语法上，异步 Generator 函数就是async函数与 Generator 函数的结合。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function* gen() {
+  yield 'hello';
+}
+const genObj = gen();
+genObj.next().then(x =&gt; console.log(x));
+// { value: 'hello', done: false }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>上面代码中，gen是一个异步 Generator 函数，执行后返回一个异步 Iterator 对象。对该对象调用next方法，返回一个 Promise 对象。</p> <p>异步遍历器的设计目的之一，就是 Generator 函数处理同步操作和异步操作时，能够使用同一套接口。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>// 同步 Generator 函数
+function* map(iterable, func) {
+  const iter = iterable[Symbol.iterator]();
+  while (true) {
+    const {value, done} = iter.next();
+    if (done) break;
+    yield func(value);
+  }
+}
+
+// 异步 Generator 函数
+async function* map(iterable, func) {
+  const iter = iterable[Symbol.asyncIterator]();
+  while (true) {
+    const {value, done} = await iter.next();
+    if (done) break;
+    yield func(value);
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>上面代码中，map是一个 Generator 函数，第一个参数是可遍历对象iterable，第二个参数是一个回调函数func。map的作用是将iterable每一步返回的值，使用func进行处理。上面有两个版本的map，前一个处理同步遍历器，后一个处理异步遍历器，可以看到两个版本的写法基本上是一致的。</p> <p>下面是另一个异步 Generator 函数的例子。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function* readLines(path) {
+  let file = await fileOpen(path);
+
+  try {
+    while (!file.EOF) {
+      yield await file.readLine();
+    }
+  } finally {
+    await file.close();
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>上面代码中，异步操作前面使用await关键字标明，即await后面的操作，应该返回 Promise 对象。凡是使用yield关键字的地方，就是next方法停下来的地方，它后面的表达式的值（即await file.readLine()的值），会作为next()返回对象的value属性，这一点是与同步 Generator 函数一致的。</p> <p>异步 Generator 函数内部，能够同时使用await和yield命令。可以这样理解，await命令用于将外部操作产生的值输入函数内部，yield命令用于将函数内部的值输出。</p> <p>上面代码定义的异步 Generator 函数的用法如下。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>(async function () {
+  for await (const line of readLines(filePath)) {
+    console.log(line);
+  }
+})()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>异步 Generator 函数可以与for await...of循环结合起来使用。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function* prefixLines(asyncIterable) {
+  for await (const line of asyncIterable) {
+    yield '&gt; ' + line;
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>异步 Generator 函数的返回值是一个异步 Iterator，即每次调用它的next方法，会返回一个 Promise 对象，也就是说，跟在yield命令后面的，应该是一个 Promise 对象。如果像上面那个例子那样，yield命令后面是一个字
+符串，会被自动包装成一个 Promise 对象。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function fetchRandom() {
+  const url = 'https://www.random.org/decimal-fractions/'
+    + '?num=1&amp;dec=10&amp;col=1&amp;format=plain&amp;rnd=new';
+  return fetch(url);
+}
+
+async function* asyncGenerator() {
+  console.log('Start');
+  const result = await fetchRandom(); // (A)
+  yield 'Result: ' + await result.text(); // (B)
+  console.log('Done');
+}
+
+const ag = asyncGenerator();
+ag.next().then(({value, done}) =&gt; {
+  console.log(value);
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>上面代码中，ag是asyncGenerator函数返回的异步遍历器对象。调用ag.next()以后，上面代码的执行顺序如下。</p> <ol><li>ag.next()立刻返回一个 Promise 对象。</li> <li>asyncGenerator函数开始执行，打印出Start。</li> <li>await命令返回一个 Promise 对象，asyncGenerator函数停在这里。</li> <li>A 处变成 fulfilled 状态，产生的值放入result变量，asyncGenerator函数继续往下执行。</li> <li>函数在 B 处的yield暂停执行，一旦yield命令取到值，ag.next()返回的那个 Promise 对象变成 fulfilled 状态。</li> <li>ag.next()后面的then方法指定的回调函数开始执行。该回调函数的参数是一个对象{value, done}，其中value的值是yield命令后面的那个表达式的值，done的值是false。</li></ol> <p>A 和 B 两行的作用类似于下面的代码。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>return new Promise((resolve, reject) =&gt; {
+  fetchRandom()
+  .then(result =&gt; result.text())
+  .then(result =&gt; {
+     resolve({
+       value: 'Result: ' + result,
+       done: false,
+     });
+  });
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>如果异步 Generator 函数抛出错误，会导致 Promise 对象的状态变为reject，然后抛出的错误被catch方法捕获。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function* asyncGenerator() {
+  throw new Error('Problem!');
+}
+
+asyncGenerator()
+.next()
+.catch(err =&gt; console.log(err)); // Error: Problem!
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>注意，普通的 async 函数返回的是一个 Promise 对象，而异步 Generator 函数返回的是一个异步 Iterator 对象。可以这样理解，async 函数和异步 Generator 函数，是封装异步操作的两种方法，都用来达到同一种目的。区别在于，前者自带执行器，后者通过for await...of执行，或者自己编写执行器。下面就是一个异步 Generator 函数的执行器。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function takeAsync(asyncIterable, count = Infinity) {
+  const result = [];
+  const iterator = asyncIterable[Symbol.asyncIterator]();
+  while (result.length &lt; count) {
+    const {value, done} = await iterator.next();
+    if (done) break;
+    result.push(value);
+  }
+  return result;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>上面代码中，异步 Generator 函数产生的异步遍历器，会通过while循环自动执行，每当await iterator.next()完成，就会进入下一轮循环。一旦done属性变为true，就会跳出循环，异步遍历器执行结束。</p> <p>下面是这个自动执行器的一个使用实例。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function f() {
+  async function* gen() {
+    yield 'a';
+    yield 'b';
+    yield 'c';
+  }
+
+  return await takeAsync(gen());
+}
+
+f().then(function (result) {
+  console.log(result); // ['a', 'b', 'c']
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>异步 Generator 函数出现以后，JavaScript 就有了四种函数形式：普通函数、async 函数、Generator 函数和异步 Generator 函数。请注意区分每种函数的不同之处。基本上，如果是一系列按照顺序执行的异步操作（比如读取文件，然后写入新内容，再存入硬盘），可以使用 async 函数；如果是一系列产生相同数据结构的异步操作（比如一行一行读取文件），可以使用异步 Generator 函数。</p> <p>异步 Generator 函数也可以通过next方法的参数，接收外部传入的数据。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>const writer = openFile('someFile.txt');
+writer.next('hello'); // 立即执行
+writer.next('world'); // 立即执行
+await writer.return(); // 等待写入结束
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>上面代码中，openFile是一个异步 Generator 函数。next方法的参数，向该函数内部的操作传入数据。每次next方法都是同步执行的，最后的await命令用于等待整个写入操作结束。</p> <p>最后，同步的数据结构，也可以使用异步 Generator 函数。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function* createAsyncIterable(syncIterable) {
+  for (const elem of syncIterable) {
+    yield elem;
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>上面代码中，由于没有异步操作，所以也就没有使用await关键字。</p> <h2 id="yield-语句"><a href="#yield-语句" class="header-anchor">#</a> yield* 语句</h2> <p>yield*语句也可以跟一个异步遍历器。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function* gen1() {
+  yield 'a';
+  yield 'b';
+  return 2;
+}
+
+async function* gen2() {
+  // result 最终会等于 2
+  const result = yield* gen1();
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>上面代码中，gen2函数里面的result变量，最后的值是2。</p> <p>与同步 Generator 函数一样，for await...of循环会展开yield*。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>(async function () {
+  for await (const x of gen2()) {
+    console.log(x);
+  }
+})();
+// a
+// b
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.eff12663.js" defer></script><script src="/assets/js/2.5e26ad3d.js" defer></script><script src="/assets/js/184.daa68ba0.js" defer></script>
+  </body>
+</html>

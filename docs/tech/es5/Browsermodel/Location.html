@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Location 对象，URL 对象，URLSearchParams 对象 | Landscape</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="私人博客网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.acb31268.css" as="style"><link rel="preload" href="/assets/js/app.eff12663.js" as="script"><link rel="preload" href="/assets/js/2.5e26ad3d.js" as="script"><link rel="preload" href="/assets/js/97.6c8de727.js" as="script"><link rel="prefetch" href="/assets/js/10.a3484fd9.js"><link rel="prefetch" href="/assets/js/100.9da04773.js"><link rel="prefetch" href="/assets/js/101.a1d60ead.js"><link rel="prefetch" href="/assets/js/102.aadfc603.js"><link rel="prefetch" href="/assets/js/103.d4e5c68e.js"><link rel="prefetch" href="/assets/js/104.1cdf50cd.js"><link rel="prefetch" href="/assets/js/105.2c5bf54c.js"><link rel="prefetch" href="/assets/js/106.0d395a27.js"><link rel="prefetch" href="/assets/js/107.14dbbcc8.js"><link rel="prefetch" href="/assets/js/108.3ef118a5.js"><link rel="prefetch" href="/assets/js/109.559d52a2.js"><link rel="prefetch" href="/assets/js/11.fc9864b2.js"><link rel="prefetch" href="/assets/js/110.1cab0ffc.js"><link rel="prefetch" href="/assets/js/111.278c6060.js"><link rel="prefetch" href="/assets/js/112.fe7b516c.js"><link rel="prefetch" href="/assets/js/113.0fa6c6ef.js"><link rel="prefetch" href="/assets/js/114.e9af8e20.js"><link rel="prefetch" href="/assets/js/115.3dc3c834.js"><link rel="prefetch" href="/assets/js/116.b9dcbc8d.js"><link rel="prefetch" href="/assets/js/117.2059e185.js"><link rel="prefetch" href="/assets/js/118.c8e1e84a.js"><link rel="prefetch" href="/assets/js/119.02ac80a4.js"><link rel="prefetch" href="/assets/js/12.c621be0e.js"><link rel="prefetch" href="/assets/js/120.bc7783aa.js"><link rel="prefetch" href="/assets/js/121.dfa2287f.js"><link rel="prefetch" href="/assets/js/122.fb0a2eb6.js"><link rel="prefetch" href="/assets/js/123.9273db6b.js"><link rel="prefetch" href="/assets/js/124.bbb44b25.js"><link rel="prefetch" href="/assets/js/125.d960c5b1.js"><link rel="prefetch" href="/assets/js/126.231185c2.js"><link rel="prefetch" href="/assets/js/127.b0bca1b4.js"><link rel="prefetch" href="/assets/js/128.cb07313f.js"><link rel="prefetch" href="/assets/js/129.7f4a4122.js"><link rel="prefetch" href="/assets/js/13.b95ad782.js"><link rel="prefetch" href="/assets/js/130.209113c0.js"><link rel="prefetch" href="/assets/js/131.51824c46.js"><link rel="prefetch" href="/assets/js/132.325528f9.js"><link rel="prefetch" href="/assets/js/133.969c5172.js"><link rel="prefetch" href="/assets/js/134.f02de0a9.js"><link rel="prefetch" href="/assets/js/135.0dbcba72.js"><link rel="prefetch" href="/assets/js/136.ef7fcf90.js"><link rel="prefetch" href="/assets/js/137.4a068132.js"><link rel="prefetch" href="/assets/js/138.08683970.js"><link rel="prefetch" href="/assets/js/139.bb302699.js"><link rel="prefetch" href="/assets/js/14.9bd1a114.js"><link rel="prefetch" href="/assets/js/140.f897ccd0.js"><link rel="prefetch" href="/assets/js/141.67aee529.js"><link rel="prefetch" href="/assets/js/142.48cf63c0.js"><link rel="prefetch" href="/assets/js/143.31876752.js"><link rel="prefetch" href="/assets/js/144.a822622c.js"><link rel="prefetch" href="/assets/js/145.3a6c8608.js"><link rel="prefetch" href="/assets/js/146.2722a46b.js"><link rel="prefetch" href="/assets/js/147.09010486.js"><link rel="prefetch" href="/assets/js/148.f0375496.js"><link rel="prefetch" href="/assets/js/149.5b7b6ad7.js"><link rel="prefetch" href="/assets/js/15.1b147ab6.js"><link rel="prefetch" href="/assets/js/150.c90512df.js"><link rel="prefetch" href="/assets/js/151.8bf2ca1e.js"><link rel="prefetch" href="/assets/js/152.b0aa9955.js"><link rel="prefetch" href="/assets/js/153.e3eb9763.js"><link rel="prefetch" href="/assets/js/154.79d8bc49.js"><link rel="prefetch" href="/assets/js/155.55725635.js"><link rel="prefetch" href="/assets/js/156.db7f77ee.js"><link rel="prefetch" href="/assets/js/157.e40fb152.js"><link rel="prefetch" href="/assets/js/158.7451fd6d.js"><link rel="prefetch" href="/assets/js/159.7cb38752.js"><link rel="prefetch" href="/assets/js/16.f7c6acb4.js"><link rel="prefetch" href="/assets/js/160.cd9f888b.js"><link rel="prefetch" href="/assets/js/161.19b6bbe3.js"><link rel="prefetch" href="/assets/js/162.03858a71.js"><link rel="prefetch" href="/assets/js/163.fd6d0f98.js"><link rel="prefetch" href="/assets/js/164.c0327e05.js"><link rel="prefetch" href="/assets/js/165.cc57996d.js"><link rel="prefetch" href="/assets/js/166.85a9ea7a.js"><link rel="prefetch" href="/assets/js/167.7399bec8.js"><link rel="prefetch" href="/assets/js/168.9d651d2b.js"><link rel="prefetch" href="/assets/js/169.54553895.js"><link rel="prefetch" href="/assets/js/17.98573fa2.js"><link rel="prefetch" href="/assets/js/170.6610310f.js"><link rel="prefetch" href="/assets/js/171.ab79b049.js"><link rel="prefetch" href="/assets/js/172.3fe4f72b.js"><link rel="prefetch" href="/assets/js/173.29260cc4.js"><link rel="prefetch" href="/assets/js/174.63590a8e.js"><link rel="prefetch" href="/assets/js/175.0807586c.js"><link rel="prefetch" href="/assets/js/176.91704f4c.js"><link rel="prefetch" href="/assets/js/177.249351b2.js"><link rel="prefetch" href="/assets/js/178.978492af.js"><link rel="prefetch" href="/assets/js/179.ded92884.js"><link rel="prefetch" href="/assets/js/18.125829f4.js"><link rel="prefetch" href="/assets/js/180.a2d68e19.js"><link rel="prefetch" href="/assets/js/181.4df6eb41.js"><link rel="prefetch" href="/assets/js/182.ff16b64a.js"><link rel="prefetch" href="/assets/js/183.3fbd4418.js"><link rel="prefetch" href="/assets/js/184.daa68ba0.js"><link rel="prefetch" href="/assets/js/185.9be000d3.js"><link rel="prefetch" href="/assets/js/186.3d9e4648.js"><link rel="prefetch" href="/assets/js/187.5e9203d0.js"><link rel="prefetch" href="/assets/js/188.209d6308.js"><link rel="prefetch" href="/assets/js/189.74da4659.js"><link rel="prefetch" href="/assets/js/19.82161e3d.js"><link rel="prefetch" href="/assets/js/190.77a8f7bf.js"><link rel="prefetch" href="/assets/js/191.83b3cf4f.js"><link rel="prefetch" href="/assets/js/192.f63c27c5.js"><link rel="prefetch" href="/assets/js/193.ad10c882.js"><link rel="prefetch" href="/assets/js/194.5404e996.js"><link rel="prefetch" href="/assets/js/195.10da6408.js"><link rel="prefetch" href="/assets/js/196.9d53b0ed.js"><link rel="prefetch" href="/assets/js/197.008a3be8.js"><link rel="prefetch" href="/assets/js/198.9c776d81.js"><link rel="prefetch" href="/assets/js/199.c0facbb7.js"><link rel="prefetch" href="/assets/js/20.0a8a8550.js"><link rel="prefetch" href="/assets/js/200.e8f5a041.js"><link rel="prefetch" href="/assets/js/201.844aaf5e.js"><link rel="prefetch" href="/assets/js/202.dd9e1dbb.js"><link rel="prefetch" href="/assets/js/203.2ccf70e8.js"><link rel="prefetch" href="/assets/js/204.ccd3b368.js"><link rel="prefetch" href="/assets/js/205.bf2a0ebb.js"><link rel="prefetch" href="/assets/js/206.1e89e7af.js"><link rel="prefetch" href="/assets/js/207.0ee96164.js"><link rel="prefetch" href="/assets/js/208.3b79fb4c.js"><link rel="prefetch" href="/assets/js/209.eea89f18.js"><link rel="prefetch" href="/assets/js/21.b314687a.js"><link rel="prefetch" href="/assets/js/210.d9e06ea0.js"><link rel="prefetch" href="/assets/js/211.2bb0a4e9.js"><link rel="prefetch" href="/assets/js/212.a8ef63db.js"><link rel="prefetch" href="/assets/js/213.a342ba58.js"><link rel="prefetch" href="/assets/js/214.e8676d03.js"><link rel="prefetch" href="/assets/js/215.b818fd95.js"><link rel="prefetch" href="/assets/js/216.0748ab97.js"><link rel="prefetch" href="/assets/js/217.eaf96780.js"><link rel="prefetch" href="/assets/js/218.d2565c28.js"><link rel="prefetch" href="/assets/js/219.20b33950.js"><link rel="prefetch" href="/assets/js/22.4e030a71.js"><link rel="prefetch" href="/assets/js/220.ade13317.js"><link rel="prefetch" href="/assets/js/221.1bba5e62.js"><link rel="prefetch" href="/assets/js/222.6a1eefca.js"><link rel="prefetch" href="/assets/js/223.89c39cca.js"><link rel="prefetch" href="/assets/js/224.58d3dd3b.js"><link rel="prefetch" href="/assets/js/225.529a105f.js"><link rel="prefetch" href="/assets/js/226.51ffa992.js"><link rel="prefetch" href="/assets/js/227.3f9b61ce.js"><link rel="prefetch" href="/assets/js/228.b867d123.js"><link rel="prefetch" href="/assets/js/229.d52c02c6.js"><link rel="prefetch" href="/assets/js/23.eff92fa9.js"><link rel="prefetch" href="/assets/js/230.96d44fda.js"><link rel="prefetch" href="/assets/js/231.85964038.js"><link rel="prefetch" href="/assets/js/232.f430e1b5.js"><link rel="prefetch" href="/assets/js/233.ad3497c7.js"><link rel="prefetch" href="/assets/js/234.6edbdf58.js"><link rel="prefetch" href="/assets/js/235.ef2f68ad.js"><link rel="prefetch" href="/assets/js/236.0e3b6e7c.js"><link rel="prefetch" href="/assets/js/237.4debf313.js"><link rel="prefetch" href="/assets/js/238.78e364c6.js"><link rel="prefetch" href="/assets/js/239.71b54391.js"><link rel="prefetch" href="/assets/js/24.34d4785c.js"><link rel="prefetch" href="/assets/js/240.e0b5a5a2.js"><link rel="prefetch" href="/assets/js/241.2b6bfdd9.js"><link rel="prefetch" href="/assets/js/242.00c76423.js"><link rel="prefetch" href="/assets/js/243.af416964.js"><link rel="prefetch" href="/assets/js/244.b2d97b07.js"><link rel="prefetch" href="/assets/js/245.05810d54.js"><link rel="prefetch" href="/assets/js/246.eb485a7c.js"><link rel="prefetch" href="/assets/js/247.23f2035d.js"><link rel="prefetch" href="/assets/js/248.b50ca4cc.js"><link rel="prefetch" href="/assets/js/249.a51e3047.js"><link rel="prefetch" href="/assets/js/25.db12a1cb.js"><link rel="prefetch" href="/assets/js/26.9ae117d2.js"><link rel="prefetch" href="/assets/js/27.8cdfe382.js"><link rel="prefetch" href="/assets/js/28.fbaa879e.js"><link rel="prefetch" href="/assets/js/29.f7ff43e9.js"><link rel="prefetch" href="/assets/js/3.d9d64dfe.js"><link rel="prefetch" href="/assets/js/30.4a628321.js"><link rel="prefetch" href="/assets/js/31.a4fc20b5.js"><link rel="prefetch" href="/assets/js/32.691a44de.js"><link rel="prefetch" href="/assets/js/33.4eda844b.js"><link rel="prefetch" href="/assets/js/34.650e1052.js"><link rel="prefetch" href="/assets/js/35.b7a6934f.js"><link rel="prefetch" href="/assets/js/36.393df10f.js"><link rel="prefetch" href="/assets/js/37.998c2e9d.js"><link rel="prefetch" href="/assets/js/38.bb1da896.js"><link rel="prefetch" href="/assets/js/39.bc01bc6d.js"><link rel="prefetch" href="/assets/js/4.ab263529.js"><link rel="prefetch" href="/assets/js/40.595a2064.js"><link rel="prefetch" href="/assets/js/41.5db688ed.js"><link rel="prefetch" href="/assets/js/42.b7c2ae57.js"><link rel="prefetch" href="/assets/js/43.fff9c36c.js"><link rel="prefetch" href="/assets/js/44.eb0181a0.js"><link rel="prefetch" href="/assets/js/45.4f201826.js"><link rel="prefetch" href="/assets/js/46.eb5bcd1a.js"><link rel="prefetch" href="/assets/js/47.d49ae9d1.js"><link rel="prefetch" href="/assets/js/48.13811aa2.js"><link rel="prefetch" href="/assets/js/49.62751beb.js"><link rel="prefetch" href="/assets/js/5.c16a4c03.js"><link rel="prefetch" href="/assets/js/50.59d9847d.js"><link rel="prefetch" href="/assets/js/51.5f8e882c.js"><link rel="prefetch" href="/assets/js/52.75ab0186.js"><link rel="prefetch" href="/assets/js/53.f7f57015.js"><link rel="prefetch" href="/assets/js/54.20c8d12e.js"><link rel="prefetch" href="/assets/js/55.b6ee6d02.js"><link rel="prefetch" href="/assets/js/56.bc52848c.js"><link rel="prefetch" href="/assets/js/57.b9f887fc.js"><link rel="prefetch" href="/assets/js/58.599adfa9.js"><link rel="prefetch" href="/assets/js/59.58f8cd6f.js"><link rel="prefetch" href="/assets/js/6.d5189c23.js"><link rel="prefetch" href="/assets/js/60.9444abd3.js"><link rel="prefetch" href="/assets/js/61.f1b9106d.js"><link rel="prefetch" href="/assets/js/62.ac54ed01.js"><link rel="prefetch" href="/assets/js/63.b92ee20d.js"><link rel="prefetch" href="/assets/js/64.0b616028.js"><link rel="prefetch" href="/assets/js/65.5f8ddce3.js"><link rel="prefetch" href="/assets/js/66.91f7035c.js"><link rel="prefetch" href="/assets/js/67.e49341c5.js"><link rel="prefetch" href="/assets/js/68.191367f2.js"><link rel="prefetch" href="/assets/js/69.7b06726d.js"><link rel="prefetch" href="/assets/js/7.ff777e38.js"><link rel="prefetch" href="/assets/js/70.38b65056.js"><link rel="prefetch" href="/assets/js/71.562791ec.js"><link rel="prefetch" href="/assets/js/72.9737d383.js"><link rel="prefetch" href="/assets/js/73.b234ecd4.js"><link rel="prefetch" href="/assets/js/74.5fe2926f.js"><link rel="prefetch" href="/assets/js/75.16388aec.js"><link rel="prefetch" href="/assets/js/76.f49c9bcf.js"><link rel="prefetch" href="/assets/js/77.3b9089bf.js"><link rel="prefetch" href="/assets/js/78.8cc0580f.js"><link rel="prefetch" href="/assets/js/79.ac0a5565.js"><link rel="prefetch" href="/assets/js/8.477f7d36.js"><link rel="prefetch" href="/assets/js/80.58bd1e87.js"><link rel="prefetch" href="/assets/js/81.28636461.js"><link rel="prefetch" href="/assets/js/82.51e95b2f.js"><link rel="prefetch" href="/assets/js/83.1a720c76.js"><link rel="prefetch" href="/assets/js/84.90a441d5.js"><link rel="prefetch" href="/assets/js/85.b2d32edd.js"><link rel="prefetch" href="/assets/js/86.eee05a7d.js"><link rel="prefetch" href="/assets/js/87.0f6f283f.js"><link rel="prefetch" href="/assets/js/88.5078beb7.js"><link rel="prefetch" href="/assets/js/89.e2cdaaee.js"><link rel="prefetch" href="/assets/js/9.aaf01cb9.js"><link rel="prefetch" href="/assets/js/90.9e461106.js"><link rel="prefetch" href="/assets/js/91.06f04191.js"><link rel="prefetch" href="/assets/js/92.0898eab5.js"><link rel="prefetch" href="/assets/js/93.acedc6e4.js"><link rel="prefetch" href="/assets/js/94.2e177f5a.js"><link rel="prefetch" href="/assets/js/95.9e8eb809.js"><link rel="prefetch" href="/assets/js/96.26328868.js"><link rel="prefetch" href="/assets/js/98.0b033595.js"><link rel="prefetch" href="/assets/js/99.60c03a85.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.acb31268.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Landscape</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link router-link-active">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/english/" class="nav-link">
+  English
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link router-link-active">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/english/" class="nav-link">
+  English
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Location 对象，URL 对象，URLSearchParams 对象</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/tech/es5/Browsermodel/Location.html#location-对象" class="sidebar-link">Location 对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/Location.html#_1-属性" class="sidebar-link">1. 属性</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/Location.html#_2-方法" class="sidebar-link">2. 方法</a></li></ul></li><li><a href="/docs/tech/es5/Browsermodel/Location.html#url-的编码和解码" class="sidebar-link">URL 的编码和解码</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/Location.html#_1-encodeuri" class="sidebar-link">1. encodeURI()</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/Location.html#_2-encodeuricomponent" class="sidebar-link">2. encodeURIComponent()</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/Location.html#_3-decodeuri" class="sidebar-link">3. decodeURI()</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/Location.html#_4-decodeuricomponent" class="sidebar-link">4. decodeURIComponent()</a></li></ul></li><li><a href="/docs/tech/es5/Browsermodel/Location.html#url-对象" class="sidebar-link">URL 对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/Location.html#_1-构造函数" class="sidebar-link">1. 构造函数</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/Location.html#_2-实例属性" class="sidebar-link">2. 实例属性</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/Location.html#_3-静态方法" class="sidebar-link">3. 静态方法</a></li></ul></li><li><a href="/docs/tech/es5/Browsermodel/Location.html#urlsearchparams-对象" class="sidebar-link">URLSearchParams 对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/Location.html#_1-概述" class="sidebar-link">1. 概述</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/Location.html#_2-urlsearchparams-tostring" class="sidebar-link">2. URLSearchParams.toString()</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/Location.html#_3-urlsearchparams-append" class="sidebar-link">3. URLSearchParams.append()</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/Location.html#_4-urlsearchparams-delete" class="sidebar-link">4. URLSearchParams.delete()</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/Location.html#_5-urlsearchparams-has" class="sidebar-link">5. URLSearchParams.has()</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/Location.html#_6-urlsearchparams-set" class="sidebar-link">6. URLSearchParams.set()</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/Location.html#_7-urlsearchparams-get-urlsearchparams-getall" class="sidebar-link">7. URLSearchParams.get()，URLSearchParams.getAll()</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/Location.html#_8-urlsearchparams-sort" class="sidebar-link">8. URLSearchParams.sort()</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/Location.html#_9-urlsearchparams-keys-urlsearchparams-values-urlsearchparams-entries" class="sidebar-link">9. URLSearchParams.keys()，URLSearchParams.values()，URLSearchParams.entries()</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="location-对象-url-对象-urlsearchparams-对象"><a href="#location-对象-url-对象-urlsearchparams-对象" class="header-anchor">#</a> Location 对象，URL 对象，URLSearchParams 对象</h1> <h2 id="location-对象"><a href="#location-对象" class="header-anchor">#</a> Location 对象</h2> <p>Location对象是浏览器提供的原生对象，提供 URL 相关的信息和操作方法。通过window.location和document.location属性，可以拿到这个对象。</p> <h3 id="_1-属性"><a href="#_1-属性" class="header-anchor">#</a> 1. 属性</h3> <p>Location对象提供以下属性。</p> <ul><li><code>Location.href</code>：整个 URL。</li> <li><code>Location.protocol</code>：当前 URL 的协议，包括冒号（:）。</li> <li><code>Location.host</code>：主机。如果端口不是协议默认的80和433，则还会包括冒号（:）和端口。</li> <li><code>Location.hostname</code>：主机名，不包括端口。</li> <li><code>Location.port</code>：端口号。</li> <li><code>Location.pathname</code>：URL 的路径部分，从根路径/开始。</li> <li><code>Location.search</code>：查询字符串部分，从问号?开始。</li> <li><code>Location.hash</code>：片段字符串部分，从#开始。</li> <li><code>Location.username</code>：域名前面的用户名。</li> <li><code>Location.password</code>：域名前面的密码。</li> <li><code>Location.origin</code>：URL 的协议、主机名和端口。</li></ul> <div class="language-url line-numbers-mode"><pre class="language-text"><code>// 当前网址为
+// http://user:passwd@www.example.com:4097/path/a.html?x=111#part1
+document.location.href
+// &quot;http://user:passwd@www.example.com:4097/path/a.html?x=111#part1&quot;
+document.location.protocol
+// &quot;http:&quot;
+document.location.host
+// &quot;www.example.com:4097&quot;
+document.location.hostname
+// &quot;www.example.com&quot;
+document.location.port
+// &quot;4097&quot;
+document.location.pathname
+// &quot;/path/a.html&quot;
+document.location.search
+// &quot;?x=111&quot;
+document.location.hash
+// &quot;#part1&quot;
+document.location.username
+// &quot;user&quot;
+document.location.password
+// &quot;passwd&quot;
+document.location.origin
+// &quot;http://user:passwd@www.example.com:4097&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p>这些属性里面，只有origin属性是只读的，其他属性都可写。</p> <p>注意，如果对Location.href写入新的 URL 地址，浏览器会立刻跳转到这个新地址。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>// 跳转到新网址
+document.location.href = 'http://www.example.com';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>这个特性常常用于让网页自动滚动到新的锚点。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>document.location.href = '#top';
+// 等同于
+document.location.hash = '#top';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>直接改写location，相当于写入href属性。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>document.location = 'http://www.example.com';
+// 等同于
+document.location.href = 'http://www.example.com';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>另外，Location.href属性是浏览器唯一允许跨域写入的属性，即非同源的窗口可以改写另一个窗口（比如子窗口与父窗口）的Location.href属性，导致后者的网址跳转。Location的其他属性都不允许跨域写入。</p> <h3 id="_2-方法"><a href="#_2-方法" class="header-anchor">#</a> 2. 方法</h3> <h4 id="_1-location-assign"><a href="#_1-location-assign" class="header-anchor">#</a> （1）Location.assign()</h4> <p>assign方法接受一个 URL 字符串作为参数，使得浏览器立刻跳转到新的 URL。如果参数不是有效的 URL 字符串，则会报错。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>// 跳转到新的网址
+document.location.assign('http://www.example.com')
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="_2-location-replace"><a href="#_2-location-replace" class="header-anchor">#</a> （2）Location.replace()</h4> <p>replace方法接受一个 URL 字符串作为参数，使得浏览器立刻跳转到新的 URL。如果参数不是有效的 URL 字符串，则会报错。</p> <p>它与assign方法的差异在于，replace会在浏览器的浏览历史History里面删除当前网址，也就是说，一旦使用了该方法，后退按钮就无法回到当前网页了，相当于在浏览历史里面，使用新的 URL 替换了老的 URL。它的一个应用是，当脚本发现当前是移动设备时，就立刻跳转到移动版网页。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>// 跳转到新的网址
+document.location.replace('http://www.example.com')
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="_3-location-reload"><a href="#_3-location-reload" class="header-anchor">#</a> （3）Location.reload()</h4> <p>reload方法使得浏览器重新加载当前网址，相当于按下浏览器的刷新按钮。</p> <p>它接受一个布尔值作为参数。如果参数为true，浏览器将向服务器重新请求这个网页，并且重新加载后，网页将滚动到头部（即scrollTop === 0）。如果参数是false或为空，浏览器将从本地缓存重新加载该网页，并且重新加载后，网页的视口位置是重新加载前的位置。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>// 向服务器重新请求当前网址
+window.location.reload(true);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="_4-location-tostring"><a href="#_4-location-tostring" class="header-anchor">#</a> （4）Location.toString()</h4> <p>toString方法返回整个 URL 字符串，相当于读取Location.href属性。</p> <h2 id="url-的编码和解码"><a href="#url-的编码和解码" class="header-anchor">#</a> URL 的编码和解码</h2> <p>网页的 URL 只能包含合法的字符。合法字符分成两类。</p> <ul><li><p>URL 元字符：分号（;），逗号（,），斜杠（/），问号（?），冒号（:），at（@），&amp;，等号（=），加号（+），美元符号（$），井号（#）</p></li> <li><p>语义字符：a-z，A-Z，0-9，连词号（-），下划线（_），点（.），感叹号（!），波浪线（~），星号（*），单引号（'），圆括号（()）</p></li></ul> <p>除了以上字符，其他字符出现在 URL 之中都必须转义，规则是根据操作系统的默认编码，将每个字节转为百分号（%）加上两个大写的十六进制字母。</p> <p>比如，UTF-8 的操作系统上，<code>http://www.example.com/q=</code>春节这个 URL 之中，汉字“春节”不是 URL 的合法字符，所以被浏览器自动转成<code>http://www.example.com/q=%E6%98%A5%E8%8A%82</code>。其中，“春”转成了<code>%E6%98%A5</code>，“节”转成了<code>%E8%8A%82</code>。这是因为“春”和“节”的 UTF-8 编码分别是E6 98 A5和E8 8A 82，将每个字节前面加上百分号，就构成了 URL 编码。</p> <p>JavaScript 提供四个 URL 的编码/解码方法。</p> <ul><li>encodeURI()</li> <li>encodeURIComponent()</li> <li>decodeURI()</li> <li>decodeURIComponent()</li></ul> <h3 id="_1-encodeuri"><a href="#_1-encodeuri" class="header-anchor">#</a> 1. encodeURI()</h3> <p>encodeURI()方法用于转码整个 URL。它的参数是一个字符串，代表整个 URL。它会将元字符和语义字符之外的字符，都进行转义。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>encodeURI('http://www.example.com/q=春节')
+// &quot;http://www.example.com/q=%E6%98%A5%E8%8A%82&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_2-encodeuricomponent"><a href="#_2-encodeuricomponent" class="header-anchor">#</a> 2. encodeURIComponent()</h3> <p>encodeURIComponent()方法用于转码 URL 的组成部分，会转码除了语义字符之外的所有字符，即元字符也会被转码。所以，它不能用于转码整个 URL。它接受一个参数，就是 URL 的片段。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>encodeURIComponent('春节')
+// &quot;%E6%98%A5%E8%8A%82&quot;
+encodeURIComponent('http://www.example.com/q=春节')
+// &quot;http%3A%2F%2Fwww.example.com%2Fq%3D%E6%98%A5%E8%8A%82&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>上面代码中，encodeURIComponent()会连 URL 元字符一起转义，所以如果转码整个 URL 就会出错。</p> <h3 id="_3-decodeuri"><a href="#_3-decodeuri" class="header-anchor">#</a> 3. decodeURI()</h3> <p>decodeURI()方法用于整个 URL 的解码。它是encodeURI()方法的逆运算。它接受一个参数，就是转码后的 URL。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>decodeURI('http://www.example.com/q=%E6%98%A5%E8%8A%82')
+// &quot;http://www.example.com/q=春节&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_4-decodeuricomponent"><a href="#_4-decodeuricomponent" class="header-anchor">#</a> 4. decodeURIComponent()</h3> <p>decodeURIComponent()用于URL 片段的解码。它是encodeURIComponent()方法的逆运算。它接受一个参数，就是转码后的 URL 片段。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>decodeURIComponent('%E6%98%A5%E8%8A%82')
+// &quot;春节&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="url-对象"><a href="#url-对象" class="header-anchor">#</a> URL 对象</h2> <p>URL对象是浏览器的原生对象，可以用来构造、解析和编码 URL。一般情况下，通过window.URL可以拿到这个对象。</p> <p><code>&lt;a&gt;</code>元素和<code>&lt;area&gt;</code>元素都部署了这个接口。这就是说，它们的 DOM 节点对象可以使用 URL 的实例属性和方法。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var a = document.createElement('a');
+a.href = 'http://example.com/?foo=1';
+
+a.hostname // &quot;example.com&quot;
+a.search // &quot;?foo=1&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>上面代码中，a是<code>&lt;a&gt;</code>元素的 DOM 节点对象。可以在这个对象上使用 URL 的实例属性，比如hostname和search。</p> <h3 id="_1-构造函数"><a href="#_1-构造函数" class="header-anchor">#</a> 1. 构造函数</h3> <p>URL对象本身是一个构造函数，可以生成 URL 实例。</p> <p>它接受一个表示 URL 的字符串作为参数。如果参数不是合法的 URL，会报错。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var url = new URL('http://www.example.com/index.html');
+url.href
+// &quot;http://www.example.com/index.html&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>如果参数是另一个 URL 实例，构造函数会自动读取该实例的href属性，作为实际参数。</p> <p>如果 URL 字符串是一个相对路径，那么需要表示绝对路径的第二个参数，作为计算基准。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var url1 = new URL('index.html', 'http://example.com');
+url1.href
+// &quot;http://example.com/index.html&quot;
+
+var url2 = new URL('page2.html', 'http://example.com/page1.html');
+url2.href
+// &quot;http://example.com/page2.html&quot;
+
+var url3 = new URL('..', 'http://example.com/a/b.html')
+url3.href
+// &quot;http://example.com/&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>上面代码中，返回的 URL 实例的路径都是在第二个参数的基础上，切换到第一个参数得到的。最后一个例子里面，第一个参数是..，表示上层路径。</p> <h3 id="_2-实例属性"><a href="#_2-实例属性" class="header-anchor">#</a> 2. 实例属性</h3> <p>URL 实例的属性与Location对象的属性基本一致，返回当前 URL 的信息。</p> <ul><li>URL.href：返回整个 URL</li> <li>URL.protocol：返回协议，以冒号:结尾</li> <li>URL.hostname：返回域名</li> <li>URL.host：返回域名与端口，包含:号，默认的80和443端口会省略</li> <li>URL.port：返回端口</li> <li>URL.origin：返回协议、域名和端口</li> <li>URL.pathname：返回路径，以斜杠/开头</li> <li>URL.search：返回查询字符串，以问号?开头</li> <li>URL.searchParams：返回一个URLSearchParams实例，该属性是Location对象没有的</li> <li>URL.hash：返回片段识别符，以井号#开头</li> <li>URL.password：返回域名前面的密码</li> <li>URL.username：返回域名前面的用户名</li></ul> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var url = new URL('http://user:passwd@www.example.com:4097/path/a.html?x=111#part1');
+
+url.href
+// &quot;http://user:passwd@www.example.com:4097/path/a.html?x=111#part1&quot;
+url.protocol
+// &quot;http:&quot;
+url.hostname
+// &quot;www.example.com&quot;
+url.host
+// &quot;www.example.com:4097&quot;
+url.port
+// &quot;4097&quot;
+url.origin
+// &quot;http://www.example.com:4097&quot;
+url.pathname
+// &quot;/path/a.html&quot;
+url.search
+// &quot;?x=111&quot;
+url.searchParams
+// URLSearchParams {}
+url.hash
+// &quot;#part1&quot;
+url.password
+// &quot;passwd&quot;
+url.username
+// &quot;user&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><p>这些属性里面，只有origin属性是只读的，其他属性都可写。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var url = new URL('http://example.com/index.html#part1');
+
+url.pathname = 'index2.html';
+url.href // &quot;http://example.com/index2.html#part1&quot;
+
+url.hash = '#part2';
+url.href // &quot;http://example.com/index2.html#part2&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>上面代码中，改变 URL 实例的pathname属性和hash属性，都会实时反映在 URL 实例当中。</p> <h3 id="_3-静态方法"><a href="#_3-静态方法" class="header-anchor">#</a> 3. 静态方法</h3> <h4 id="_1-url-createobjecturl"><a href="#_1-url-createobjecturl" class="header-anchor">#</a> （1）URL.createObjectURL()</h4> <p>URL.createObjectURL方法用来为上传/下载的文件、流媒体文件生成一个 URL 字符串。这个字符串代表了File对象或Blob对象的 URL。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>// HTML 代码如下
+// &lt;div id=&quot;display&quot;/&gt;
+// &lt;input
+//   type=&quot;file&quot;
+//   id=&quot;fileElem&quot;
+//   multiple
+//   accept=&quot;image/*&quot;
+//   onchange=&quot;handleFiles(this.files)&quot;
+//  &gt;
+var div = document.getElementById('display');
+
+function handleFiles(files) {
+  for (var i = 0; i &lt; files.length; i++) {
+    var img = document.createElement('img');
+    img.src = window.URL.createObjectURL(files[i]);
+    div.appendChild(img);
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>上面代码中，URL.createObjectURL方法用来为上传的文件生成一个 URL 字符串，作为<code>&lt;img&gt;</code>元素的图片来源。</p> <p>该方法生成的 URL 就像下面的样子。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>blob:http://localhost/c745ef73-ece9-46da-8f66-ebes574789b1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>注意，每次使用URL.createObjectURL方法，都会在内存里面生成一个 URL 实例。如果不再需要该方法生成的 URL 字符串，为了节省内存，可以使用URL.revokeObjectURL()方法释放这个实例。</p> <h4 id="_2-url-revokeobjecturl"><a href="#_2-url-revokeobjecturl" class="header-anchor">#</a> （2）URL.revokeObjectURL()</h4> <p>URL.revokeObjectURL方法用来释放URL.createObjectURL方法生成的 URL 实例。它的参数就是URL.createObjectURL方法返回的 URL 字符串。</p> <p>下面为上一段的示例加上URL.revokeObjectURL()。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var div = document.getElementById('display');
+
+function handleFiles(files) {
+  for (var i = 0; i &lt; files.length; i++) {
+    var img = document.createElement('img');
+    img.src = window.URL.createObjectURL(files[i]);
+    div.appendChild(img);
+    img.onload = function() {
+      window.URL.revokeObjectURL(this.src);
+    }
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>上面代码中，一旦图片加载成功以后，为本地文件生成的 URL 字符串就没用了，于是可以在img.onload回调函数里面，通过URL.revokeObjectURL方法卸载这个 URL 实例。</p> <h2 id="urlsearchparams-对象"><a href="#urlsearchparams-对象" class="header-anchor">#</a> URLSearchParams 对象</h2> <h3 id="_1-概述"><a href="#_1-概述" class="header-anchor">#</a> 1. 概述</h3> <p>URLSearchParams对象是浏览器的原生对象，用来构造、解析和处理 URL 的查询字符串（即 URL 问号后面的部分）。</p> <p>它本身也是一个构造函数，可以生成实例。参数可以为查询字符串，起首的问号?有没有都行，也可以是对应查询字符串的数组或对象。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>// 方法一：传入字符串
+var params = new URLSearchParams('?foo=1&amp;bar=2');
+// 等同于
+var params = new URLSearchParams(document.location.search);
+
+// 方法二：传入数组
+var params = new URLSearchParams([['foo', 1], ['bar', 2]]);
+
+// 方法三：传入对象
+var params = new URLSearchParams({'foo' : 1 , 'bar' : 2});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>URLSearchParams会对查询字符串自动编码。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var params = new URLSearchParams({'foo': '你好'});
+params.toString() // &quot;foo=%E4%BD%A0%E5%A5%BD&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>上面代码中，foo的值是汉字，URLSearchParams对其自动进行 URL 编码。</p> <p>浏览器向服务器发送表单数据时，可以直接使用URLSearchParams实例作为表单数据。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>const params = new URLSearchParams({foo: 1, bar: 2});
+fetch('https://example.com/api', {
+  method: 'POST',
+  body: params
+}).then(...)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>上面代码中，fetch命令向服务器发送命令时，可以直接使用URLSearchParams实例。</p> <p>URLSearchParams可以与URL接口结合使用。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var url = new URL(window.location);
+var foo = url.searchParams.get('foo') || 'somedefault';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>上面代码中，URL 实例的searchParams属性就是一个URLSearchParams实例，所以可以使用URLSearchParams接口的get方法。</p> <p>DOM 的a元素节点的searchParams属性，就是一个URLSearchParams实例。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var a = document.createElement('a');
+a.href = 'https://example.com?filter=api';
+a.searchParams.get('filter') // &quot;api&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>URLSearchParams实例有遍历器接口，可以用for...of循环遍历（详见《ES6 标准入门》的《Iterator》一章）。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var params = new URLSearchParams({'foo': 1 , 'bar': 2});
+
+for (var p of params) {
+  console.log(p[0] + ': ' + p[1]);
+}
+// foo: 1
+// bar: 2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>URLSearchParams没有实例属性，只有实例方法。</p> <h3 id="_2-urlsearchparams-tostring"><a href="#_2-urlsearchparams-tostring" class="header-anchor">#</a> 2. URLSearchParams.toString()</h3> <p>toString方法返回实例的字符串形式。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var url = new URL('https://example.com?foo=1&amp;bar=2');
+var params = new URLSearchParams(url.search);
+
+params.toString() // &quot;foo=1&amp;bar=2'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>那么需要字符串的场合，会自动调用toString方法。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var params = new URLSearchParams({version: 2.0});
+window.location.href = location.pathname + '?' + params;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>上面代码中，location.href赋值时，可以直接使用params对象。这时就会自动调用toString方法。</p> <h3 id="_3-urlsearchparams-append"><a href="#_3-urlsearchparams-append" class="header-anchor">#</a> 3. URLSearchParams.append()</h3> <p>append方法用来追加一个查询参数。它接受两个参数，第一个为键名，第二个为键值，没有返回值。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var params = new URLSearchParams({'foo': 1 , 'bar': 2});
+params.append('baz', 3);
+params.toString() // &quot;foo=1&amp;bar=2&amp;baz=3&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>append方法不会识别是否键名已经存在。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var params = new URLSearchParams({'foo': 1 , 'bar': 2});
+params.append('foo', 3);
+params.toString() // &quot;foo=1&amp;bar=2&amp;foo=3&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>上面代码中，查询字符串里面foo已经存在了，但是append依然会追加一个同名键。</p> <h3 id="_4-urlsearchparams-delete"><a href="#_4-urlsearchparams-delete" class="header-anchor">#</a> 4. URLSearchParams.delete()</h3> <p>delete方法用来删除指定的查询参数。它接受键名作为参数。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var params = new URLSearchParams({'foo': 1 , 'bar': 2});
+params.delete('bar');
+params.toString() // &quot;foo=1&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_5-urlsearchparams-has"><a href="#_5-urlsearchparams-has" class="header-anchor">#</a> 5. URLSearchParams.has()</h3> <p>has方法返回一个布尔值，表示查询字符串是否包含指定的键名。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var params = new URLSearchParams({'foo': 1 , 'bar': 2});
+params.has('bar') // true
+params.has('baz') // false
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_6-urlsearchparams-set"><a href="#_6-urlsearchparams-set" class="header-anchor">#</a> 6. URLSearchParams.set()</h3> <p>set方法用来设置查询字符串的键值。</p> <p>它接受两个参数，第一个是键名，第二个是键值。如果是已经存在的键，键值会被改写，否则会被追加。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var params = new URLSearchParams('?foo=1');
+params.set('foo', 2);
+params.toString() // &quot;foo=2&quot;
+params.set('bar', 3);
+params.toString() // &quot;foo=2&amp;bar=3&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>上面代码中，foo是已经存在的键，bar是还不存在的键。</p> <p>如果有多个的同名键，set会移除现存所有的键。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var params = new URLSearchParams('?foo=1&amp;foo=2');
+params.set('foo', 3);
+params.toString() // &quot;foo=3&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>下面是一个替换当前 URL 的例子。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>// URL: https://example.com?version=1.0
+var params = new URLSearchParams(location.search.slice(1));
+params.set('version', 2.0);
+
+window.history.replaceState({}, '', location.pathname + `?` + params);
+// URL: https://example.com?version=2.0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="_7-urlsearchparams-get-urlsearchparams-getall"><a href="#_7-urlsearchparams-get-urlsearchparams-getall" class="header-anchor">#</a> 7. URLSearchParams.get()，URLSearchParams.getAll()</h3> <p>get方法用来读取查询字符串里面的指定键。它接受键名作为参数。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var params = new URLSearchParams('?foo=1');
+params.get('foo') // &quot;1&quot;
+params.get('bar') // null
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>两个地方需要注意。第一，它返回的是字符串，如果原始值是数值，需要转一下类型；第二，如果指定的键名不存在，返回值是null。</p> <p>如果有多个的同名键，get返回位置最前面的那个键值。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var params = new URLSearchParams('?foo=3&amp;foo=2&amp;foo=1');
+params.get('foo') // &quot;3&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>上面代码中，查询字符串有三个foo键，get方法返回最前面的键值3。</p> <p>getAll方法返回一个数组，成员是指定键的所有键值。它接受键名作为参数。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var params = new URLSearchParams('?foo=1&amp;foo=2');
+params.getAll('foo') // [&quot;1&quot;, &quot;2&quot;]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>上面代码中，查询字符串有两个foo键，getAll返回的数组就有两个成员。</p> <h3 id="_8-urlsearchparams-sort"><a href="#_8-urlsearchparams-sort" class="header-anchor">#</a> 8. URLSearchParams.sort()</h3> <p>sort方法对查询字符串里面的键进行排序，规则是按照 Unicode 码点从小到大排列。</p> <p>该方法没有返回值，或者说返回值是undefined。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var params = new URLSearchParams('c=4&amp;a=2&amp;b=3&amp;a=1');
+params.sort();
+params.toString() // &quot;a=2&amp;a=1&amp;b=3&amp;c=4&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>上面代码中，如果有两个同名的键a，它们之间不会排序，而是保留原始的顺序。</p> <h3 id="_9-urlsearchparams-keys-urlsearchparams-values-urlsearchparams-entries"><a href="#_9-urlsearchparams-keys-urlsearchparams-values-urlsearchparams-entries" class="header-anchor">#</a> 9. URLSearchParams.keys()，URLSearchParams.values()，URLSearchParams.entries()</h3> <p>这三个方法都返回一个遍历器对象，供for...of循环遍历。它们的区别在于，keys方法返回的是键名的遍历器，values方法返回的是键值的遍历器，entries返回的是键值对的遍历器。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>var params = new URLSearchParams('a=1&amp;b=2');
+
+for(var p of params.keys()) {
+  console.log(p);
+}
+// a
+// b
+
+for(var p of params.values()) {
+  console.log(p);
+}
+// 1
+// 2
+
+for(var p of params.entries()) {
+  console.log(p);
+}
+// [&quot;a&quot;, &quot;1&quot;]
+// [&quot;b&quot;, &quot;2&quot;]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>如果直接对URLSearchParams进行遍历，其实内部调用的就是entries接口。</p> <div class="language-url line-numbers-mode"><pre class="language-text"><code>for (var p of params) {}
+// 等同于
+for (var p of params.entries()) {}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.eff12663.js" defer></script><script src="/assets/js/2.5e26ad3d.js" defer></script><script src="/assets/js/97.6c8de727.js" defer></script>
+  </body>
+</html>
