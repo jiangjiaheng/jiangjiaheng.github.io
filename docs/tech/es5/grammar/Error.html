@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>错误处理机制 | Landscape</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="私人博客网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.2257f275.css" as="style"><link rel="preload" href="/assets/js/app.ad02aee1.js" as="script"><link rel="preload" href="/assets/js/2.1ffc695d.js" as="script"><link rel="preload" href="/assets/js/171.42fb235a.js" as="script"><link rel="prefetch" href="/assets/js/10.290809a4.js"><link rel="prefetch" href="/assets/js/100.a5f3b027.js"><link rel="prefetch" href="/assets/js/101.615c212b.js"><link rel="prefetch" href="/assets/js/102.4291c908.js"><link rel="prefetch" href="/assets/js/103.50522407.js"><link rel="prefetch" href="/assets/js/104.ceee5fac.js"><link rel="prefetch" href="/assets/js/105.b7beea77.js"><link rel="prefetch" href="/assets/js/106.fbe74bf5.js"><link rel="prefetch" href="/assets/js/107.80058fc6.js"><link rel="prefetch" href="/assets/js/108.c6cfbeb7.js"><link rel="prefetch" href="/assets/js/109.e4122eb5.js"><link rel="prefetch" href="/assets/js/11.f0ab786a.js"><link rel="prefetch" href="/assets/js/110.a0ee13ce.js"><link rel="prefetch" href="/assets/js/111.7ccd6531.js"><link rel="prefetch" href="/assets/js/112.2dec3ee5.js"><link rel="prefetch" href="/assets/js/113.00787c50.js"><link rel="prefetch" href="/assets/js/114.34fc0165.js"><link rel="prefetch" href="/assets/js/115.3cdee417.js"><link rel="prefetch" href="/assets/js/116.e512eacb.js"><link rel="prefetch" href="/assets/js/117.d3a7a7d5.js"><link rel="prefetch" href="/assets/js/118.53c22989.js"><link rel="prefetch" href="/assets/js/119.24121cc5.js"><link rel="prefetch" href="/assets/js/12.ae0d079f.js"><link rel="prefetch" href="/assets/js/120.3159578a.js"><link rel="prefetch" href="/assets/js/121.e62a6ca9.js"><link rel="prefetch" href="/assets/js/122.81c191bd.js"><link rel="prefetch" href="/assets/js/123.5f36aea6.js"><link rel="prefetch" href="/assets/js/124.17e887bb.js"><link rel="prefetch" href="/assets/js/125.536a127d.js"><link rel="prefetch" href="/assets/js/126.d3b888bf.js"><link rel="prefetch" href="/assets/js/127.7cc025da.js"><link rel="prefetch" href="/assets/js/128.baa51f00.js"><link rel="prefetch" href="/assets/js/129.45497c33.js"><link rel="prefetch" href="/assets/js/13.68d39284.js"><link rel="prefetch" href="/assets/js/130.faf24e7f.js"><link rel="prefetch" href="/assets/js/131.2fea1ba7.js"><link rel="prefetch" href="/assets/js/132.6d3b9e16.js"><link rel="prefetch" href="/assets/js/133.30c7d0eb.js"><link rel="prefetch" href="/assets/js/134.b85b676e.js"><link rel="prefetch" href="/assets/js/135.7a365aca.js"><link rel="prefetch" href="/assets/js/136.35c6b2de.js"><link rel="prefetch" href="/assets/js/137.97082234.js"><link rel="prefetch" href="/assets/js/138.4ae18848.js"><link rel="prefetch" href="/assets/js/139.b8cda881.js"><link rel="prefetch" href="/assets/js/14.ff6c8808.js"><link rel="prefetch" href="/assets/js/140.396a39fa.js"><link rel="prefetch" href="/assets/js/141.107ad53f.js"><link rel="prefetch" href="/assets/js/142.4645c1c6.js"><link rel="prefetch" href="/assets/js/143.d3dc0d75.js"><link rel="prefetch" href="/assets/js/144.4c350235.js"><link rel="prefetch" href="/assets/js/145.b37f2b71.js"><link rel="prefetch" href="/assets/js/146.b1bb66f1.js"><link rel="prefetch" href="/assets/js/147.54889a86.js"><link rel="prefetch" href="/assets/js/148.641387cc.js"><link rel="prefetch" href="/assets/js/149.55af1815.js"><link rel="prefetch" href="/assets/js/15.69d128aa.js"><link rel="prefetch" href="/assets/js/150.34f5936e.js"><link rel="prefetch" href="/assets/js/151.df1926c3.js"><link rel="prefetch" href="/assets/js/152.c7e17ff9.js"><link rel="prefetch" href="/assets/js/153.a551e735.js"><link rel="prefetch" href="/assets/js/154.4c196cd8.js"><link rel="prefetch" href="/assets/js/155.f066ae13.js"><link rel="prefetch" href="/assets/js/156.fe72a5f6.js"><link rel="prefetch" href="/assets/js/157.8764a261.js"><link rel="prefetch" href="/assets/js/158.e11f1dce.js"><link rel="prefetch" href="/assets/js/159.48091ed5.js"><link rel="prefetch" href="/assets/js/16.3e552539.js"><link rel="prefetch" href="/assets/js/160.7a7ede47.js"><link rel="prefetch" href="/assets/js/161.5b3a8e87.js"><link rel="prefetch" href="/assets/js/162.ddb146f8.js"><link rel="prefetch" href="/assets/js/163.0559007e.js"><link rel="prefetch" href="/assets/js/164.5871e60c.js"><link rel="prefetch" href="/assets/js/165.9c0e6c1d.js"><link rel="prefetch" href="/assets/js/166.77cd3bd1.js"><link rel="prefetch" href="/assets/js/167.bcb2a7e3.js"><link rel="prefetch" href="/assets/js/168.4a7ed88b.js"><link rel="prefetch" href="/assets/js/169.a92913eb.js"><link rel="prefetch" href="/assets/js/17.bfb21641.js"><link rel="prefetch" href="/assets/js/170.32cfef81.js"><link rel="prefetch" href="/assets/js/172.bc0e8204.js"><link rel="prefetch" href="/assets/js/173.95e4f947.js"><link rel="prefetch" href="/assets/js/174.a61c4976.js"><link rel="prefetch" href="/assets/js/175.4745d798.js"><link rel="prefetch" href="/assets/js/176.85beab2b.js"><link rel="prefetch" href="/assets/js/177.45959145.js"><link rel="prefetch" href="/assets/js/178.ead040a8.js"><link rel="prefetch" href="/assets/js/179.1364fba1.js"><link rel="prefetch" href="/assets/js/18.4b18c9ce.js"><link rel="prefetch" href="/assets/js/180.12bafa5d.js"><link rel="prefetch" href="/assets/js/181.59e0dfb2.js"><link rel="prefetch" href="/assets/js/182.e711d639.js"><link rel="prefetch" href="/assets/js/183.d37d6e3c.js"><link rel="prefetch" href="/assets/js/184.8e5dbea7.js"><link rel="prefetch" href="/assets/js/185.37e059ca.js"><link rel="prefetch" href="/assets/js/186.78132d87.js"><link rel="prefetch" href="/assets/js/187.d15c37d8.js"><link rel="prefetch" href="/assets/js/188.741a311f.js"><link rel="prefetch" href="/assets/js/189.5e1a8e2d.js"><link rel="prefetch" href="/assets/js/19.af7db11b.js"><link rel="prefetch" href="/assets/js/190.83064ded.js"><link rel="prefetch" href="/assets/js/191.f053dbba.js"><link rel="prefetch" href="/assets/js/192.5cf79d70.js"><link rel="prefetch" href="/assets/js/193.1d22e2d2.js"><link rel="prefetch" href="/assets/js/194.97c0cf56.js"><link rel="prefetch" href="/assets/js/195.40b195bd.js"><link rel="prefetch" href="/assets/js/196.edd567d8.js"><link rel="prefetch" href="/assets/js/197.ac86d7a8.js"><link rel="prefetch" href="/assets/js/198.a2b93e19.js"><link rel="prefetch" href="/assets/js/199.a9df90aa.js"><link rel="prefetch" href="/assets/js/20.1332d188.js"><link rel="prefetch" href="/assets/js/200.51168d92.js"><link rel="prefetch" href="/assets/js/201.93e43e37.js"><link rel="prefetch" href="/assets/js/202.ac0614f2.js"><link rel="prefetch" href="/assets/js/203.cfa8bd98.js"><link rel="prefetch" href="/assets/js/204.e6b89f0c.js"><link rel="prefetch" href="/assets/js/205.a450836b.js"><link rel="prefetch" href="/assets/js/206.c33beb45.js"><link rel="prefetch" href="/assets/js/207.a0911f17.js"><link rel="prefetch" href="/assets/js/208.508e11a9.js"><link rel="prefetch" href="/assets/js/209.365f6f5b.js"><link rel="prefetch" href="/assets/js/21.c3e31198.js"><link rel="prefetch" href="/assets/js/210.44ed43c5.js"><link rel="prefetch" href="/assets/js/211.b772d0b3.js"><link rel="prefetch" href="/assets/js/212.8aed896a.js"><link rel="prefetch" href="/assets/js/213.3f376780.js"><link rel="prefetch" href="/assets/js/214.58f25518.js"><link rel="prefetch" href="/assets/js/215.796484f7.js"><link rel="prefetch" href="/assets/js/216.46d8b95d.js"><link rel="prefetch" href="/assets/js/217.96821801.js"><link rel="prefetch" href="/assets/js/218.af467116.js"><link rel="prefetch" href="/assets/js/219.592f0c7d.js"><link rel="prefetch" href="/assets/js/22.1a111c3f.js"><link rel="prefetch" href="/assets/js/220.c9deee6d.js"><link rel="prefetch" href="/assets/js/221.e41e1997.js"><link rel="prefetch" href="/assets/js/222.ce09af6a.js"><link rel="prefetch" href="/assets/js/223.0a93af6b.js"><link rel="prefetch" href="/assets/js/224.551563d3.js"><link rel="prefetch" href="/assets/js/225.d307d37e.js"><link rel="prefetch" href="/assets/js/226.712c3b98.js"><link rel="prefetch" href="/assets/js/227.b8cee395.js"><link rel="prefetch" href="/assets/js/228.832bee04.js"><link rel="prefetch" href="/assets/js/229.90a5f5e7.js"><link rel="prefetch" href="/assets/js/23.841fb3ca.js"><link rel="prefetch" href="/assets/js/230.d4e512c6.js"><link rel="prefetch" href="/assets/js/231.d515aedf.js"><link rel="prefetch" href="/assets/js/232.e9a631ac.js"><link rel="prefetch" href="/assets/js/233.77f15c46.js"><link rel="prefetch" href="/assets/js/234.7c0a666c.js"><link rel="prefetch" href="/assets/js/235.97530e19.js"><link rel="prefetch" href="/assets/js/236.34a0a0a4.js"><link rel="prefetch" href="/assets/js/237.e5e3f4aa.js"><link rel="prefetch" href="/assets/js/238.4828dbf3.js"><link rel="prefetch" href="/assets/js/239.3e88152e.js"><link rel="prefetch" href="/assets/js/24.cf856690.js"><link rel="prefetch" href="/assets/js/240.be8b4d73.js"><link rel="prefetch" href="/assets/js/241.30e97f3d.js"><link rel="prefetch" href="/assets/js/242.684c0156.js"><link rel="prefetch" href="/assets/js/243.48d5cb79.js"><link rel="prefetch" href="/assets/js/244.3ba88cbb.js"><link rel="prefetch" href="/assets/js/245.12405961.js"><link rel="prefetch" href="/assets/js/246.2828f103.js"><link rel="prefetch" href="/assets/js/247.5f5a46c4.js"><link rel="prefetch" href="/assets/js/248.4ffbc192.js"><link rel="prefetch" href="/assets/js/249.0803ee70.js"><link rel="prefetch" href="/assets/js/25.d33d19aa.js"><link rel="prefetch" href="/assets/js/250.3eea413c.js"><link rel="prefetch" href="/assets/js/251.9ea896cc.js"><link rel="prefetch" href="/assets/js/252.1177e70c.js"><link rel="prefetch" href="/assets/js/253.007bd970.js"><link rel="prefetch" href="/assets/js/254.adf1e89c.js"><link rel="prefetch" href="/assets/js/255.013aed96.js"><link rel="prefetch" href="/assets/js/256.3f5882d4.js"><link rel="prefetch" href="/assets/js/257.cad28684.js"><link rel="prefetch" href="/assets/js/258.c42df280.js"><link rel="prefetch" href="/assets/js/259.01e4f81a.js"><link rel="prefetch" href="/assets/js/26.d92632f7.js"><link rel="prefetch" href="/assets/js/260.daa60cc0.js"><link rel="prefetch" href="/assets/js/261.6c2bfbd5.js"><link rel="prefetch" href="/assets/js/262.46d62ca9.js"><link rel="prefetch" href="/assets/js/263.f44be23b.js"><link rel="prefetch" href="/assets/js/264.46c4bde6.js"><link rel="prefetch" href="/assets/js/265.8fece6f4.js"><link rel="prefetch" href="/assets/js/266.38dc3775.js"><link rel="prefetch" href="/assets/js/27.5209e799.js"><link rel="prefetch" href="/assets/js/28.9a4b815b.js"><link rel="prefetch" href="/assets/js/29.94dd5537.js"><link rel="prefetch" href="/assets/js/3.13299593.js"><link rel="prefetch" href="/assets/js/30.788ed750.js"><link rel="prefetch" href="/assets/js/31.a96ffaa2.js"><link rel="prefetch" href="/assets/js/32.4d73a2d6.js"><link rel="prefetch" href="/assets/js/33.95d105e2.js"><link rel="prefetch" href="/assets/js/34.c7d109f2.js"><link rel="prefetch" href="/assets/js/35.344cdf17.js"><link rel="prefetch" href="/assets/js/36.cb17272e.js"><link rel="prefetch" href="/assets/js/37.aa1ef3a6.js"><link rel="prefetch" href="/assets/js/38.b214c471.js"><link rel="prefetch" href="/assets/js/39.d32b8415.js"><link rel="prefetch" href="/assets/js/4.953691e3.js"><link rel="prefetch" href="/assets/js/40.9b31dd32.js"><link rel="prefetch" href="/assets/js/41.60855b4e.js"><link rel="prefetch" href="/assets/js/42.d7cd4cde.js"><link rel="prefetch" href="/assets/js/43.2413ba69.js"><link rel="prefetch" href="/assets/js/44.3c8523a5.js"><link rel="prefetch" href="/assets/js/45.9bda535f.js"><link rel="prefetch" href="/assets/js/46.2d68c3ee.js"><link rel="prefetch" href="/assets/js/47.2be7c6c2.js"><link rel="prefetch" href="/assets/js/48.5fdc3a4a.js"><link rel="prefetch" href="/assets/js/49.56e0483a.js"><link rel="prefetch" href="/assets/js/5.2a3eb217.js"><link rel="prefetch" href="/assets/js/50.42dedc17.js"><link rel="prefetch" href="/assets/js/51.543714d0.js"><link rel="prefetch" href="/assets/js/52.4e78b2c9.js"><link rel="prefetch" href="/assets/js/53.681d8201.js"><link rel="prefetch" href="/assets/js/54.f921c9ac.js"><link rel="prefetch" href="/assets/js/55.e0387c6e.js"><link rel="prefetch" href="/assets/js/56.15dec43c.js"><link rel="prefetch" href="/assets/js/57.e888e47a.js"><link rel="prefetch" href="/assets/js/58.16ab50de.js"><link rel="prefetch" href="/assets/js/59.4cb980bb.js"><link rel="prefetch" href="/assets/js/6.32986265.js"><link rel="prefetch" href="/assets/js/60.1d6b65be.js"><link rel="prefetch" href="/assets/js/61.f78d6676.js"><link rel="prefetch" href="/assets/js/62.e324b386.js"><link rel="prefetch" href="/assets/js/63.5665ba03.js"><link rel="prefetch" href="/assets/js/64.685bf9fb.js"><link rel="prefetch" href="/assets/js/65.cc41c908.js"><link rel="prefetch" href="/assets/js/66.85fcadae.js"><link rel="prefetch" href="/assets/js/67.8edb4fbe.js"><link rel="prefetch" href="/assets/js/68.edaf059d.js"><link rel="prefetch" href="/assets/js/69.b310f467.js"><link rel="prefetch" href="/assets/js/7.677d0219.js"><link rel="prefetch" href="/assets/js/70.dd2d3d0a.js"><link rel="prefetch" href="/assets/js/71.798ce689.js"><link rel="prefetch" href="/assets/js/72.30a05d21.js"><link rel="prefetch" href="/assets/js/73.f4235617.js"><link rel="prefetch" href="/assets/js/74.6f3a9da8.js"><link rel="prefetch" href="/assets/js/75.29b85b01.js"><link rel="prefetch" href="/assets/js/76.b0833b0d.js"><link rel="prefetch" href="/assets/js/77.3de81cbf.js"><link rel="prefetch" href="/assets/js/78.b5301833.js"><link rel="prefetch" href="/assets/js/79.4fe12b30.js"><link rel="prefetch" href="/assets/js/8.dd4e5f42.js"><link rel="prefetch" href="/assets/js/80.f8834e60.js"><link rel="prefetch" href="/assets/js/81.a664274b.js"><link rel="prefetch" href="/assets/js/82.0b4afef7.js"><link rel="prefetch" href="/assets/js/83.4331a1ae.js"><link rel="prefetch" href="/assets/js/84.5786dad9.js"><link rel="prefetch" href="/assets/js/85.e436e066.js"><link rel="prefetch" href="/assets/js/86.4e3c3dfa.js"><link rel="prefetch" href="/assets/js/87.dfc9c847.js"><link rel="prefetch" href="/assets/js/88.a8e7d035.js"><link rel="prefetch" href="/assets/js/89.1ac670f1.js"><link rel="prefetch" href="/assets/js/9.2f41087d.js"><link rel="prefetch" href="/assets/js/90.a67eae95.js"><link rel="prefetch" href="/assets/js/91.44545794.js"><link rel="prefetch" href="/assets/js/92.9acd0bd8.js"><link rel="prefetch" href="/assets/js/93.0c571e66.js"><link rel="prefetch" href="/assets/js/94.87e895bc.js"><link rel="prefetch" href="/assets/js/95.4c8504c7.js"><link rel="prefetch" href="/assets/js/96.30959d91.js"><link rel="prefetch" href="/assets/js/97.25dda37d.js"><link rel="prefetch" href="/assets/js/98.8f9f5390.js"><link rel="prefetch" href="/assets/js/99.336c9a15.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2257f275.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Landscape</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link router-link-active">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/english/" class="nav-link">
+  English
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link router-link-active">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/english/" class="nav-link">
+  English
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>错误处理机制</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/tech/es5/grammar/Error.html#error实例对象" class="sidebar-link">Error实例对象</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/grammar/Error.html#原生错误类型" class="sidebar-link">原生错误类型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es5/grammar/Error.html#_1-syntaxerror" class="sidebar-link">1. SyntaxError</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/grammar/Error.html#_2-referenceerror" class="sidebar-link">2. ReferenceError</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/grammar/Error.html#_3-rangeerror" class="sidebar-link">3. RangeError</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/grammar/Error.html#_4-typeerror" class="sidebar-link">4. TypeError</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/grammar/Error.html#_5-urlerror" class="sidebar-link">5. URlError</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/grammar/Error.html#_6-evalerror" class="sidebar-link">6. EvalError</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/grammar/Error.html#_7-总结" class="sidebar-link">7. 总结</a></li></ul></li><li><a href="/docs/tech/es5/grammar/Error.html#自定义错误" class="sidebar-link">自定义错误</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/grammar/Error.html#throw" class="sidebar-link">throw</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/grammar/Error.html#try-catch" class="sidebar-link">try...catch</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/grammar/Error.html#finally" class="sidebar-link">finally</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="错误处理机制"><a href="#错误处理机制" class="header-anchor">#</a> 错误处理机制</h1> <h2 id="error实例对象"><a href="#error实例对象" class="header-anchor">#</a> Error实例对象</h2> <p>JavaScript 解析或运行时，一旦发生错误，引擎就会抛出一个错误对象。JavaScript 原生提供Error构造函数，所有抛出的错误都是这个构造函数的实例。</p> <div class="language-er line-numbers-mode"><pre class="language-text"><code>var err = new Error('出错了');
+err.message // &quot;出错了&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>JavaScript 语言标准只提到，Error实例对象必须有message属性，表示出错时的提示信息，没有提到其他属性。大多数 JavaScript 引擎，对Error实例还提供name和stack属性，分别表示错误的名称和错误的堆栈，但它们是非标准的，不是每种实现都有。</p> <ul><li>message：错误提示信息</li> <li>name：错误名称（非标准属性）</li> <li>stack：错误的堆栈（非标准属性）</li></ul> <p>使用name和message这两个属性，可以对发生什么错误有一个大概的了解。</p> <div class="language-er line-numbers-mode"><pre class="language-text"><code>if (error.name) {
+  console.log(error.name + ': ' + error.message);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>stack属性用来查看错误发生时的堆栈。</p> <div class="language-er line-numbers-mode"><pre class="language-text"><code>function throwit() {
+  throw new Error('');
+}
+
+function catchit() {
+  try {
+    throwit();
+  } catch(e) {
+    console.log(e.stack); // print stack trace
+  }
+}
+
+catchit()
+// Error
+//    at throwit (~/examples/throwcatch.js:9:11)
+//    at catchit (~/examples/throwcatch.js:3:9)
+//    at repl:1:5
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h2 id="原生错误类型"><a href="#原生错误类型" class="header-anchor">#</a> 原生错误类型</h2> <h3 id="_1-syntaxerror"><a href="#_1-syntaxerror" class="header-anchor">#</a> 1. SyntaxError</h3> <p>SyntaxError对象是解析代码时发生的语法错误。</p> <div class="language-er line-numbers-mode"><pre class="language-text"><code>// 变量名错误
+var 1a;
+// Uncaught SyntaxError: Invalid or unexpected token
+
+// 缺少括号
+console.log 'hello');
+// Uncaught SyntaxError: Unexpected string
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="_2-referenceerror"><a href="#_2-referenceerror" class="header-anchor">#</a> 2. ReferenceError</h3> <p>ReferenceError对象是引用一个不存在的变量时发生的错误。</p> <div class="language-er line-numbers-mode"><pre class="language-text"><code>// 使用一个不存在的变量
+unknownVariable
+// Uncaught ReferenceError: unknownVariable is not defined
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_3-rangeerror"><a href="#_3-rangeerror" class="header-anchor">#</a> 3. RangeError</h3> <p>RangeError对象是一个值超出有效范围时发生的错误。主要有几种情况，一是数组长度为负数，二是Number对象的方法参数超出范围，以及函数堆栈超过最大值。</p> <div class="language-er line-numbers-mode"><pre class="language-text"><code>// 数组长度不得为负数
+new Array(-1)
+// Uncaught RangeError: Invalid array length
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_4-typeerror"><a href="#_4-typeerror" class="header-anchor">#</a> 4. TypeError</h3> <p>TypeError对象是变量或参数不是预期类型时发生的错误。比如，对字符串、布尔值、数值等原始类型的值使用new命令，就会抛出这种错误，因为new命令的参数应该是一个构造函数。</p> <div class="language-er line-numbers-mode"><pre class="language-text"><code>new 123
+// Uncaught TypeError: number is not a func
+
+var obj = {};
+obj.unknownMethod()
+// Uncaught TypeError: obj.unknownMethod is not a function
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="_5-urlerror"><a href="#_5-urlerror" class="header-anchor">#</a> 5. URlError</h3> <p>URIError对象是 URI 相关函数的参数不正确时抛出的错误，主要涉及encodeURI()、decodeURI()、encodeURIComponent()、decodeURIComponent()、escape()和unescape()这六个函数。</p> <div class="language-er line-numbers-mode"><pre class="language-text"><code>decodeURI('%2')
+// URIError: URI malformed
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_6-evalerror"><a href="#_6-evalerror" class="header-anchor">#</a> 6. EvalError</h3> <p>eval函数没有被正确执行时，会抛出EvalError错误。该错误类型已经不再使用了，只是为了保证与以前代码兼容，才继续保留。</p> <h3 id="_7-总结"><a href="#_7-总结" class="header-anchor">#</a> 7. 总结</h3> <p>以上这6种派生错误，连同原始的Error对象，都是构造函数。开发者可以使用它们，手动生成错误对象的实例。这些构造函数都接受一个参数，代表错误提示信息（message）。</p> <div class="language-er line-numbers-mode"><pre class="language-text"><code>var err1 = new Error('出错了！');
+var err2 = new RangeError('出错了，变量超出有效范围！');
+var err3 = new TypeError('出错了，变量类型无效！');
+
+err1.message // &quot;出错了！&quot;
+err2.message // &quot;出错了，变量超出有效范围！&quot;
+err3.message // &quot;出错了，变量类型无效！&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="自定义错误"><a href="#自定义错误" class="header-anchor">#</a> 自定义错误</h2> <p>除了 JavaScript 原生提供的七种错误对象，还可以定义自己的错误对象。</p> <div class="language-er line-numbers-mode"><pre class="language-text"><code>function UserError(message) {
+  this.message = message || '默认信息';
+  this.name = 'UserError';
+}
+
+UserError.prototype = new Error();
+UserError.prototype.constructor = UserError;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>上面代码自定义一个错误对象UserError，让它继承Error对象。然后，就可以生成这种自定义类型的错误了。</p> <div class="language-er line-numbers-mode"><pre class="language-text"><code>new UserError('这是自定义的错误！');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="throw"><a href="#throw" class="header-anchor">#</a> throw</h2> <p>throw语句的作用是手动中断程序执行，抛出一个错误。</p> <div class="language-er line-numbers-mode"><pre class="language-text"><code>if (x &lt;= 0) {
+  throw new Error('x 必须为正数');
+}
+// Uncaught ReferenceError: x is not defined
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>throw也可以抛出自定义错误。</p> <div class="language-er line-numbers-mode"><pre class="language-text"><code>function UserError(message) {
+  this.message = message || '默认信息';
+  this.name = 'UserError';
+}
+
+throw new UserError('出错了！');
+// Uncaught UserError {message: &quot;出错了！&quot;, name: &quot;UserError&quot;}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>实际上，throw可以抛出任何类型的值。也就是说，它的参数可以是任何值。</p> <div class="language-er line-numbers-mode"><pre class="language-text"><code>// 抛出一个字符串
+throw 'Error！';
+// Uncaught Error！
+
+// 抛出一个数值
+throw 42;
+// Uncaught 42
+
+// 抛出一个布尔值
+throw true;
+// Uncaught true
+
+// 抛出一个对象
+throw {
+  toString: function () {
+    return 'Error!';
+  }
+};
+// Uncaught {toString: ƒ}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>对于 JavaScript 引擎来说，遇到throw语句，程序就中止了。</p> <h2 id="try-catch"><a href="#try-catch" class="header-anchor">#</a> try...catch</h2> <p>一旦发生错误，程序就中止执行了。JavaScript 提供了try...catch结构，允许对错误进行处理，选择是否往下执行。</p> <div class="language-er line-numbers-mode"><pre class="language-text"><code>try {
+  throw new Error('出错了!');
+} catch (e) {
+  console.log(e.name + &quot;: &quot; + e.message);
+  console.log(e.stack);
+}
+// Error: 出错了!
+//   at &lt;anonymous&gt;:3:9
+//   ...
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>如果你不确定某些代码是否会报错，就可以把它们放在try...catch代码块之中，便于进一步对错误进行处理。</p> <div class="language-er line-numbers-mode"><pre class="language-text"><code>try {
+  f();
+} catch(e) {
+  // 处理错误
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>catch代码块捕获错误之后，程序不会中断，会按照正常流程继续执行下去。</p> <div class="language-er line-numbers-mode"><pre class="language-text"><code>try {
+  throw &quot;出错了&quot;;
+} catch (e) {
+  console.log(111);
+}
+console.log(222);
+// 111
+// 222
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>catch代码块之中，还可以再抛出错误，甚至使用嵌套的try...catch结构。</p> <div class="language-er line-numbers-mode"><pre class="language-text"><code>var n = 100;
+
+try {
+  throw n;
+} catch (e) {
+  if (e &lt;= 50) {
+    // ...
+  } else {
+    throw e;
+  }
+}
+// Uncaught 100
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>为了捕捉不同类型的错误，catch代码块之中可以加入判断语句。</p> <div class="language-er line-numbers-mode"><pre class="language-text"><code>try {
+  foo.bar();
+} catch (e) {
+  if (e instanceof EvalError) {
+    console.log(e.name + &quot;: &quot; + e.message);
+  } else if (e instanceof RangeError) {
+    console.log(e.name + &quot;: &quot; + e.message);
+  }
+  // ...
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="finally"><a href="#finally" class="header-anchor">#</a> finally</h2> <p>try...catch结构允许在最后添加一个finally代码块，表示不管是否出现错误，都必需在最后运行的语句。</p> <div class="language-er line-numbers-mode"><pre class="language-text"><code>openFile();
+
+try {
+  writeFile(Data);
+} catch(e) {
+  handleError(e);
+} finally {
+  closeFile();
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.ad02aee1.js" defer></script><script src="/assets/js/2.1ffc695d.js" defer></script><script src="/assets/js/171.42fb235a.js" defer></script>
+  </body>
+</html>
