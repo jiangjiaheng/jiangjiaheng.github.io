@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>let命令与const命令 | Landscape</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="私人博客网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.5149da19.css" as="style"><link rel="preload" href="/assets/js/app.d23b6637.js" as="script"><link rel="preload" href="/assets/js/2.9c41e448.js" as="script"><link rel="preload" href="/assets/js/1.2c8cdafe.js" as="script"><link rel="preload" href="/assets/js/235.4cb6e771.js" as="script"><link rel="prefetch" href="/assets/js/10.9a78c136.js"><link rel="prefetch" href="/assets/js/100.9a09e43d.js"><link rel="prefetch" href="/assets/js/101.746edda3.js"><link rel="prefetch" href="/assets/js/102.42717f37.js"><link rel="prefetch" href="/assets/js/103.fcc1039f.js"><link rel="prefetch" href="/assets/js/104.36756ecf.js"><link rel="prefetch" href="/assets/js/105.60d3e4ac.js"><link rel="prefetch" href="/assets/js/106.e260f939.js"><link rel="prefetch" href="/assets/js/107.cbeae72a.js"><link rel="prefetch" href="/assets/js/108.cd7952f9.js"><link rel="prefetch" href="/assets/js/109.3856f24b.js"><link rel="prefetch" href="/assets/js/11.8f41bfe2.js"><link rel="prefetch" href="/assets/js/110.13493118.js"><link rel="prefetch" href="/assets/js/111.807e700e.js"><link rel="prefetch" href="/assets/js/112.a82398e7.js"><link rel="prefetch" href="/assets/js/113.6ed8b1ba.js"><link rel="prefetch" href="/assets/js/114.8f8fff48.js"><link rel="prefetch" href="/assets/js/115.1cb00c23.js"><link rel="prefetch" href="/assets/js/116.95af0e99.js"><link rel="prefetch" href="/assets/js/117.c768843d.js"><link rel="prefetch" href="/assets/js/118.bd1ef53b.js"><link rel="prefetch" href="/assets/js/119.49f07cf8.js"><link rel="prefetch" href="/assets/js/12.c51f03c4.js"><link rel="prefetch" href="/assets/js/120.b5ddcfc8.js"><link rel="prefetch" href="/assets/js/121.d8176536.js"><link rel="prefetch" href="/assets/js/122.90713c77.js"><link rel="prefetch" href="/assets/js/123.c038888d.js"><link rel="prefetch" href="/assets/js/124.eb865377.js"><link rel="prefetch" href="/assets/js/125.6ceab4d2.js"><link rel="prefetch" href="/assets/js/126.c7279d35.js"><link rel="prefetch" href="/assets/js/127.2a29902f.js"><link rel="prefetch" href="/assets/js/128.a600c2aa.js"><link rel="prefetch" href="/assets/js/129.c35db020.js"><link rel="prefetch" href="/assets/js/13.63e2250d.js"><link rel="prefetch" href="/assets/js/130.b7ab77a2.js"><link rel="prefetch" href="/assets/js/131.fb747ae8.js"><link rel="prefetch" href="/assets/js/132.b0200e4c.js"><link rel="prefetch" href="/assets/js/133.1c22beef.js"><link rel="prefetch" href="/assets/js/134.650fac21.js"><link rel="prefetch" href="/assets/js/135.763b7938.js"><link rel="prefetch" href="/assets/js/136.06249a04.js"><link rel="prefetch" href="/assets/js/137.35cc8273.js"><link rel="prefetch" href="/assets/js/138.2853e965.js"><link rel="prefetch" href="/assets/js/139.7bc95ea4.js"><link rel="prefetch" href="/assets/js/14.39577714.js"><link rel="prefetch" href="/assets/js/140.1097168c.js"><link rel="prefetch" href="/assets/js/141.28454a21.js"><link rel="prefetch" href="/assets/js/142.6312fa0b.js"><link rel="prefetch" href="/assets/js/143.02b0ff5b.js"><link rel="prefetch" href="/assets/js/144.e76f1f77.js"><link rel="prefetch" href="/assets/js/145.1e635d53.js"><link rel="prefetch" href="/assets/js/146.28b74940.js"><link rel="prefetch" href="/assets/js/147.ed3dc0ca.js"><link rel="prefetch" href="/assets/js/148.d26a7cb9.js"><link rel="prefetch" href="/assets/js/149.5cc93721.js"><link rel="prefetch" href="/assets/js/15.16a10138.js"><link rel="prefetch" href="/assets/js/150.c7ed3cb9.js"><link rel="prefetch" href="/assets/js/151.be2281f0.js"><link rel="prefetch" href="/assets/js/152.5726d0f3.js"><link rel="prefetch" href="/assets/js/153.13934142.js"><link rel="prefetch" href="/assets/js/154.ddc8ad09.js"><link rel="prefetch" href="/assets/js/155.a7f952be.js"><link rel="prefetch" href="/assets/js/156.6fcb8de8.js"><link rel="prefetch" href="/assets/js/157.5a566a7e.js"><link rel="prefetch" href="/assets/js/158.e0faab59.js"><link rel="prefetch" href="/assets/js/159.f636ed23.js"><link rel="prefetch" href="/assets/js/16.268b7541.js"><link rel="prefetch" href="/assets/js/160.ef34f69a.js"><link rel="prefetch" href="/assets/js/161.6514a6ea.js"><link rel="prefetch" href="/assets/js/162.afbf55f8.js"><link rel="prefetch" href="/assets/js/163.c8757d6e.js"><link rel="prefetch" href="/assets/js/164.5e18b924.js"><link rel="prefetch" href="/assets/js/165.fa42dd21.js"><link rel="prefetch" href="/assets/js/166.b647e3db.js"><link rel="prefetch" href="/assets/js/167.1a1ad5d5.js"><link rel="prefetch" href="/assets/js/168.f0762236.js"><link rel="prefetch" href="/assets/js/169.c8fc8f31.js"><link rel="prefetch" href="/assets/js/17.bc320121.js"><link rel="prefetch" href="/assets/js/170.c5249deb.js"><link rel="prefetch" href="/assets/js/171.b4a41c28.js"><link rel="prefetch" href="/assets/js/172.e9da41cb.js"><link rel="prefetch" href="/assets/js/173.8015599f.js"><link rel="prefetch" href="/assets/js/174.2b29097a.js"><link rel="prefetch" href="/assets/js/175.30d9ce8d.js"><link rel="prefetch" href="/assets/js/176.e3ca349d.js"><link rel="prefetch" href="/assets/js/177.3fe19222.js"><link rel="prefetch" href="/assets/js/178.8f2c8f91.js"><link rel="prefetch" href="/assets/js/179.113c00ce.js"><link rel="prefetch" href="/assets/js/18.f25a177b.js"><link rel="prefetch" href="/assets/js/180.39bd3054.js"><link rel="prefetch" href="/assets/js/181.fa5bd059.js"><link rel="prefetch" href="/assets/js/182.4e2f76ed.js"><link rel="prefetch" href="/assets/js/183.2b7eb6aa.js"><link rel="prefetch" href="/assets/js/184.ff3902c6.js"><link rel="prefetch" href="/assets/js/185.afaaabb4.js"><link rel="prefetch" href="/assets/js/186.86aac60a.js"><link rel="prefetch" href="/assets/js/187.e0ffb442.js"><link rel="prefetch" href="/assets/js/188.d9797738.js"><link rel="prefetch" href="/assets/js/189.596fef09.js"><link rel="prefetch" href="/assets/js/19.69a9cb43.js"><link rel="prefetch" href="/assets/js/190.4e1a7df1.js"><link rel="prefetch" href="/assets/js/191.0f3355f1.js"><link rel="prefetch" href="/assets/js/192.e6fe226a.js"><link rel="prefetch" href="/assets/js/193.26bc9d48.js"><link rel="prefetch" href="/assets/js/194.8f05fd3c.js"><link rel="prefetch" href="/assets/js/195.c4b6d63c.js"><link rel="prefetch" href="/assets/js/196.9b841580.js"><link rel="prefetch" href="/assets/js/197.c1e44ff8.js"><link rel="prefetch" href="/assets/js/198.7c02b561.js"><link rel="prefetch" href="/assets/js/199.af24cee2.js"><link rel="prefetch" href="/assets/js/20.02a969ac.js"><link rel="prefetch" href="/assets/js/200.180070fc.js"><link rel="prefetch" href="/assets/js/201.2b78ecd6.js"><link rel="prefetch" href="/assets/js/202.0823172a.js"><link rel="prefetch" href="/assets/js/203.0a98414a.js"><link rel="prefetch" href="/assets/js/204.74210146.js"><link rel="prefetch" href="/assets/js/205.488d5acd.js"><link rel="prefetch" href="/assets/js/206.ee6694cc.js"><link rel="prefetch" href="/assets/js/207.d1172b65.js"><link rel="prefetch" href="/assets/js/208.a38eda4d.js"><link rel="prefetch" href="/assets/js/209.3da224f0.js"><link rel="prefetch" href="/assets/js/21.de545bd9.js"><link rel="prefetch" href="/assets/js/210.dc578875.js"><link rel="prefetch" href="/assets/js/211.794e8649.js"><link rel="prefetch" href="/assets/js/212.c7623571.js"><link rel="prefetch" href="/assets/js/213.abe5c28e.js"><link rel="prefetch" href="/assets/js/214.80c56ed0.js"><link rel="prefetch" href="/assets/js/215.080f4eee.js"><link rel="prefetch" href="/assets/js/216.5e8df034.js"><link rel="prefetch" href="/assets/js/217.fe4b3ea0.js"><link rel="prefetch" href="/assets/js/218.378f5e62.js"><link rel="prefetch" href="/assets/js/219.62059f88.js"><link rel="prefetch" href="/assets/js/22.b1e6b735.js"><link rel="prefetch" href="/assets/js/220.4cdd37c8.js"><link rel="prefetch" href="/assets/js/221.175cd4c8.js"><link rel="prefetch" href="/assets/js/222.46adbe26.js"><link rel="prefetch" href="/assets/js/223.b8e6a3df.js"><link rel="prefetch" href="/assets/js/224.66a8d96e.js"><link rel="prefetch" href="/assets/js/225.0d0a4f01.js"><link rel="prefetch" href="/assets/js/226.33b6e292.js"><link rel="prefetch" href="/assets/js/227.c484b1c0.js"><link rel="prefetch" href="/assets/js/228.532acc30.js"><link rel="prefetch" href="/assets/js/229.6b4f5986.js"><link rel="prefetch" href="/assets/js/23.69dc8d94.js"><link rel="prefetch" href="/assets/js/230.98636eb4.js"><link rel="prefetch" href="/assets/js/231.de472d24.js"><link rel="prefetch" href="/assets/js/232.c64e1a92.js"><link rel="prefetch" href="/assets/js/233.2902c8cf.js"><link rel="prefetch" href="/assets/js/234.40075c94.js"><link rel="prefetch" href="/assets/js/236.f8c69989.js"><link rel="prefetch" href="/assets/js/237.c3e47ef9.js"><link rel="prefetch" href="/assets/js/238.5cb18cec.js"><link rel="prefetch" href="/assets/js/239.c7f238f8.js"><link rel="prefetch" href="/assets/js/24.8cc27d75.js"><link rel="prefetch" href="/assets/js/240.7159ed1c.js"><link rel="prefetch" href="/assets/js/241.8fbd7a88.js"><link rel="prefetch" href="/assets/js/242.d5286d38.js"><link rel="prefetch" href="/assets/js/243.6f1b26d0.js"><link rel="prefetch" href="/assets/js/244.b1db3449.js"><link rel="prefetch" href="/assets/js/245.9103aa2c.js"><link rel="prefetch" href="/assets/js/246.562532ff.js"><link rel="prefetch" href="/assets/js/247.8d35730e.js"><link rel="prefetch" href="/assets/js/248.c2d48cb6.js"><link rel="prefetch" href="/assets/js/249.5a42abd5.js"><link rel="prefetch" href="/assets/js/25.e462d438.js"><link rel="prefetch" href="/assets/js/250.35b9ebaa.js"><link rel="prefetch" href="/assets/js/251.bfce4f71.js"><link rel="prefetch" href="/assets/js/252.b7fc8f7d.js"><link rel="prefetch" href="/assets/js/253.d6479f72.js"><link rel="prefetch" href="/assets/js/254.11668984.js"><link rel="prefetch" href="/assets/js/255.ad7057bb.js"><link rel="prefetch" href="/assets/js/256.615a5f52.js"><link rel="prefetch" href="/assets/js/257.76386264.js"><link rel="prefetch" href="/assets/js/258.b6a33029.js"><link rel="prefetch" href="/assets/js/259.5a1fcd52.js"><link rel="prefetch" href="/assets/js/26.272c4775.js"><link rel="prefetch" href="/assets/js/260.81321c51.js"><link rel="prefetch" href="/assets/js/261.2618a4bc.js"><link rel="prefetch" href="/assets/js/262.9c78b07d.js"><link rel="prefetch" href="/assets/js/263.c184d445.js"><link rel="prefetch" href="/assets/js/264.6b95a5a3.js"><link rel="prefetch" href="/assets/js/265.ba1444e8.js"><link rel="prefetch" href="/assets/js/266.1b3b8c61.js"><link rel="prefetch" href="/assets/js/267.e1f8e377.js"><link rel="prefetch" href="/assets/js/268.977baaf9.js"><link rel="prefetch" href="/assets/js/269.9deeb735.js"><link rel="prefetch" href="/assets/js/27.27165313.js"><link rel="prefetch" href="/assets/js/270.21a944f9.js"><link rel="prefetch" href="/assets/js/271.82bcab4c.js"><link rel="prefetch" href="/assets/js/272.74ce6610.js"><link rel="prefetch" href="/assets/js/273.43ecef63.js"><link rel="prefetch" href="/assets/js/274.0f9e2912.js"><link rel="prefetch" href="/assets/js/275.c779aae8.js"><link rel="prefetch" href="/assets/js/276.d76c31d5.js"><link rel="prefetch" href="/assets/js/277.101bd0a9.js"><link rel="prefetch" href="/assets/js/278.25226ab5.js"><link rel="prefetch" href="/assets/js/279.ce16889c.js"><link rel="prefetch" href="/assets/js/28.2cb54f95.js"><link rel="prefetch" href="/assets/js/280.2719aabc.js"><link rel="prefetch" href="/assets/js/281.a975f322.js"><link rel="prefetch" href="/assets/js/29.bf0be342.js"><link rel="prefetch" href="/assets/js/3.e3770c3e.js"><link rel="prefetch" href="/assets/js/30.0b152030.js"><link rel="prefetch" href="/assets/js/31.7083766f.js"><link rel="prefetch" href="/assets/js/32.cf7012ae.js"><link rel="prefetch" href="/assets/js/33.f1551eac.js"><link rel="prefetch" href="/assets/js/34.a7224f5b.js"><link rel="prefetch" href="/assets/js/35.bfc02a3c.js"><link rel="prefetch" href="/assets/js/36.27642112.js"><link rel="prefetch" href="/assets/js/37.4c32574e.js"><link rel="prefetch" href="/assets/js/38.169347cb.js"><link rel="prefetch" href="/assets/js/39.bf6f30c4.js"><link rel="prefetch" href="/assets/js/4.07df64b9.js"><link rel="prefetch" href="/assets/js/40.f5595267.js"><link rel="prefetch" href="/assets/js/41.a10a77e6.js"><link rel="prefetch" href="/assets/js/42.e0566ba1.js"><link rel="prefetch" href="/assets/js/43.6cdbe759.js"><link rel="prefetch" href="/assets/js/44.7f448001.js"><link rel="prefetch" href="/assets/js/45.bac543b3.js"><link rel="prefetch" href="/assets/js/46.1b805f69.js"><link rel="prefetch" href="/assets/js/47.ab11b01d.js"><link rel="prefetch" href="/assets/js/48.66917717.js"><link rel="prefetch" href="/assets/js/49.b37b48f9.js"><link rel="prefetch" href="/assets/js/5.315d7655.js"><link rel="prefetch" href="/assets/js/50.a24e370f.js"><link rel="prefetch" href="/assets/js/51.ef06b224.js"><link rel="prefetch" href="/assets/js/52.f7d4093b.js"><link rel="prefetch" href="/assets/js/53.cba85543.js"><link rel="prefetch" href="/assets/js/54.82e55703.js"><link rel="prefetch" href="/assets/js/55.6eb0914a.js"><link rel="prefetch" href="/assets/js/56.8a3d8476.js"><link rel="prefetch" href="/assets/js/57.6ba0e7ad.js"><link rel="prefetch" href="/assets/js/58.83442123.js"><link rel="prefetch" href="/assets/js/59.cfed0170.js"><link rel="prefetch" href="/assets/js/6.5fb7fa31.js"><link rel="prefetch" href="/assets/js/60.2a31246e.js"><link rel="prefetch" href="/assets/js/61.d8c91c2a.js"><link rel="prefetch" href="/assets/js/62.b2fa8a2d.js"><link rel="prefetch" href="/assets/js/63.6692f87c.js"><link rel="prefetch" href="/assets/js/64.07228ecd.js"><link rel="prefetch" href="/assets/js/65.f31ddbd3.js"><link rel="prefetch" href="/assets/js/66.8473fbb6.js"><link rel="prefetch" href="/assets/js/67.325c4e8a.js"><link rel="prefetch" href="/assets/js/68.e9df21fa.js"><link rel="prefetch" href="/assets/js/69.fdf6dc25.js"><link rel="prefetch" href="/assets/js/7.d8f2050a.js"><link rel="prefetch" href="/assets/js/70.156b7381.js"><link rel="prefetch" href="/assets/js/71.50a9d308.js"><link rel="prefetch" href="/assets/js/72.5bea38a2.js"><link rel="prefetch" href="/assets/js/73.bc8395e3.js"><link rel="prefetch" href="/assets/js/74.ef5db219.js"><link rel="prefetch" href="/assets/js/75.4a44590a.js"><link rel="prefetch" href="/assets/js/76.ca88e946.js"><link rel="prefetch" href="/assets/js/77.2f4ae552.js"><link rel="prefetch" href="/assets/js/78.c3f26731.js"><link rel="prefetch" href="/assets/js/79.98ecd6b8.js"><link rel="prefetch" href="/assets/js/80.a67d9a9d.js"><link rel="prefetch" href="/assets/js/81.b1fc025a.js"><link rel="prefetch" href="/assets/js/82.5c1ffd4b.js"><link rel="prefetch" href="/assets/js/83.70c587a2.js"><link rel="prefetch" href="/assets/js/84.7cc3e29d.js"><link rel="prefetch" href="/assets/js/85.3c1ae599.js"><link rel="prefetch" href="/assets/js/86.144e9fa1.js"><link rel="prefetch" href="/assets/js/87.5a1983c5.js"><link rel="prefetch" href="/assets/js/88.83a937b8.js"><link rel="prefetch" href="/assets/js/89.b415a3b3.js"><link rel="prefetch" href="/assets/js/90.17823ffc.js"><link rel="prefetch" href="/assets/js/91.89ac2489.js"><link rel="prefetch" href="/assets/js/92.4239ec94.js"><link rel="prefetch" href="/assets/js/93.0f13453b.js"><link rel="prefetch" href="/assets/js/94.d4062002.js"><link rel="prefetch" href="/assets/js/95.eeee50d6.js"><link rel="prefetch" href="/assets/js/96.b09ce030.js"><link rel="prefetch" href="/assets/js/97.4f4a01e0.js"><link rel="prefetch" href="/assets/js/98.04a73b57.js"><link rel="prefetch" href="/assets/js/99.8908422c.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.e3b34f7a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5149da19.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Landscape</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link router-link-active">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/english/" class="nav-link">
+  English
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link router-link-active">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/english/" class="nav-link">
+  English
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>let命令与const命令</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/tech/es6/var/let.html#let命令" class="sidebar-link">let命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/let.html#_1-基本用法" class="sidebar-link">1. 基本用法</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/let.html#_2-不存在遍历提升与暂时性死区" class="sidebar-link">2. 不存在遍历提升与暂时性死区</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/let.html#_3-不允许重复声明" class="sidebar-link">3. 不允许重复声明</a></li></ul></li><li><a href="/docs/tech/es6/var/let.html#const命令" class="sidebar-link">const命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/let.html#_1-基本使用法" class="sidebar-link">1. 基本使用法</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/let.html#_2-与let一样的用法" class="sidebar-link">2. 与let一样的用法</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/var/let.html#_3-本质" class="sidebar-link">3. 本质</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="let命令与const命令"><a href="#let命令与const命令" class="header-anchor">#</a> let命令与const命令</h1> <h2 id="let命令"><a href="#let命令" class="header-anchor">#</a> let命令</h2> <h3 id="_1-基本用法"><a href="#_1-基本用法" class="header-anchor">#</a> 1. 基本用法</h3> <p>ES6 新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。</p> <div class="language-let line-numbers-mode"><pre class="language-text"><code>{
+  let a = 10;
+  var b = 1;
+}
+
+a // ReferenceError: a is not defined.
+b // 1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>for循环的计数器，就很合适使用let命令。</p> <div class="language-let line-numbers-mode"><pre class="language-text"><code>for (let i = 0; i &lt; 10; i++) {
+  // ...
+}
+
+console.log(i);
+// ReferenceError: i is not defined
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>下面的代码如果使用var，最后输出的是10。</p> <div class="language-let line-numbers-mode"><pre class="language-text"><code>var a = [];
+for (var i = 0; i &lt; 10; i++) {
+  a[i] = function () {
+    console.log(i);
+  };
+}
+a[6](); // 10
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>如果使用let，声明的变量仅在块级作用域内有效，最后输出的是 6。</p> <div class="language-let line-numbers-mode"><pre class="language-text"><code>var a = [];
+for (let i = 0; i &lt; 10; i++) {
+  a[i] = function () {
+    console.log(i);
+  };
+}
+a[6](); // 6
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>另外，for循环还有一个特别之处，就是设置循环变量的那部分是一个父作用域，而循环体内部是一个单独的子作用域。</p> <div class="language-let line-numbers-mode"><pre class="language-text"><code>for (let i = 0; i &lt; 3; i++) {
+  let i = 'abc';
+  console.log(i);
+}
+// abc
+// abc
+// abc
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="_2-不存在遍历提升与暂时性死区"><a href="#_2-不存在遍历提升与暂时性死区" class="header-anchor">#</a> 2. 不存在遍历提升与暂时性死区</h3> <p>var命令会发生“变量提升”现象，即变量可以在声明之前使用，值为undefined。</p> <div class="language-let line-numbers-mode"><pre class="language-text"><code>// var 的情况
+console.log(foo); // 输出undefined
+var foo = 2;
+
+// let 的情况
+console.log(bar); // 报错ReferenceError
+let bar = 2;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>只要块级作用域内存在let命令，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响。</p> <div class="language-let line-numbers-mode"><pre class="language-text"><code>var tmp = 123;
+
+if (true) {
+  tmp = 'abc'; // ReferenceError
+  let tmp;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>总之，在代码块内，使用let命令声明变量之前，该变量都是不可用的。这在语法上，称为“暂时性死区”（temporal dead zone，简称 TDZ）。</p> <div class="language-let line-numbers-mode"><pre class="language-text"><code>if (true) {
+  // TDZ开始
+  tmp = 'abc'; // ReferenceError
+  console.log(tmp); // ReferenceError
+
+  let tmp; // TDZ结束
+  console.log(tmp); // undefined
+
+  tmp = 123;
+  console.log(tmp); // 123
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>有些“死区”比较隐蔽，不太容易发现。</p> <div class="language-let line-numbers-mode"><pre class="language-text"><code>function bar(x = y, y = 2) {
+  return [x, y];
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>另外，下面的代码也会报错，与var的行为不同。</p> <div class="language-let line-numbers-mode"><pre class="language-text"><code>// 不报错
+var x = x;
+
+// 报错
+let x = x;
+// ReferenceError: x is not defined
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="_3-不允许重复声明"><a href="#_3-不允许重复声明" class="header-anchor">#</a> 3. 不允许重复声明</h3> <p>let不允许在相同作用域内，重复声明同一个变量。</p> <div class="language-let line-numbers-mode"><pre class="language-text"><code>// 报错
+function func() {
+  let a = 10;
+  var a = 1;
+}
+
+// 报错
+function func() {
+  let a = 10;
+  let a = 1;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>因此，不能在函数内部重新声明参数。</p> <div class="language-let line-numbers-mode"><pre class="language-text"><code>function func(arg) {
+  let arg;
+}
+func() // 报错
+
+function func(arg) {
+  {
+    let arg;
+  }
+}
+func() // 不报错
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h2 id="const命令"><a href="#const命令" class="header-anchor">#</a> const命令</h2> <h3 id="_1-基本使用法"><a href="#_1-基本使用法" class="header-anchor">#</a> 1. 基本使用法</h3> <p>const声明一个只读的常量。一旦声明，常量的值就不能改变。</p> <div class="language-const line-numbers-mode"><pre class="language-text"><code>const PI = 3.1415;
+PI // 3.1415
+
+PI = 3;
+// TypeError: Assignment to constant variable.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>const声明的变量不得改变值，这意味着，const一旦声明变量，就必须立即初始化，不能留到以后赋值。</p> <div class="language-const line-numbers-mode"><pre class="language-text"><code>const foo;
+// SyntaxError: Missing initializer in const declaration
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_2-与let一样的用法"><a href="#_2-与let一样的用法" class="header-anchor">#</a> 2. 与let一样的用法</h3> <p>const的作用域与let命令相同：只在声明所在的块级作用域内有效。</p> <div class="language-const line-numbers-mode"><pre class="language-text"><code>if (true) {
+  const MAX = 5;
+}
+
+MAX // Uncaught ReferenceError: MAX is not defined
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>const命令声明的常量也是不提升，同样存在暂时性死区，只能在声明的位置后面使用。</p> <div class="language-const line-numbers-mode"><pre class="language-text"><code>if (true) {
+  console.log(MAX); // ReferenceError
+  const MAX = 5;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>const声明的常量，也与let一样不可重复声明。</p> <div class="language-const line-numbers-mode"><pre class="language-text"><code>var message = &quot;Hello!&quot;;
+let age = 25;
+
+// 以下两行都会报错
+const message = &quot;Goodbye!&quot;;
+const age = 30;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="_3-本质"><a href="#_3-本质" class="header-anchor">#</a> 3. 本质</h3> <p>const实际上保证的，并不是变量的值不得改动，而是变量指向的那个内存地址所保存的数据不得改动。对于简单类型的数据（数值、字符串、布尔值），值就保存在变量指向的那个内存地址，因此等同于常量。但对于复合类型的数据（主要是对象和数组），变量指向的内存地址，保存的只是一个指向实际数据的指针，const只能保证这个指针是固定的（即总是指向另一个固定的地址），至于它指向的数据结构是不是可变的，就完全不能控制了。</p> <div class="language-const line-numbers-mode"><pre class="language-text"><code>const foo = {};
+
+// 为 foo 添加一个属性，可以成功
+foo.prop = 123;
+foo.prop // 123
+
+// 将 foo 指向另一个对象，就会报错
+foo = {}; // TypeError: &quot;foo&quot; is read-only
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>下面是另一个例子。</p> <div class="language-const line-numbers-mode"><pre class="language-text"><code>const a = [];
+a.push('Hello'); // 可执行
+a.length = 0;    // 可执行
+a = ['Dave'];    // 报错
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>如果真的想将对象冻结，应该使用Object.freeze方法。</p> <div class="language-const line-numbers-mode"><pre class="language-text"><code>const foo = Object.freeze({});
+
+// 常规模式时，下面一行不起作用；
+// 严格模式时，该行会报错
+foo.prop = 123;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>除了将对象本身冻结，对象的属性也应该冻结。下面是一个将对象彻底冻结的函数。</p> <div class="language-const line-numbers-mode"><pre class="language-text"><code>var constantize = (obj) =&gt; {
+  Object.freeze(obj);
+  Object.keys(obj).forEach( (key, i) =&gt; {
+    if ( typeof obj[key] === 'object' ) {
+      constantize( obj[key] );
+    }
+  });
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.d23b6637.js" defer></script><script src="/assets/js/2.9c41e448.js" defer></script><script src="/assets/js/1.2c8cdafe.js" defer></script><script src="/assets/js/235.4cb6e771.js" defer></script>
+  </body>
+</html>
