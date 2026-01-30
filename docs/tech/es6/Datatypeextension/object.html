@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>对象的扩展 | Landscape</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="私人博客网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.5149da19.css" as="style"><link rel="preload" href="/assets/js/app.2826576e.js" as="script"><link rel="preload" href="/assets/js/2.9c41e448.js" as="script"><link rel="preload" href="/assets/js/1.2c8cdafe.js" as="script"><link rel="preload" href="/assets/js/213.48a9d6bc.js" as="script"><link rel="prefetch" href="/assets/js/10.9a78c136.js"><link rel="prefetch" href="/assets/js/100.0e49fc02.js"><link rel="prefetch" href="/assets/js/101.2ef8bf73.js"><link rel="prefetch" href="/assets/js/102.8e49613c.js"><link rel="prefetch" href="/assets/js/103.af56515e.js"><link rel="prefetch" href="/assets/js/104.1460815b.js"><link rel="prefetch" href="/assets/js/105.e44851a5.js"><link rel="prefetch" href="/assets/js/106.fe5ed25d.js"><link rel="prefetch" href="/assets/js/107.a95ebaee.js"><link rel="prefetch" href="/assets/js/108.a1994c22.js"><link rel="prefetch" href="/assets/js/109.68a5d528.js"><link rel="prefetch" href="/assets/js/11.8f41bfe2.js"><link rel="prefetch" href="/assets/js/110.16ebede2.js"><link rel="prefetch" href="/assets/js/111.9801ca03.js"><link rel="prefetch" href="/assets/js/112.ce77dfd6.js"><link rel="prefetch" href="/assets/js/113.7597a04c.js"><link rel="prefetch" href="/assets/js/114.26cf7708.js"><link rel="prefetch" href="/assets/js/115.e2fb0725.js"><link rel="prefetch" href="/assets/js/116.9f3695ab.js"><link rel="prefetch" href="/assets/js/117.af269c5e.js"><link rel="prefetch" href="/assets/js/118.27967538.js"><link rel="prefetch" href="/assets/js/119.2c5a9879.js"><link rel="prefetch" href="/assets/js/12.c51f03c4.js"><link rel="prefetch" href="/assets/js/120.7cfd9762.js"><link rel="prefetch" href="/assets/js/121.5dd148ae.js"><link rel="prefetch" href="/assets/js/122.bce5a239.js"><link rel="prefetch" href="/assets/js/123.7710fecc.js"><link rel="prefetch" href="/assets/js/124.c12f0c0e.js"><link rel="prefetch" href="/assets/js/125.7109fba0.js"><link rel="prefetch" href="/assets/js/126.7d50f5a0.js"><link rel="prefetch" href="/assets/js/127.fe4198ca.js"><link rel="prefetch" href="/assets/js/128.de9fd960.js"><link rel="prefetch" href="/assets/js/129.71369692.js"><link rel="prefetch" href="/assets/js/13.63e2250d.js"><link rel="prefetch" href="/assets/js/130.dc8977a0.js"><link rel="prefetch" href="/assets/js/131.3d3a243b.js"><link rel="prefetch" href="/assets/js/132.45da0ca2.js"><link rel="prefetch" href="/assets/js/133.4dd31779.js"><link rel="prefetch" href="/assets/js/134.8eeb105f.js"><link rel="prefetch" href="/assets/js/135.319e61f4.js"><link rel="prefetch" href="/assets/js/136.0ea7e322.js"><link rel="prefetch" href="/assets/js/137.a36a4c27.js"><link rel="prefetch" href="/assets/js/138.dda1eacc.js"><link rel="prefetch" href="/assets/js/139.6dcb5d88.js"><link rel="prefetch" href="/assets/js/14.39577714.js"><link rel="prefetch" href="/assets/js/140.1073490d.js"><link rel="prefetch" href="/assets/js/141.a2c202a8.js"><link rel="prefetch" href="/assets/js/142.2976f931.js"><link rel="prefetch" href="/assets/js/143.e3bdd469.js"><link rel="prefetch" href="/assets/js/144.5fb7ca62.js"><link rel="prefetch" href="/assets/js/145.f5ed2e4a.js"><link rel="prefetch" href="/assets/js/146.ceaa6db7.js"><link rel="prefetch" href="/assets/js/147.073ef305.js"><link rel="prefetch" href="/assets/js/148.f8038a3e.js"><link rel="prefetch" href="/assets/js/149.922e75ad.js"><link rel="prefetch" href="/assets/js/15.16a10138.js"><link rel="prefetch" href="/assets/js/150.f07e3682.js"><link rel="prefetch" href="/assets/js/151.65365ce6.js"><link rel="prefetch" href="/assets/js/152.899243b8.js"><link rel="prefetch" href="/assets/js/153.fbde5efc.js"><link rel="prefetch" href="/assets/js/154.c5b2941e.js"><link rel="prefetch" href="/assets/js/155.c96ded06.js"><link rel="prefetch" href="/assets/js/156.9dd5f902.js"><link rel="prefetch" href="/assets/js/157.34dd8ed1.js"><link rel="prefetch" href="/assets/js/158.b326a232.js"><link rel="prefetch" href="/assets/js/159.0c8af8e5.js"><link rel="prefetch" href="/assets/js/16.268b7541.js"><link rel="prefetch" href="/assets/js/160.7dd5b96f.js"><link rel="prefetch" href="/assets/js/161.e8afc0c5.js"><link rel="prefetch" href="/assets/js/162.80bd0e1d.js"><link rel="prefetch" href="/assets/js/163.98c2255b.js"><link rel="prefetch" href="/assets/js/164.ef977417.js"><link rel="prefetch" href="/assets/js/165.81857668.js"><link rel="prefetch" href="/assets/js/166.6f75a221.js"><link rel="prefetch" href="/assets/js/167.e34bfad8.js"><link rel="prefetch" href="/assets/js/168.ce06674a.js"><link rel="prefetch" href="/assets/js/169.c64377ed.js"><link rel="prefetch" href="/assets/js/17.bc320121.js"><link rel="prefetch" href="/assets/js/170.d14bfe78.js"><link rel="prefetch" href="/assets/js/171.364243a2.js"><link rel="prefetch" href="/assets/js/172.d569a937.js"><link rel="prefetch" href="/assets/js/173.e03aa5af.js"><link rel="prefetch" href="/assets/js/174.f7a268d0.js"><link rel="prefetch" href="/assets/js/175.d7ecedae.js"><link rel="prefetch" href="/assets/js/176.a8cf7d3f.js"><link rel="prefetch" href="/assets/js/177.abb59835.js"><link rel="prefetch" href="/assets/js/178.eaefc419.js"><link rel="prefetch" href="/assets/js/179.69059653.js"><link rel="prefetch" href="/assets/js/18.f25a177b.js"><link rel="prefetch" href="/assets/js/180.8f66115c.js"><link rel="prefetch" href="/assets/js/181.c12b833d.js"><link rel="prefetch" href="/assets/js/182.cfec49db.js"><link rel="prefetch" href="/assets/js/183.21006349.js"><link rel="prefetch" href="/assets/js/184.eed55192.js"><link rel="prefetch" href="/assets/js/185.1b34187b.js"><link rel="prefetch" href="/assets/js/186.2198324a.js"><link rel="prefetch" href="/assets/js/187.39dd9e89.js"><link rel="prefetch" href="/assets/js/188.71e55bcf.js"><link rel="prefetch" href="/assets/js/189.15eaa945.js"><link rel="prefetch" href="/assets/js/19.69a9cb43.js"><link rel="prefetch" href="/assets/js/190.8615f40b.js"><link rel="prefetch" href="/assets/js/191.696cfd2a.js"><link rel="prefetch" href="/assets/js/192.ccb8a7d4.js"><link rel="prefetch" href="/assets/js/193.4f9d9453.js"><link rel="prefetch" href="/assets/js/194.0d6170f9.js"><link rel="prefetch" href="/assets/js/195.415c616d.js"><link rel="prefetch" href="/assets/js/196.e5f5228f.js"><link rel="prefetch" href="/assets/js/197.7e33c9c3.js"><link rel="prefetch" href="/assets/js/198.40026d07.js"><link rel="prefetch" href="/assets/js/199.173c4778.js"><link rel="prefetch" href="/assets/js/20.02a969ac.js"><link rel="prefetch" href="/assets/js/200.5bca89ca.js"><link rel="prefetch" href="/assets/js/201.52f98bf3.js"><link rel="prefetch" href="/assets/js/202.9a90ff27.js"><link rel="prefetch" href="/assets/js/203.362927aa.js"><link rel="prefetch" href="/assets/js/204.9741ac80.js"><link rel="prefetch" href="/assets/js/205.4c1c6b2a.js"><link rel="prefetch" href="/assets/js/206.5d31615c.js"><link rel="prefetch" href="/assets/js/207.e58b9f84.js"><link rel="prefetch" href="/assets/js/208.43b53be1.js"><link rel="prefetch" href="/assets/js/209.b9bef10a.js"><link rel="prefetch" href="/assets/js/21.de545bd9.js"><link rel="prefetch" href="/assets/js/210.07cb10b8.js"><link rel="prefetch" href="/assets/js/211.bbccbad7.js"><link rel="prefetch" href="/assets/js/212.40aee5f1.js"><link rel="prefetch" href="/assets/js/214.91ae8767.js"><link rel="prefetch" href="/assets/js/215.0f915104.js"><link rel="prefetch" href="/assets/js/216.4ced7917.js"><link rel="prefetch" href="/assets/js/217.c44832e9.js"><link rel="prefetch" href="/assets/js/218.82e96fcc.js"><link rel="prefetch" href="/assets/js/219.ff087285.js"><link rel="prefetch" href="/assets/js/22.b1e6b735.js"><link rel="prefetch" href="/assets/js/220.2240eb80.js"><link rel="prefetch" href="/assets/js/221.c6fd36eb.js"><link rel="prefetch" href="/assets/js/222.17ff9609.js"><link rel="prefetch" href="/assets/js/223.8ea59d32.js"><link rel="prefetch" href="/assets/js/224.edb2be53.js"><link rel="prefetch" href="/assets/js/225.8cc81aa6.js"><link rel="prefetch" href="/assets/js/226.44b62ed2.js"><link rel="prefetch" href="/assets/js/227.3a93fc65.js"><link rel="prefetch" href="/assets/js/228.39c27b72.js"><link rel="prefetch" href="/assets/js/229.c6e9c1dc.js"><link rel="prefetch" href="/assets/js/23.cbeda6d1.js"><link rel="prefetch" href="/assets/js/230.f8578f30.js"><link rel="prefetch" href="/assets/js/231.f9f87c61.js"><link rel="prefetch" href="/assets/js/232.d116fc47.js"><link rel="prefetch" href="/assets/js/233.e85040ce.js"><link rel="prefetch" href="/assets/js/234.6f22ee2a.js"><link rel="prefetch" href="/assets/js/235.db478cc2.js"><link rel="prefetch" href="/assets/js/236.004fcf4a.js"><link rel="prefetch" href="/assets/js/237.bec203ef.js"><link rel="prefetch" href="/assets/js/238.f0f33cff.js"><link rel="prefetch" href="/assets/js/239.99e2af82.js"><link rel="prefetch" href="/assets/js/24.9bcb3169.js"><link rel="prefetch" href="/assets/js/240.81e079fe.js"><link rel="prefetch" href="/assets/js/241.be233728.js"><link rel="prefetch" href="/assets/js/242.2aa225e9.js"><link rel="prefetch" href="/assets/js/243.6e2c9e44.js"><link rel="prefetch" href="/assets/js/244.3c86a3d3.js"><link rel="prefetch" href="/assets/js/245.6abc862e.js"><link rel="prefetch" href="/assets/js/246.27f34043.js"><link rel="prefetch" href="/assets/js/247.4cc3763b.js"><link rel="prefetch" href="/assets/js/248.3c574687.js"><link rel="prefetch" href="/assets/js/249.bda6f6f1.js"><link rel="prefetch" href="/assets/js/25.e462d438.js"><link rel="prefetch" href="/assets/js/250.05f0ad51.js"><link rel="prefetch" href="/assets/js/251.1e50cf19.js"><link rel="prefetch" href="/assets/js/252.cc64e422.js"><link rel="prefetch" href="/assets/js/253.fc2034a8.js"><link rel="prefetch" href="/assets/js/254.93969eb6.js"><link rel="prefetch" href="/assets/js/255.2f100407.js"><link rel="prefetch" href="/assets/js/256.82ebedbb.js"><link rel="prefetch" href="/assets/js/257.3f6f3368.js"><link rel="prefetch" href="/assets/js/258.59641de6.js"><link rel="prefetch" href="/assets/js/259.abf8ebe6.js"><link rel="prefetch" href="/assets/js/26.64b78ea8.js"><link rel="prefetch" href="/assets/js/260.daeab7cd.js"><link rel="prefetch" href="/assets/js/261.fe0bb0e3.js"><link rel="prefetch" href="/assets/js/262.f6a7c120.js"><link rel="prefetch" href="/assets/js/263.4daec71b.js"><link rel="prefetch" href="/assets/js/264.debd0fba.js"><link rel="prefetch" href="/assets/js/265.0e890557.js"><link rel="prefetch" href="/assets/js/266.db64ef16.js"><link rel="prefetch" href="/assets/js/267.a93d11cd.js"><link rel="prefetch" href="/assets/js/268.d5106946.js"><link rel="prefetch" href="/assets/js/269.ad26e90d.js"><link rel="prefetch" href="/assets/js/27.ed37a2eb.js"><link rel="prefetch" href="/assets/js/270.fc41160e.js"><link rel="prefetch" href="/assets/js/271.0e58d768.js"><link rel="prefetch" href="/assets/js/272.f99c88c9.js"><link rel="prefetch" href="/assets/js/273.d6052730.js"><link rel="prefetch" href="/assets/js/274.66261708.js"><link rel="prefetch" href="/assets/js/275.0058d0d9.js"><link rel="prefetch" href="/assets/js/276.82dc29ad.js"><link rel="prefetch" href="/assets/js/277.36f375fe.js"><link rel="prefetch" href="/assets/js/278.bbd479c2.js"><link rel="prefetch" href="/assets/js/279.4f399031.js"><link rel="prefetch" href="/assets/js/28.2ffd0202.js"><link rel="prefetch" href="/assets/js/280.098e949c.js"><link rel="prefetch" href="/assets/js/281.e8f454bf.js"><link rel="prefetch" href="/assets/js/282.adcf3153.js"><link rel="prefetch" href="/assets/js/283.094c64d6.js"><link rel="prefetch" href="/assets/js/284.86db0b90.js"><link rel="prefetch" href="/assets/js/285.6fc1c24d.js"><link rel="prefetch" href="/assets/js/286.fc7f64a4.js"><link rel="prefetch" href="/assets/js/287.07c79b49.js"><link rel="prefetch" href="/assets/js/29.260656cb.js"><link rel="prefetch" href="/assets/js/3.e3770c3e.js"><link rel="prefetch" href="/assets/js/30.056fcad8.js"><link rel="prefetch" href="/assets/js/31.a7e1f2da.js"><link rel="prefetch" href="/assets/js/32.cf7012ae.js"><link rel="prefetch" href="/assets/js/33.0869b75e.js"><link rel="prefetch" href="/assets/js/34.225ed5cd.js"><link rel="prefetch" href="/assets/js/35.d64acde6.js"><link rel="prefetch" href="/assets/js/36.55950f21.js"><link rel="prefetch" href="/assets/js/37.51d3ab92.js"><link rel="prefetch" href="/assets/js/38.a8b1615a.js"><link rel="prefetch" href="/assets/js/39.19940575.js"><link rel="prefetch" href="/assets/js/4.07df64b9.js"><link rel="prefetch" href="/assets/js/40.b69bb74c.js"><link rel="prefetch" href="/assets/js/41.81a14989.js"><link rel="prefetch" href="/assets/js/42.26a2fc30.js"><link rel="prefetch" href="/assets/js/43.21014c23.js"><link rel="prefetch" href="/assets/js/44.24a62610.js"><link rel="prefetch" href="/assets/js/45.a8632a23.js"><link rel="prefetch" href="/assets/js/46.e84ed7c7.js"><link rel="prefetch" href="/assets/js/47.4797d05d.js"><link rel="prefetch" href="/assets/js/48.98c774ec.js"><link rel="prefetch" href="/assets/js/49.f5d38f0d.js"><link rel="prefetch" href="/assets/js/5.315d7655.js"><link rel="prefetch" href="/assets/js/50.957e2a48.js"><link rel="prefetch" href="/assets/js/51.7f98ac53.js"><link rel="prefetch" href="/assets/js/52.238cd9b5.js"><link rel="prefetch" href="/assets/js/53.a9020e29.js"><link rel="prefetch" href="/assets/js/54.13205b95.js"><link rel="prefetch" href="/assets/js/55.9deb921f.js"><link rel="prefetch" href="/assets/js/56.3d6d9ac1.js"><link rel="prefetch" href="/assets/js/57.2addc3ec.js"><link rel="prefetch" href="/assets/js/58.da160219.js"><link rel="prefetch" href="/assets/js/59.479b572d.js"><link rel="prefetch" href="/assets/js/6.5fb7fa31.js"><link rel="prefetch" href="/assets/js/60.cadf56bc.js"><link rel="prefetch" href="/assets/js/61.9afcea76.js"><link rel="prefetch" href="/assets/js/62.e719abc2.js"><link rel="prefetch" href="/assets/js/63.bef53c08.js"><link rel="prefetch" href="/assets/js/64.1e3e8cad.js"><link rel="prefetch" href="/assets/js/65.5e801022.js"><link rel="prefetch" href="/assets/js/66.5b6a49d8.js"><link rel="prefetch" href="/assets/js/67.9bbbcc57.js"><link rel="prefetch" href="/assets/js/68.8d43dac2.js"><link rel="prefetch" href="/assets/js/69.0838ff61.js"><link rel="prefetch" href="/assets/js/7.d8f2050a.js"><link rel="prefetch" href="/assets/js/70.660da076.js"><link rel="prefetch" href="/assets/js/71.f996cfb8.js"><link rel="prefetch" href="/assets/js/72.16f97981.js"><link rel="prefetch" href="/assets/js/73.84811680.js"><link rel="prefetch" href="/assets/js/74.bfb4dc05.js"><link rel="prefetch" href="/assets/js/75.0d2ad03a.js"><link rel="prefetch" href="/assets/js/76.fc8f9bef.js"><link rel="prefetch" href="/assets/js/77.92742ed4.js"><link rel="prefetch" href="/assets/js/78.1f032488.js"><link rel="prefetch" href="/assets/js/79.b407413e.js"><link rel="prefetch" href="/assets/js/80.70759906.js"><link rel="prefetch" href="/assets/js/81.98046152.js"><link rel="prefetch" href="/assets/js/82.a597e050.js"><link rel="prefetch" href="/assets/js/83.472bd151.js"><link rel="prefetch" href="/assets/js/84.81dd68de.js"><link rel="prefetch" href="/assets/js/85.2ec7175a.js"><link rel="prefetch" href="/assets/js/86.907ca21e.js"><link rel="prefetch" href="/assets/js/87.a9ff1031.js"><link rel="prefetch" href="/assets/js/88.5c06c5af.js"><link rel="prefetch" href="/assets/js/89.9062f5b2.js"><link rel="prefetch" href="/assets/js/90.9ba15f51.js"><link rel="prefetch" href="/assets/js/91.881cc3ce.js"><link rel="prefetch" href="/assets/js/92.d56805af.js"><link rel="prefetch" href="/assets/js/93.b8642ce1.js"><link rel="prefetch" href="/assets/js/94.132d3bf1.js"><link rel="prefetch" href="/assets/js/95.c9f5ab1a.js"><link rel="prefetch" href="/assets/js/96.09795021.js"><link rel="prefetch" href="/assets/js/97.82913b83.js"><link rel="prefetch" href="/assets/js/98.ad5fd138.js"><link rel="prefetch" href="/assets/js/99.cabc9f5f.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.e3b34f7a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5149da19.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Landscape</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link router-link-active">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/operatingsystem/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link router-link-active">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/operatingsystem/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>对象的扩展</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/tech/es6/Datatypeextension/object.html#属性的简洁表示法" class="sidebar-link">属性的简洁表示法</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/Datatypeextension/object.html#属性名表达式" class="sidebar-link">属性名表达式</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/Datatypeextension/object.html#方法的name属性" class="sidebar-link">方法的name属性</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/Datatypeextension/object.html#属性的可枚举和遍历" class="sidebar-link">属性的可枚举和遍历</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es6/Datatypeextension/object.html#_1-可枚举性" class="sidebar-link">1. 可枚举性</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Datatypeextension/object.html#_2-属性的遍历" class="sidebar-link">2. 属性的遍历</a></li></ul></li><li><a href="/docs/tech/es6/Datatypeextension/object.html#super关键字" class="sidebar-link">super关键字</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/Datatypeextension/object.html#对象的扩展运算符" class="sidebar-link">对象的扩展运算符</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es6/Datatypeextension/object.html#_1-解构赋值" class="sidebar-link">1. 解构赋值</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Datatypeextension/object.html#_2-扩展运算符" class="sidebar-link">2. 扩展运算符</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="对象的扩展"><a href="#对象的扩展" class="header-anchor">#</a> 对象的扩展</h1> <h2 id="属性的简洁表示法"><a href="#属性的简洁表示法" class="header-anchor">#</a> 属性的简洁表示法</h2> <p>ES6 允许直接写入变量和函数，作为对象的属性和方法。这样的书写更加简洁。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>const foo = 'bar';
+const baz = {foo};
+baz // {foo: &quot;bar&quot;}
+
+// 等同于
+const baz = {foo: foo};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>下面是另一个例子。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>function f(x, y) {
+  return {x, y};
+}
+
+// 等同于
+
+function f(x, y) {
+  return {x: x, y: y};
+}
+
+f(1, 2) // Object {x: 1, y: 2}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>除了属性简写，方法也可以简写。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>const o = {
+  method() {
+    return &quot;Hello!&quot;;
+  }
+};
+
+// 等同于
+
+const o = {
+  method: function() {
+    return &quot;Hello!&quot;;
+  }
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>下面是一个实际的例子。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let birth = '2000/01/01';
+
+const Person = {
+
+  name: '张三',
+
+  //等同于birth: birth
+  birth,
+
+  // 等同于hello: function ()...
+  hello() { console.log('我的名字是', this.name); }
+
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>这种写法用于函数的返回值，将会非常方便。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>function getPoint() {
+  const x = 1;
+  const y = 10;
+  return {x, y};
+}
+
+getPoint()
+// {x:1, y:10}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>CommonJS 模块输出一组变量，就非常合适使用简洁写法。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let ms = {};
+
+function getItem (key) {
+  return key in ms ? ms[key] : null;
+}
+
+function setItem (key, value) {
+  ms[key] = value;
+}
+
+function clear () {
+  ms = {};
+}
+
+module.exports = { getItem, setItem, clear };
+// 等同于
+module.exports = {
+  getItem: getItem,
+  setItem: setItem,
+  clear: clear
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p>属性的赋值器（setter）和取值器（getter），事实上也是采用这种写法。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>const cart = {
+  _wheels: 4,
+
+  get wheels () {
+    return this._wheels;
+  },
+
+  set wheels (value) {
+    if (value &lt; this._wheels) {
+      throw new Error('数值太小了！');
+    }
+    this._wheels = value;
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="属性名表达式"><a href="#属性名表达式" class="header-anchor">#</a> 属性名表达式</h2> <p>JavaScript 定义对象的属性，有两种方法。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>// 方法一
+obj.foo = true;
+
+// 方法二
+obj['a' + 'bc'] = 123;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>ES6 允许字面量定义对象时，用方法二（表达式）作为对象的属性名，即把表达式放在方括号内。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let propKey = 'foo';
+
+let obj = {
+  [propKey]: true,
+  ['a' + 'bc']: 123
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>下面是另一个例子。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let lastWord = 'last word';
+
+const a = {
+  'first word': 'hello',
+  [lastWord]: 'world'
+};
+
+a['first word'] // &quot;hello&quot;
+a[lastWord] // &quot;world&quot;
+a['last word'] // &quot;world&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>表达式还可以用于定义方法名。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let obj = {
+  ['h' + 'ello']() {
+    return 'hi';
+  }
+};
+
+obj.hello() // hi
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>注意，属性名表达式与简洁表示法，不能同时使用，会报错。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>// 报错
+const foo = 'bar';
+const bar = 'abc';
+const baz = { [foo] };
+
+// 正确
+const foo = 'bar';
+const baz = { [foo]: 'abc'};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>注意，属性名表达式如果是一个对象，默认情况下会自动将对象转为字符串</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>[object Object]，这一点要特别小心。
+
+const keyA = {a: 1};
+const keyB = {b: 2};
+
+const myObject = {
+  [keyA]: 'valueA',
+  [keyB]: 'valueB'
+};
+
+myObject // Object {[object Object]: &quot;valueB&quot;}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h2 id="方法的name属性"><a href="#方法的name属性" class="header-anchor">#</a> 方法的name属性</h2> <p>函数的name属性，返回函数名。对象方法也是函数，因此也有name属性。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>const person = {
+  sayName() {
+    console.log('hello!');
+  },
+};
+
+person.sayName.name   // &quot;sayName&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>如果对象的方法使用了取值函数（getter）和存值函数（setter），则name属性不是在该方法上面，而是该方法的属性的描述对象的get和set属性上面，返回值是方法名前加上get和set。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>const obj = {
+  get foo() {},
+  set foo(x) {}
+};
+
+obj.foo.name
+// TypeError: Cannot read property 'name' of undefined
+
+const descriptor = Object.getOwnPropertyDescriptor(obj, 'foo');
+
+descriptor.get.name // &quot;get foo&quot;
+descriptor.set.name // &quot;set foo&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>有两种特殊情况：bind方法创造的函数，name属性返回bound加上原函数的名字；Function构造函数创造的函数，name属性返回anonymous。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>(new Function()).name // &quot;anonymous&quot;
+
+var doSomething = function() {
+  // ...
+};
+doSomething.bind().name // &quot;bound doSomething&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>如果对象的方法是一个 Symbol 值，那么name属性返回的是这个 Symbol 值的描述。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>const key1 = Symbol('description');
+const key2 = Symbol();
+let obj = {
+  [key1]() {},
+  [key2]() {},
+};
+obj[key1].name // &quot;[description]&quot;
+obj[key2].name // &quot;&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="属性的可枚举和遍历"><a href="#属性的可枚举和遍历" class="header-anchor">#</a> 属性的可枚举和遍历</h2> <h3 id="_1-可枚举性"><a href="#_1-可枚举性" class="header-anchor">#</a> 1. 可枚举性</h3> <p>对象的每个属性都有一个描述对象（Descriptor），用来控制该属性的行为。Object.getOwnPropertyDescriptor方法可以获取该属性的描述对象。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let obj = { foo: 123 };
+Object.getOwnPropertyDescriptor(obj, 'foo')
+//  {
+//    value: 123,
+//    writable: true,
+//    enumerable: true,
+//    configurable: true
+//  }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>描述对象的enumerable属性，称为“可枚举性”，如果该属性为false，就表示某些操作会忽略当前属性。</p> <p>目前，有四个操作会忽略enumerable为false的属性。</p> <ul><li>for...in循环：只遍历对象自身的和继承的可枚举的属性。</li> <li>Object.keys()：返回对象自身的所有可枚举的属性的键名。</li> <li>JSON.stringify()：只串行化对象自身的可枚举的属性。</li> <li>Object.assign()： 忽略enumerable为false的属性，只拷贝对象自身的可枚举的属性。</li></ul> <p>对象原型的toString方法，以及数组的length属性，就通过“可枚举性”，从而避免被for...in遍历到。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>Object.getOwnPropertyDescriptor(Object.prototype, 'toString').enumerable
+// false
+
+Object.getOwnPropertyDescriptor([], 'length').enumerable
+// false
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>另外，ES6 规定，所有 Class 的原型的方法都是不可枚举的。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>Object.getOwnPropertyDescriptor(class {foo() {}}.prototype, 'foo').enumerable
+// false
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_2-属性的遍历"><a href="#_2-属性的遍历" class="header-anchor">#</a> 2. 属性的遍历</h3> <p>ES6 一共有 5 种方法可以遍历对象的属性。</p> <p>（1）for...in</p> <p>for...in循环遍历对象自身的和继承的可枚举属性（不含 Symbol 属性）。</p> <p>（2）Object.keys(obj)</p> <p>Object.keys返回一个数组，包括对象自身的（不含继承的）所有可枚举属性（不含 Symbol 属性）的键名。</p> <p>（3）Object.getOwnPropertyNames(obj)</p> <p>Object.getOwnPropertyNames返回一个数组，包含对象自身的所有属性（不含 Symbol 属性，但是包括不可枚举属性）的键名。</p> <p>（4）Object.getOwnPropertySymbols(obj)</p> <p>Object.getOwnPropertySymbols返回一个数组，包含对象自身的所有 Symbol 属性的键名。</p> <p>（5）Reflect.ownKeys(obj)</p> <p>Reflect.ownKeys返回一个数组，包含对象自身的所有键名，不管键名是 Symbol 或字符串，也不管是否可枚举。</p> <p>以上的 5 种方法遍历对象的键名，都遵守同样的属性遍历的次序规则。</p> <ul><li>首先遍历所有数值键，按照数值升序排列。</li> <li>其次遍历所有字符串键，按照加入时间升序排列。</li> <li>最后遍历所有 Symbol 键，按照加入时间升序排列。</li></ul> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>Reflect.ownKeys({ [Symbol()]:0, b:0, 10:0, 2:0, a:0 })
+// ['2', '10', 'b', 'a', Symbol()]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>上面代码中，Reflect.ownKeys方法返回一个数组，包含了参数对象的所有属性。这个数组的属性次序是这样的，首先是数值属性2和10，其次是字符串属性b和a，最后是 Symbol 属性。</p> <h2 id="super关键字"><a href="#super关键字" class="header-anchor">#</a> super关键字</h2> <p>我们知道，this关键字总是指向函数所在的当前对象，ES6 又新增了另一个类似的关键字super，指向当前对象的原型对象。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>const proto = {
+  foo: 'hello'
+};
+
+const obj = {
+  foo: 'world',
+  find() {
+    return super.foo;
+  }
+};
+
+Object.setPrototypeOf(obj, proto);
+obj.find() // &quot;hello&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>上面代码中，对象obj.find()方法之中，通过super.foo引用了原型对象proto的foo属性。</p> <p>注意，super关键字表示原型对象时，只能用在对象的方法之中，用在其他地方都会报错。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>// 报错
+const obj = {
+  foo: super.foo
+}
+
+// 报错
+const obj = {
+  foo: () =&gt; super.foo
+}
+
+// 报错
+const obj = {
+  foo: function () {
+    return super.foo
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>JavaScript 引擎内部，super.foo等同于Object.getPrototypeOf(this).foo（属性）或Object.getPrototypeOf(this).foo.call(this)（方法）。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>const proto = {
+  x: 'hello',
+  foo() {
+    console.log(this.x);
+  },
+};
+
+const obj = {
+  x: 'world',
+  foo() {
+    super.foo();
+  }
+}
+
+Object.setPrototypeOf(obj, proto);
+
+obj.foo() // &quot;world&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h2 id="对象的扩展运算符"><a href="#对象的扩展运算符" class="header-anchor">#</a> 对象的扩展运算符</h2> <h3 id="_1-解构赋值"><a href="#_1-解构赋值" class="header-anchor">#</a> 1. 解构赋值</h3> <p>对象的解构赋值用于从一个对象取值，相当于将目标对象自身的所有可遍历的（enumerable）、但尚未被读取的属性，分配到指定的对象上面。所有的键和它们的值，都会拷贝到新对象上面。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
+x // 1
+y // 2
+z // { a: 3, b: 4 }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>由于解构赋值要求等号右边是一个对象，所以如果等号右边是undefined或null，就会报错，因为它们无法转为对象。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let { ...z } = null; // 运行时错误
+let { ...z } = undefined; // 运行时错误
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>解构赋值必须是最后一个参数，否则会报错。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let { ...x, y, z } = someObject; // 句法错误
+let { x, ...y, ...z } = someObject; // 句法错误
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>注意，解构赋值的拷贝是浅拷贝，即如果一个键的值是复合类型的值（数组、对象、函数）、那么解构赋值拷贝的是这个值的引用，而不是这个值的副本。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let obj = { a: { b: 1 } };
+let { ...x } = obj;
+obj.a.b = 2;
+x.a.b // 2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>另外，扩展运算符的解构赋值，不能复制继承自原型对象的属性。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let o1 = { a: 1 };
+let o2 = { b: 2 };
+o2.__proto__ = o1;
+let { ...o3 } = o2;
+o3 // { b: 2 }
+o3.a // undefined
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>下面是另一个例子。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>const o = Object.create({ x: 1, y: 2 });
+o.z = 3;
+
+let { x, ...newObj } = o;
+let { y, z } = newObj;
+x // 1
+y // undefined
+z // 3
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>解构赋值的一个用处，是扩展某个函数的参数，引入其他操作。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>function baseFunction({ a, b }) {
+  // ...
+}
+function wrapperFunction({ x, y, ...restConfig }) {
+  // 使用 x 和 y 参数进行操作
+  // 其余参数传给原始函数
+  return baseFunction(restConfig);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="_2-扩展运算符"><a href="#_2-扩展运算符" class="header-anchor">#</a> 2. 扩展运算符</h3> <p>对象的扩展运算符（...）用于取出参数对象的所有可遍历属性，拷贝到当前对象之中。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let z = { a: 3, b: 4 };
+let n = { ...z };
+n // { a: 3, b: 4 }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>由于数组是特殊的对象，所以对象的扩展运算符也可以用于数组。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let foo = { ...['a', 'b', 'c'] };
+foo
+// {0: &quot;a&quot;, 1: &quot;b&quot;, 2: &quot;c&quot;}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>如果扩展运算符后面是一个空对象，则没有任何效果。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>{...{}, a: 1}
+// { a: 1 }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>如果扩展运算符后面不是对象，则会自动将其转为对象。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>// 等同于 {...Object(1)}
+{...1} // {}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>下面的例子都是类似的道理。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>// 等同于 {...Object(true)}
+{...true} // {}
+
+// 等同于 {...Object(undefined)}
+{...undefined} // {}
+
+// 等同于 {...Object(null)}
+{...null} // {}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>但是，如果扩展运算符后面是字符串，它会自动转成一个类似数组的对象，因此返回的不是空对象。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>{...'hello'}
+// {0: &quot;h&quot;, 1: &quot;e&quot;, 2: &quot;l&quot;, 3: &quot;l&quot;, 4: &quot;o&quot;}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>对象的扩展运算符等同于使用Object.assign()方法。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let aClone = { ...a };
+// 等同于
+let aClone = Object.assign({}, a);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>上面的例子只是拷贝了对象实例的属性，如果想完整克隆一个对象，还拷贝对象原型的属性，可以采用下面的写法。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>// 写法一
+const clone1 = {
+  __proto__: Object.getPrototypeOf(obj),
+  ...obj
+};
+
+// 写法二
+const clone2 = Object.assign(
+  Object.create(Object.getPrototypeOf(obj)),
+  obj
+);
+
+// 写法三
+const clone3 = Object.create(
+  Object.getPrototypeOf(obj),
+  Object.getOwnPropertyDescriptors(obj)
+)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>扩展运算符可以用于合并两个对象。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let ab = { ...a, ...b };
+// 等同于
+let ab = Object.assign({}, a, b);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>如果用户自定义的属性，放在扩展运算符后面，则扩展运算符内部的同名属性会被覆盖掉。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let aWithOverrides = { ...a, x: 1, y: 2 };
+// 等同于
+let aWithOverrides = { ...a, ...{ x: 1, y: 2 } };
+// 等同于
+let x = 1, y = 2, aWithOverrides = { ...a, x, y };
+// 等同于
+let aWithOverrides = Object.assign({}, a, { x: 1, y: 2 });
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>如果把自定义属性放在扩展运算符前面，就变成了设置新对象的默认属性值。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>let aWithDefaults = { x: 1, y: 2, ...a };
+// 等同于
+let aWithDefaults = Object.assign({}, { x: 1, y: 2 }, a);
+// 等同于
+let aWithDefaults = Object.assign({ x: 1, y: 2 }, a);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>与数组的扩展运算符一样，对象的扩展运算符后面可以跟表达式。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>const obj = {
+  ...(x &gt; 1 ? {a: 1} : {}),
+  b: 2,
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>扩展运算符的参数对象之中，如果有取值函数get，这个函数是会执行的。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>// 并不会抛出错误，因为 x 属性只是被定义，但没执行
+let aWithXGetter = {
+  ...a,
+  get x() {
+    throw new Error('not throw yet');
+  }
+};
+
+// 会抛出错误，因为 x 属性被执行了
+let runtimeError = {
+  ...a,
+  ...{
+    get x() {
+      throw new Error('throw now');
+    }
+  }
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.2826576e.js" defer></script><script src="/assets/js/2.9c41e448.js" defer></script><script src="/assets/js/1.2c8cdafe.js" defer></script><script src="/assets/js/213.48a9d6bc.js" defer></script>
+  </body>
+</html>
