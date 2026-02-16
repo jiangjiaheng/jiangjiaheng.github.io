@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>XMLHttpRequest 对象 | Landscape</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="私人博客网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.5149da19.css" as="style"><link rel="preload" href="/assets/js/app.03709e87.js" as="script"><link rel="preload" href="/assets/js/2.9c41e448.js" as="script"><link rel="preload" href="/assets/js/1.2c8cdafe.js" as="script"><link rel="preload" href="/assets/js/141.4599df87.js" as="script"><link rel="prefetch" href="/assets/js/10.9a78c136.js"><link rel="prefetch" href="/assets/js/100.c9e70424.js"><link rel="prefetch" href="/assets/js/101.7d153ac9.js"><link rel="prefetch" href="/assets/js/102.85de912f.js"><link rel="prefetch" href="/assets/js/103.61b2f7e1.js"><link rel="prefetch" href="/assets/js/104.5a35b1f0.js"><link rel="prefetch" href="/assets/js/105.3b4ecaec.js"><link rel="prefetch" href="/assets/js/106.c442c55b.js"><link rel="prefetch" href="/assets/js/107.a95ebaee.js"><link rel="prefetch" href="/assets/js/108.a1994c22.js"><link rel="prefetch" href="/assets/js/109.60b54124.js"><link rel="prefetch" href="/assets/js/11.8f41bfe2.js"><link rel="prefetch" href="/assets/js/110.9f3397c8.js"><link rel="prefetch" href="/assets/js/111.9801ca03.js"><link rel="prefetch" href="/assets/js/112.ce77dfd6.js"><link rel="prefetch" href="/assets/js/113.7597a04c.js"><link rel="prefetch" href="/assets/js/114.26cf7708.js"><link rel="prefetch" href="/assets/js/115.d974a106.js"><link rel="prefetch" href="/assets/js/116.700143af.js"><link rel="prefetch" href="/assets/js/117.a66165d2.js"><link rel="prefetch" href="/assets/js/118.b31e6990.js"><link rel="prefetch" href="/assets/js/119.5cb9f809.js"><link rel="prefetch" href="/assets/js/12.c51f03c4.js"><link rel="prefetch" href="/assets/js/120.1fd76b91.js"><link rel="prefetch" href="/assets/js/121.d2492484.js"><link rel="prefetch" href="/assets/js/122.d843abd8.js"><link rel="prefetch" href="/assets/js/123.8ac8400b.js"><link rel="prefetch" href="/assets/js/124.a9949254.js"><link rel="prefetch" href="/assets/js/125.8796a7b5.js"><link rel="prefetch" href="/assets/js/126.7f1f78c2.js"><link rel="prefetch" href="/assets/js/127.9cd44447.js"><link rel="prefetch" href="/assets/js/128.b71edd96.js"><link rel="prefetch" href="/assets/js/129.bd3afe44.js"><link rel="prefetch" href="/assets/js/13.63e2250d.js"><link rel="prefetch" href="/assets/js/130.2fa9a027.js"><link rel="prefetch" href="/assets/js/131.c41b0245.js"><link rel="prefetch" href="/assets/js/132.00f91944.js"><link rel="prefetch" href="/assets/js/133.938bdbbf.js"><link rel="prefetch" href="/assets/js/134.9edb144c.js"><link rel="prefetch" href="/assets/js/135.07c0f821.js"><link rel="prefetch" href="/assets/js/136.7c89ad8e.js"><link rel="prefetch" href="/assets/js/137.1c2439fa.js"><link rel="prefetch" href="/assets/js/138.ee8a9d1e.js"><link rel="prefetch" href="/assets/js/139.c25fa4da.js"><link rel="prefetch" href="/assets/js/14.39577714.js"><link rel="prefetch" href="/assets/js/140.73aed9e1.js"><link rel="prefetch" href="/assets/js/142.0539f993.js"><link rel="prefetch" href="/assets/js/143.2393d855.js"><link rel="prefetch" href="/assets/js/144.4872f976.js"><link rel="prefetch" href="/assets/js/145.4725cc29.js"><link rel="prefetch" href="/assets/js/146.5ac1ae41.js"><link rel="prefetch" href="/assets/js/147.ee55fe80.js"><link rel="prefetch" href="/assets/js/148.017a60a5.js"><link rel="prefetch" href="/assets/js/149.9275392f.js"><link rel="prefetch" href="/assets/js/15.16a10138.js"><link rel="prefetch" href="/assets/js/150.4f6e39e2.js"><link rel="prefetch" href="/assets/js/151.8112ed38.js"><link rel="prefetch" href="/assets/js/152.9b3892fe.js"><link rel="prefetch" href="/assets/js/153.985dfc78.js"><link rel="prefetch" href="/assets/js/154.c5b2941e.js"><link rel="prefetch" href="/assets/js/155.17e7db46.js"><link rel="prefetch" href="/assets/js/156.18ce8096.js"><link rel="prefetch" href="/assets/js/157.503c9654.js"><link rel="prefetch" href="/assets/js/158.d2a16ef9.js"><link rel="prefetch" href="/assets/js/159.ea946356.js"><link rel="prefetch" href="/assets/js/16.268b7541.js"><link rel="prefetch" href="/assets/js/160.e33ccb84.js"><link rel="prefetch" href="/assets/js/161.00ee3a5e.js"><link rel="prefetch" href="/assets/js/162.2a192fc6.js"><link rel="prefetch" href="/assets/js/163.8ea65891.js"><link rel="prefetch" href="/assets/js/164.f5ba32ea.js"><link rel="prefetch" href="/assets/js/165.d3e0e3bc.js"><link rel="prefetch" href="/assets/js/166.3fb11b83.js"><link rel="prefetch" href="/assets/js/167.d3165489.js"><link rel="prefetch" href="/assets/js/168.b4e4fee5.js"><link rel="prefetch" href="/assets/js/169.48ef06de.js"><link rel="prefetch" href="/assets/js/17.bc320121.js"><link rel="prefetch" href="/assets/js/170.cf8bdfa4.js"><link rel="prefetch" href="/assets/js/171.a15829ec.js"><link rel="prefetch" href="/assets/js/172.7339f3af.js"><link rel="prefetch" href="/assets/js/173.8e7612d5.js"><link rel="prefetch" href="/assets/js/174.57733e3c.js"><link rel="prefetch" href="/assets/js/175.5da89883.js"><link rel="prefetch" href="/assets/js/176.d3088d0b.js"><link rel="prefetch" href="/assets/js/177.77d4f99a.js"><link rel="prefetch" href="/assets/js/178.6f080056.js"><link rel="prefetch" href="/assets/js/179.fd1b6bae.js"><link rel="prefetch" href="/assets/js/18.f25a177b.js"><link rel="prefetch" href="/assets/js/180.947ec3a7.js"><link rel="prefetch" href="/assets/js/181.137f66d8.js"><link rel="prefetch" href="/assets/js/182.a2605386.js"><link rel="prefetch" href="/assets/js/183.e1d41264.js"><link rel="prefetch" href="/assets/js/184.a92813fb.js"><link rel="prefetch" href="/assets/js/185.287a04b2.js"><link rel="prefetch" href="/assets/js/186.7284a85c.js"><link rel="prefetch" href="/assets/js/187.9d46b1fd.js"><link rel="prefetch" href="/assets/js/188.d488ef34.js"><link rel="prefetch" href="/assets/js/189.a4b1c139.js"><link rel="prefetch" href="/assets/js/19.69a9cb43.js"><link rel="prefetch" href="/assets/js/190.b5fc0d1e.js"><link rel="prefetch" href="/assets/js/191.cb3df8ec.js"><link rel="prefetch" href="/assets/js/192.284ab855.js"><link rel="prefetch" href="/assets/js/193.9943ea97.js"><link rel="prefetch" href="/assets/js/194.ca5b0372.js"><link rel="prefetch" href="/assets/js/195.3dd22df1.js"><link rel="prefetch" href="/assets/js/196.2bb20f59.js"><link rel="prefetch" href="/assets/js/197.f68f5cea.js"><link rel="prefetch" href="/assets/js/198.7fe206e3.js"><link rel="prefetch" href="/assets/js/199.dfacca9f.js"><link rel="prefetch" href="/assets/js/20.02a969ac.js"><link rel="prefetch" href="/assets/js/200.a2d258cc.js"><link rel="prefetch" href="/assets/js/201.66f9f3cd.js"><link rel="prefetch" href="/assets/js/202.9a90ff27.js"><link rel="prefetch" href="/assets/js/203.362927aa.js"><link rel="prefetch" href="/assets/js/204.dc472967.js"><link rel="prefetch" href="/assets/js/205.1a5438ac.js"><link rel="prefetch" href="/assets/js/206.dfd0a913.js"><link rel="prefetch" href="/assets/js/207.b291df1e.js"><link rel="prefetch" href="/assets/js/208.c501ea52.js"><link rel="prefetch" href="/assets/js/209.b9bef10a.js"><link rel="prefetch" href="/assets/js/21.de545bd9.js"><link rel="prefetch" href="/assets/js/210.bbe94fe3.js"><link rel="prefetch" href="/assets/js/211.bbccbad7.js"><link rel="prefetch" href="/assets/js/212.b8b0156c.js"><link rel="prefetch" href="/assets/js/213.a611ca63.js"><link rel="prefetch" href="/assets/js/214.ce63df2d.js"><link rel="prefetch" href="/assets/js/215.6e65bdbb.js"><link rel="prefetch" href="/assets/js/216.83d053c2.js"><link rel="prefetch" href="/assets/js/217.f0ff8083.js"><link rel="prefetch" href="/assets/js/218.5e6d306c.js"><link rel="prefetch" href="/assets/js/219.18acb160.js"><link rel="prefetch" href="/assets/js/22.3405b01f.js"><link rel="prefetch" href="/assets/js/220.e768121c.js"><link rel="prefetch" href="/assets/js/221.d02e030a.js"><link rel="prefetch" href="/assets/js/222.17ff9609.js"><link rel="prefetch" href="/assets/js/223.bf07fdde.js"><link rel="prefetch" href="/assets/js/224.58104c7b.js"><link rel="prefetch" href="/assets/js/225.639a8660.js"><link rel="prefetch" href="/assets/js/226.65b0cfbd.js"><link rel="prefetch" href="/assets/js/227.d297a59f.js"><link rel="prefetch" href="/assets/js/228.1a6934d7.js"><link rel="prefetch" href="/assets/js/229.de34422e.js"><link rel="prefetch" href="/assets/js/23.69dc8d94.js"><link rel="prefetch" href="/assets/js/230.4a9af2ca.js"><link rel="prefetch" href="/assets/js/231.f9f87c61.js"><link rel="prefetch" href="/assets/js/232.c9249af0.js"><link rel="prefetch" href="/assets/js/233.e4884b4a.js"><link rel="prefetch" href="/assets/js/234.4263d01e.js"><link rel="prefetch" href="/assets/js/235.36944367.js"><link rel="prefetch" href="/assets/js/236.47acc35d.js"><link rel="prefetch" href="/assets/js/237.1a1ec8d4.js"><link rel="prefetch" href="/assets/js/238.901dae66.js"><link rel="prefetch" href="/assets/js/239.29e6bd75.js"><link rel="prefetch" href="/assets/js/24.a1782a04.js"><link rel="prefetch" href="/assets/js/240.e1a99c00.js"><link rel="prefetch" href="/assets/js/241.21b7b4d5.js"><link rel="prefetch" href="/assets/js/242.c6e8f51d.js"><link rel="prefetch" href="/assets/js/243.b9f7dbb8.js"><link rel="prefetch" href="/assets/js/244.d82e7676.js"><link rel="prefetch" href="/assets/js/245.d6d32bef.js"><link rel="prefetch" href="/assets/js/246.9df785ca.js"><link rel="prefetch" href="/assets/js/247.39361a95.js"><link rel="prefetch" href="/assets/js/248.ded311ae.js"><link rel="prefetch" href="/assets/js/249.ed678461.js"><link rel="prefetch" href="/assets/js/25.e45a6beb.js"><link rel="prefetch" href="/assets/js/250.fbbb1010.js"><link rel="prefetch" href="/assets/js/251.81a4098f.js"><link rel="prefetch" href="/assets/js/252.d01d4352.js"><link rel="prefetch" href="/assets/js/253.ac8e8036.js"><link rel="prefetch" href="/assets/js/254.673d0ac8.js"><link rel="prefetch" href="/assets/js/255.648ca249.js"><link rel="prefetch" href="/assets/js/256.df9e0d06.js"><link rel="prefetch" href="/assets/js/257.2659fd53.js"><link rel="prefetch" href="/assets/js/258.768a5063.js"><link rel="prefetch" href="/assets/js/259.3cafd7d8.js"><link rel="prefetch" href="/assets/js/26.2ddddaf3.js"><link rel="prefetch" href="/assets/js/260.daeab7cd.js"><link rel="prefetch" href="/assets/js/261.750a6b34.js"><link rel="prefetch" href="/assets/js/262.10ad1dea.js"><link rel="prefetch" href="/assets/js/263.3de9e804.js"><link rel="prefetch" href="/assets/js/264.5d8fa025.js"><link rel="prefetch" href="/assets/js/265.2ddc1eb3.js"><link rel="prefetch" href="/assets/js/266.47aaa313.js"><link rel="prefetch" href="/assets/js/267.ec6c5119.js"><link rel="prefetch" href="/assets/js/268.27d2cac0.js"><link rel="prefetch" href="/assets/js/269.654a0297.js"><link rel="prefetch" href="/assets/js/27.ed37a2eb.js"><link rel="prefetch" href="/assets/js/270.68714208.js"><link rel="prefetch" href="/assets/js/271.a112d42c.js"><link rel="prefetch" href="/assets/js/272.a7eb7e21.js"><link rel="prefetch" href="/assets/js/273.8c2b15f1.js"><link rel="prefetch" href="/assets/js/274.1804e4d1.js"><link rel="prefetch" href="/assets/js/275.b7d0b48b.js"><link rel="prefetch" href="/assets/js/276.d5db1108.js"><link rel="prefetch" href="/assets/js/277.26ff02bd.js"><link rel="prefetch" href="/assets/js/278.705c9e2d.js"><link rel="prefetch" href="/assets/js/279.cfa9e5cd.js"><link rel="prefetch" href="/assets/js/28.77c432c4.js"><link rel="prefetch" href="/assets/js/280.9c1589b5.js"><link rel="prefetch" href="/assets/js/281.4ba44106.js"><link rel="prefetch" href="/assets/js/282.72006fe6.js"><link rel="prefetch" href="/assets/js/283.59bfc241.js"><link rel="prefetch" href="/assets/js/284.1a5840e8.js"><link rel="prefetch" href="/assets/js/285.6fc1c24d.js"><link rel="prefetch" href="/assets/js/286.4d77a9b3.js"><link rel="prefetch" href="/assets/js/287.07c79b49.js"><link rel="prefetch" href="/assets/js/29.bf0be342.js"><link rel="prefetch" href="/assets/js/3.e3770c3e.js"><link rel="prefetch" href="/assets/js/30.056fcad8.js"><link rel="prefetch" href="/assets/js/31.7083766f.js"><link rel="prefetch" href="/assets/js/32.cf7012ae.js"><link rel="prefetch" href="/assets/js/33.f1551eac.js"><link rel="prefetch" href="/assets/js/34.0a7ed9f3.js"><link rel="prefetch" href="/assets/js/35.1fedcab6.js"><link rel="prefetch" href="/assets/js/36.f32b5536.js"><link rel="prefetch" href="/assets/js/37.ecf063ae.js"><link rel="prefetch" href="/assets/js/38.ff825fc2.js"><link rel="prefetch" href="/assets/js/39.0d51331a.js"><link rel="prefetch" href="/assets/js/4.07df64b9.js"><link rel="prefetch" href="/assets/js/40.725c83f7.js"><link rel="prefetch" href="/assets/js/41.177d3173.js"><link rel="prefetch" href="/assets/js/42.d79ab1a6.js"><link rel="prefetch" href="/assets/js/43.0843e4ba.js"><link rel="prefetch" href="/assets/js/44.b50ba5e1.js"><link rel="prefetch" href="/assets/js/45.0d8c8534.js"><link rel="prefetch" href="/assets/js/46.9f6a4cc3.js"><link rel="prefetch" href="/assets/js/47.1dc4dd52.js"><link rel="prefetch" href="/assets/js/48.e5b33d10.js"><link rel="prefetch" href="/assets/js/49.f5d38f0d.js"><link rel="prefetch" href="/assets/js/5.315d7655.js"><link rel="prefetch" href="/assets/js/50.957e2a48.js"><link rel="prefetch" href="/assets/js/51.defe65c0.js"><link rel="prefetch" href="/assets/js/52.238cd9b5.js"><link rel="prefetch" href="/assets/js/53.2bd85fef.js"><link rel="prefetch" href="/assets/js/54.e529ff10.js"><link rel="prefetch" href="/assets/js/55.d57343cc.js"><link rel="prefetch" href="/assets/js/56.87d50d47.js"><link rel="prefetch" href="/assets/js/57.40964fa2.js"><link rel="prefetch" href="/assets/js/58.da160219.js"><link rel="prefetch" href="/assets/js/59.2bd1560f.js"><link rel="prefetch" href="/assets/js/6.5fb7fa31.js"><link rel="prefetch" href="/assets/js/60.6fd4af6f.js"><link rel="prefetch" href="/assets/js/61.663f58f0.js"><link rel="prefetch" href="/assets/js/62.33b5cc26.js"><link rel="prefetch" href="/assets/js/63.126f3575.js"><link rel="prefetch" href="/assets/js/64.ae08b65e.js"><link rel="prefetch" href="/assets/js/65.be75da36.js"><link rel="prefetch" href="/assets/js/66.78dade32.js"><link rel="prefetch" href="/assets/js/67.1a890242.js"><link rel="prefetch" href="/assets/js/68.9753a6d4.js"><link rel="prefetch" href="/assets/js/69.82ddc388.js"><link rel="prefetch" href="/assets/js/7.d8f2050a.js"><link rel="prefetch" href="/assets/js/70.660da076.js"><link rel="prefetch" href="/assets/js/71.ca894609.js"><link rel="prefetch" href="/assets/js/72.4be8bf5e.js"><link rel="prefetch" href="/assets/js/73.f7657d8f.js"><link rel="prefetch" href="/assets/js/74.c23c25fb.js"><link rel="prefetch" href="/assets/js/75.e72b6434.js"><link rel="prefetch" href="/assets/js/76.fc8f9bef.js"><link rel="prefetch" href="/assets/js/77.10c38121.js"><link rel="prefetch" href="/assets/js/78.97eca5ed.js"><link rel="prefetch" href="/assets/js/79.628bb0a2.js"><link rel="prefetch" href="/assets/js/80.805d0556.js"><link rel="prefetch" href="/assets/js/81.486955ff.js"><link rel="prefetch" href="/assets/js/82.8a8efc07.js"><link rel="prefetch" href="/assets/js/83.d5c86a91.js"><link rel="prefetch" href="/assets/js/84.81dd68de.js"><link rel="prefetch" href="/assets/js/85.611ac749.js"><link rel="prefetch" href="/assets/js/86.4079cda4.js"><link rel="prefetch" href="/assets/js/87.b32830f7.js"><link rel="prefetch" href="/assets/js/88.340512a5.js"><link rel="prefetch" href="/assets/js/89.89bda9e8.js"><link rel="prefetch" href="/assets/js/90.6310209c.js"><link rel="prefetch" href="/assets/js/91.d92e18eb.js"><link rel="prefetch" href="/assets/js/92.c89608f4.js"><link rel="prefetch" href="/assets/js/93.cd043d25.js"><link rel="prefetch" href="/assets/js/94.5daec904.js"><link rel="prefetch" href="/assets/js/95.8db5b0f6.js"><link rel="prefetch" href="/assets/js/96.6c7b0725.js"><link rel="prefetch" href="/assets/js/97.544da230.js"><link rel="prefetch" href="/assets/js/98.ad5fd138.js"><link rel="prefetch" href="/assets/js/99.48105d1a.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.e3b34f7a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5149da19.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Landscape</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link router-link-active">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/operatingsystem/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link router-link-active">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/operatingsystem/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>XMLHttpRequest 对象</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#简介" class="sidebar-link">简介</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#xmlhttprequest-的实例属性" class="sidebar-link">XMLHttpRequest 的实例属性</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_1-xmlhttprequest-readystate" class="sidebar-link">1. XMLHttpRequest.readyState</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_2-xmlhttprequest-onreadystatechange" class="sidebar-link">2. XMLHttpRequest.onreadystatechange</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_3-xmlhttprequest-response" class="sidebar-link">3. XMLHttpRequest.response</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_4-xmlhttprequest-responsetype" class="sidebar-link">4. XMLHttpRequest.responseType</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_5-xmlhttprequest-responsetext" class="sidebar-link">5. XMLHttpRequest.responseText</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_6-xmlhttprequest-responsexml" class="sidebar-link">6. XMLHttpRequest.responseXML</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_7-xmlhttprequest-responseurl" class="sidebar-link">7. XMLHttpRequest.responseURL</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_8-xmlhttprequest-status-xmlhttprequest-statustext" class="sidebar-link">8. XMLHttpRequest.status，XMLHttpRequest.statusText</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_9-xmlhttprequest-timeout-xmlhttprequesteventtarget-ontimeout" class="sidebar-link">9. XMLHttpRequest.timeout，XMLHttpRequestEventTarget.ontimeout</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_10-事件监听属性" class="sidebar-link">10. 事件监听属性</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_11-xmlhttprequest-withcredentials" class="sidebar-link">11. XMLHttpRequest.withCredentials</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_12-xmlhttprequest-upload" class="sidebar-link">12. XMLHttpRequest.upload</a></li></ul></li><li><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#xmlhttprequest-的实例方法" class="sidebar-link">XMLHttpRequest 的实例方法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_1-xmlhttprequest-open" class="sidebar-link">1. XMLHttpRequest.open()</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_2-xmlhttprequest-send" class="sidebar-link">2. XMLHttpRequest.send()</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_3-xmlhttprequest-setrequestheader" class="sidebar-link">3. XMLHttpRequest.setRequestHeader()</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_4-xmlhttprequest-overridemimetype" class="sidebar-link">4. XMLHttpRequest.overrideMimeType()</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_5-xmlhttprequest-getresponseheader" class="sidebar-link">5. XMLHttpRequest.getResponseHeader()</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_6-xmlhttprequest-getallresponseheaders" class="sidebar-link">6. XMLHttpRequest.getAllResponseHeaders()</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_7-xmlhttprequest-abort" class="sidebar-link">7. XMLHttpRequest.abort()</a></li></ul></li><li><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#xmlhttprequest-实例的事件" class="sidebar-link">XMLHttpRequest 实例的事件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_1-readystatechange-事件" class="sidebar-link">1. readyStateChange 事件</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_2-progress-事件" class="sidebar-link">2. progress 事件</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_3-load-事件、error-事件、abort-事件" class="sidebar-link">3. load 事件、error 事件、abort 事件</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_4-loadend-事件" class="sidebar-link">4. loadend 事件</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#_5-timeout-事件" class="sidebar-link">5. timeout 事件</a></li></ul></li><li><a href="/docs/tech/es5/Browsermodel/XMLHttpRequest.html#navigator-sendbeacon" class="sidebar-link">Navigator.sendBeacon()</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="xmlhttprequest-对象"><a href="#xmlhttprequest-对象" class="header-anchor">#</a> XMLHttpRequest 对象</h1> <h2 id="简介"><a href="#简介" class="header-anchor">#</a> 简介</h2> <p>浏览器与服务器之间，采用 HTTP 协议通信。用户在浏览器地址栏键入一个网址，或者通过网页表单向服务器提交内容，这时浏览器就会向服务器发出 HTTP 请求。</p> <p>1999年，微软公司发布 IE 浏览器5.0版，第一次引入新功能：允许 JavaScript 脚本向服务器发起 HTTP 请求。这个功能当时并没有引起注意，直到2004年 Gmail 发布和2005年 Google Map 发布，才引起广泛重视。2005年2月，AJAX 这个词第一次正式提出，它是 Asynchronous JavaScript and XML 的缩写，指的是通过 JavaScript 的异步通信，从服务器获取 XML 文档从中提取数据，再更新当前网页的对应部分，而不用刷新整个网页。后来，AJAX 这个词就成为 JavaScript 脚本发起 HTTP 通信的代名词，也就是说，只要用脚本发起通信，就可以叫做 AJAX 通信。W3C 也在2006年发布了它的国际标准。</p> <p>具体来说，AJAX 包括以下几个步骤。</p> <ol><li>创建 XMLHttpRequest 实例</li> <li>发出 HTTP 请求</li> <li>接收服务器传回的数据</li> <li>更新网页数据</li></ol> <p>概括起来，就是一句话，AJAX 通过原生的XMLHttpRequest对象发出 HTTP 请求，得到服务器返回的数据后，再进行处理。现在，服务器返回的都是 JSON 格式的数据，XML 格式已经过时了，但是 AJAX 这个名字已经成了一个通用名词，字面含义已经消失了。</p> <p>XMLHttpRequest对象是 AJAX 的主要接口，用于浏览器与服务器之间的通信。尽管名字里面有XML和Http，它实际上可以使用多种协议（比如file或ftp），发送任何格式的数据（包括字符串和二进制）。</p> <p>XMLHttpRequest本身是一个构造函数，可以使用new命令生成实例。它没有任何参数。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var xhr = new XMLHttpRequest();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>一旦新建实例，就可以使用open()方法指定建立 HTTP 连接的一些细节。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>xhr.open('GET', 'http://www.example.com/page.php', true);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>上面代码指定使用 GET 方法，跟指定的服务器网址建立连接。第三个参数true，表示请求是异步的。</p> <p>然后，指定回调函数，监听通信状态（readyState属性）的变化。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>xhr.onreadystatechange = handleStateChange;
+
+function handleStateChange() {
+  // ...
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>上面代码中，一旦XMLHttpRequest实例的状态发生变化，就会调用监听函数handleStateChange</p> <p>最后使用send()方法，实际发出请求。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>xhr.send(null);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>上面代码中，send()的参数为null，表示发送请求的时候，不带有数据体。如果发送的是 POST 请求，这里就需要指定数据体。</p> <p>一旦拿到服务器返回的数据，AJAX 不会刷新整个网页，而是只更新网页里面的相关部分，从而不打断用户正在做的事情。</p> <p>注意，AJAX 只能向同源网址（协议、域名、端口都相同）发出 HTTP 请求，如果发出跨域请求，就会报错（详见《同源政策》和《CORS 通信》两章）。</p> <p>下面是XMLHttpRequest对象简单用法的完整例子。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var xhr = new XMLHttpRequest();
+
+xhr.onreadystatechange = function(){
+  // 通信成功时，状态值为4
+  if (xhr.readyState === 4){
+    if (xhr.status === 200){
+      console.log(xhr.responseText);
+    } else {
+      console.error(xhr.statusText);
+    }
+  }
+};
+
+xhr.onerror = function (e) {
+  console.error(xhr.statusText);
+};
+
+xhr.open('GET', '/endpoint', true);
+xhr.send(null);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h2 id="xmlhttprequest-的实例属性"><a href="#xmlhttprequest-的实例属性" class="header-anchor">#</a> XMLHttpRequest 的实例属性</h2> <h3 id="_1-xmlhttprequest-readystate"><a href="#_1-xmlhttprequest-readystate" class="header-anchor">#</a> 1. XMLHttpRequest.readyState</h3> <p>XMLHttpRequest.readyState返回一个整数，表示实例对象的当前状态。该属性只读。它可能返回以下值。</p> <ul><li><p>0，表示 XMLHttpRequest 实例已经生成，但是实例的open()方法还没有被调用。</p></li> <li><p>1，表示open()方法已经调用，但是实例的send()方法还没有调用，仍然可以使用实例的setRequestHeader()方法，设定 HTTP 请求的头信息。</p></li> <li><p>2，表示实例的send()方法已经调用，并且服务器返回的头信息和状态码已经收到。</p></li> <li><p>3，表示正在接收服务器传来的数据体（body 部分）。这时，如果实例的responseType属性等于text或者空字符串，responseText属性就会包含已经收到的部分信息。</p></li> <li><p>4，表示服务器返回的数据已经完全接收，或者本次接收已经失败。
+通信过程中，每当实例对象发生状态变化，它的readyState属性的值就会改变。这个值每一次变化，都会触发readyStateChange事件。</p></li></ul> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var xhr = new XMLHttpRequest();
+
+if (xhr.readyState === 4) {
+  // 请求结束，处理服务器返回的数据
+} else {
+  // 显示提示“加载中……”
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>上面代码中，xhr.readyState等于4时，表明脚本发出的 HTTP 请求已经完成。其他情况，都表示 HTTP 请求还在进行中。</p> <h3 id="_2-xmlhttprequest-onreadystatechange"><a href="#_2-xmlhttprequest-onreadystatechange" class="header-anchor">#</a> 2. XMLHttpRequest.onreadystatechange</h3> <p>XMLHttpRequest.onreadystatechange属性指向一个监听函数。readystatechange事件发生时（实例的readyState属性变化），就会执行这个属性。</p> <p>另外，如果使用实例的abort()方法，终止 XMLHttpRequest 请求，也会造成readyState属性变化，导致调用XMLHttpRequest.onreadystatechange属性。</p> <p>下面是一个例子。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var xhr = new XMLHttpRequest();
+xhr.open( 'GET', 'http://example.com' , true );
+xhr.onreadystatechange = function () {
+  if (xhr.readyState !== 4 || xhr.status !== 200) {
+    return;
+  }
+  console.log(xhr.responseText);
+};
+xhr.send();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="_3-xmlhttprequest-response"><a href="#_3-xmlhttprequest-response" class="header-anchor">#</a> 3. XMLHttpRequest.response</h3> <p>XMLHttpRequest.response属性表示服务器返回的数据体（即 HTTP 回应的 body 部分）。它可能是任何数据类型，比如字符串、对象、二进制对象等等，具体的类型由XMLHttpRequest.responseType属性决定。该属性只读。</p> <p>如果本次请求没有成功或者数据不完整，该属性等于null。但是，如果responseType属性等于text或空字符串，在请求没有结束之前（readyState等于3的阶段），response属性包含服务器已经返回的部分数据。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var xhr = new XMLHttpRequest();
+
+xhr.onreadystatechange = function () {
+  if (xhr.readyState === 4) {
+    handler(xhr.response);
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="_4-xmlhttprequest-responsetype"><a href="#_4-xmlhttprequest-responsetype" class="header-anchor">#</a> 4. XMLHttpRequest.responseType</h3> <p>XMLHttpRequest.responseType属性是一个字符串，表示服务器返回数据的类型。这个属性是可写的，可以在调用open()方法之后、调用send()方法之前，设置这个属性的值，告诉服务器返回指定类型的数据。如果responseType设为空字符串，就等同于默认值text。</p> <p>XMLHttpRequest.responseType属性可以等于以下值。</p> <ul><li>&quot;&quot;（空字符串）：等同于text，表示服务器返回文本数据。</li> <li>&quot;arraybuffer&quot;：ArrayBuffer 对象，表示服务器返回二进制数组。</li> <li>&quot;blob&quot;：Blob 对象，表示服务器返回二进制对象。</li> <li>&quot;document&quot;：Document 对象，表示服务器返回一个文档对象。</li> <li>&quot;json&quot;：JSON 对象。</li> <li>&quot;text&quot;：字符串。</li></ul> <p>上面几种类型之中，text类型适合大多数情况，而且直接处理文本也比较方便。document类型适合返回 HTML / XML 文档的情况，这意味着，对于那些打开 CORS 的网站，可以直接用 Ajax 抓取网页，然后不用解析 HTML 字符串，直接对抓取回来的数据进行 DOM 操作。blob类型适合读取二进制数据，比如图片文件。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var xhr = new XMLHttpRequest();
+xhr.open('GET', '/path/to/image.png', true);
+xhr.responseType = 'blob';
+
+xhr.onload = function(e) {
+  if (this.status === 200) {
+    var blob = new Blob([xhr.response], {type: 'image/png'});
+    // 或者
+    var blob = xhr.response;
+  }
+};
+
+xhr.send();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>如果将这个属性设为ArrayBuffer，就可以按照数组的方式处理二进制数据。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var xhr = new XMLHttpRequest();
+xhr.open('GET', '/path/to/image.png', true);
+xhr.responseType = 'arraybuffer';
+
+xhr.onload = function(e) {
+  var uInt8Array = new Uint8Array(this.response);
+  for (var i = 0, len = uInt8Array.length; i &lt; len; ++i) {
+    // var byte = uInt8Array[i];
+  }
+};
+
+xhr.send();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>如果将这个属性设为json，浏览器就会自动对返回数据调用JSON.parse()方法。也就是说，从xhr.response属性（注意，不是xhr.responseText属性）得到的不是文本，而是一个 JSON 对象。</p> <h3 id="_5-xmlhttprequest-responsetext"><a href="#_5-xmlhttprequest-responsetext" class="header-anchor">#</a> 5. XMLHttpRequest.responseText</h3> <p>XMLHttpRequest.responseText属性返回从服务器接收到的字符串，该属性为只读。只有 HTTP 请求完成接收以后，该属性才会包含完整的数据。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var xhr = new XMLHttpRequest();
+xhr.open('GET', '/server', true);
+
+xhr.responseType = 'text';
+xhr.onload = function () {
+  if (xhr.readyState === 4 &amp;&amp; xhr.status === 200) {
+    console.log(xhr.responseText);
+  }
+};
+
+xhr.send(null);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h3 id="_6-xmlhttprequest-responsexml"><a href="#_6-xmlhttprequest-responsexml" class="header-anchor">#</a> 6. XMLHttpRequest.responseXML</h3> <p>XMLHttpRequest.responseXML属性返回从服务器接收到的 HTML 或 XML 文档对象，该属性为只读。如果本次请求没有成功，或者收到的数据不能被解析为 XML 或 HTML，该属性等于null。</p> <p>该属性生效的前提是 HTTP 回应的Content-Type头信息等于text/xml或application/xml。这要求在发送请求前，XMLHttpRequest.responseType属性要设为document。如果 HTTP 回应的Content-Type头信息不等于text/xml和application/xml，但是想从responseXML拿到数据（即把数据按照 DOM 格式解析），那么需要手动调用XMLHttpRequest.overrideMimeType()方法，强制进行 XML 解析。</p> <p>该属性得到的数据，是直接解析后的文档 DOM 树。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var xhr = new XMLHttpRequest();
+xhr.open('GET', '/server', true);
+
+xhr.responseType = 'document';
+xhr.overrideMimeType('text/xml');
+
+xhr.onload = function () {
+  if (xhr.readyState === 4 &amp;&amp; xhr.status === 200) {
+    console.log(xhr.responseXML);
+  }
+};
+
+xhr.send(null);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h3 id="_7-xmlhttprequest-responseurl"><a href="#_7-xmlhttprequest-responseurl" class="header-anchor">#</a> 7. XMLHttpRequest.responseURL</h3> <p>XMLHttpRequest.responseURL属性是字符串，表示发送数据的服务器的网址。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var xhr = new XMLHttpRequest();
+xhr.open('GET', 'http://example.com/test', true);
+xhr.onload = function () {
+  // 返回 http://example.com/test
+  console.log(xhr.responseURL);
+};
+xhr.send(null);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>注意，这个属性的值与open()方法指定的请求网址不一定相同。如果服务器端发生跳转，这个属性返回最后实际返回数据的网址。另外，如果原始 URL 包括锚点（fragment），该属性会把锚点剥离。</p> <h3 id="_8-xmlhttprequest-status-xmlhttprequest-statustext"><a href="#_8-xmlhttprequest-status-xmlhttprequest-statustext" class="header-anchor">#</a> 8. XMLHttpRequest.status，XMLHttpRequest.statusText</h3> <p>XMLHttpRequest.status属性返回一个整数，表示服务器回应的 HTTP 状态码。一般来说，如果通信成功的话，这个状态码是200；如果服务器没有返回状态码，那么这个属性默认是200。请求发出之前，该属性为0。该属性只读。</p> <ul><li>200, OK，访问正常</li> <li>301, Moved Permanently，永久移动</li> <li>302, Moved temporarily，暂时移动</li> <li>304, Not Modified，未修改</li> <li>307, Temporary Redirect，暂时重定向</li> <li>401, Unauthorized，未授权</li> <li>403, Forbidden，禁止访问</li> <li>404, Not Found，未发现指定网址</li> <li>500, Internal Server Error，服务器发生错误</li></ul> <p>基本上，只有2xx和304的状态码，表示服务器返回是正常状态。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>if (xhr.readyState === 4) {
+  if ( (xhr.status &gt;= 200 &amp;&amp; xhr.status &lt; 300)
+    || (xhr.status === 304) ) {
+    // 处理服务器的返回数据
+  } else {
+    // 出错
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>XMLHttpRequest.statusText属性返回一个字符串，表示服务器发送的状态提示。不同于status属性，该属性包含整个状态信息，比如“OK”和“Not Found”。在请求发送之前（即调用open()方法之前），该属性的值是空字符串；如果服务器没有返回状态提示，该属性的值默认为“OK”。该属性为只读属性。</p> <h3 id="_9-xmlhttprequest-timeout-xmlhttprequesteventtarget-ontimeout"><a href="#_9-xmlhttprequest-timeout-xmlhttprequesteventtarget-ontimeout" class="header-anchor">#</a> 9. XMLHttpRequest.timeout，XMLHttpRequestEventTarget.ontimeout</h3> <p>XMLHttpRequest.timeout属性返回一个整数，表示多少毫秒后，如果请求仍然没有得到结果，就会自动终止。如果该属性等于0，就表示没有时间限制。</p> <p>XMLHttpRequestEventTarget.ontimeout属性用于设置一个监听函数，如果发生 timeout 事件，就会执行这个监听函数。</p> <p>下面是一个例子。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var xhr = new XMLHttpRequest();
+var url = '/server';
+
+xhr.ontimeout = function () {
+  console.error('The request for ' + url + ' timed out.');
+};
+
+xhr.onload = function() {
+  if (xhr.readyState === 4) {
+    if (xhr.status === 200) {
+      // 处理服务器返回的数据
+    } else {
+      console.error(xhr.statusText);
+    }
+  }
+};
+
+xhr.open('GET', url, true);
+// 指定 10 秒钟超时
+xhr.timeout = 10 * 1000;
+xhr.send(null);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h3 id="_10-事件监听属性"><a href="#_10-事件监听属性" class="header-anchor">#</a> 10. 事件监听属性</h3> <p>XMLHttpRequest 对象可以对以下事件指定监听函数。</p> <ul><li><p>XMLHttpRequest.onloadstart：loadstart 事件（HTTP 请求发出）的监听函数</p></li> <li><p>XMLHttpRequest.onprogress：progress事件（正在发送和加载数据）的监听函数</p></li> <li><p>XMLHttpRequest.onabort：abort 事件（请求中止，比如用户调用了abort()方法）的监听函数</p></li> <li><p>XMLHttpRequest.onerror：error 事件（请求失败）的监听函数</p></li> <li><p>XMLHttpRequest.onload：load 事件（请求成功完成）的监听函数</p></li> <li><p>XMLHttpRequest.ontimeout：timeout 事件（用户指定的时限超过了，请求还未完成）的监听函数</p></li> <li><p>XMLHttpRequest.onloadend：loadend 事件（请求完成，不管成功或失败）的监听函数</p></li></ul> <p>下面是一个例子。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>xhr.onload = function() {
+ var responseText = xhr.responseText;
+ console.log(responseText);
+ // process the response.
+};
+
+xhr.onabort = function () {
+  console.log('The request was aborted');
+};
+
+xhr.onprogress = function (event) {
+  console.log(event.loaded);
+  console.log(event.total);
+};
+
+xhr.onerror = function() {
+  console.log('There was an error!');
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>progress事件的监听函数有一个事件对象参数，该对象有三个属性：loaded属性返回已经传输的数据量，total属性返回总的数据量，lengthComputable属性返回一个布尔值，表示加载的进度是否可以计算。所有这些监听函数里面，只有progress事件的监听函数有参数，其他函数都没有参数。</p> <p>注意，如果发生网络错误（比如服务器无法连通），onerror事件无法获取报错信息。也就是说，可能没有错误对象，所以这样只能显示报错的提示。</p> <h3 id="_11-xmlhttprequest-withcredentials"><a href="#_11-xmlhttprequest-withcredentials" class="header-anchor">#</a> 11. XMLHttpRequest.withCredentials</h3> <p>XMLHttpRequest.withCredentials属性是一个布尔值，表示跨域请求时，用户信息（比如 Cookie 和认证的 HTTP 头信息）是否会包含在请求之中，默认为false，即向example.com发出跨域请求时，不会发送example.com设置在本机上的 Cookie（如果有的话）。</p> <p>如果需要跨域 AJAX 请求发送 Cookie，需要withCredentials属性设为true。注意，同源的请求不需要设置这个属性。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var xhr = new XMLHttpRequest();
+xhr.open('GET', 'http://example.com/', true);
+xhr.withCredentials = true;
+xhr.send(null);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>为了让这个属性生效，服务器必须显式返回
+Access-Control-Allow-Credentials这个头信息。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>Access-Control-Allow-Credentials: true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>withCredentials属性打开的话，跨域请求不仅会发送 Cookie，还会设置远程主机指定的 Cookie。反之也成立，如果withCredentials属性没有打开，那么跨域的 AJAX 请求即使明确要求浏览器设置 Cookie，浏览器也会忽略。</p> <p>注意，脚本总是遵守同源政策，无法从document.cookie或者 HTTP 回应的头信息之中，读取跨域的 Cookie，withCredentials属性不影响这一点。</p> <h3 id="_12-xmlhttprequest-upload"><a href="#_12-xmlhttprequest-upload" class="header-anchor">#</a> 12. XMLHttpRequest.upload</h3> <p>XMLHttpRequest 不仅可以发送请求，还可以发送文件，这就是 AJAX 文件上传。发送文件以后，通过XMLHttpRequest.upload属性可以得到一个对象，通过观察这个对象，可以得知上传的进展。主要方法就是监听这个对象的各种事件：loadstart、loadend、load、abort、error、progress、timeout。</p> <p>假定网页上有一个<code>&lt;progress&gt;</code>元素。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>progress</span> <span class="token attr-name">min</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>0<span class="token punctuation">&quot;</span></span> <span class="token attr-name">max</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>100<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>0% complete<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>progress</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>文件上传时，对upload属性指定progress事件的监听函数，即可获得上传的进度。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>function upload(blobOrFile) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', '/server', true);
+  xhr.onload = function (e) {};
+
+  var progressBar = document.querySelector('progress');
+  xhr.upload.onprogress = function (e) {
+    if (e.lengthComputable) {
+      progressBar.value = (e.loaded / e.total) * 100;
+      // 兼容不支持 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>progress</span><span class="token punctuation">&gt;</span></span> 元素的老式浏览器
+      progressBar.textContent = progressBar.value;
+    }
+  };
+
+  xhr.send(blobOrFile);
+}
+
+upload(new Blob(['hello world'], {type: 'text/plain'}));
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h2 id="xmlhttprequest-的实例方法"><a href="#xmlhttprequest-的实例方法" class="header-anchor">#</a> XMLHttpRequest 的实例方法</h2> <h3 id="_1-xmlhttprequest-open"><a href="#_1-xmlhttprequest-open" class="header-anchor">#</a> 1. XMLHttpRequest.open()</h3> <p>XMLHttpRequest.open()方法用于指定 HTTP 请求的参数，或者说初始化 XMLHttpRequest 实例对象。它一共可以接受五个参数。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>void open(
+   string method,
+   string url,
+   optional boolean async,
+   optional string user,
+   optional string password
+);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><ul><li><p>method：表示 HTTP 动词方法，比如GET、POST、PUT、DELETE、HEAD等。</p></li> <li><p>url: 表示请求发送目标 URL。</p></li> <li><p>async: 布尔值，表示请求是否为异步，默认为true。如果设为false，则
+send()方法只有等到收到服务器返回了结果，才会进行下一步操作。该参数可选。由于同步 AJAX 请求会造成浏览器失去响应，许多浏览器已经禁止在主线程使用，只允许 Worker 里面使用。所以，这个参数轻易不应该设为false。</p></li> <li><p>user：表示用于认证的用户名，默认为空字符串。该参数可选。</p></li> <li><p>password：表示用于认证的密码，默认为空字符串。该参数可选。</p></li></ul> <p>注意，如果对使用过open()方法的 AJAX 请求，再次使用这个方法，等同于调用abort()，即终止请求。</p> <p>下面发送 POST 请求的例子。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var xhr = new XMLHttpRequest();
+xhr.open('POST', encodeURI('someURL'));
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_2-xmlhttprequest-send"><a href="#_2-xmlhttprequest-send" class="header-anchor">#</a> 2. XMLHttpRequest.send()</h3> <p>XMLHttpRequest.send()方法用于实际发出 HTTP 请求。它的参数是可选的，如果不带参数，就表示 HTTP 请求只有一个 URL，没有数据体，典型例子就是 GET 请求；如果带有参数，就表示除了头信息，还带有包含具体数据的信息体，典型例子就是 POST 请求。</p> <p>下面是 GET 请求的例子。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var xhr = new XMLHttpRequest();
+xhr.open('GET',
+  'http://www.example.com/?id=' + encodeURIComponent(id),
+  true
+);
+xhr.send(null);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>上面代码中，GET请求的参数，作为查询字符串附加在 URL 后面。</p> <p>下面是发送 POST 请求的例子。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var xhr = new XMLHttpRequest();
+var data = 'email='
+  + encodeURIComponent(email)
+  + '&amp;password='
+  + encodeURIComponent(password);
+
+xhr.open('POST', 'http://www.example.com', true);
+xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+xhr.send(data);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>注意，所有 XMLHttpRequest 的监听事件，都必须在send()方法调用之前设定。</p> <p>send方法的参数就是发送的数据。多种格式的数据，都可以作为它的参数。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>void send();
+void send(ArrayBufferView data);
+void send(Blob data);
+void send(Document data);
+void send(String data);
+void send(FormData data);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>如果send()发送 DOM 对象，在发送之前，数据会先被串行化。如果发送二进制数据，最好是发送ArrayBufferView或Blob对象，这使得通过 Ajax 上传文件成为可能。</p> <p>下面是发送表单数据的例子。FormData对象可以用于构造表单数据。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var formData = new FormData();
+
+formData.append('username', '张三');
+formData.append('email', 'zhangsan@example.com');
+formData.append('birthDate', 1940);
+
+var xhr = new XMLHttpRequest();
+xhr.open('POST', '/register');
+xhr.send(formData);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>上面代码中，FormData对象构造了表单数据，然后使用send()方法发送。它的效果与发送下面的表单数据是一样的。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>registration<span class="token punctuation">'</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>registration<span class="token punctuation">'</span></span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>/register<span class="token punctuation">'</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>text<span class="token punctuation">'</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>username<span class="token punctuation">'</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>张三<span class="token punctuation">'</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>email<span class="token punctuation">'</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>email<span class="token punctuation">'</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>zhangsan@example.com<span class="token punctuation">'</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>number<span class="token punctuation">'</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>birthDate<span class="token punctuation">'</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>1940<span class="token punctuation">'</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>submit<span class="token punctuation">'</span></span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>return sendForm(this.form);<span class="token punctuation">'</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>下面的例子是使用FormData对象加工表单数据，然后再发送。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>function sendForm(form) {
+  var formData = new FormData(form);
+  formData.append('csrf', 'e69a18d7db1286040586e6da1950128c');
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', form.action, true);
+  xhr.onload = function() {
+    // ...
+  };
+  xhr.send(formData);
+
+  return false;
+}
+
+var form = document.querySelector('#registration');
+sendForm(form);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h3 id="_3-xmlhttprequest-setrequestheader"><a href="#_3-xmlhttprequest-setrequestheader" class="header-anchor">#</a> 3. XMLHttpRequest.setRequestHeader()</h3> <p>XMLHttpRequest.setRequestHeader()方法用于设置浏览器发送的 HTTP 请求的头信息。该方法必须在open()之后、send()之前调用。如果该方法多次调用，设定同一个字段，则每一次调用的值会被合并成一个单一的值发送。</p> <p>该方法接受两个参数。第一个参数是字符串，表示头信息的字段名，第二个参
+数是字段值。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.setRequestHeader('Content-Length', JSON.stringify(data).length);
+xhr.send(JSON.stringify(data));
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>上面代码首先设置头信息Content-Type，表示发送 JSON 格式的数据；然后设置Content-Length，表示数据长度；最后发送 JSON 数据。</p> <h3 id="_4-xmlhttprequest-overridemimetype"><a href="#_4-xmlhttprequest-overridemimetype" class="header-anchor">#</a> 4. XMLHttpRequest.overrideMimeType()</h3> <p>XMLHttpRequest.overrideMimeType()方法用来指定 MIME 类型，覆盖服务器返回的真正的 MIME 类型，从而让浏览器进行不一样的处理。举例来说，服务器返回的数据类型是text/xml，由于种种原因浏览器解析不成功报错，这时就拿不到数据了。为了拿到原始数据，我们可以把 MIME 类型改成text/plain，这样浏览器就不会去自动解析，从而我们就可以拿到原始文本了。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>xhr.overrideMimeType('text/plain')
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>注意，该方法必须在send()方法之前调用。</p> <p>修改服务器返回的数据类型，不是正常情况下应该采取的方法。如果希望服务器返回指定的数据类型，可以用responseType属性告诉服务器，就像下面的例子。只有在服务器无法返回某种数据类型时，才使用overrideMimeType()方法。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var xhr = new XMLHttpRequest();
+xhr.onload = function(e) {
+  var arraybuffer = xhr.response;
+  // ...
+}
+xhr.open('GET', url);
+xhr.responseType = 'arraybuffer';
+xhr.send();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="_5-xmlhttprequest-getresponseheader"><a href="#_5-xmlhttprequest-getresponseheader" class="header-anchor">#</a> 5. XMLHttpRequest.getResponseHeader()</h3> <p>XMLHttpRequest.getResponseHeader()方法返回 HTTP 头信息指定字段的值，如果还没有收到服务器回应或者指定字段不存在，返回null。该方法的参数不区分大小写。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>function getHeaderTime() {
+  console.log(this.getResponseHeader(&quot;Last-Modified&quot;));
+}
+
+var xhr = new XMLHttpRequest();
+xhr.open('HEAD', 'yourpage.html');
+xhr.onload = getHeaderTime;
+xhr.send();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>如果有多个字段同名，它们的值会被连接为一个字符串，每个字段之间使用“逗号+空格”分隔。</p> <h3 id="_6-xmlhttprequest-getallresponseheaders"><a href="#_6-xmlhttprequest-getallresponseheaders" class="header-anchor">#</a> 6. XMLHttpRequest.getAllResponseHeaders()</h3> <p>XMLHttpRequest.getAllResponseHeaders()方法返回一个字符串，表示服务器发来的所有 HTTP 头信息。格式为字符串，每个头信息之间使用CRLF分隔（回车+换行），如果没有收到服务器回应，该属性为null。如果发生网络错误，该属性为空字符串。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var xhr = new XMLHttpRequest();
+xhr.open('GET', 'foo.txt', true);
+xhr.send();
+
+xhr.onreadystatechange = function () {
+  if (this.readyState === 4) {
+    var headers = xhr.getAllResponseHeaders();
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>上面代码用于获取服务器返回的所有头信息。它可能是下面这样的字符串。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
+content-encoding: gzip\r\n
+x-content-type-options: nosniff\r\n
+server: meinheld/0.6.1\r\n
+x-frame-options: DENY\r\n
+content-type: text/html; charset=utf-8\r\n
+connection: keep-alive\r\n
+strict-transport-security: max-age=63072000\r\n
+vary: Cookie, Accept-Encoding\r\n
+content-length: 6502\r\n
+x-xss-protection: 1; mode=block\r\n
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>然后，对这个字符串进行处理。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var arr = headers.trim().split(/[\r\n]+/);
+var headerMap = {};
+
+arr.forEach(function (line) {
+  var parts = line.split(': ');
+  var header = parts.shift();
+  var value = parts.join(': ');
+  headerMap[header] = value;
+});
+
+headerMap['content-length'] // &quot;6502&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h3 id="_7-xmlhttprequest-abort"><a href="#_7-xmlhttprequest-abort" class="header-anchor">#</a> 7. XMLHttpRequest.abort()</h3> <p>XMLHttpRequest.abort()方法用来终止已经发出的 HTTP 请求。调用这个方法以后，readyState属性变为4，status属性变为0。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var xhr = new XMLHttpRequest();
+xhr.open('GET', 'http://www.example.com/page.php', true);
+setTimeout(function () {
+  if (xhr) {
+    xhr.abort();
+    xhr = null;
+  }
+}, 5000);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>上面代码在发出5秒之后，终止一个 AJAX 请求。</p> <h2 id="xmlhttprequest-实例的事件"><a href="#xmlhttprequest-实例的事件" class="header-anchor">#</a> XMLHttpRequest 实例的事件</h2> <h3 id="_1-readystatechange-事件"><a href="#_1-readystatechange-事件" class="header-anchor">#</a> 1. readyStateChange 事件</h3> <p>readyState属性的值发生改变，就会触发 readyStateChange 事件。</p> <p>我们可以通过onReadyStateChange属性，指定这个事件的监听函数，对不同状态进行不同处理。尤其是当状态变为4的时候，表示通信成功，这时回调函数就可以处理服务器传送回来的数据。</p> <h3 id="_2-progress-事件"><a href="#_2-progress-事件" class="header-anchor">#</a> 2. progress 事件</h3> <p>上传文件时，XMLHttpRequest 实例对象本身和实例的upload属性，都有一个progress事件，会不断返回上传的进度。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var xhr = new XMLHttpRequest();
+
+function updateProgress (oEvent) {
+  if (oEvent.lengthComputable) {
+    var percentComplete = oEvent.loaded / oEvent.total;
+  } else {
+    console.log('无法计算进展');
+  }
+}
+
+xhr.addEventListener('progress', updateProgress);
+
+xhr.open();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h3 id="_3-load-事件、error-事件、abort-事件"><a href="#_3-load-事件、error-事件、abort-事件" class="header-anchor">#</a> 3. load 事件、error 事件、abort 事件</h3> <p>load 事件表示服务器传来的数据接收完毕，error 事件表示请求出错，abort 事件表示请求被中断（比如用户取消请求）。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>var xhr = new XMLHttpRequest();
+
+xhr.addEventListener('load', transferComplete);
+xhr.addEventListener('error', transferFailed);
+xhr.addEventListener('abort', transferCanceled);
+
+xhr.open();
+
+function transferComplete() {
+  console.log('数据接收完毕');
+}
+
+function transferFailed() {
+  console.log('数据接收出错');
+}
+
+function transferCanceled() {
+  console.log('用户取消接收');
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h3 id="_4-loadend-事件"><a href="#_4-loadend-事件" class="header-anchor">#</a> 4. loadend 事件</h3> <p>abort、load和error这三个事件，会伴随一个loadend事件，表示请求结束，但不知道其是否成功。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>xhr.addEventListener('loadend', loadEnd);
+
+function loadEnd(e) {
+  console.log('请求结束，状态未知');
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="_5-timeout-事件"><a href="#_5-timeout-事件" class="header-anchor">#</a> 5. timeout 事件</h3> <p>服务器超过指定时间还没有返回结果，就会触发 timeout 事件，具体的例子参见timeout属性一节。</p> <h2 id="navigator-sendbeacon"><a href="#navigator-sendbeacon" class="header-anchor">#</a> Navigator.sendBeacon()</h2> <p>用户卸载网页的时候，有时需要向服务器发一些数据。很自然的做法是在unload事件或beforeunload事件的监听函数里面，使用XMLHttpRequest对象发送数据。但是，这样做不是很可靠，因为XMLHttpRequest对象是异步发送，很可能在它即将发送的时候，页面已经卸载了，从而导致发送取消或者发送失败。</p> <p>解决方法就是unload事件里面，加一些很耗时的同步操作。这样就能留出足够的时间，保证异步 AJAX 能够发送成功。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>function log() {
+  let xhr = new XMLHttpRequest();
+  xhr.open('post', '/log', true);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.send('foo=bar');
+}
+
+window.addEventListener('unload', function(event) {
+  log();
+
+  // a time-consuming operation
+  for (let i = 1; i &lt; 10000; i++) {
+    for (let m = 1; m &lt; 10000; m++) { continue; }
+  }
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>上面代码中，强制执行了一次双重循环，拖长了unload事件的执行时间，导致异步 AJAX 能够发送成功。</p> <p>类似的还可以使用setTimeout。下面是追踪用户点击的例子。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>// HTML 代码如下
+// <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>target<span class="token punctuation">&quot;</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://baidu.com<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>click<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+const clickTime = 350;
+const theLink = document.getElementById('target');
+
+function log() {
+  let xhr = new XMLHttpRequest();
+  xhr.open('post', '/log', true);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.send('foo=bar');
+}
+
+theLink.addEventListener('click', function (event) {
+  event.preventDefault();
+  log();
+
+  setTimeout(function () {
+    window.location.href = theLink.getAttribute('href');
+  }, clickTime);
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>上面代码使用setTimeout，拖延了350毫秒，才让页面跳转，因此使得异步 AJAX 有时间发出。</p> <p>这些做法的共同问题是，卸载的时间被硬生生拖长了，后面页面的加载被推迟了，用户体验不好。</p> <p>为了解决这个问题，浏览器引入了Navigator.sendBeacon()方法。这个方法还是异步发出请求，但是请求与当前页面线程脱钩，作为浏览器进程的任务，因此可以保证会把数据发出去，不拖延卸载流程。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>window.addEventListener('unload', logData, false);
+
+function logData() {
+  navigator.sendBeacon('/log', analyticsData);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>Navigator.sendBeacon方法接受两个参数，第一个参数是目标服务器的 URL，第二个参数是所要发送的数据（可选），可以是任意类型（字符串、表单对象、二进制对象等等）。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>navigator.sendBeacon(url, data)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>这个方法的返回值是一个布尔值，成功发送数据为true，否则为false。</p> <p>该方法发送数据的 HTTP 方法是 POST，可以跨域，类似于表单提交数据。它不能指定回调函数。</p> <p>下面是一个例子。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>// HTML 代码如下
+// <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span> <span class="token attr-name">onload</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>analytics('start')<span class="token punctuation">&quot;</span></span> <span class="token attr-name">onunload</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>analytics('end')<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+
+function analytics(state) {
+  if (!navigator.sendBeacon) return;
+
+  var URL = 'http://example.com/analytics';
+  var data = 'state=' + state + '&amp;location=' + window.location;
+  navigator.sendBeacon(URL, data);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.03709e87.js" defer></script><script src="/assets/js/2.9c41e448.js" defer></script><script src="/assets/js/1.2c8cdafe.js" defer></script><script src="/assets/js/141.4599df87.js" defer></script>
+  </body>
+</html>

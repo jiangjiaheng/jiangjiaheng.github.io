@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>async函数 | Landscape</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="私人博客网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.5149da19.css" as="style"><link rel="preload" href="/assets/js/app.03709e87.js" as="script"><link rel="preload" href="/assets/js/2.9c41e448.js" as="script"><link rel="preload" href="/assets/js/1.2c8cdafe.js" as="script"><link rel="preload" href="/assets/js/219.18acb160.js" as="script"><link rel="prefetch" href="/assets/js/10.9a78c136.js"><link rel="prefetch" href="/assets/js/100.c9e70424.js"><link rel="prefetch" href="/assets/js/101.7d153ac9.js"><link rel="prefetch" href="/assets/js/102.85de912f.js"><link rel="prefetch" href="/assets/js/103.61b2f7e1.js"><link rel="prefetch" href="/assets/js/104.5a35b1f0.js"><link rel="prefetch" href="/assets/js/105.3b4ecaec.js"><link rel="prefetch" href="/assets/js/106.c442c55b.js"><link rel="prefetch" href="/assets/js/107.a95ebaee.js"><link rel="prefetch" href="/assets/js/108.a1994c22.js"><link rel="prefetch" href="/assets/js/109.60b54124.js"><link rel="prefetch" href="/assets/js/11.8f41bfe2.js"><link rel="prefetch" href="/assets/js/110.9f3397c8.js"><link rel="prefetch" href="/assets/js/111.9801ca03.js"><link rel="prefetch" href="/assets/js/112.ce77dfd6.js"><link rel="prefetch" href="/assets/js/113.7597a04c.js"><link rel="prefetch" href="/assets/js/114.26cf7708.js"><link rel="prefetch" href="/assets/js/115.d974a106.js"><link rel="prefetch" href="/assets/js/116.700143af.js"><link rel="prefetch" href="/assets/js/117.a66165d2.js"><link rel="prefetch" href="/assets/js/118.b31e6990.js"><link rel="prefetch" href="/assets/js/119.5cb9f809.js"><link rel="prefetch" href="/assets/js/12.c51f03c4.js"><link rel="prefetch" href="/assets/js/120.1fd76b91.js"><link rel="prefetch" href="/assets/js/121.d2492484.js"><link rel="prefetch" href="/assets/js/122.d843abd8.js"><link rel="prefetch" href="/assets/js/123.8ac8400b.js"><link rel="prefetch" href="/assets/js/124.a9949254.js"><link rel="prefetch" href="/assets/js/125.8796a7b5.js"><link rel="prefetch" href="/assets/js/126.7f1f78c2.js"><link rel="prefetch" href="/assets/js/127.9cd44447.js"><link rel="prefetch" href="/assets/js/128.b71edd96.js"><link rel="prefetch" href="/assets/js/129.bd3afe44.js"><link rel="prefetch" href="/assets/js/13.63e2250d.js"><link rel="prefetch" href="/assets/js/130.2fa9a027.js"><link rel="prefetch" href="/assets/js/131.c41b0245.js"><link rel="prefetch" href="/assets/js/132.00f91944.js"><link rel="prefetch" href="/assets/js/133.938bdbbf.js"><link rel="prefetch" href="/assets/js/134.9edb144c.js"><link rel="prefetch" href="/assets/js/135.07c0f821.js"><link rel="prefetch" href="/assets/js/136.7c89ad8e.js"><link rel="prefetch" href="/assets/js/137.1c2439fa.js"><link rel="prefetch" href="/assets/js/138.ee8a9d1e.js"><link rel="prefetch" href="/assets/js/139.c25fa4da.js"><link rel="prefetch" href="/assets/js/14.39577714.js"><link rel="prefetch" href="/assets/js/140.73aed9e1.js"><link rel="prefetch" href="/assets/js/141.4599df87.js"><link rel="prefetch" href="/assets/js/142.0539f993.js"><link rel="prefetch" href="/assets/js/143.2393d855.js"><link rel="prefetch" href="/assets/js/144.4872f976.js"><link rel="prefetch" href="/assets/js/145.4725cc29.js"><link rel="prefetch" href="/assets/js/146.5ac1ae41.js"><link rel="prefetch" href="/assets/js/147.ee55fe80.js"><link rel="prefetch" href="/assets/js/148.017a60a5.js"><link rel="prefetch" href="/assets/js/149.9275392f.js"><link rel="prefetch" href="/assets/js/15.16a10138.js"><link rel="prefetch" href="/assets/js/150.4f6e39e2.js"><link rel="prefetch" href="/assets/js/151.8112ed38.js"><link rel="prefetch" href="/assets/js/152.9b3892fe.js"><link rel="prefetch" href="/assets/js/153.985dfc78.js"><link rel="prefetch" href="/assets/js/154.c5b2941e.js"><link rel="prefetch" href="/assets/js/155.17e7db46.js"><link rel="prefetch" href="/assets/js/156.18ce8096.js"><link rel="prefetch" href="/assets/js/157.503c9654.js"><link rel="prefetch" href="/assets/js/158.d2a16ef9.js"><link rel="prefetch" href="/assets/js/159.ea946356.js"><link rel="prefetch" href="/assets/js/16.268b7541.js"><link rel="prefetch" href="/assets/js/160.e33ccb84.js"><link rel="prefetch" href="/assets/js/161.00ee3a5e.js"><link rel="prefetch" href="/assets/js/162.2a192fc6.js"><link rel="prefetch" href="/assets/js/163.8ea65891.js"><link rel="prefetch" href="/assets/js/164.f5ba32ea.js"><link rel="prefetch" href="/assets/js/165.d3e0e3bc.js"><link rel="prefetch" href="/assets/js/166.3fb11b83.js"><link rel="prefetch" href="/assets/js/167.d3165489.js"><link rel="prefetch" href="/assets/js/168.b4e4fee5.js"><link rel="prefetch" href="/assets/js/169.48ef06de.js"><link rel="prefetch" href="/assets/js/17.bc320121.js"><link rel="prefetch" href="/assets/js/170.cf8bdfa4.js"><link rel="prefetch" href="/assets/js/171.a15829ec.js"><link rel="prefetch" href="/assets/js/172.7339f3af.js"><link rel="prefetch" href="/assets/js/173.8e7612d5.js"><link rel="prefetch" href="/assets/js/174.57733e3c.js"><link rel="prefetch" href="/assets/js/175.5da89883.js"><link rel="prefetch" href="/assets/js/176.d3088d0b.js"><link rel="prefetch" href="/assets/js/177.77d4f99a.js"><link rel="prefetch" href="/assets/js/178.6f080056.js"><link rel="prefetch" href="/assets/js/179.fd1b6bae.js"><link rel="prefetch" href="/assets/js/18.f25a177b.js"><link rel="prefetch" href="/assets/js/180.947ec3a7.js"><link rel="prefetch" href="/assets/js/181.137f66d8.js"><link rel="prefetch" href="/assets/js/182.a2605386.js"><link rel="prefetch" href="/assets/js/183.e1d41264.js"><link rel="prefetch" href="/assets/js/184.a92813fb.js"><link rel="prefetch" href="/assets/js/185.287a04b2.js"><link rel="prefetch" href="/assets/js/186.7284a85c.js"><link rel="prefetch" href="/assets/js/187.9d46b1fd.js"><link rel="prefetch" href="/assets/js/188.d488ef34.js"><link rel="prefetch" href="/assets/js/189.a4b1c139.js"><link rel="prefetch" href="/assets/js/19.69a9cb43.js"><link rel="prefetch" href="/assets/js/190.b5fc0d1e.js"><link rel="prefetch" href="/assets/js/191.cb3df8ec.js"><link rel="prefetch" href="/assets/js/192.284ab855.js"><link rel="prefetch" href="/assets/js/193.9943ea97.js"><link rel="prefetch" href="/assets/js/194.ca5b0372.js"><link rel="prefetch" href="/assets/js/195.3dd22df1.js"><link rel="prefetch" href="/assets/js/196.2bb20f59.js"><link rel="prefetch" href="/assets/js/197.f68f5cea.js"><link rel="prefetch" href="/assets/js/198.7fe206e3.js"><link rel="prefetch" href="/assets/js/199.dfacca9f.js"><link rel="prefetch" href="/assets/js/20.02a969ac.js"><link rel="prefetch" href="/assets/js/200.a2d258cc.js"><link rel="prefetch" href="/assets/js/201.66f9f3cd.js"><link rel="prefetch" href="/assets/js/202.9a90ff27.js"><link rel="prefetch" href="/assets/js/203.362927aa.js"><link rel="prefetch" href="/assets/js/204.dc472967.js"><link rel="prefetch" href="/assets/js/205.1a5438ac.js"><link rel="prefetch" href="/assets/js/206.dfd0a913.js"><link rel="prefetch" href="/assets/js/207.b291df1e.js"><link rel="prefetch" href="/assets/js/208.c501ea52.js"><link rel="prefetch" href="/assets/js/209.b9bef10a.js"><link rel="prefetch" href="/assets/js/21.de545bd9.js"><link rel="prefetch" href="/assets/js/210.bbe94fe3.js"><link rel="prefetch" href="/assets/js/211.bbccbad7.js"><link rel="prefetch" href="/assets/js/212.b8b0156c.js"><link rel="prefetch" href="/assets/js/213.a611ca63.js"><link rel="prefetch" href="/assets/js/214.ce63df2d.js"><link rel="prefetch" href="/assets/js/215.6e65bdbb.js"><link rel="prefetch" href="/assets/js/216.83d053c2.js"><link rel="prefetch" href="/assets/js/217.f0ff8083.js"><link rel="prefetch" href="/assets/js/218.5e6d306c.js"><link rel="prefetch" href="/assets/js/22.3405b01f.js"><link rel="prefetch" href="/assets/js/220.e768121c.js"><link rel="prefetch" href="/assets/js/221.d02e030a.js"><link rel="prefetch" href="/assets/js/222.17ff9609.js"><link rel="prefetch" href="/assets/js/223.bf07fdde.js"><link rel="prefetch" href="/assets/js/224.58104c7b.js"><link rel="prefetch" href="/assets/js/225.639a8660.js"><link rel="prefetch" href="/assets/js/226.65b0cfbd.js"><link rel="prefetch" href="/assets/js/227.d297a59f.js"><link rel="prefetch" href="/assets/js/228.1a6934d7.js"><link rel="prefetch" href="/assets/js/229.de34422e.js"><link rel="prefetch" href="/assets/js/23.69dc8d94.js"><link rel="prefetch" href="/assets/js/230.4a9af2ca.js"><link rel="prefetch" href="/assets/js/231.f9f87c61.js"><link rel="prefetch" href="/assets/js/232.c9249af0.js"><link rel="prefetch" href="/assets/js/233.e4884b4a.js"><link rel="prefetch" href="/assets/js/234.4263d01e.js"><link rel="prefetch" href="/assets/js/235.36944367.js"><link rel="prefetch" href="/assets/js/236.47acc35d.js"><link rel="prefetch" href="/assets/js/237.1a1ec8d4.js"><link rel="prefetch" href="/assets/js/238.901dae66.js"><link rel="prefetch" href="/assets/js/239.29e6bd75.js"><link rel="prefetch" href="/assets/js/24.a1782a04.js"><link rel="prefetch" href="/assets/js/240.e1a99c00.js"><link rel="prefetch" href="/assets/js/241.21b7b4d5.js"><link rel="prefetch" href="/assets/js/242.c6e8f51d.js"><link rel="prefetch" href="/assets/js/243.b9f7dbb8.js"><link rel="prefetch" href="/assets/js/244.d82e7676.js"><link rel="prefetch" href="/assets/js/245.d6d32bef.js"><link rel="prefetch" href="/assets/js/246.9df785ca.js"><link rel="prefetch" href="/assets/js/247.39361a95.js"><link rel="prefetch" href="/assets/js/248.ded311ae.js"><link rel="prefetch" href="/assets/js/249.ed678461.js"><link rel="prefetch" href="/assets/js/25.e45a6beb.js"><link rel="prefetch" href="/assets/js/250.fbbb1010.js"><link rel="prefetch" href="/assets/js/251.81a4098f.js"><link rel="prefetch" href="/assets/js/252.d01d4352.js"><link rel="prefetch" href="/assets/js/253.ac8e8036.js"><link rel="prefetch" href="/assets/js/254.673d0ac8.js"><link rel="prefetch" href="/assets/js/255.648ca249.js"><link rel="prefetch" href="/assets/js/256.df9e0d06.js"><link rel="prefetch" href="/assets/js/257.2659fd53.js"><link rel="prefetch" href="/assets/js/258.768a5063.js"><link rel="prefetch" href="/assets/js/259.3cafd7d8.js"><link rel="prefetch" href="/assets/js/26.2ddddaf3.js"><link rel="prefetch" href="/assets/js/260.daeab7cd.js"><link rel="prefetch" href="/assets/js/261.750a6b34.js"><link rel="prefetch" href="/assets/js/262.10ad1dea.js"><link rel="prefetch" href="/assets/js/263.3de9e804.js"><link rel="prefetch" href="/assets/js/264.5d8fa025.js"><link rel="prefetch" href="/assets/js/265.2ddc1eb3.js"><link rel="prefetch" href="/assets/js/266.47aaa313.js"><link rel="prefetch" href="/assets/js/267.ec6c5119.js"><link rel="prefetch" href="/assets/js/268.27d2cac0.js"><link rel="prefetch" href="/assets/js/269.654a0297.js"><link rel="prefetch" href="/assets/js/27.ed37a2eb.js"><link rel="prefetch" href="/assets/js/270.68714208.js"><link rel="prefetch" href="/assets/js/271.a112d42c.js"><link rel="prefetch" href="/assets/js/272.a7eb7e21.js"><link rel="prefetch" href="/assets/js/273.8c2b15f1.js"><link rel="prefetch" href="/assets/js/274.1804e4d1.js"><link rel="prefetch" href="/assets/js/275.b7d0b48b.js"><link rel="prefetch" href="/assets/js/276.d5db1108.js"><link rel="prefetch" href="/assets/js/277.26ff02bd.js"><link rel="prefetch" href="/assets/js/278.705c9e2d.js"><link rel="prefetch" href="/assets/js/279.cfa9e5cd.js"><link rel="prefetch" href="/assets/js/28.77c432c4.js"><link rel="prefetch" href="/assets/js/280.9c1589b5.js"><link rel="prefetch" href="/assets/js/281.4ba44106.js"><link rel="prefetch" href="/assets/js/282.72006fe6.js"><link rel="prefetch" href="/assets/js/283.59bfc241.js"><link rel="prefetch" href="/assets/js/284.1a5840e8.js"><link rel="prefetch" href="/assets/js/285.6fc1c24d.js"><link rel="prefetch" href="/assets/js/286.4d77a9b3.js"><link rel="prefetch" href="/assets/js/287.07c79b49.js"><link rel="prefetch" href="/assets/js/29.bf0be342.js"><link rel="prefetch" href="/assets/js/3.e3770c3e.js"><link rel="prefetch" href="/assets/js/30.056fcad8.js"><link rel="prefetch" href="/assets/js/31.7083766f.js"><link rel="prefetch" href="/assets/js/32.cf7012ae.js"><link rel="prefetch" href="/assets/js/33.f1551eac.js"><link rel="prefetch" href="/assets/js/34.0a7ed9f3.js"><link rel="prefetch" href="/assets/js/35.1fedcab6.js"><link rel="prefetch" href="/assets/js/36.f32b5536.js"><link rel="prefetch" href="/assets/js/37.ecf063ae.js"><link rel="prefetch" href="/assets/js/38.ff825fc2.js"><link rel="prefetch" href="/assets/js/39.0d51331a.js"><link rel="prefetch" href="/assets/js/4.07df64b9.js"><link rel="prefetch" href="/assets/js/40.725c83f7.js"><link rel="prefetch" href="/assets/js/41.177d3173.js"><link rel="prefetch" href="/assets/js/42.d79ab1a6.js"><link rel="prefetch" href="/assets/js/43.0843e4ba.js"><link rel="prefetch" href="/assets/js/44.b50ba5e1.js"><link rel="prefetch" href="/assets/js/45.0d8c8534.js"><link rel="prefetch" href="/assets/js/46.9f6a4cc3.js"><link rel="prefetch" href="/assets/js/47.1dc4dd52.js"><link rel="prefetch" href="/assets/js/48.e5b33d10.js"><link rel="prefetch" href="/assets/js/49.f5d38f0d.js"><link rel="prefetch" href="/assets/js/5.315d7655.js"><link rel="prefetch" href="/assets/js/50.957e2a48.js"><link rel="prefetch" href="/assets/js/51.defe65c0.js"><link rel="prefetch" href="/assets/js/52.238cd9b5.js"><link rel="prefetch" href="/assets/js/53.2bd85fef.js"><link rel="prefetch" href="/assets/js/54.e529ff10.js"><link rel="prefetch" href="/assets/js/55.d57343cc.js"><link rel="prefetch" href="/assets/js/56.87d50d47.js"><link rel="prefetch" href="/assets/js/57.40964fa2.js"><link rel="prefetch" href="/assets/js/58.da160219.js"><link rel="prefetch" href="/assets/js/59.2bd1560f.js"><link rel="prefetch" href="/assets/js/6.5fb7fa31.js"><link rel="prefetch" href="/assets/js/60.6fd4af6f.js"><link rel="prefetch" href="/assets/js/61.663f58f0.js"><link rel="prefetch" href="/assets/js/62.33b5cc26.js"><link rel="prefetch" href="/assets/js/63.126f3575.js"><link rel="prefetch" href="/assets/js/64.ae08b65e.js"><link rel="prefetch" href="/assets/js/65.be75da36.js"><link rel="prefetch" href="/assets/js/66.78dade32.js"><link rel="prefetch" href="/assets/js/67.1a890242.js"><link rel="prefetch" href="/assets/js/68.9753a6d4.js"><link rel="prefetch" href="/assets/js/69.82ddc388.js"><link rel="prefetch" href="/assets/js/7.d8f2050a.js"><link rel="prefetch" href="/assets/js/70.660da076.js"><link rel="prefetch" href="/assets/js/71.ca894609.js"><link rel="prefetch" href="/assets/js/72.4be8bf5e.js"><link rel="prefetch" href="/assets/js/73.f7657d8f.js"><link rel="prefetch" href="/assets/js/74.c23c25fb.js"><link rel="prefetch" href="/assets/js/75.e72b6434.js"><link rel="prefetch" href="/assets/js/76.fc8f9bef.js"><link rel="prefetch" href="/assets/js/77.10c38121.js"><link rel="prefetch" href="/assets/js/78.97eca5ed.js"><link rel="prefetch" href="/assets/js/79.628bb0a2.js"><link rel="prefetch" href="/assets/js/80.805d0556.js"><link rel="prefetch" href="/assets/js/81.486955ff.js"><link rel="prefetch" href="/assets/js/82.8a8efc07.js"><link rel="prefetch" href="/assets/js/83.d5c86a91.js"><link rel="prefetch" href="/assets/js/84.81dd68de.js"><link rel="prefetch" href="/assets/js/85.611ac749.js"><link rel="prefetch" href="/assets/js/86.4079cda4.js"><link rel="prefetch" href="/assets/js/87.b32830f7.js"><link rel="prefetch" href="/assets/js/88.340512a5.js"><link rel="prefetch" href="/assets/js/89.89bda9e8.js"><link rel="prefetch" href="/assets/js/90.6310209c.js"><link rel="prefetch" href="/assets/js/91.d92e18eb.js"><link rel="prefetch" href="/assets/js/92.c89608f4.js"><link rel="prefetch" href="/assets/js/93.cd043d25.js"><link rel="prefetch" href="/assets/js/94.5daec904.js"><link rel="prefetch" href="/assets/js/95.8db5b0f6.js"><link rel="prefetch" href="/assets/js/96.6c7b0725.js"><link rel="prefetch" href="/assets/js/97.544da230.js"><link rel="prefetch" href="/assets/js/98.ad5fd138.js"><link rel="prefetch" href="/assets/js/99.48105d1a.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.e3b34f7a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5149da19.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Landscape</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link router-link-active">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/operatingsystem/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link router-link-active">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/operatingsystem/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>async函数</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/tech/es6/Generator/async.html#含义" class="sidebar-link">含义</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/Generator/async.html#基本用法" class="sidebar-link">基本用法</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/Generator/async.html#语法" class="sidebar-link">语法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es6/Generator/async.html#_1-返回-promise-对象" class="sidebar-link">1. 返回 Promise 对象</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Generator/async.html#_2-promise-对象的状态变化" class="sidebar-link">2. Promise 对象的状态变化</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Generator/async.html#_3-await-命令" class="sidebar-link">3. await 命令</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Generator/async.html#_4-错误处理" class="sidebar-link">4. 错误处理</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Generator/async.html#_5-使用注意点" class="sidebar-link">5. 使用注意点</a></li></ul></li><li><a href="/docs/tech/es6/Generator/async.html#async-函数的实现原理" class="sidebar-link">async 函数的实现原理</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/Generator/async.html#与其他异步处理方法的比较" class="sidebar-link">与其他异步处理方法的比较</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/Generator/async.html#实例-按顺序完成异步操作" class="sidebar-link">实例：按顺序完成异步操作</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="async函数"><a href="#async函数" class="header-anchor">#</a> async函数</h1> <h2 id="含义"><a href="#含义" class="header-anchor">#</a> 含义</h2> <p>ES2017 标准引入了 async 函数，使得异步操作变得更加方便。</p> <p>async 函数是什么？一句话，它就是 Generator 函数的语法糖。</p> <p>前文有一个 Generator 函数，依次读取两个文件。</p> <div class="language-asy line-numbers-mode"><pre class="language-text"><code>const fs = require('fs');
+
+const readFile = function (fileName) {
+  return new Promise(function (resolve, reject) {
+    fs.readFile(fileName, function(error, data) {
+      if (error) return reject(error);
+      resolve(data);
+    });
+  });
+};
+
+const gen = function* () {
+  const f1 = yield readFile('/etc/fstab');
+  const f2 = yield readFile('/etc/shells');
+  console.log(f1.toString());
+  console.log(f2.toString());
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>上面代码的函数gen可以写成async函数，就是下面这样。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>const asyncReadFile = async function () {
+  const f1 = await readFile('/etc/fstab');
+  const f2 = await readFile('/etc/shells');
+  console.log(f1.toString());
+  console.log(f2.toString());
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>一比较就会发现，async函数就是将 Generator 函数的星号（*）替换成async，将yield替换成await，仅此而已。</p> <p>async函数对 Generator 函数的改进，体现在以下四点。</p> <p>（1）内置执行器。</p> <p>Generator 函数的执行必须靠执行器，所以才有了co模块，而async函数自带执行器。也就是说，async函数的执行，与普通函数一模一样，只要一行。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>asyncReadFile();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>上面的代码调用了asyncReadFile函数，然后它就会自动执行，输出最后结果。这完全不像 Generator 函数，需要调用next方法，或者用co模块，才能真正执行，得到最后结果。</p> <p>（2）更好的语义。</p> <p>async和await，比起星号和yield，语义更清楚了。async表示函数里有异步操作，await表示紧跟在后面的表达式需要等待结果。</p> <p>（3）更广的适用性。</p> <p>co模块约定，yield命令后面只能是 Thunk 函数或 Promise 对象，而async函数的await命令后面，可以是 Promise 对象和原始类型的值（数值、字符串和布尔值，但这时会自动转成立即 resolved 的 Promise 对象）。</p> <p>（4）返回值是 Promise。</p> <p>async函数的返回值是 Promise 对象，这比 Generator 函数的返回值是 Iterator 对象方便多了。你可以用then方法指定下一步的操作。</p> <p>进一步说，async函数完全可以看作多个异步操作，包装成的一个 Promise 对象，而await命令就是内部then命令的语法糖。</p> <h2 id="基本用法"><a href="#基本用法" class="header-anchor">#</a> 基本用法</h2> <p>async函数返回一个 Promise 对象，可以使用then方法添加回调函数。当函数执行的时候，一旦遇到await就会先返回，等到异步操作完成，再接着执行函数体内后面的语句。</p> <p>下面是一个例子。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function getStockPriceByName(name) {
+  const symbol = await getStockSymbol(name);
+  const stockPrice = await getStockPrice(symbol);
+  return stockPrice;
+}
+
+getStockPriceByName('goog').then(function (result) {
+  console.log(result);
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>上面代码是一个获取股票报价的函数，函数前面的async关键字，表明该函数内部有异步操作。调用该函数时，会立即返回一个Promise对象。</p> <p>下面是另一个例子，指定多少毫秒后输出一个值。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function timeout(ms) {
+  return new Promise((resolve) =&gt; {
+    setTimeout(resolve, ms);
+  });
+}
+
+async function asyncPrint(value, ms) {
+  await timeout(ms);
+  console.log(value);
+}
+
+asyncPrint('hello world', 50);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>上面代码指定 50 毫秒以后，输出hello world。</p> <p>由于async函数返回的是 Promise 对象，可以作为await命令的参数。所以，上面的例子也可以写成下面的形式。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function timeout(ms) {
+  await new Promise((resolve) =&gt; {
+    setTimeout(resolve, ms);
+  });
+}
+
+async function asyncPrint(value, ms) {
+  await timeout(ms);
+  console.log(value);
+}
+
+asyncPrint('hello world', 50);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>async 函数有多种使用形式。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>// 函数声明
+async function foo() {}
+
+// 函数表达式
+const foo = async function () {};
+
+// 对象的方法
+let obj = { async foo() {} };
+obj.foo().then(...)
+
+// Class 的方法
+class Storage {
+  constructor() {
+    this.cachePromise = caches.open('avatars');
+  }
+
+  async getAvatar(name) {
+    const cache = await this.cachePromise;
+    return cache.match(`/avatars/${name}.jpg`);
+  }
+}
+
+const storage = new Storage();
+storage.getAvatar('jake').then(…);
+
+// 箭头函数
+const foo = async () =&gt; {};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><h2 id="语法"><a href="#语法" class="header-anchor">#</a> 语法</h2> <p>async函数的语法规则总体上比较简单，难点是错误处理机制。</p> <h3 id="_1-返回-promise-对象"><a href="#_1-返回-promise-对象" class="header-anchor">#</a> 1. 返回 Promise 对象</h3> <p>async函数返回一个 Promise 对象。</p> <p>async函数内部return语句返回的值，会成为then方法回调函数的参数。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function f() {
+  return 'hello world';
+}
+
+f().then(v =&gt; console.log(v))
+// &quot;hello world&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>上面代码中，函数f内部return命令返回的值，会被then方法回调函数接收到。</p> <p>async函数内部抛出错误，会导致返回的 Promise 对象变为reject状态。抛出的错误对象会被catch方法回调函数接收到。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function f() {
+  throw new Error('出错了');
+}
+
+f().then(
+  v =&gt; console.log(v),
+  e =&gt; console.log(e)
+)
+// Error: 出错了
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="_2-promise-对象的状态变化"><a href="#_2-promise-对象的状态变化" class="header-anchor">#</a> 2. Promise 对象的状态变化</h3> <p>async函数返回的 Promise 对象，必须等到内部所有await命令后面的 Promise 对象执行完，才会发生状态改变，除非遇到return语句或者抛出错误。也就是说，只有async函数内部的异步操作执行完，才会执行then方法指定的回调函数。</p> <p>下面是一个例子。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function getTitle(url) {
+  let response = await fetch(url);
+  let html = await response.text();
+  return html.match(/&lt;title&gt;([\s\S]+)&lt;\/title&gt;/i)[1];
+}
+getTitle('https://tc39.github.io/ecma262/').then(console.log)
+// &quot;ECMAScript 2017 Language Specification&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>上面代码中，函数getTitle内部有三个操作：抓取网页、取出文本、匹配页面标题。只有这三个操作全部完成，才会执行then方法里面的console.log。</p> <h3 id="_3-await-命令"><a href="#_3-await-命令" class="header-anchor">#</a> 3. await 命令</h3> <p>正常情况下，await命令后面是一个 Promise 对象，返回该对象的结果。如果不是 Promise 对象，就直接返回对应的值。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function f() {
+  // 等同于
+  // return 123;
+  return await 123;
+}
+
+f().then(v =&gt; console.log(v))
+// 123
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>上面代码中，await命令的参数是数值123，这时等同于return 123。</p> <p>另一种情况是，await命令后面是一个thenable对象（即定义then方法的对象），那么await会将其等同于 Promise 对象。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>class Sleep {
+  constructor(timeout) {
+    this.timeout = timeout;
+  }
+  then(resolve, reject) {
+    const startTime = Date.now();
+    setTimeout(
+      () =&gt; resolve(Date.now() - startTime),
+      this.timeout
+    );
+  }
+}
+
+(async () =&gt; {
+  const sleepTime = await new Sleep(1000);
+  console.log(sleepTime);
+})();
+// 1000
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>上面代码中，await命令后面是一个Sleep对象的实例。这个实例不是 Promise 对象，但是因为定义了then方法，await会将其视为Promise处理。</p> <p>这个例子还演示了如何实现休眠效果。JavaScript 一直没有休眠的语法，但是借助await命令就可以让程序停顿指定的时间。下面给出了一个简化的sleep实现。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function sleep(interval) {
+  return new Promise(resolve =&gt; {
+    setTimeout(resolve, interval);
+  })
+}
+
+// 用法
+async function one2FiveInAsync() {
+  for(let i = 1; i &lt;= 5; i++) {
+    console.log(i);
+    await sleep(1000);
+  }
+}
+
+one2FiveInAsync();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>await命令后面的 Promise 对象如果变为reject状态，则reject的参数会被catch方法的回调函数接收到。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function f() {
+  await Promise.reject('出错了');
+}
+
+f()
+.then(v =&gt; console.log(v))
+.catch(e =&gt; console.log(e))
+// 出错了
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>注意，上面代码中，await语句前面没有return，但是reject方法的参数依然传入了catch方法的回调函数。这里如果在await前面加上return，效果是一样的。</p> <p>任何一个await语句后面的 Promise 对象变为reject状态，那么整个async函数都会中断执行。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function f() {
+  await Promise.reject('出错了');
+  await Promise.resolve('hello world'); // 不会执行
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>上面代码中，第二个await语句是不会执行的，因为第一个await语句状态变成了reject。</p> <p>有时，我们希望即使前一个异步操作失败，也不要中断后面的异步操作。这时可以将第一个await放在try...catch结构里面，这样不管这个异步操作是否成功，第二个await都会执行。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function f() {
+  try {
+    await Promise.reject('出错了');
+  } catch(e) {
+  }
+  return await Promise.resolve('hello world');
+}
+
+f()
+.then(v =&gt; console.log(v))
+// hello world
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>另一种方法是await后面的 Promise 对象再跟一个catch方法，处理前面可能出现的错误。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function f() {
+  await Promise.reject('出错了')
+    .catch(e =&gt; console.log(e));
+  return await Promise.resolve('hello world');
+}
+
+f()
+.then(v =&gt; console.log(v))
+// 出错了
+// hello world
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="_4-错误处理"><a href="#_4-错误处理" class="header-anchor">#</a> 4. 错误处理</h3> <p>如果await后面的异步操作出错，那么等同于async函数返回的 Promise 对象被reject。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function f() {
+  await new Promise(function (resolve, reject) {
+    throw new Error('出错了');
+  });
+}
+
+f()
+.then(v =&gt; console.log(v))
+.catch(e =&gt; console.log(e))
+// Error：出错了
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>上面代码中，async函数f执行后，await后面的 Promise 对象会抛出一个错误对象，导致catch方法的回调函数被调用，它的参数就是抛出的错误对象。具体的执行机制，可以参考后文的“async 函数的实现原理”。</p> <p>防止出错的方法，也是将其放在try...catch代码块之中。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function f() {
+  try {
+    await new Promise(function (resolve, reject) {
+      throw new Error('出错了');
+    });
+  } catch(e) {
+  }
+  return await('hello world');
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>如果有多个await命令，可以统一放在try...catch结构中。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function main() {
+  try {
+    const val1 = await firstStep();
+    const val2 = await secondStep(val1);
+    const val3 = await thirdStep(val1, val2);
+
+    console.log('Final: ', val3);
+  }
+  catch (err) {
+    console.error(err);
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>下面的例子使用try...catch结构，实现多次重复尝试。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>const superagent = require('superagent');
+const NUM_RETRIES = 3;
+
+async function test() {
+  let i;
+  for (i = 0; i &lt; NUM_RETRIES; ++i) {
+    try {
+      await superagent.get('http://google.com/this-throws-an-error');
+      break;
+    } catch(err) {}
+  }
+  console.log(i); // 3
+}
+
+test();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>上面代码中，如果await操作成功，就会使用break语句退出循环；如果失败，会被catch语句捕捉，然后进入下一轮循环。</p> <h3 id="_5-使用注意点"><a href="#_5-使用注意点" class="header-anchor">#</a> 5. 使用注意点</h3> <p>第一点，前面已经说过，await命令后面的Promise对象，运行结果可能是rejected，所以最好把await命令放在try...catch代码块中。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function myFunction() {
+  try {
+    await somethingThatReturnsAPromise();
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+// 另一种写法
+
+async function myFunction() {
+  await somethingThatReturnsAPromise()
+  .catch(function (err) {
+    console.log(err);
+  });
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>第二点，多个await命令后面的异步操作，如果不存在继发关系，最好让它们同时触发。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>let foo = await getFoo();
+let bar = await getBar();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>上面代码中，getFoo和getBar是两个独立的异步操作（即互不依赖），被写成继发关系。这样比较耗时，因为只有getFoo完成以后，才会执行getBar，完全可以让它们同时触发。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>// 写法一
+let [foo, bar] = await Promise.all([getFoo(), getBar()]);
+
+// 写法二
+let fooPromise = getFoo();
+let barPromise = getBar();
+let foo = await fooPromise;
+let bar = await barPromise;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>上面两种写法，getFoo和getBar都是同时触发，这样就会缩短程序的执行时间。</p> <p>第三点，await命令只能用在async函数之中，如果用在普通函数，就会报错。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function dbFuc(db) {
+  let docs = [{}, {}, {}];
+
+  // 报错
+  docs.forEach(function (doc) {
+    await db.post(doc);
+  });
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>上面代码会报错，因为await用在普通函数之中了。但是，如果将forEach方法的参数改成async函数，也有问题。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function dbFuc(db) { //这里不需要 async
+  let docs = [{}, {}, {}];
+
+  // 可能得到错误结果
+  docs.forEach(async function (doc) {
+    await db.post(doc);
+  });
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>上面代码可能不会正常工作，原因是这时三个db.post操作将是并发执行，也就是同时执行，而不是继发执行。正确的写法是采用for循环。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function dbFuc(db) {
+  let docs = [{}, {}, {}];
+
+  for (let doc of docs) {
+    await db.post(doc);
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>如果确实希望多个请求并发执行，可以使用Promise.all方法。当三个请求都会resolved时，下面两种写法效果相同。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function dbFuc(db) {
+  let docs = [{}, {}, {}];
+  let promises = docs.map((doc) =&gt; db.post(doc));
+
+  let results = await Promise.all(promises);
+  console.log(results);
+}
+
+// 或者使用下面的写法
+
+async function dbFuc(db) {
+  let docs = [{}, {}, {}];
+  let promises = docs.map((doc) =&gt; db.post(doc));
+
+  let results = [];
+  for (let promise of promises) {
+    results.push(await promise);
+  }
+  console.log(results);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>第四点，async 函数可以保留运行堆栈。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>const a = () =&gt; {
+  b().then(() =&gt; c());
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>上面代码中，函数a内部运行了一个异步任务b()。当b()运行的时候，函数a()不会中断，而是继续执行。等到b()运行结束，可能a()早就运行结束了，b()所在的上下文环境已经消失了。如果b()或c()报错，错误堆栈将不包括a()。</p> <p>现在将这个例子改成async函数。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>const a = async () =&gt; {
+  await b();
+  c();
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>上面代码中，b()运行的时候，a()是暂停执行，上下文环境都保存着。一旦b()或c()报错，错误堆栈将包括a()。</p> <h2 id="async-函数的实现原理"><a href="#async-函数的实现原理" class="header-anchor">#</a> async 函数的实现原理</h2> <p>async 函数的实现原理，就是将 Generator 函数和自动执行器，包装在一个函数里。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function fn(args) {
+  // ...
+}
+
+// 等同于
+
+function fn(args) {
+  return spawn(function* () {
+    // ...
+  });
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>所有的async函数都可以写成上面的第二种形式，其中的spawn函数就是自动执行器。</p> <p>下面给出spawn函数的实现，基本就是前文自动执行器的翻版。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function spawn(genF) {
+  return new Promise(function(resolve, reject) {
+    const gen = genF();
+    function step(nextF) {
+      let next;
+      try {
+        next = nextF();
+      } catch(e) {
+        return reject(e);
+      }
+      if(next.done) {
+        return resolve(next.value);
+      }
+      Promise.resolve(next.value).then(function(v) {
+        step(function() { return gen.next(v); });
+      }, function(e) {
+        step(function() { return gen.throw(e); });
+      });
+    }
+    step(function() { return gen.next(undefined); });
+  });
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h2 id="与其他异步处理方法的比较"><a href="#与其他异步处理方法的比较" class="header-anchor">#</a> 与其他异步处理方法的比较</h2> <p>我们通过一个例子，来看 async 函数与 Promise、Generator 函数的比较。</p> <p>假定某个 DOM 元素上面，部署了一系列的动画，前一个动画结束，才能开始后一个。如果当中有一个动画出错，就不再往下执行，返回上一个成功执行的动画的返回值。</p> <p>首先是 Promise 的写法。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function chainAnimationsPromise(elem, animations) {
+
+  // 变量ret用来保存上一个动画的返回值
+  let ret = null;
+
+  // 新建一个空的Promise
+  let p = Promise.resolve();
+
+  // 使用then方法，添加所有动画
+  for(let anim of animations) {
+    p = p.then(function(val) {
+      ret = val;
+      return anim(elem);
+    });
+  }
+
+  // 返回一个部署了错误捕捉机制的Promise
+  return p.catch(function(e) {
+    /* 忽略错误，继续执行 */
+  }).then(function() {
+    return ret;
+  });
+
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p>虽然 Promise 的写法比回调函数的写法大大改进，但是一眼看上去，代码完全都是 Promise 的 API（then、catch等等），操作本身的语义反而不容易看出来。</p> <p>接着是 Generator 函数的写法。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function chainAnimationsGenerator(elem, animations) {
+
+  return spawn(function*() {
+    let ret = null;
+    try {
+      for(let anim of animations) {
+        ret = yield anim(elem);
+      }
+    } catch(e) {
+      /* 忽略错误，继续执行 */
+    }
+    return ret;
+  });
+
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>上面代码使用 Generator 函数遍历了每个动画，语义比 Promise 写法更清晰，用户定义的操作全部都出现在spawn函数的内部。这个写法的问题在于，必须有一个任务运行器，自动执行 Generator 函数，上面代码的spawn函数就是自动执行器，它返回一个 Promise 对象，而且必须保证yield语句后面的表达式，必须返回一个 Promise。</p> <p>最后是 async 函数的写法。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function chainAnimationsAsync(elem, animations) {
+  let ret = null;
+  try {
+    for(let anim of animations) {
+      ret = await anim(elem);
+    }
+  } catch(e) {
+    /* 忽略错误，继续执行 */
+  }
+  return ret;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>可以看到 Async 函数的实现最简洁，最符合语义，几乎没有语义不相关的代码。它将 Generator 写法中的自动执行器，改在语言层面提供，不暴露给用户，因此代码量最少。如果使用 Generator 写法，自动执行器需要用户自己提供。</p> <h2 id="实例-按顺序完成异步操作"><a href="#实例-按顺序完成异步操作" class="header-anchor">#</a> 实例：按顺序完成异步操作</h2> <p>实际开发中，经常遇到一组异步操作，需要按照顺序完成。比如，依次远程读取一组 URL，然后按照读取的顺序输出结果。</p> <p>Promise 的写法如下。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function logInOrder(urls) {
+  // 远程读取所有URL
+  const textPromises = urls.map(url =&gt; {
+    return fetch(url).then(response =&gt; response.text());
+  });
+
+  // 按次序输出
+  textPromises.reduce((chain, textPromise) =&gt; {
+    return chain.then(() =&gt; textPromise)
+      .then(text =&gt; console.log(text));
+  }, Promise.resolve());
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>上面代码使用fetch方法，同时远程读取一组 URL。每个fetch操作都返回一个 Promise 对象，放入textPromises数组。然后，reduce方法依次处理每个 Promise 对象，然后使用then，将所有 Promise 对象连起来，因此就可以依次输出结果。</p> <p>这种写法不太直观，可读性比较差。下面是 async 函数实现。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function logInOrder(urls) {
+  for (const url of urls) {
+    const response = await fetch(url);
+    console.log(await response.text());
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>上面代码确实大大简化，问题是所有远程操作都是继发。只有前一个 URL 返回结果，才会去读取下一个 URL，这样做效率很差，非常浪费时间。我们需要的是并发发出远程请求。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>async function logInOrder(urls) {
+  // 并发读取远程URL
+  const textPromises = urls.map(async url =&gt; {
+    const response = await fetch(url);
+    return response.text();
+  });
+
+  // 按次序输出
+  for (const textPromise of textPromises) {
+    console.log(await textPromise);
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>上面代码中，虽然map方法的参数是async函数，但它是并发执行的，因为只有async函数内部是继发执行，外部不受影响。后面的for..of循环内部使用了await，因此实现了按顺序输出。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.03709e87.js" defer></script><script src="/assets/js/2.9c41e448.js" defer></script><script src="/assets/js/1.2c8cdafe.js" defer></script><script src="/assets/js/219.18acb160.js" defer></script>
+  </body>
+</html>

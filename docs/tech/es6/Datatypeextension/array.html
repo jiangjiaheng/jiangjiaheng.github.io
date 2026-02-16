@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>数组的扩展 | Landscape</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="私人博客网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.5149da19.css" as="style"><link rel="preload" href="/assets/js/app.03709e87.js" as="script"><link rel="preload" href="/assets/js/2.9c41e448.js" as="script"><link rel="preload" href="/assets/js/1.2c8cdafe.js" as="script"><link rel="preload" href="/assets/js/209.b9bef10a.js" as="script"><link rel="prefetch" href="/assets/js/10.9a78c136.js"><link rel="prefetch" href="/assets/js/100.c9e70424.js"><link rel="prefetch" href="/assets/js/101.7d153ac9.js"><link rel="prefetch" href="/assets/js/102.85de912f.js"><link rel="prefetch" href="/assets/js/103.61b2f7e1.js"><link rel="prefetch" href="/assets/js/104.5a35b1f0.js"><link rel="prefetch" href="/assets/js/105.3b4ecaec.js"><link rel="prefetch" href="/assets/js/106.c442c55b.js"><link rel="prefetch" href="/assets/js/107.a95ebaee.js"><link rel="prefetch" href="/assets/js/108.a1994c22.js"><link rel="prefetch" href="/assets/js/109.60b54124.js"><link rel="prefetch" href="/assets/js/11.8f41bfe2.js"><link rel="prefetch" href="/assets/js/110.9f3397c8.js"><link rel="prefetch" href="/assets/js/111.9801ca03.js"><link rel="prefetch" href="/assets/js/112.ce77dfd6.js"><link rel="prefetch" href="/assets/js/113.7597a04c.js"><link rel="prefetch" href="/assets/js/114.26cf7708.js"><link rel="prefetch" href="/assets/js/115.d974a106.js"><link rel="prefetch" href="/assets/js/116.700143af.js"><link rel="prefetch" href="/assets/js/117.a66165d2.js"><link rel="prefetch" href="/assets/js/118.b31e6990.js"><link rel="prefetch" href="/assets/js/119.5cb9f809.js"><link rel="prefetch" href="/assets/js/12.c51f03c4.js"><link rel="prefetch" href="/assets/js/120.1fd76b91.js"><link rel="prefetch" href="/assets/js/121.d2492484.js"><link rel="prefetch" href="/assets/js/122.d843abd8.js"><link rel="prefetch" href="/assets/js/123.8ac8400b.js"><link rel="prefetch" href="/assets/js/124.a9949254.js"><link rel="prefetch" href="/assets/js/125.8796a7b5.js"><link rel="prefetch" href="/assets/js/126.7f1f78c2.js"><link rel="prefetch" href="/assets/js/127.9cd44447.js"><link rel="prefetch" href="/assets/js/128.b71edd96.js"><link rel="prefetch" href="/assets/js/129.bd3afe44.js"><link rel="prefetch" href="/assets/js/13.63e2250d.js"><link rel="prefetch" href="/assets/js/130.2fa9a027.js"><link rel="prefetch" href="/assets/js/131.c41b0245.js"><link rel="prefetch" href="/assets/js/132.00f91944.js"><link rel="prefetch" href="/assets/js/133.938bdbbf.js"><link rel="prefetch" href="/assets/js/134.9edb144c.js"><link rel="prefetch" href="/assets/js/135.07c0f821.js"><link rel="prefetch" href="/assets/js/136.7c89ad8e.js"><link rel="prefetch" href="/assets/js/137.1c2439fa.js"><link rel="prefetch" href="/assets/js/138.ee8a9d1e.js"><link rel="prefetch" href="/assets/js/139.c25fa4da.js"><link rel="prefetch" href="/assets/js/14.39577714.js"><link rel="prefetch" href="/assets/js/140.73aed9e1.js"><link rel="prefetch" href="/assets/js/141.4599df87.js"><link rel="prefetch" href="/assets/js/142.0539f993.js"><link rel="prefetch" href="/assets/js/143.2393d855.js"><link rel="prefetch" href="/assets/js/144.4872f976.js"><link rel="prefetch" href="/assets/js/145.4725cc29.js"><link rel="prefetch" href="/assets/js/146.5ac1ae41.js"><link rel="prefetch" href="/assets/js/147.ee55fe80.js"><link rel="prefetch" href="/assets/js/148.017a60a5.js"><link rel="prefetch" href="/assets/js/149.9275392f.js"><link rel="prefetch" href="/assets/js/15.16a10138.js"><link rel="prefetch" href="/assets/js/150.4f6e39e2.js"><link rel="prefetch" href="/assets/js/151.8112ed38.js"><link rel="prefetch" href="/assets/js/152.9b3892fe.js"><link rel="prefetch" href="/assets/js/153.985dfc78.js"><link rel="prefetch" href="/assets/js/154.c5b2941e.js"><link rel="prefetch" href="/assets/js/155.17e7db46.js"><link rel="prefetch" href="/assets/js/156.18ce8096.js"><link rel="prefetch" href="/assets/js/157.503c9654.js"><link rel="prefetch" href="/assets/js/158.d2a16ef9.js"><link rel="prefetch" href="/assets/js/159.ea946356.js"><link rel="prefetch" href="/assets/js/16.268b7541.js"><link rel="prefetch" href="/assets/js/160.e33ccb84.js"><link rel="prefetch" href="/assets/js/161.00ee3a5e.js"><link rel="prefetch" href="/assets/js/162.2a192fc6.js"><link rel="prefetch" href="/assets/js/163.8ea65891.js"><link rel="prefetch" href="/assets/js/164.f5ba32ea.js"><link rel="prefetch" href="/assets/js/165.d3e0e3bc.js"><link rel="prefetch" href="/assets/js/166.3fb11b83.js"><link rel="prefetch" href="/assets/js/167.d3165489.js"><link rel="prefetch" href="/assets/js/168.b4e4fee5.js"><link rel="prefetch" href="/assets/js/169.48ef06de.js"><link rel="prefetch" href="/assets/js/17.bc320121.js"><link rel="prefetch" href="/assets/js/170.cf8bdfa4.js"><link rel="prefetch" href="/assets/js/171.a15829ec.js"><link rel="prefetch" href="/assets/js/172.7339f3af.js"><link rel="prefetch" href="/assets/js/173.8e7612d5.js"><link rel="prefetch" href="/assets/js/174.57733e3c.js"><link rel="prefetch" href="/assets/js/175.5da89883.js"><link rel="prefetch" href="/assets/js/176.d3088d0b.js"><link rel="prefetch" href="/assets/js/177.77d4f99a.js"><link rel="prefetch" href="/assets/js/178.6f080056.js"><link rel="prefetch" href="/assets/js/179.fd1b6bae.js"><link rel="prefetch" href="/assets/js/18.f25a177b.js"><link rel="prefetch" href="/assets/js/180.947ec3a7.js"><link rel="prefetch" href="/assets/js/181.137f66d8.js"><link rel="prefetch" href="/assets/js/182.a2605386.js"><link rel="prefetch" href="/assets/js/183.e1d41264.js"><link rel="prefetch" href="/assets/js/184.a92813fb.js"><link rel="prefetch" href="/assets/js/185.287a04b2.js"><link rel="prefetch" href="/assets/js/186.7284a85c.js"><link rel="prefetch" href="/assets/js/187.9d46b1fd.js"><link rel="prefetch" href="/assets/js/188.d488ef34.js"><link rel="prefetch" href="/assets/js/189.a4b1c139.js"><link rel="prefetch" href="/assets/js/19.69a9cb43.js"><link rel="prefetch" href="/assets/js/190.b5fc0d1e.js"><link rel="prefetch" href="/assets/js/191.cb3df8ec.js"><link rel="prefetch" href="/assets/js/192.284ab855.js"><link rel="prefetch" href="/assets/js/193.9943ea97.js"><link rel="prefetch" href="/assets/js/194.ca5b0372.js"><link rel="prefetch" href="/assets/js/195.3dd22df1.js"><link rel="prefetch" href="/assets/js/196.2bb20f59.js"><link rel="prefetch" href="/assets/js/197.f68f5cea.js"><link rel="prefetch" href="/assets/js/198.7fe206e3.js"><link rel="prefetch" href="/assets/js/199.dfacca9f.js"><link rel="prefetch" href="/assets/js/20.02a969ac.js"><link rel="prefetch" href="/assets/js/200.a2d258cc.js"><link rel="prefetch" href="/assets/js/201.66f9f3cd.js"><link rel="prefetch" href="/assets/js/202.9a90ff27.js"><link rel="prefetch" href="/assets/js/203.362927aa.js"><link rel="prefetch" href="/assets/js/204.dc472967.js"><link rel="prefetch" href="/assets/js/205.1a5438ac.js"><link rel="prefetch" href="/assets/js/206.dfd0a913.js"><link rel="prefetch" href="/assets/js/207.b291df1e.js"><link rel="prefetch" href="/assets/js/208.c501ea52.js"><link rel="prefetch" href="/assets/js/21.de545bd9.js"><link rel="prefetch" href="/assets/js/210.bbe94fe3.js"><link rel="prefetch" href="/assets/js/211.bbccbad7.js"><link rel="prefetch" href="/assets/js/212.b8b0156c.js"><link rel="prefetch" href="/assets/js/213.a611ca63.js"><link rel="prefetch" href="/assets/js/214.ce63df2d.js"><link rel="prefetch" href="/assets/js/215.6e65bdbb.js"><link rel="prefetch" href="/assets/js/216.83d053c2.js"><link rel="prefetch" href="/assets/js/217.f0ff8083.js"><link rel="prefetch" href="/assets/js/218.5e6d306c.js"><link rel="prefetch" href="/assets/js/219.18acb160.js"><link rel="prefetch" href="/assets/js/22.3405b01f.js"><link rel="prefetch" href="/assets/js/220.e768121c.js"><link rel="prefetch" href="/assets/js/221.d02e030a.js"><link rel="prefetch" href="/assets/js/222.17ff9609.js"><link rel="prefetch" href="/assets/js/223.bf07fdde.js"><link rel="prefetch" href="/assets/js/224.58104c7b.js"><link rel="prefetch" href="/assets/js/225.639a8660.js"><link rel="prefetch" href="/assets/js/226.65b0cfbd.js"><link rel="prefetch" href="/assets/js/227.d297a59f.js"><link rel="prefetch" href="/assets/js/228.1a6934d7.js"><link rel="prefetch" href="/assets/js/229.de34422e.js"><link rel="prefetch" href="/assets/js/23.69dc8d94.js"><link rel="prefetch" href="/assets/js/230.4a9af2ca.js"><link rel="prefetch" href="/assets/js/231.f9f87c61.js"><link rel="prefetch" href="/assets/js/232.c9249af0.js"><link rel="prefetch" href="/assets/js/233.e4884b4a.js"><link rel="prefetch" href="/assets/js/234.4263d01e.js"><link rel="prefetch" href="/assets/js/235.36944367.js"><link rel="prefetch" href="/assets/js/236.47acc35d.js"><link rel="prefetch" href="/assets/js/237.1a1ec8d4.js"><link rel="prefetch" href="/assets/js/238.901dae66.js"><link rel="prefetch" href="/assets/js/239.29e6bd75.js"><link rel="prefetch" href="/assets/js/24.a1782a04.js"><link rel="prefetch" href="/assets/js/240.e1a99c00.js"><link rel="prefetch" href="/assets/js/241.21b7b4d5.js"><link rel="prefetch" href="/assets/js/242.c6e8f51d.js"><link rel="prefetch" href="/assets/js/243.b9f7dbb8.js"><link rel="prefetch" href="/assets/js/244.d82e7676.js"><link rel="prefetch" href="/assets/js/245.d6d32bef.js"><link rel="prefetch" href="/assets/js/246.9df785ca.js"><link rel="prefetch" href="/assets/js/247.39361a95.js"><link rel="prefetch" href="/assets/js/248.ded311ae.js"><link rel="prefetch" href="/assets/js/249.ed678461.js"><link rel="prefetch" href="/assets/js/25.e45a6beb.js"><link rel="prefetch" href="/assets/js/250.fbbb1010.js"><link rel="prefetch" href="/assets/js/251.81a4098f.js"><link rel="prefetch" href="/assets/js/252.d01d4352.js"><link rel="prefetch" href="/assets/js/253.ac8e8036.js"><link rel="prefetch" href="/assets/js/254.673d0ac8.js"><link rel="prefetch" href="/assets/js/255.648ca249.js"><link rel="prefetch" href="/assets/js/256.df9e0d06.js"><link rel="prefetch" href="/assets/js/257.2659fd53.js"><link rel="prefetch" href="/assets/js/258.768a5063.js"><link rel="prefetch" href="/assets/js/259.3cafd7d8.js"><link rel="prefetch" href="/assets/js/26.2ddddaf3.js"><link rel="prefetch" href="/assets/js/260.daeab7cd.js"><link rel="prefetch" href="/assets/js/261.750a6b34.js"><link rel="prefetch" href="/assets/js/262.10ad1dea.js"><link rel="prefetch" href="/assets/js/263.3de9e804.js"><link rel="prefetch" href="/assets/js/264.5d8fa025.js"><link rel="prefetch" href="/assets/js/265.2ddc1eb3.js"><link rel="prefetch" href="/assets/js/266.47aaa313.js"><link rel="prefetch" href="/assets/js/267.ec6c5119.js"><link rel="prefetch" href="/assets/js/268.27d2cac0.js"><link rel="prefetch" href="/assets/js/269.654a0297.js"><link rel="prefetch" href="/assets/js/27.ed37a2eb.js"><link rel="prefetch" href="/assets/js/270.68714208.js"><link rel="prefetch" href="/assets/js/271.a112d42c.js"><link rel="prefetch" href="/assets/js/272.a7eb7e21.js"><link rel="prefetch" href="/assets/js/273.8c2b15f1.js"><link rel="prefetch" href="/assets/js/274.1804e4d1.js"><link rel="prefetch" href="/assets/js/275.b7d0b48b.js"><link rel="prefetch" href="/assets/js/276.d5db1108.js"><link rel="prefetch" href="/assets/js/277.26ff02bd.js"><link rel="prefetch" href="/assets/js/278.705c9e2d.js"><link rel="prefetch" href="/assets/js/279.cfa9e5cd.js"><link rel="prefetch" href="/assets/js/28.77c432c4.js"><link rel="prefetch" href="/assets/js/280.9c1589b5.js"><link rel="prefetch" href="/assets/js/281.4ba44106.js"><link rel="prefetch" href="/assets/js/282.72006fe6.js"><link rel="prefetch" href="/assets/js/283.59bfc241.js"><link rel="prefetch" href="/assets/js/284.1a5840e8.js"><link rel="prefetch" href="/assets/js/285.6fc1c24d.js"><link rel="prefetch" href="/assets/js/286.4d77a9b3.js"><link rel="prefetch" href="/assets/js/287.07c79b49.js"><link rel="prefetch" href="/assets/js/29.bf0be342.js"><link rel="prefetch" href="/assets/js/3.e3770c3e.js"><link rel="prefetch" href="/assets/js/30.056fcad8.js"><link rel="prefetch" href="/assets/js/31.7083766f.js"><link rel="prefetch" href="/assets/js/32.cf7012ae.js"><link rel="prefetch" href="/assets/js/33.f1551eac.js"><link rel="prefetch" href="/assets/js/34.0a7ed9f3.js"><link rel="prefetch" href="/assets/js/35.1fedcab6.js"><link rel="prefetch" href="/assets/js/36.f32b5536.js"><link rel="prefetch" href="/assets/js/37.ecf063ae.js"><link rel="prefetch" href="/assets/js/38.ff825fc2.js"><link rel="prefetch" href="/assets/js/39.0d51331a.js"><link rel="prefetch" href="/assets/js/4.07df64b9.js"><link rel="prefetch" href="/assets/js/40.725c83f7.js"><link rel="prefetch" href="/assets/js/41.177d3173.js"><link rel="prefetch" href="/assets/js/42.d79ab1a6.js"><link rel="prefetch" href="/assets/js/43.0843e4ba.js"><link rel="prefetch" href="/assets/js/44.b50ba5e1.js"><link rel="prefetch" href="/assets/js/45.0d8c8534.js"><link rel="prefetch" href="/assets/js/46.9f6a4cc3.js"><link rel="prefetch" href="/assets/js/47.1dc4dd52.js"><link rel="prefetch" href="/assets/js/48.e5b33d10.js"><link rel="prefetch" href="/assets/js/49.f5d38f0d.js"><link rel="prefetch" href="/assets/js/5.315d7655.js"><link rel="prefetch" href="/assets/js/50.957e2a48.js"><link rel="prefetch" href="/assets/js/51.defe65c0.js"><link rel="prefetch" href="/assets/js/52.238cd9b5.js"><link rel="prefetch" href="/assets/js/53.2bd85fef.js"><link rel="prefetch" href="/assets/js/54.e529ff10.js"><link rel="prefetch" href="/assets/js/55.d57343cc.js"><link rel="prefetch" href="/assets/js/56.87d50d47.js"><link rel="prefetch" href="/assets/js/57.40964fa2.js"><link rel="prefetch" href="/assets/js/58.da160219.js"><link rel="prefetch" href="/assets/js/59.2bd1560f.js"><link rel="prefetch" href="/assets/js/6.5fb7fa31.js"><link rel="prefetch" href="/assets/js/60.6fd4af6f.js"><link rel="prefetch" href="/assets/js/61.663f58f0.js"><link rel="prefetch" href="/assets/js/62.33b5cc26.js"><link rel="prefetch" href="/assets/js/63.126f3575.js"><link rel="prefetch" href="/assets/js/64.ae08b65e.js"><link rel="prefetch" href="/assets/js/65.be75da36.js"><link rel="prefetch" href="/assets/js/66.78dade32.js"><link rel="prefetch" href="/assets/js/67.1a890242.js"><link rel="prefetch" href="/assets/js/68.9753a6d4.js"><link rel="prefetch" href="/assets/js/69.82ddc388.js"><link rel="prefetch" href="/assets/js/7.d8f2050a.js"><link rel="prefetch" href="/assets/js/70.660da076.js"><link rel="prefetch" href="/assets/js/71.ca894609.js"><link rel="prefetch" href="/assets/js/72.4be8bf5e.js"><link rel="prefetch" href="/assets/js/73.f7657d8f.js"><link rel="prefetch" href="/assets/js/74.c23c25fb.js"><link rel="prefetch" href="/assets/js/75.e72b6434.js"><link rel="prefetch" href="/assets/js/76.fc8f9bef.js"><link rel="prefetch" href="/assets/js/77.10c38121.js"><link rel="prefetch" href="/assets/js/78.97eca5ed.js"><link rel="prefetch" href="/assets/js/79.628bb0a2.js"><link rel="prefetch" href="/assets/js/80.805d0556.js"><link rel="prefetch" href="/assets/js/81.486955ff.js"><link rel="prefetch" href="/assets/js/82.8a8efc07.js"><link rel="prefetch" href="/assets/js/83.d5c86a91.js"><link rel="prefetch" href="/assets/js/84.81dd68de.js"><link rel="prefetch" href="/assets/js/85.611ac749.js"><link rel="prefetch" href="/assets/js/86.4079cda4.js"><link rel="prefetch" href="/assets/js/87.b32830f7.js"><link rel="prefetch" href="/assets/js/88.340512a5.js"><link rel="prefetch" href="/assets/js/89.89bda9e8.js"><link rel="prefetch" href="/assets/js/90.6310209c.js"><link rel="prefetch" href="/assets/js/91.d92e18eb.js"><link rel="prefetch" href="/assets/js/92.c89608f4.js"><link rel="prefetch" href="/assets/js/93.cd043d25.js"><link rel="prefetch" href="/assets/js/94.5daec904.js"><link rel="prefetch" href="/assets/js/95.8db5b0f6.js"><link rel="prefetch" href="/assets/js/96.6c7b0725.js"><link rel="prefetch" href="/assets/js/97.544da230.js"><link rel="prefetch" href="/assets/js/98.ad5fd138.js"><link rel="prefetch" href="/assets/js/99.48105d1a.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.e3b34f7a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5149da19.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Landscape</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link router-link-active">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/operatingsystem/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link router-link-active">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/operatingsystem/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>数组的扩展</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/tech/es6/Datatypeextension/array.html#扩展运算符" class="sidebar-link">扩展运算符</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es6/Datatypeextension/array.html#_1-含义" class="sidebar-link">1. 含义</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Datatypeextension/array.html#_2-替代函数的-apply-方法" class="sidebar-link">2. 替代函数的 apply 方法</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Datatypeextension/array.html#_3-扩展运算符的应用" class="sidebar-link">3. 扩展运算符的应用</a></li></ul></li><li><a href="/docs/tech/es6/Datatypeextension/array.html#静态方法" class="sidebar-link">静态方法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es6/Datatypeextension/array.html#_1-from" class="sidebar-link">1. from</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Datatypeextension/array.html#_2-of" class="sidebar-link">2. of</a></li></ul></li><li><a href="/docs/tech/es6/Datatypeextension/array.html#实例方法" class="sidebar-link">实例方法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es6/Datatypeextension/array.html#_1-copywithin" class="sidebar-link">1. copyWithin</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Datatypeextension/array.html#_2-find-findindex" class="sidebar-link">2. find，findIndex</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Datatypeextension/array.html#_3-fill" class="sidebar-link">3. fill</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Datatypeextension/array.html#_4-entries-keys-values" class="sidebar-link">4. entries，keys，values</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Datatypeextension/array.html#_5-includes" class="sidebar-link">5. includes</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Datatypeextension/array.html#_6-flat-flatmap" class="sidebar-link">6. flat，flatMap</a></li></ul></li><li><a href="/docs/tech/es6/Datatypeextension/array.html#数组的空位" class="sidebar-link">数组的空位</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="数组的扩展"><a href="#数组的扩展" class="header-anchor">#</a> 数组的扩展</h1> <h2 id="扩展运算符"><a href="#扩展运算符" class="header-anchor">#</a> 扩展运算符</h2> <h3 id="_1-含义"><a href="#_1-含义" class="header-anchor">#</a> 1. 含义</h3> <p>扩展运算符（spread）是三个点（...）。它好比 rest 参数的逆运算，将一个数组转为用逗号分隔的参数序列。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>console.log(...[1, 2, 3])
+// 1 2 3
+
+console.log(1, ...[2, 3, 4], 5)
+// 1 2 3 4 5
+
+[...document.querySelectorAll('div')]
+// [&lt;div&gt;, &lt;div&gt;, &lt;div&gt;]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>该运算符主要用于函数调用。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>function push(array, ...items) {
+  array.push(...items);
+}
+
+function add(x, y) {
+  return x + y;
+}
+
+const numbers = [4, 38];
+add(...numbers) // 42
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>扩展运算符与正常的函数参数可以结合使用，非常灵活。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>function f(v, w, x, y, z) { }
+const args = [0, 1];
+f(-1, ...args, 2, ...[3]);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>扩展运算符后面还可以放置表达式。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>const arr = [
+  ...(x &gt; 0 ? ['a'] : []),
+  'b',
+];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>如果扩展运算符后面是一个空数组，则不产生任何效果。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>[...[], 1]
+// [1]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>注意，只有函数调用时，扩展运算符才可以放在圆括号中，否则会报错。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>(...[1, 2])
+
+// Uncaught SyntaxError: Unexpected number
+
+console.log((...[1, 2]))
+// Uncaught SyntaxError: Unexpected number
+
+console.log(...[1, 2])
+// 1 2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="_2-替代函数的-apply-方法"><a href="#_2-替代函数的-apply-方法" class="header-anchor">#</a> 2. 替代函数的 apply 方法</h3> <p>由于扩展运算符可以展开数组，所以不再需要apply方法，将数组转为函数的参数了。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>// ES5 的写法
+function f(x, y, z) {
+  // ...
+}
+var args = [0, 1, 2];
+f.apply(null, args);
+
+// ES6的写法
+function f(x, y, z) {
+  // ...
+}
+let args = [0, 1, 2];
+f(...args);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>下面是扩展运算符取代apply方法的一个实际的例子，应用Math.max方法，简化求出一个数组最大元素的写法。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>// ES5 的写法
+Math.max.apply(null, [14, 3, 77])
+
+// ES6 的写法
+Math.max(...[14, 3, 77])
+
+// 等同于
+Math.max(14, 3, 77);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>另一个例子是通过push函数，将一个数组添加到另一个数组的尾部。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>// ES5的 写法
+var arr1 = [0, 1, 2];
+var arr2 = [3, 4, 5];
+Array.prototype.push.apply(arr1, arr2);
+
+// ES6 的写法
+let arr1 = [0, 1, 2];
+let arr2 = [3, 4, 5];
+arr1.push(...arr2);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>下面是另外一个例子。</p> <p>// ES5
+new (Date.bind.apply(Date, [null, 2015, 1, 1]))
+// ES6
+new Date(...[2015, 1, 1]);</p> <h3 id="_3-扩展运算符的应用"><a href="#_3-扩展运算符的应用" class="header-anchor">#</a> 3. 扩展运算符的应用</h3> <p>（1）复制数组</p> <p>数组是复合的数据类型，直接复制的话，只是复制了指向底层数据结构的指针，而不是克隆一个全新的数组。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>const a1 = [1, 2];
+const a2 = a1;
+
+a2[0] = 2;
+a1 // [2, 2]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>上面代码中，a2并不是a1的克隆，而是指向同一份数据的另一个指针。修改a2，会直接导致a1的变化。</p> <p>扩展运算符提供了复制数组的简便写法。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>const a1 = [1, 2];
+// 写法一
+const a2 = [...a1];
+// 写法二
+const [...a2] = a1;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>上面的两种写法，a2都是a1的克隆。</p> <p>（2）合并数组</p> <p>扩展运算符提供了数组合并的新写法。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>const arr1 = ['a', 'b'];
+const arr2 = ['c'];
+const arr3 = ['d', 'e'];
+
+// ES5 的合并数组
+arr1.concat(arr2, arr3);
+// [ 'a', 'b', 'c', 'd', 'e' ]
+
+// ES6 的合并数组
+[...arr1, ...arr2, ...arr3]
+// [ 'a', 'b', 'c', 'd', 'e' ]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>不过，这两种方法都是浅拷贝，使用的时候需要注意。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>const a1 = [{ foo: 1 }];
+const a2 = [{ bar: 2 }];
+
+const a3 = a1.concat(a2);
+const a4 = [...a1, ...a2];
+
+a3[0] === a1[0] // true
+a4[0] === a1[0] // true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>（3）与解构赋值结合</p> <p>扩展运算符可以与解构赋值结合起来，用于生成数组。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>// ES5
+a = list[0], rest = list.slice(1)
+// ES6
+[a, ...rest] = list
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>下面是另外一些例子。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>const [first, ...rest] = [1, 2, 3, 4, 5];
+first // 1
+rest  // [2, 3, 4, 5]
+
+const [first, ...rest] = [];
+first // undefined
+rest  // []
+
+const [first, ...rest] = [&quot;foo&quot;];
+first  // &quot;foo&quot;
+rest   // []
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>如果将扩展运算符用于数组赋值，只能放在参数的最后一位，否则会报错。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>const [...butLast, last] = [1, 2, 3, 4, 5];
+// 报错
+
+const [first, ...middle, last] = [1, 2, 3, 4, 5];
+// 报错
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>（4）字符串</p> <p>扩展运算符还可以将字符串转为真正的数组。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>[...'hello']
+// [ &quot;h&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot; ]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>上面的写法，有一个重要的好处，那就是能够正确识别四个字节的 Unicode 字符。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>'x\uD83D\uDE80y'.length // 4
+[...'x\uD83D\uDE80y'].length // 3
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>（5）实现了 Iterator 接口的对象</p> <p>任何定义了遍历器（Iterator）接口的对象，都可以用扩展运算符转为真正的数组。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>let nodeList = document.querySelectorAll('div');
+let array = [...nodeList];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>对于那些没有部署 Iterator 接口的类似数组的对象，扩展运算符就无法将其转为真正的数组。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>let arrayLike = {
+  '0': 'a',
+  '1': 'b',
+  '2': 'c',
+  length: 3
+};
+
+// TypeError: Cannot spread non-iterable object.
+let arr = [...arrayLike];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>（6）Map 和 Set 结构，Generator 函数</p> <p>扩展运算符内部调用的是数据结构的 Iterator 接口，因此只要具有 Iterator 接口的对象，都可以使用扩展运算符，比如 Map 结构。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>let map = new Map([
+  [1, 'one'],
+  [2, 'two'],
+  [3, 'three'],
+]);
+
+let arr = [...map.keys()]; // [1, 2, 3]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>Generator 函数运行后，返回一个遍历器对象，因此也可以使用扩展运算符。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>const go = function*(){
+  yield 1;
+  yield 2;
+  yield 3;
+  };
+
+[...go()] // [1, 2, 3]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>上面代码中，变量go是一个 Generator 函数，执行后返回的是一个遍历器对象，对这个遍历器对象执行扩展运算符，就会将内部遍历得到的值，转为一个数组。</p> <p>如果对没有 Iterator 接口的对象，使用扩展运算符，将会报错。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>const obj = {a: 1, b: 2};
+let arr = [...obj]; // TypeError: Cannot spread non-iterable object
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="静态方法"><a href="#静态方法" class="header-anchor">#</a> 静态方法</h2> <h3 id="_1-from"><a href="#_1-from" class="header-anchor">#</a> 1. from</h3> <p>Array.from方法用于将两类对象转为真正的数组：类似数组的对象（array-like object）和可遍历（iterable）的对象（包括 ES6 新增的数据结构 Set 和 Map）。</p> <p>下面是一个类似数组的对象，Array.from将它转为真正的数组。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>let arrayLike = {
+    '0': 'a',
+    '1': 'b',
+    '2': 'c',
+    length: 3
+};
+
+// ES5的写法
+var arr1 = [].slice.call(arrayLike); // ['a', 'b', 'c']
+
+// ES6的写法
+let arr2 = Array.from(arrayLike); // ['a', 'b', 'c']
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>实际应用中，常见的类似数组的对象是 DOM 操作返回的 NodeList 集合，以及函数内部的arguments对象。Array.from都可以将它们转为真正的数组。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>// NodeList对象
+let ps = document.querySelectorAll('p');
+Array.from(ps).filter(p =&gt; {
+  return p.textContent.length &gt; 100;
+});
+
+// arguments对象
+function foo() {
+  var args = Array.from(arguments);
+  // ...
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>只要是部署了 Iterator 接口的数据结构，Array.from都能将其转为数组。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>Array.from('hello')
+// ['h', 'e', 'l', 'l', 'o']
+
+let namesSet = new Set(['a', 'b'])
+Array.from(namesSet) // ['a', 'b']
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>上面代码中，字符串和 Set 结构都具有 Iterator 接口，因此可以被Array.from转为真正的数组。</p> <p>如果参数是一个真正的数组，Array.from会返回一个一模一样的新数组。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>Array.from([1, 2, 3])
+// [1, 2, 3]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>值得提醒的是，扩展运算符（...）也可以将某些数据结构转为数组。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>// arguments对象
+function foo() {
+  const args = [...arguments];
+}
+
+// NodeList对象
+[...document.querySelectorAll('div')]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>任何有length属性的对象，都可以通过Array.from方法转为数组，而此时扩展运算符就无法转换。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>Array.from({ length: 3 });
+// [ undefined, undefined, undefined ]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>Array.from还可以接受第二个参数，作用类似于数组的map方法，用来对每个元素进行处理，将处理后的值放入返回的数组。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>Array.from(arrayLike, x =&gt; x * x);
+// 等同于
+Array.from(arrayLike).map(x =&gt; x * x);
+
+Array.from([1, 2, 3], (x) =&gt; x * x)
+// [1, 4, 9]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>下面的例子是取出一组 DOM 节点的文本内容。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>let spans = document.querySelectorAll('span.name');
+
+// map()
+let names1 = Array.prototype.map.call(spans, s =&gt; s.textContent);
+
+// Array.from()
+let names2 = Array.from(spans, s =&gt; s.textContent)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>下面的例子将数组中布尔值为false的成员转为0。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>Array.from([1, , 2, , 3], (n) =&gt; n || 0)
+// [1, 0, 2, 0, 3]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>另一个例子是返回各种数据的类型。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>function typesOf () {
+  return Array.from(arguments, value =&gt; typeof value)
+}
+typesOf(null, [], NaN)
+// ['object', 'object', 'number']
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>Array.from()可以将各种值转为真正的数组，并且还提供map功能。这实际上意味着，只要有一个原始的数据结构，你就可以先对它的值进行处理，然后转成规范的数组结构，进而就可以使用数量众多的数组方法。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>Array.from({ length: 2 }, () =&gt; 'jack')
+// ['jack', 'jack']
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>上面代码中，Array.from的第一个参数指定了第二个参数运行的次数。这种特性可以让该方法的用法变得非常灵活。</p> <p>Array.from()的另一个应用是，将字符串转为数组，然后返回字符串的长度。因为它能正确处理各种 Unicode 字符，可以避免 JavaScript 将大于\uFFFF的 Unicode 字符，算作两个字符的 bug。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>function countSymbols(string) {
+  return Array.from(string).length;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_2-of"><a href="#_2-of" class="header-anchor">#</a> 2. of</h3> <p>Array.of方法用于将一组值，转换为数组。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>Array.of(3, 11, 8) // [3,11,8]
+Array.of(3) // [3]
+Array.of(3).length // 1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>这个方法的主要目的，是弥补数组构造函数Array()的不足。因为参数个数的不同，会导致Array()的行为有差异。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>Array() // []
+Array(3) // [, , ,]
+Array(3, 11, 8) // [3, 11, 8]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>Array.of基本上可以用来替代Array()或new Array()，并且不存在由于参数不同而导致的重载。它的行为非常统一。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>Array.of() // []
+Array.of(undefined) // [undefined]
+Array.of(1) // [1]
+Array.of(1, 2) // [1, 2]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>Array.of总是返回参数值组成的数组。如果没有参数，就返回一个空数组。</p> <p>Array.of方法可以用下面的代码模拟实现。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>function ArrayOf(){
+  return [].slice.call(arguments);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="实例方法"><a href="#实例方法" class="header-anchor">#</a> 实例方法</h2> <h3 id="_1-copywithin"><a href="#_1-copywithin" class="header-anchor">#</a> 1. copyWithin</h3> <p>数组实例的copyWithin()方法，在当前数组内部，将指定位置的成员复制到其他位置（会覆盖原有成员），然后返回当前数组。也就是说，使用这个方法，会修改当前数组。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>Array.prototype.copyWithin(target, start = 0, end = this.length)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>它接受三个参数。</p> <ul><li>target（必需）：从该位置开始替换数据。如果为负值，表示倒数。</li> <li>start（可选）：从该位置开始读取数据，默认为 0。如果为负值，表示从末尾开始计算。</li> <li>end（可选）：到该位置前停止读取数据，默认等于数组长度。如果为负值，表示从末尾开始计算。
+这三个参数都应该是数值，如果不是，会自动转为数值。</li></ul> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>[1, 2, 3, 4, 5].copyWithin(0, 3)
+// [4, 5, 3, 4, 5]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>下面是更多例子。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>// 将3号位复制到0号位
+[1, 2, 3, 4, 5].copyWithin(0, 3, 4)
+// [4, 2, 3, 4, 5]
+
+// -2相当于3号位，-1相当于4号位
+[1, 2, 3, 4, 5].copyWithin(0, -2, -1)
+// [4, 2, 3, 4, 5]
+
+// 将3号位复制到0号位
+[].copyWithin.call({length: 5, 3: 1}, 0, 3)
+// {0: 1, 3: 1, length: 5}
+
+// 将2号位到数组结束，复制到0号位
+let i32a = new Int32Array([1, 2, 3, 4, 5]);
+i32a.copyWithin(0, 2);
+// Int32Array [3, 4, 5, 4, 5]
+
+// 对于没有部署 TypedArray 的 copyWithin 方法的平台
+// 需要采用下面的写法
+[].copyWithin.call(new Int32Array([1, 2, 3, 4, 5]), 0, 3, 4);
+// Int32Array [4, 2, 3, 4, 5]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h3 id="_2-find-findindex"><a href="#_2-find-findindex" class="header-anchor">#</a> 2. find，findIndex</h3> <p>数组实例的find方法，用于找出第一个符合条件的数组成员。它的参数是一个回调函数，所有数组成员依次执行该回调函数，直到找出第一个返回值为true的成员，然后返回该成员。如果没有符合条件的成员，则返回undefined。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>[1, 4, -5, 10].find((n) =&gt; n &lt; 0)
+// -5
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>上面代码找出数组中第一个小于 0 的成员。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>[1, 5, 10, 15].find(function(value, index, arr) {
+  return value &gt; 9;
+}) // 10
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>数组实例的findIndex方法的用法与find方法非常类似，返回第一个符合条件的数组成员的位置，如果所有成员都不符合条件，则返回-1。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>[1, 5, 10, 15].findIndex(function(value, index, arr) {
+  return value &gt; 9;
+}) // 2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>这两个方法都可以接受第二个参数，用来绑定回调函数的this对象。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>function f(v){
+  return v &gt; this.age;
+}
+let person = {name: 'John', age: 20};
+[10, 12, 26, 15].find(f, person);    // 26
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>另外，这两个方法都可以发现NaN，弥补了数组的indexOf方法的不足。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>[NaN].indexOf(NaN)
+// -1
+
+[NaN].findIndex(y =&gt; Object.is(NaN, y))
+// 0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="_3-fill"><a href="#_3-fill" class="header-anchor">#</a> 3. fill</h3> <p>fill方法使用给定值，填充一个数组。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>['a', 'b', 'c'].fill(7)
+// [7, 7, 7]
+
+new Array(3).fill(7)
+// [7, 7, 7]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>上面代码表明，fill方法用于空数组的初始化非常方便。数组中已有的元素，会被全部抹去。</p> <p>fill方法还可以接受第二个和第三个参数，用于指定填充的起始位置和结束位置。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>['a', 'b', 'c'].fill(7, 1, 2)
+// ['a', 7, 'c']
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>注意，如果填充的类型为对象，那么被赋值的是同一个内存地址的对象，而不是深拷贝对象。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>let arr = new Array(3).fill({name: &quot;Mike&quot;});
+arr[0].name = &quot;Ben&quot;;
+arr
+// [{name: &quot;Ben&quot;}, {name: &quot;Ben&quot;}, {name: &quot;Ben&quot;}]
+
+let arr = new Array(3).fill([]);
+arr[0].push(5);
+arr
+// [[5], [5], [5]]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="_4-entries-keys-values"><a href="#_4-entries-keys-values" class="header-anchor">#</a> 4. entries，keys，values</h3> <p>ES6 提供三个新的方法——entries()，keys()和values()——用于遍历数组。它们都返回一个遍历器对象（详见《Iterator》一章），可以用for...of循环进行遍历，唯一的区别是keys()是对键名的遍历、values()是对键值的遍历，entries()是对键值对的遍历。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>for (let index of ['a', 'b'].keys()) {
+  console.log(index);
+}
+// 0
+// 1
+
+for (let elem of ['a', 'b'].values()) {
+  console.log(elem);
+}
+// 'a'
+// 'b'
+
+for (let [index, elem] of ['a', 'b'].entries()) {
+  console.log(index, elem);
+}
+// 0 &quot;a&quot;
+// 1 &quot;b&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>如果不使用for...of循环，可以手动调用遍历器对象的next方法，进行遍历。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>let letter = ['a', 'b', 'c'];
+let entries = letter.entries();
+console.log(entries.next().value); // [0, 'a']
+console.log(entries.next().value); // [1, 'b']
+console.log(entries.next().value); // [2, 'c']
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="_5-includes"><a href="#_5-includes" class="header-anchor">#</a> 5. includes</h3> <p>Array.prototype.includes方法返回一个布尔值，表示某个数组是否包含给定的值，与字符串的includes方法类似。ES2016 引入了该方法。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>[1, 2, 3].includes(2)     // true
+[1, 2, 3].includes(4)     // false
+[1, 2, NaN].includes(NaN) // true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>该方法的第二个参数表示搜索的起始位置，默认为0。如果第二个参数为负数，则表示倒数的位置，如果这时它大于数组长度（比如第二个参数为-4，但数组长度为3），则会重置为从0开始。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>[1, 2, 3].includes(3, 3);  // false
+[1, 2, 3].includes(3, -1); // true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>includes使用的是不一样的判断算法。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>[NaN].includes(NaN)
+// true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>另外，Map 和 Set 数据结构有一个has方法，需要注意与includes区分。</p> <ul><li><p>Map 结构的has方法，是用来查找键名的，比如Map.prototype.has(key)、WeakMap.prototype.has(key)、Reflect.has(target, propertyKey)。</p></li> <li><p>Set 结构的has方法，是用来查找值的，比如Set.prototype.has(value)、WeakSet.prototype.has(value)。</p></li></ul> <h3 id="_6-flat-flatmap"><a href="#_6-flat-flatmap" class="header-anchor">#</a> 6. flat，flatMap</h3> <p>数组的成员有时还是数组，Array.prototype.flat()用于将嵌套的数组“拉平”，变成一维的数组。该方法返回一个新数组，对原数据没有影响。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>[1, 2, [3, 4]].flat()
+// [1, 2, 3, 4]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>flat()默认只会“拉平”一层，如果想要“拉平”多层的嵌套数组，可以将flat()方法的参数写成一个整数，表示想要拉平的层数，默认为1。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>[1, 2, [3, [4, 5]]].flat()
+// [1, 2, 3, [4, 5]]
+
+[1, 2, [3, [4, 5]]].flat(2)
+// [1, 2, 3, 4, 5]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>如果不管有多少层嵌套，都要转成一维数组，可以用Infinity关键字作为参数。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>[1, [2, [3]]].flat(Infinity)
+// [1, 2, 3]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>如果原数组有空位，flat()方法会跳过空位。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>[1, 2, , 4, 5].flat()
+// [1, 2, 4, 5]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>flatMap()方法对原数组的每个成员执行一个函数（相当于执行Array.prototype.map()），然后对返回值组成的数组执行flat()方法。该方法返回一个新数组，不改变原数组。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>// 相当于 [[2, 4], [3, 6], [4, 8]].flat()
+[2, 3, 4].flatMap((x) =&gt; [x, x * 2])
+// [2, 4, 3, 6, 4, 8]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>flatMap()只能展开一层数组。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>// 相当于 [[[2]], [[4]], [[6]], [[8]]].flat()
+[1, 2, 3, 4].flatMap(x =&gt; [[x * 2]])
+// [[2], [4], [6], [8]]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>flatMap()方法的参数是一个遍历函数，该函数可以接受三个参数，分别是当前数组成员、当前数组成员的位置（从零开始）、原数组。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>arr.flatMap(function callback(currentValue[, index[, array]]) {
+  // ...
+}[, thisArg])
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>flatMap()方法还可以有第二个参数，用来绑定遍历函数里面的this。</p> <h2 id="数组的空位"><a href="#数组的空位" class="header-anchor">#</a> 数组的空位</h2> <p>数组的空位指，数组的某一个位置没有任何值。比如，Array构造函数返回的数组都是空位。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>Array(3) // [, , ,]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>上面代码中，Array(3)返回一个具有 3 个空位的数组。</p> <p>注意，空位不是undefined，一个位置的值等于undefined，依然是有值的。空位是没有任何值，in运算符可以说明这一点。</p> <div class="language-arr line-numbers-mode"><pre class="language-text"><code>0 in [undefined, undefined, undefined] // true
+0 in [, , ,] // false
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>ES5 对空位的处理，已经很不一致了，大多数情况下会忽略空位。</p> <p>ES6 则是明确将空位转为undefined。</p> <p>由于空位的处理规则非常不统一，所以建议避免出现空位。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.03709e87.js" defer></script><script src="/assets/js/2.9c41e448.js" defer></script><script src="/assets/js/1.2c8cdafe.js" defer></script><script src="/assets/js/209.b9bef10a.js" defer></script>
+  </body>
+</html>

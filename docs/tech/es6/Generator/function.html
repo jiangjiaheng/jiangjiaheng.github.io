@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Generator函数的语法 | Landscape</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="私人博客网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.5149da19.css" as="style"><link rel="preload" href="/assets/js/app.03709e87.js" as="script"><link rel="preload" href="/assets/js/2.9c41e448.js" as="script"><link rel="preload" href="/assets/js/1.2c8cdafe.js" as="script"><link rel="preload" href="/assets/js/220.e768121c.js" as="script"><link rel="prefetch" href="/assets/js/10.9a78c136.js"><link rel="prefetch" href="/assets/js/100.c9e70424.js"><link rel="prefetch" href="/assets/js/101.7d153ac9.js"><link rel="prefetch" href="/assets/js/102.85de912f.js"><link rel="prefetch" href="/assets/js/103.61b2f7e1.js"><link rel="prefetch" href="/assets/js/104.5a35b1f0.js"><link rel="prefetch" href="/assets/js/105.3b4ecaec.js"><link rel="prefetch" href="/assets/js/106.c442c55b.js"><link rel="prefetch" href="/assets/js/107.a95ebaee.js"><link rel="prefetch" href="/assets/js/108.a1994c22.js"><link rel="prefetch" href="/assets/js/109.60b54124.js"><link rel="prefetch" href="/assets/js/11.8f41bfe2.js"><link rel="prefetch" href="/assets/js/110.9f3397c8.js"><link rel="prefetch" href="/assets/js/111.9801ca03.js"><link rel="prefetch" href="/assets/js/112.ce77dfd6.js"><link rel="prefetch" href="/assets/js/113.7597a04c.js"><link rel="prefetch" href="/assets/js/114.26cf7708.js"><link rel="prefetch" href="/assets/js/115.d974a106.js"><link rel="prefetch" href="/assets/js/116.700143af.js"><link rel="prefetch" href="/assets/js/117.a66165d2.js"><link rel="prefetch" href="/assets/js/118.b31e6990.js"><link rel="prefetch" href="/assets/js/119.5cb9f809.js"><link rel="prefetch" href="/assets/js/12.c51f03c4.js"><link rel="prefetch" href="/assets/js/120.1fd76b91.js"><link rel="prefetch" href="/assets/js/121.d2492484.js"><link rel="prefetch" href="/assets/js/122.d843abd8.js"><link rel="prefetch" href="/assets/js/123.8ac8400b.js"><link rel="prefetch" href="/assets/js/124.a9949254.js"><link rel="prefetch" href="/assets/js/125.8796a7b5.js"><link rel="prefetch" href="/assets/js/126.7f1f78c2.js"><link rel="prefetch" href="/assets/js/127.9cd44447.js"><link rel="prefetch" href="/assets/js/128.b71edd96.js"><link rel="prefetch" href="/assets/js/129.bd3afe44.js"><link rel="prefetch" href="/assets/js/13.63e2250d.js"><link rel="prefetch" href="/assets/js/130.2fa9a027.js"><link rel="prefetch" href="/assets/js/131.c41b0245.js"><link rel="prefetch" href="/assets/js/132.00f91944.js"><link rel="prefetch" href="/assets/js/133.938bdbbf.js"><link rel="prefetch" href="/assets/js/134.9edb144c.js"><link rel="prefetch" href="/assets/js/135.07c0f821.js"><link rel="prefetch" href="/assets/js/136.7c89ad8e.js"><link rel="prefetch" href="/assets/js/137.1c2439fa.js"><link rel="prefetch" href="/assets/js/138.ee8a9d1e.js"><link rel="prefetch" href="/assets/js/139.c25fa4da.js"><link rel="prefetch" href="/assets/js/14.39577714.js"><link rel="prefetch" href="/assets/js/140.73aed9e1.js"><link rel="prefetch" href="/assets/js/141.4599df87.js"><link rel="prefetch" href="/assets/js/142.0539f993.js"><link rel="prefetch" href="/assets/js/143.2393d855.js"><link rel="prefetch" href="/assets/js/144.4872f976.js"><link rel="prefetch" href="/assets/js/145.4725cc29.js"><link rel="prefetch" href="/assets/js/146.5ac1ae41.js"><link rel="prefetch" href="/assets/js/147.ee55fe80.js"><link rel="prefetch" href="/assets/js/148.017a60a5.js"><link rel="prefetch" href="/assets/js/149.9275392f.js"><link rel="prefetch" href="/assets/js/15.16a10138.js"><link rel="prefetch" href="/assets/js/150.4f6e39e2.js"><link rel="prefetch" href="/assets/js/151.8112ed38.js"><link rel="prefetch" href="/assets/js/152.9b3892fe.js"><link rel="prefetch" href="/assets/js/153.985dfc78.js"><link rel="prefetch" href="/assets/js/154.c5b2941e.js"><link rel="prefetch" href="/assets/js/155.17e7db46.js"><link rel="prefetch" href="/assets/js/156.18ce8096.js"><link rel="prefetch" href="/assets/js/157.503c9654.js"><link rel="prefetch" href="/assets/js/158.d2a16ef9.js"><link rel="prefetch" href="/assets/js/159.ea946356.js"><link rel="prefetch" href="/assets/js/16.268b7541.js"><link rel="prefetch" href="/assets/js/160.e33ccb84.js"><link rel="prefetch" href="/assets/js/161.00ee3a5e.js"><link rel="prefetch" href="/assets/js/162.2a192fc6.js"><link rel="prefetch" href="/assets/js/163.8ea65891.js"><link rel="prefetch" href="/assets/js/164.f5ba32ea.js"><link rel="prefetch" href="/assets/js/165.d3e0e3bc.js"><link rel="prefetch" href="/assets/js/166.3fb11b83.js"><link rel="prefetch" href="/assets/js/167.d3165489.js"><link rel="prefetch" href="/assets/js/168.b4e4fee5.js"><link rel="prefetch" href="/assets/js/169.48ef06de.js"><link rel="prefetch" href="/assets/js/17.bc320121.js"><link rel="prefetch" href="/assets/js/170.cf8bdfa4.js"><link rel="prefetch" href="/assets/js/171.a15829ec.js"><link rel="prefetch" href="/assets/js/172.7339f3af.js"><link rel="prefetch" href="/assets/js/173.8e7612d5.js"><link rel="prefetch" href="/assets/js/174.57733e3c.js"><link rel="prefetch" href="/assets/js/175.5da89883.js"><link rel="prefetch" href="/assets/js/176.d3088d0b.js"><link rel="prefetch" href="/assets/js/177.77d4f99a.js"><link rel="prefetch" href="/assets/js/178.6f080056.js"><link rel="prefetch" href="/assets/js/179.fd1b6bae.js"><link rel="prefetch" href="/assets/js/18.f25a177b.js"><link rel="prefetch" href="/assets/js/180.947ec3a7.js"><link rel="prefetch" href="/assets/js/181.137f66d8.js"><link rel="prefetch" href="/assets/js/182.a2605386.js"><link rel="prefetch" href="/assets/js/183.e1d41264.js"><link rel="prefetch" href="/assets/js/184.a92813fb.js"><link rel="prefetch" href="/assets/js/185.287a04b2.js"><link rel="prefetch" href="/assets/js/186.7284a85c.js"><link rel="prefetch" href="/assets/js/187.9d46b1fd.js"><link rel="prefetch" href="/assets/js/188.d488ef34.js"><link rel="prefetch" href="/assets/js/189.a4b1c139.js"><link rel="prefetch" href="/assets/js/19.69a9cb43.js"><link rel="prefetch" href="/assets/js/190.b5fc0d1e.js"><link rel="prefetch" href="/assets/js/191.cb3df8ec.js"><link rel="prefetch" href="/assets/js/192.284ab855.js"><link rel="prefetch" href="/assets/js/193.9943ea97.js"><link rel="prefetch" href="/assets/js/194.ca5b0372.js"><link rel="prefetch" href="/assets/js/195.3dd22df1.js"><link rel="prefetch" href="/assets/js/196.2bb20f59.js"><link rel="prefetch" href="/assets/js/197.f68f5cea.js"><link rel="prefetch" href="/assets/js/198.7fe206e3.js"><link rel="prefetch" href="/assets/js/199.dfacca9f.js"><link rel="prefetch" href="/assets/js/20.02a969ac.js"><link rel="prefetch" href="/assets/js/200.a2d258cc.js"><link rel="prefetch" href="/assets/js/201.66f9f3cd.js"><link rel="prefetch" href="/assets/js/202.9a90ff27.js"><link rel="prefetch" href="/assets/js/203.362927aa.js"><link rel="prefetch" href="/assets/js/204.dc472967.js"><link rel="prefetch" href="/assets/js/205.1a5438ac.js"><link rel="prefetch" href="/assets/js/206.dfd0a913.js"><link rel="prefetch" href="/assets/js/207.b291df1e.js"><link rel="prefetch" href="/assets/js/208.c501ea52.js"><link rel="prefetch" href="/assets/js/209.b9bef10a.js"><link rel="prefetch" href="/assets/js/21.de545bd9.js"><link rel="prefetch" href="/assets/js/210.bbe94fe3.js"><link rel="prefetch" href="/assets/js/211.bbccbad7.js"><link rel="prefetch" href="/assets/js/212.b8b0156c.js"><link rel="prefetch" href="/assets/js/213.a611ca63.js"><link rel="prefetch" href="/assets/js/214.ce63df2d.js"><link rel="prefetch" href="/assets/js/215.6e65bdbb.js"><link rel="prefetch" href="/assets/js/216.83d053c2.js"><link rel="prefetch" href="/assets/js/217.f0ff8083.js"><link rel="prefetch" href="/assets/js/218.5e6d306c.js"><link rel="prefetch" href="/assets/js/219.18acb160.js"><link rel="prefetch" href="/assets/js/22.3405b01f.js"><link rel="prefetch" href="/assets/js/221.d02e030a.js"><link rel="prefetch" href="/assets/js/222.17ff9609.js"><link rel="prefetch" href="/assets/js/223.bf07fdde.js"><link rel="prefetch" href="/assets/js/224.58104c7b.js"><link rel="prefetch" href="/assets/js/225.639a8660.js"><link rel="prefetch" href="/assets/js/226.65b0cfbd.js"><link rel="prefetch" href="/assets/js/227.d297a59f.js"><link rel="prefetch" href="/assets/js/228.1a6934d7.js"><link rel="prefetch" href="/assets/js/229.de34422e.js"><link rel="prefetch" href="/assets/js/23.69dc8d94.js"><link rel="prefetch" href="/assets/js/230.4a9af2ca.js"><link rel="prefetch" href="/assets/js/231.f9f87c61.js"><link rel="prefetch" href="/assets/js/232.c9249af0.js"><link rel="prefetch" href="/assets/js/233.e4884b4a.js"><link rel="prefetch" href="/assets/js/234.4263d01e.js"><link rel="prefetch" href="/assets/js/235.36944367.js"><link rel="prefetch" href="/assets/js/236.47acc35d.js"><link rel="prefetch" href="/assets/js/237.1a1ec8d4.js"><link rel="prefetch" href="/assets/js/238.901dae66.js"><link rel="prefetch" href="/assets/js/239.29e6bd75.js"><link rel="prefetch" href="/assets/js/24.a1782a04.js"><link rel="prefetch" href="/assets/js/240.e1a99c00.js"><link rel="prefetch" href="/assets/js/241.21b7b4d5.js"><link rel="prefetch" href="/assets/js/242.c6e8f51d.js"><link rel="prefetch" href="/assets/js/243.b9f7dbb8.js"><link rel="prefetch" href="/assets/js/244.d82e7676.js"><link rel="prefetch" href="/assets/js/245.d6d32bef.js"><link rel="prefetch" href="/assets/js/246.9df785ca.js"><link rel="prefetch" href="/assets/js/247.39361a95.js"><link rel="prefetch" href="/assets/js/248.ded311ae.js"><link rel="prefetch" href="/assets/js/249.ed678461.js"><link rel="prefetch" href="/assets/js/25.e45a6beb.js"><link rel="prefetch" href="/assets/js/250.fbbb1010.js"><link rel="prefetch" href="/assets/js/251.81a4098f.js"><link rel="prefetch" href="/assets/js/252.d01d4352.js"><link rel="prefetch" href="/assets/js/253.ac8e8036.js"><link rel="prefetch" href="/assets/js/254.673d0ac8.js"><link rel="prefetch" href="/assets/js/255.648ca249.js"><link rel="prefetch" href="/assets/js/256.df9e0d06.js"><link rel="prefetch" href="/assets/js/257.2659fd53.js"><link rel="prefetch" href="/assets/js/258.768a5063.js"><link rel="prefetch" href="/assets/js/259.3cafd7d8.js"><link rel="prefetch" href="/assets/js/26.2ddddaf3.js"><link rel="prefetch" href="/assets/js/260.daeab7cd.js"><link rel="prefetch" href="/assets/js/261.750a6b34.js"><link rel="prefetch" href="/assets/js/262.10ad1dea.js"><link rel="prefetch" href="/assets/js/263.3de9e804.js"><link rel="prefetch" href="/assets/js/264.5d8fa025.js"><link rel="prefetch" href="/assets/js/265.2ddc1eb3.js"><link rel="prefetch" href="/assets/js/266.47aaa313.js"><link rel="prefetch" href="/assets/js/267.ec6c5119.js"><link rel="prefetch" href="/assets/js/268.27d2cac0.js"><link rel="prefetch" href="/assets/js/269.654a0297.js"><link rel="prefetch" href="/assets/js/27.ed37a2eb.js"><link rel="prefetch" href="/assets/js/270.68714208.js"><link rel="prefetch" href="/assets/js/271.a112d42c.js"><link rel="prefetch" href="/assets/js/272.a7eb7e21.js"><link rel="prefetch" href="/assets/js/273.8c2b15f1.js"><link rel="prefetch" href="/assets/js/274.1804e4d1.js"><link rel="prefetch" href="/assets/js/275.b7d0b48b.js"><link rel="prefetch" href="/assets/js/276.d5db1108.js"><link rel="prefetch" href="/assets/js/277.26ff02bd.js"><link rel="prefetch" href="/assets/js/278.705c9e2d.js"><link rel="prefetch" href="/assets/js/279.cfa9e5cd.js"><link rel="prefetch" href="/assets/js/28.77c432c4.js"><link rel="prefetch" href="/assets/js/280.9c1589b5.js"><link rel="prefetch" href="/assets/js/281.4ba44106.js"><link rel="prefetch" href="/assets/js/282.72006fe6.js"><link rel="prefetch" href="/assets/js/283.59bfc241.js"><link rel="prefetch" href="/assets/js/284.1a5840e8.js"><link rel="prefetch" href="/assets/js/285.6fc1c24d.js"><link rel="prefetch" href="/assets/js/286.4d77a9b3.js"><link rel="prefetch" href="/assets/js/287.07c79b49.js"><link rel="prefetch" href="/assets/js/29.bf0be342.js"><link rel="prefetch" href="/assets/js/3.e3770c3e.js"><link rel="prefetch" href="/assets/js/30.056fcad8.js"><link rel="prefetch" href="/assets/js/31.7083766f.js"><link rel="prefetch" href="/assets/js/32.cf7012ae.js"><link rel="prefetch" href="/assets/js/33.f1551eac.js"><link rel="prefetch" href="/assets/js/34.0a7ed9f3.js"><link rel="prefetch" href="/assets/js/35.1fedcab6.js"><link rel="prefetch" href="/assets/js/36.f32b5536.js"><link rel="prefetch" href="/assets/js/37.ecf063ae.js"><link rel="prefetch" href="/assets/js/38.ff825fc2.js"><link rel="prefetch" href="/assets/js/39.0d51331a.js"><link rel="prefetch" href="/assets/js/4.07df64b9.js"><link rel="prefetch" href="/assets/js/40.725c83f7.js"><link rel="prefetch" href="/assets/js/41.177d3173.js"><link rel="prefetch" href="/assets/js/42.d79ab1a6.js"><link rel="prefetch" href="/assets/js/43.0843e4ba.js"><link rel="prefetch" href="/assets/js/44.b50ba5e1.js"><link rel="prefetch" href="/assets/js/45.0d8c8534.js"><link rel="prefetch" href="/assets/js/46.9f6a4cc3.js"><link rel="prefetch" href="/assets/js/47.1dc4dd52.js"><link rel="prefetch" href="/assets/js/48.e5b33d10.js"><link rel="prefetch" href="/assets/js/49.f5d38f0d.js"><link rel="prefetch" href="/assets/js/5.315d7655.js"><link rel="prefetch" href="/assets/js/50.957e2a48.js"><link rel="prefetch" href="/assets/js/51.defe65c0.js"><link rel="prefetch" href="/assets/js/52.238cd9b5.js"><link rel="prefetch" href="/assets/js/53.2bd85fef.js"><link rel="prefetch" href="/assets/js/54.e529ff10.js"><link rel="prefetch" href="/assets/js/55.d57343cc.js"><link rel="prefetch" href="/assets/js/56.87d50d47.js"><link rel="prefetch" href="/assets/js/57.40964fa2.js"><link rel="prefetch" href="/assets/js/58.da160219.js"><link rel="prefetch" href="/assets/js/59.2bd1560f.js"><link rel="prefetch" href="/assets/js/6.5fb7fa31.js"><link rel="prefetch" href="/assets/js/60.6fd4af6f.js"><link rel="prefetch" href="/assets/js/61.663f58f0.js"><link rel="prefetch" href="/assets/js/62.33b5cc26.js"><link rel="prefetch" href="/assets/js/63.126f3575.js"><link rel="prefetch" href="/assets/js/64.ae08b65e.js"><link rel="prefetch" href="/assets/js/65.be75da36.js"><link rel="prefetch" href="/assets/js/66.78dade32.js"><link rel="prefetch" href="/assets/js/67.1a890242.js"><link rel="prefetch" href="/assets/js/68.9753a6d4.js"><link rel="prefetch" href="/assets/js/69.82ddc388.js"><link rel="prefetch" href="/assets/js/7.d8f2050a.js"><link rel="prefetch" href="/assets/js/70.660da076.js"><link rel="prefetch" href="/assets/js/71.ca894609.js"><link rel="prefetch" href="/assets/js/72.4be8bf5e.js"><link rel="prefetch" href="/assets/js/73.f7657d8f.js"><link rel="prefetch" href="/assets/js/74.c23c25fb.js"><link rel="prefetch" href="/assets/js/75.e72b6434.js"><link rel="prefetch" href="/assets/js/76.fc8f9bef.js"><link rel="prefetch" href="/assets/js/77.10c38121.js"><link rel="prefetch" href="/assets/js/78.97eca5ed.js"><link rel="prefetch" href="/assets/js/79.628bb0a2.js"><link rel="prefetch" href="/assets/js/80.805d0556.js"><link rel="prefetch" href="/assets/js/81.486955ff.js"><link rel="prefetch" href="/assets/js/82.8a8efc07.js"><link rel="prefetch" href="/assets/js/83.d5c86a91.js"><link rel="prefetch" href="/assets/js/84.81dd68de.js"><link rel="prefetch" href="/assets/js/85.611ac749.js"><link rel="prefetch" href="/assets/js/86.4079cda4.js"><link rel="prefetch" href="/assets/js/87.b32830f7.js"><link rel="prefetch" href="/assets/js/88.340512a5.js"><link rel="prefetch" href="/assets/js/89.89bda9e8.js"><link rel="prefetch" href="/assets/js/90.6310209c.js"><link rel="prefetch" href="/assets/js/91.d92e18eb.js"><link rel="prefetch" href="/assets/js/92.c89608f4.js"><link rel="prefetch" href="/assets/js/93.cd043d25.js"><link rel="prefetch" href="/assets/js/94.5daec904.js"><link rel="prefetch" href="/assets/js/95.8db5b0f6.js"><link rel="prefetch" href="/assets/js/96.6c7b0725.js"><link rel="prefetch" href="/assets/js/97.544da230.js"><link rel="prefetch" href="/assets/js/98.ad5fd138.js"><link rel="prefetch" href="/assets/js/99.48105d1a.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.e3b34f7a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5149da19.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Landscape</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link router-link-active">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/operatingsystem/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link router-link-active">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/operatingsystem/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Generator函数的语法</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/tech/es6/Generator/function.html#简介" class="sidebar-link">简介</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es6/Generator/function.html#_1-基本概念" class="sidebar-link">1. 基本概念</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Generator/function.html#_2-yield-表达式" class="sidebar-link">2. yield 表达式</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Generator/function.html#_3-与-iterator-接口的关系" class="sidebar-link">3. 与 Iterator 接口的关系</a></li></ul></li><li><a href="/docs/tech/es6/Generator/function.html#next-方法的参数" class="sidebar-link">next 方法的参数</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/Generator/function.html#for-of-循环" class="sidebar-link">for...of 循环</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/Generator/function.html#generator-prototype-throw" class="sidebar-link">Generator.prototype.throw()</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/Generator/function.html#generator-prototype-return" class="sidebar-link">Generator.prototype.return()</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/Generator/function.html#next-、throw-、return-的共同点" class="sidebar-link">next()、throw()、return() 的共同点</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/Generator/function.html#yield-表达式" class="sidebar-link">yield* 表达式</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/Generator/function.html#作为对象属性的-generator-函数" class="sidebar-link">作为对象属性的 Generator 函数</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/Generator/function.html#generator-函数的this" class="sidebar-link">Generator 函数的this</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/Generator/function.html#含义" class="sidebar-link">含义</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es6/Generator/function.html#_1-generator-与状态机" class="sidebar-link">1. Generator 与状态机</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Generator/function.html#_2-generator-与协程" class="sidebar-link">2. Generator 与协程</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Generator/function.html#_3-generator-与上下文" class="sidebar-link">3. Generator 与上下文</a></li></ul></li><li><a href="/docs/tech/es6/Generator/function.html#应用" class="sidebar-link">应用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es6/Generator/function.html#_1-异步操作的同步化表达" class="sidebar-link">（1）异步操作的同步化表达</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Generator/function.html#_2-控制流管理" class="sidebar-link">（2）控制流管理</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Generator/function.html#_3-部署-iterator-接口" class="sidebar-link">（3）部署 Iterator 接口</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/Generator/function.html#_4-作为数据结构" class="sidebar-link">（4）作为数据结构</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="generator函数的语法"><a href="#generator函数的语法" class="header-anchor">#</a> Generator函数的语法</h1> <h2 id="简介"><a href="#简介" class="header-anchor">#</a> 简介</h2> <h3 id="_1-基本概念"><a href="#_1-基本概念" class="header-anchor">#</a> 1. 基本概念</h3> <p>Generator 函数是 ES6 提供的一种异步编程解决方案，语法行为与传统函数完全不同。</p> <p>Generator 函数有多种理解角度。语法上，首先可以把它理解成，Generator 函数是一个状态机，封装了多个内部状态。</p> <p>执行 Generator 函数会返回一个遍历器对象，也就是说，Generator 函数除了状态机，还是一个遍历器对象生成函数。返回的遍历器对象，可以依次遍历 Generator 函数内部的每一个状态。</p> <p>形式上，Generator 函数是一个普通函数，但是有两个特征。一是，function关键字与函数名之间有一个星号；二是，函数体内部使用yield表达式，定义不同的内部状态（yield在英语里的意思就是“产出”）。</p> <div class="language-node line-numbers-mode"><pre class="language-text"><code>function* helloWorldGenerator() {
+  yield 'hello';
+  yield 'world';
+  return 'ending';
+}
+
+var hw = helloWorldGenerator();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>上面代码定义了一个 Generator 函数helloWorldGenerator，它内部有两个yield表达式（hello和world），即该函数有三个状态：hello，world 和 return 语句（结束执行）。</p> <p>然后，Generator 函数的调用方法与普通函数一样，也是在函数名后面加上一对圆括号。不同的是，调用 Generator 函数后，该函数并不执行，返回的也不是函数运行结果，而是一个指向内部状态的指针对象，也就是上一章介绍的遍历器对象（Iterator Object）。</p> <p>下一步，必须调用遍历器对象的next方法，使得指针移向下一个状态。也就是说，每次调用next方法，内部指针就从函数头部或上一次停下来的地方开始执行，直到遇到下一个yield表达式（或return语句）为止。换言之，Generator 函数是分段执行的，yield表达式是暂停执行的标记，而next方法可以恢复执行。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>hw.next()
+// { value: 'hello', done: false }
+
+hw.next()
+// { value: 'world', done: false }
+
+hw.next()
+// { value: 'ending', done: true }
+
+hw.next()
+// { value: undefined, done: true }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>上面代码一共调用了四次next方法。</p> <p>总结一下，调用 Generator 函数，返回一个遍历器对象，代表 Generator 函数的内部指针。以后，每次调用遍历器对象的next方法，就会返回一个有着value和done两个属性的对象。value属性表示当前的内部状态的值，是yield表达式后面那个表达式的值；done属性是一个布尔值，表示是否遍历结束。</p> <p>ES6 没有规定，function关键字与函数名之间的星号，写在哪个位置。这导致下面的写法都能通过。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function * foo(x, y) { ··· }
+function *foo(x, y) { ··· }
+function* foo(x, y) { ··· }
+function*foo(x, y) { ··· }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>由于 Generator 函数仍然是普通函数，所以一般的写法是上面的第三种，即星号紧跟在function关键字后面。本书也采用这种写法。</p> <h3 id="_2-yield-表达式"><a href="#_2-yield-表达式" class="header-anchor">#</a> 2. yield 表达式</h3> <p>由于 Generator 函数返回的遍历器对象，只有调用next方法才会遍历下一个内部状态，所以其实提供了一种可以暂停执行的函数。yield表达式就是暂停标志。</p> <p>遍历器对象的next方法的运行逻辑如下。</p> <p>（1）遇到yield表达式，就暂停执行后面的操作，并将紧跟在yield后面的那个表达式的值，作为返回的对象的value属性值。</p> <p>（2）下一次调用next方法时，再继续往下执行，直到遇到下一个yield表达式。</p> <p>（3）如果没有再遇到新的yield表达式，就一直运行到函数结束，直到return语句为止，并将return语句后面的表达式的值，作为返回的对象的value属性值。</p> <p>（4）如果该函数没有return语句，则返回的对象的value属性值为undefined。</p> <p>需要注意的是，yield表达式后面的表达式，只有当调用next方法、内部指针指向该语句时才会执行，因此等于为 JavaScript 提供了手动的“惰性求值”（Lazy Evaluation）的语法功能。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* gen() {
+  yield  123 + 456;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>上面代码中，yield后面的表达式123 + 456，不会立即求值，只会在next方法将指针移到这一句时，才会求值。</p> <p>Generator 函数可以不用yield表达式，这时就变成了一个单纯的暂缓执行函数。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* f() {
+  console.log('执行了！')
+}
+
+var generator = f();
+
+setTimeout(function () {
+  generator.next()
+}, 2000);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>上面代码中，函数f如果是普通函数，在为变量generator赋值时就会执行。但是，函数f是一个 Generator 函数，就变成只有调用next方法时，函数f才会执行。</p> <p>另外需要注意，yield表达式只能用在 Generator 函数里面，用在其他地方都会报错。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>(function (){
+  yield 1;
+})()
+// SyntaxError: Unexpected number
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>上面代码在一个普通函数中使用yield表达式，结果产生一个句法错误。</p> <p>下面是另外一个例子。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>var arr = [1, [[2, 3], 4], [5, 6]];
+
+var flat = function* (a) {
+  a.forEach(function (item) {
+    if (typeof item !== 'number') {
+      yield* flat(item);
+    } else {
+      yield item;
+    }
+  });
+};
+
+for (var f of flat(arr)){
+  console.log(f);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>上面代码也会产生句法错误，因为forEach方法的参数是一个普通函数，但是在里面使用了yield表达式（这个函数里面还使用了yield*表达式，详细介绍见后文）。一种修改方法是改用for循环。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>var arr = [1, [[2, 3], 4], [5, 6]];
+
+var flat = function* (a) {
+  var length = a.length;
+  for (var i = 0; i &lt; length; i++) {
+    var item = a[i];
+    if (typeof item !== 'number') {
+      yield* flat(item);
+    } else {
+      yield item;
+    }
+  }
+};
+
+for (var f of flat(arr)) {
+  console.log(f);
+}
+// 1, 2, 3, 4, 5, 6
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>另外，yield表达式如果用在另一个表达式之中，必须放在圆括号里面。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* demo() {
+  console.log('Hello' + yield); // SyntaxError
+  console.log('Hello' + yield 123); // SyntaxError
+
+  console.log('Hello' + (yield)); // OK
+  console.log('Hello' + (yield 123)); // OK
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>yield表达式用作函数参数或放在赋值表达式的右边，可以不加括号。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* demo() {
+  foo(yield 'a', yield 'b'); // OK
+  let input = yield; // OK
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="_3-与-iterator-接口的关系"><a href="#_3-与-iterator-接口的关系" class="header-anchor">#</a> 3. 与 Iterator 接口的关系</h3> <p>上一章说过，任意一个对象的Symbol.iterator方法，等于该对象的遍历器生成函数，调用该函数会返回该对象的一个遍历器对象。</p> <p>由于 Generator 函数就是遍历器生成函数，因此可以把 Generator 赋值给对象的Symbol.iterator属性，从而使得该对象具有 Iterator 接口。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>var myIterable = {};
+myIterable[Symbol.iterator] = function* () {
+  yield 1;
+  yield 2;
+  yield 3;
+};
+
+[...myIterable] // [1, 2, 3]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>上面代码中，Generator 函数赋值给Symbol.iterator属性，从而使得myIterable对象具有了 Iterator 接口，可以被...运算符遍历了。</p> <p>Generator 函数执行后，返回一个遍历器对象。该对象本身也具有Symbol.iterator属性，执行后返回自身。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* gen(){
+  // some code
+}
+
+var g = gen();
+
+g[Symbol.iterator]() === g
+// true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>上面代码中，gen是一个 Generator 函数，调用它会生成一个遍历器对象g。它的Symbol.iterator属性，也是一个遍历器对象生成函数，执行后返回它自己。</p> <h2 id="next-方法的参数"><a href="#next-方法的参数" class="header-anchor">#</a> next 方法的参数</h2> <p>yield表达式本身没有返回值，或者说总是返回undefined。next方法可以带一个参数，该参数就会被当作上一个yield表达式的返回值。</p> <div class="language-node line-numbers-mode"><pre class="language-text"><code>function* f() {
+  for(var i = 0; true; i++) {
+    var reset = yield i;
+    if(reset) { i = -1; }
+  }
+}
+
+var g = f();
+
+g.next() // { value: 0, done: false }
+g.next() // { value: 1, done: false }
+g.next(true) // { value: 0, done: false }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>上面代码先定义了一个可以无限运行的 Generator 函数f，如果next方法没有参数，每次运行到yield表达式，变量reset的值总是undefined。当next方法带一个参数true时，变量reset就被重置为这个参数（即true），因此i会等于-1，下一轮循环就会从-1开始递增。</p> <p>这个功能有很重要的语法意义。Generator 函数从暂停状态到恢复运行，它的上下文状态（context）是不变的。通过next方法的参数，就有办法在 Generator 函数开始运行之后，继续向函数体内部注入值。也就是说，可以在 Generator 函数运行的不同阶段，从外部向内部注入不同的值，从而调整函数行为。</p> <p>再看一个例子。</p> <div class="language-node line-numbers-mode"><pre class="language-text"><code>function* foo(x) {
+  var y = 2 * (yield (x + 1));
+  var z = yield (y / 3);
+  return (x + y + z);
+}
+
+var a = foo(5);
+a.next() // Object{value:6, done:false}
+a.next() // Object{value:NaN, done:false}
+a.next() // Object{value:NaN, done:true}
+
+var b = foo(5);
+b.next() // { value:6, done:false }
+b.next(12) // { value:8, done:false }
+b.next(13) // { value:42, done:true }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>上面代码中，第二次运行next方法的时候不带参数，导致 y 的值等于2 * undefined（即NaN），除以 3 以后还是NaN，因此返回对象的value属性也等于NaN。第三次运行Next方法的时候不带参数，所以z等于undefined，返回对象的value属性等于5 + NaN + undefined，即NaN。</p> <p>如果向next方法提供参数，返回结果就完全不一样了。上面代码第一次调用b的next方法时，返回x+1的值6；第二次调用next方法，将上一次yield表达式的值设为12，因此y等于24，返回y / 3的值8；第三次调用next方法，将上一次yield表达式的值设为13，因此z等于13，这时x等于5，y等于24，所以return语句的值等于42。</p> <p>注意，由于next方法的参数表示上一个yield表达式的返回值，所以在第一次使用next方法时，传递参数是无效的。V8 引擎直接忽略第一次使用next方法时的参数，只有从第二次使用next方法开始，参数才是有效的。从语义上讲，第一个next方法用来启动遍历器对象，所以不用带有参数。</p> <p>再看一个通过next方法的参数，向 Generator 函数内部输入值的例子。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* dataConsumer() {
+  console.log('Started');
+  console.log(`1. ${yield}`);
+  console.log(`2. ${yield}`);
+  return 'result';
+}
+
+let genObj = dataConsumer();
+genObj.next();
+// Started
+genObj.next('a')
+// 1. a
+genObj.next('b')
+// 2. b
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>上面代码是一个很直观的例子，每次通过next方法向 Generator 函数输入值，然后打印出来。</p> <p>如果想要第一次调用next方法时，就能够输入值，可以在 Generator 函数外面再包一层。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function wrapper(generatorFunction) {
+  return function (...args) {
+    let generatorObject = generatorFunction(...args);
+    generatorObject.next();
+    return generatorObject;
+  };
+}
+
+const wrapped = wrapper(function* () {
+  console.log(`First input: ${yield}`);
+  return 'DONE';
+});
+
+wrapped().next('hello!')
+// First input: hello!
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>上面代码中，Generator 函数如果不用wrapper先包一层，是无法第一次调用next方法，就输入参数的。</p> <h2 id="for-of-循环"><a href="#for-of-循环" class="header-anchor">#</a> for...of 循环</h2> <p>for...of循环可以自动遍历 Generator 函数运行时生成的Iterator对象，且此时不再需要调用next方法。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* foo() {
+  yield 1;
+  yield 2;
+  yield 3;
+  yield 4;
+  yield 5;
+  return 6;
+}
+
+for (let v of foo()) {
+  console.log(v);
+}
+// 1 2 3 4 5
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>上面代码使用for...of循环，依次显示 5 个yield表达式的值。这里需要注意，一旦next方法的返回对象的done属性为true，for...of循环就会中止，且不包含该返回对象，所以上面代码的return语句返回的6，不包括在for...of循环之中。</p> <p>下面是一个利用 Generator 函数和for...of循环，实现斐波那契数列的例子。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* fibonacci() {
+  let [prev, curr] = [0, 1];
+  for (;;) {
+    yield curr;
+    [prev, curr] = [curr, prev + curr];
+  }
+}
+
+for (let n of fibonacci()) {
+  if (n &gt; 1000) break;
+  console.log(n);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>从上面代码可见，使用for...of语句时不需要使用next方法。</p> <p>利用for...of循环，可以写出遍历任意对象（object）的方法。原生的 JavaScript 对象没有遍历接口，无法使用for...of循环，通过 Generator 函数为它加上这个接口，就可以用了。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* objectEntries(obj) {
+  let propKeys = Reflect.ownKeys(obj);
+
+  for (let propKey of propKeys) {
+    yield [propKey, obj[propKey]];
+  }
+}
+
+let jane = { first: 'Jane', last: 'Doe' };
+
+for (let [key, value] of objectEntries(jane)) {
+  console.log(`${key}: ${value}`);
+}
+// first: Jane
+// last: Doe
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>上面代码中，对象jane原生不具备 Iterator 接口，无法用for...of遍历。这时，我们通过 Generator 函数objectEntries为它加上遍历器接口，就可以用for...of遍历了。加上遍历器接口的另一种写法是，将 Generator 函数加到对象的Symbol.iterator属性上面。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* objectEntries() {
+  let propKeys = Object.keys(this);
+
+  for (let propKey of propKeys) {
+    yield [propKey, this[propKey]];
+  }
+}
+
+let jane = { first: 'Jane', last: 'Doe' };
+
+jane[Symbol.iterator] = objectEntries;
+
+for (let [key, value] of jane) {
+  console.log(`${key}: ${value}`);
+}
+// first: Jane
+// last: Doe
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>除了for...of循环以外，扩展运算符（...）、解构赋值和Array.from方法内部调用的，都是遍历器接口。这意味着，它们都可以将 Generator 函数返回的 Iterator 对象，作为参数。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* numbers () {
+  yield 1
+  yield 2
+  return 3
+  yield 4
+}
+
+// 扩展运算符
+[...numbers()] // [1, 2]
+
+// Array.from 方法
+Array.from(numbers()) // [1, 2]
+
+// 解构赋值
+let [x, y] = numbers();
+x // 1
+y // 2
+
+// for...of 循环
+for (let n of numbers()) {
+  console.log(n)
+}
+// 1
+// 2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><h2 id="generator-prototype-throw"><a href="#generator-prototype-throw" class="header-anchor">#</a> Generator.prototype.throw()</h2> <p>Generator 函数返回的遍历器对象，都有一个throw方法，可以在函数体外抛出错误，然后在 Generator 函数体内捕获。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>var g = function* () {
+  try {
+    yield;
+  } catch (e) {
+    console.log('内部捕获', e);
+  }
+};
+
+var i = g();
+i.next();
+
+try {
+  i.throw('a');
+  i.throw('b');
+} catch (e) {
+  console.log('外部捕获', e);
+}
+// 内部捕获 a
+// 外部捕获 b
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>上面代码中，遍历器对象i连续抛出两个错误。第一个错误被 Generator 函数体内的catch语句捕获。i第二次抛出错误，由于 Generator 函数内部的catch语句已经执行过了，不会再捕捉到这个错误了，所以这个错误就被抛出了 Generator 函数体，被函数体外的catch语句捕获。</p> <p>throw方法可以接受一个参数，该参数会被catch语句接收，建议抛出Error对象的实例。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>var g = function* () {
+  try {
+    yield;
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+var i = g();
+i.next();
+i.throw(new Error('出错了！'));
+// Error: 出错了！(…)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>注意，不要混淆遍历器对象的throw方法和全局的throw命令。上面代码的错误，是用遍历器对象的throw方法抛出的，而不是用throw命令抛出的。后者只能被函数体外的catch语句捕获。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>var g = function* () {
+  while (true) {
+    try {
+      yield;
+    } catch (e) {
+      if (e != 'a') throw e;
+      console.log('内部捕获', e);
+    }
+  }
+};
+
+var i = g();
+i.next();
+
+try {
+  throw new Error('a');
+  throw new Error('b');
+} catch (e) {
+  console.log('外部捕获', e);
+}
+// 外部捕获 [Error: a]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p>上面代码之所以只捕获了a，是因为函数体外的catch语句块，捕获了抛出的a错误以后，就不会再继续try代码块里面剩余的语句了。</p> <p>如果 Generator 函数内部没有部署try...catch代码块，那么throw方法抛出的错误，将被外部try...catch代码块捕获。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>var g = function* () {
+  while (true) {
+    yield;
+    console.log('内部捕获', e);
+  }
+};
+
+var i = g();
+i.next();
+
+try {
+  i.throw('a');
+  i.throw('b');
+} catch (e) {
+  console.log('外部捕获', e);
+}
+// 外部捕获 a
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>上面代码中，Generator 函数g内部没有部署try...catch代码块，所以抛出的错误直接被外部catch代码块捕获。</p> <p>如果 Generator 函数内部和外部，都没有部署try...catch代码块，那么程序将报错，直接中断执行。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>var gen = function* gen(){
+  yield console.log('hello');
+  yield console.log('world');
+}
+
+var g = gen();
+g.next();
+g.throw();
+// hello
+// Uncaught undefined
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>上面代码中，g.throw抛出错误以后，没有任何try...catch代码块可以捕获这个错误，导致程序报错，中断执行。</p> <p>throw方法抛出的错误要被内部捕获，前提是必须至少执行过一次next方法。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* gen() {
+  try {
+    yield 1;
+  } catch (e) {
+    console.log('内部捕获');
+  }
+}
+
+var g = gen();
+g.throw(1);
+// Uncaught 1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>上面代码中，g.throw(1)执行时，next方法一次都没有执行过。这时，抛出的错误不会被内部捕获，而是直接在外部抛出，导致程序出错。这种行为其实很好理解，因为第一次执行next方法，等同于启动执行 Generator 函数的内部代码，否则 Generator 函数还没有开始执行，这时throw方法抛错只可能抛出在函数外部。</p> <p>throw方法被捕获以后，会附带执行下一条yield表达式。也就是说，会附带执行一次next方法。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>var gen = function* gen(){
+  try {
+    yield console.log('a');
+  } catch (e) {
+    // ...
+  }
+  yield console.log('b');
+  yield console.log('c');
+}
+
+var g = gen();
+g.next() // a
+g.throw() // b
+g.next() // c
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>上面代码中，g.throw方法被捕获以后，自动执行了一次next方法，所以会打印b。另外，也可以看到，只要 Generator 函数内部部署了try...catch代码块，那么遍历器的throw方法抛出的错误，不影响下一次遍历。</p> <p>另外，throw命令与g.throw方法是无关的，两者互不影响。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>var gen = function* gen(){
+  yield console.log('hello');
+  yield console.log('world');
+}
+
+var g = gen();
+g.next();
+
+try {
+  throw new Error();
+} catch (e) {
+  g.next();
+}
+// hello
+// world
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>上面代码中，throw命令抛出的错误不会影响到遍历器的状态，所以两次执行next方法，都进行了正确的操作。</p> <p>这种函数体内捕获错误的机制，大大方便了对错误的处理。多个yield表达式，可以只用一个try...catch代码块来捕获错误。如果使用回调函数的写法，想要捕获多个错误，就不得不为每个函数内部写一个错误处理语句，现在只在 Generator 函数内部写一次catch语句就可以了。</p> <p>Generator 函数体外抛出的错误，可以在函数体内捕获；反过来，Generator 函数体内抛出的错误，也可以被函数体外的catch捕获。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* foo() {
+  var x = yield 3;
+  var y = x.toUpperCase();
+  yield y;
+}
+
+var it = foo();
+
+it.next(); // { value:3, done:false }
+
+try {
+  it.next(42);
+} catch (err) {
+  console.log(err);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>上面代码中，第二个next方法向函数体内传入一个参数 42，数值是没有toUpperCase方法的，所以会抛出一个 TypeError 错误，被函数体外的catch捕获。</p> <p>一旦 Generator 执行过程中抛出错误，且没有被内部捕获，就不会再执行下去了。如果此后还调用next方法，将返回一个value属性等于undefined、done属性等于true的对象，即 JavaScript 引擎认为这个 Generator 已经运行结束了。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* g() {
+  yield 1;
+  console.log('throwing an exception');
+  throw new Error('generator broke!');
+  yield 2;
+  yield 3;
+}
+
+function log(generator) {
+  var v;
+  console.log('starting generator');
+  try {
+    v = generator.next();
+    console.log('第一次运行next方法', v);
+  } catch (err) {
+    console.log('捕捉错误', v);
+  }
+  try {
+    v = generator.next();
+    console.log('第二次运行next方法', v);
+  } catch (err) {
+    console.log('捕捉错误', v);
+  }
+  try {
+    v = generator.next();
+    console.log('第三次运行next方法', v);
+  } catch (err) {
+    console.log('捕捉错误', v);
+  }
+  console.log('caller done');
+}
+
+log(g());
+// starting generator
+// 第一次运行next方法 { value: 1, done: false }
+// throwing an exception
+// 捕捉错误 { value: 1, done: false }
+// 第三次运行next方法 { value: undefined, done: true }
+// caller done
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br></div></div><p>上面代码一共三次运行next方法，第二次运行的时候会抛出错误，然后第三次运行的时候，Generator 函数就已经结束了，不再执行下去了。</p> <h2 id="generator-prototype-return"><a href="#generator-prototype-return" class="header-anchor">#</a> Generator.prototype.return()</h2> <p>Generator 函数返回的遍历器对象，还有一个return方法，可以返回给定的值，并且终结遍历 Generator 函数。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* gen() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+var g = gen();
+
+g.next()        // { value: 1, done: false }
+g.return('foo') // { value: &quot;foo&quot;, done: true }
+g.next()        // { value: undefined, done: true }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>上面代码中，遍历器对象g调用return方法后，返回值的value属性就是return方法的参数foo。并且，Generator 函数的遍历就终止了，返回值的done属性为true，以后再调用next方法，done属性总是返回true。</p> <p>如果return方法调用时，不提供参数，则返回值的value属性为undefined。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* gen() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+var g = gen();
+
+g.next()        // { value: 1, done: false }
+g.return() // { value: undefined, done: true }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>如果 Generator 函数内部有try...finally代码块，且正在执行try代码块，那么return方法会推迟到finally代码块执行完再执行。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* numbers () {
+  yield 1;
+  try {
+    yield 2;
+    yield 3;
+  } finally {
+    yield 4;
+    yield 5;
+  }
+  yield 6;
+}
+var g = numbers();
+g.next() // { value: 1, done: false }
+g.next() // { value: 2, done: false }
+g.return(7) // { value: 4, done: false }
+g.next() // { value: 5, done: false }
+g.next() // { value: 7, done: true }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>上面代码中，调用return方法后，就开始执行finally代码块，然后等到finally代码块执行完，再执行return方法。</p> <h2 id="next-、throw-、return-的共同点"><a href="#next-、throw-、return-的共同点" class="header-anchor">#</a> next()、throw()、return() 的共同点</h2> <p>next()、throw()、return()这三个方法本质上是同一件事，可以放在一起理解。它们的作用都是让 Generator 函数恢复执行，并且使用不同的语句替换yield表达式。</p> <p>next()是将yield表达式替换成一个值。</p> <div class="language-node line-numbers-mode"><pre class="language-text"><code>const g = function* (x, y) {
+  let result = yield x + y;
+  return result;
+};
+
+const gen = g(1, 2);
+gen.next(); // Object {value: 3, done: false}
+
+gen.next(1); // Object {value: 1, done: true}
+// 相当于将 let result = yield x + y
+// 替换成 let result = 1;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>上面代码中，第二个next(1)方法就相当于将yield表达式替换成一个值1。如果next方法没有参数，就相当于替换成undefined。</p> <p>throw()是将yield表达式替换成一个throw语句。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>gen.throw(new Error('出错了')); // Uncaught Error: 出错了
+// 相当于将 let result = yield x + y
+// 替换成 let result = throw(new Error('出错了'));
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>return()是将yield表达式替换成一个return语句。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>gen.return(2); // Object {value: 2, done: true}
+// 相当于将 let result = yield x + y
+// 替换成 let result = return 2;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="yield-表达式"><a href="#yield-表达式" class="header-anchor">#</a> yield* 表达式</h2> <p>如果在 Generator 函数内部，调用另一个 Generator 函数。需要在前者的函数体内部，自己手动完成遍历。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* foo() {
+  yield 'a';
+  yield 'b';
+}
+
+function* bar() {
+  yield 'x';
+  // 手动遍历 foo()
+  for (let i of foo()) {
+    console.log(i);
+  }
+  yield 'y';
+}
+
+for (let v of bar()){
+  console.log(v);
+}
+// x
+// a
+// b
+// y
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p>上面代码中，foo和bar都是 Generator 函数，在bar里面调用foo，就需要手动遍历foo。如果有多个 Generator 函数嵌套，写起来就非常麻烦。</p> <p>ES6 提供了yield*表达式，作为解决办法，用来在一个 Generator 函数里面执行另一个 Generator 函数。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* bar() {
+  yield 'x';
+  yield* foo();
+  yield 'y';
+}
+
+// 等同于
+function* bar() {
+  yield 'x';
+  yield 'a';
+  yield 'b';
+  yield 'y';
+}
+
+// 等同于
+function* bar() {
+  yield 'x';
+  for (let v of foo()) {
+    yield v;
+  }
+  yield 'y';
+}
+
+for (let v of bar()){
+  console.log(v);
+}
+// &quot;x&quot;
+// &quot;a&quot;
+// &quot;b&quot;
+// &quot;y&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><p>再来看一个对比的例子。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* inner() {
+  yield 'hello!';
+}
+
+function* outer1() {
+  yield 'open';
+  yield inner();
+  yield 'close';
+}
+
+var gen = outer1()
+gen.next().value // &quot;open&quot;
+gen.next().value // 返回一个遍历器对象
+gen.next().value // &quot;close&quot;
+
+function* outer2() {
+  yield 'open'
+  yield* inner()
+  yield 'close'
+}
+
+var gen = outer2()
+gen.next().value // &quot;open&quot;
+gen.next().value // &quot;hello!&quot;
+gen.next().value // &quot;close&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><p>上面例子中，outer2使用了yield*，outer1没使用。结果就是，outer1返回一个遍历器对象，outer2返回该遍历器对象的内部值。</p> <p>从语法角度看，如果yield表达式后面跟的是一个遍历器对象，需要在yield表达式后面加上星号，表明它返回的是一个遍历器对象。这被称为yield*表达式。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>let delegatedIterator = (function* () {
+  yield 'Hello!';
+  yield 'Bye!';
+}());
+
+let delegatingIterator = (function* () {
+  yield 'Greetings!';
+  yield* delegatedIterator;
+  yield 'Ok, bye.';
+}());
+
+for(let value of delegatingIterator) {
+  console.log(value);
+}
+// &quot;Greetings!
+// &quot;Hello!&quot;
+// &quot;Bye!&quot;
+// &quot;Ok, bye.&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>上面代码中，delegatingIterator是代理者，delegatedIterator是被代理者。由于yield* delegatedIterator语句得到的值，是一个遍历器，所以要用星号表示。运行结果就是使用一个遍历器，遍历了多个 Generator 函数，有递归的效果。</p> <p>yield*后面的 Generator 函数（没有return语句时），等同于在 Generator 函数内部，部署一个for...of循环。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* concat(iter1, iter2) {
+  yield* iter1;
+  yield* iter2;
+}
+
+// 等同于
+
+function* concat(iter1, iter2) {
+  for (var value of iter1) {
+    yield value;
+  }
+  for (var value of iter2) {
+    yield value;
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>上面代码说明，yield<em>后面的 Generator 函数（没有return语句时），不过是for...of的一种简写形式，完全可以用后者替代前者。反之，在有return语句时，则需要用var value = yield</em> iterator的形式获取return语句的值。</p> <p>如果yield*后面跟着一个数组，由于数组原生支持遍历器，因此就会遍历数组成员。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* gen(){
+  yield* [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;];
+}
+
+gen().next() // { value:&quot;a&quot;, done:false }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>上面代码中，yield命令后面如果不加星号，返回的是整个数组，加了星号就表示返回的是数组的遍历器对象。</p> <p>实际上，任何数据结构只要有 Iterator 接口，就可以被yield*遍历。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>let read = (function* () {
+  yield 'hello';
+  yield* 'hello';
+})();
+
+read.next().value // &quot;hello&quot;
+read.next().value // &quot;h&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>上面代码中，yield表达式返回整个字符串，yield<em>语句返回单个字符。因为字符串具有 Iterator 接口，所以被yield</em>遍历。</p> <p>如果被代理的 Generator 函数有return语句，那么就可以向代理它的 Generator 函数返回数据。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* foo() {
+  yield 2;
+  yield 3;
+  return &quot;foo&quot;;
+}
+
+function* bar() {
+  yield 1;
+  var v = yield* foo();
+  console.log(&quot;v: &quot; + v);
+  yield 4;
+}
+
+var it = bar();
+
+it.next()
+// {value: 1, done: false}
+it.next()
+// {value: 2, done: false}
+it.next()
+// {value: 3, done: false}
+it.next();
+// &quot;v: foo&quot;
+// {value: 4, done: false}
+it.next()
+// {value: undefined, done: true}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><p>上面代码在第四次调用next方法的时候，屏幕上会有输出，这是因为函数foo的return语句，向函数bar提供了返回值。</p> <p>再看一个例子。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* genFuncWithReturn() {
+  yield 'a';
+  yield 'b';
+  return 'The result';
+}
+function* logReturned(genObj) {
+  let result = yield* genObj;
+  console.log(result);
+}
+
+[...logReturned(genFuncWithReturn())]
+// The result
+// 值为 [ 'a', 'b' ]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>上面代码中，存在两次遍历。第一次是扩展运算符遍历函数logReturned返回的遍历器对象，第二次是yield*语句遍历函数genFuncWithReturn返回的遍历器对象。这两次遍历的效果是叠加的，最终表现为扩展运算符遍历函数genFuncWithReturn返回的遍历器对象。所以，最后的数据表达式得到的值等于[ 'a', 'b' ]。但是，函数genFuncWithReturn的return语句的返回值The result，会返回给函数logReturned内部的result变量，因此会有终端输出。</p> <p>yield*命令可以很方便地取出嵌套数组的所有成员。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* iterTree(tree) {
+  if (Array.isArray(tree)) {
+    for(let i=0; i &lt; tree.length; i++) {
+      yield* iterTree(tree[i]);
+    }
+  } else {
+    yield tree;
+  }
+}
+
+const tree = [ 'a', ['b', 'c'], ['d', 'e'] ];
+
+for(let x of iterTree(tree)) {
+  console.log(x);
+}
+// a
+// b
+// c
+// d
+// e
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>由于扩展运算符...默认调用 Iterator 接口，所以上面这个函数也可以用于嵌套数组的平铺。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>[...iterTree(tree)] // [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="作为对象属性的-generator-函数"><a href="#作为对象属性的-generator-函数" class="header-anchor">#</a> 作为对象属性的 Generator 函数</h2> <p>如果一个对象的属性是 Generator 函数，可以简写成下面的形式。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>let obj = {
+  * myGeneratorMethod() {
+    ···
+  }
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>上面代码中，myGeneratorMethod属性前面有一个星号，表示这个属性是一个 Generator 函数。</p> <p>它的完整形式如下，与上面的写法是等价的。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>let obj = {
+  myGeneratorMethod: function* () {
+    // ···
+  }
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="generator-函数的this"><a href="#generator-函数的this" class="header-anchor">#</a> Generator 函数的this</h2> <p>Generator 函数总是返回一个遍历器，ES6 规定这个遍历器是 Generator 函数的实例，也继承了 Generator 函数的prototype对象上的方法。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* g() {}
+
+g.prototype.hello = function () {
+  return 'hi!';
+};
+
+let obj = g();
+
+obj instanceof g // true
+obj.hello() // 'hi!'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>上面代码表明，Generator 函数g返回的遍历器obj，是g的实例，而且继承了g.prototype。但是，如果把g当作普通的构造函数，并不会生效，因为g返回的总是遍历器对象，而不是this对象。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* g() {
+  this.a = 11;
+}
+
+let obj = g();
+obj.next();
+obj.a // undefined
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>上面代码中，Generator 函数g在this对象上面添加了一个属性a，但是obj对象拿不到这个属性。</p> <p>Generator 函数也不能跟new命令一起用，会报错。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* F() {
+  yield this.x = 2;
+  yield this.y = 3;
+}
+
+new F()
+// TypeError: F is not a constructor
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>上面代码中，new命令跟构造函数F一起使用，结果报错，因为F不是构造函数。</p> <p>那么，有没有办法让 Generator 函数返回一个正常的对象实例，既可以用next方法，又可以获得正常的this？</p> <p>下面是一个变通方法。首先，生成一个空对象，使用call方法绑定 Generator 函数内部的this。这样，构造函数调用以后，这个空对象就是 Generator 函数的实例对象了。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* F() {
+  this.a = 1;
+  yield this.b = 2;
+  yield this.c = 3;
+}
+var obj = {};
+var f = F.call(obj);
+
+f.next();  // Object {value: 2, done: false}
+f.next();  // Object {value: 3, done: false}
+f.next();  // Object {value: undefined, done: true}
+
+obj.a // 1
+obj.b // 2
+obj.c // 3
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>上面代码中，首先是F内部的this对象绑定obj对象，然后调用它，返回一个 Iterator 对象。这个对象执行三次next方法（因为F内部有两个yield表达式），完成 F 内部所有代码的运行。这时，所有内部属性都绑定在obj对象上了，因此obj对象也就成了F的实例。</p> <p>上面代码中，执行的是遍历器对象f，但是生成的对象实例是obj，有没有办法将这两个对象统一呢？</p> <p>一个办法就是将obj换成F.prototype。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* F() {
+  this.a = 1;
+  yield this.b = 2;
+  yield this.c = 3;
+}
+var f = F.call(F.prototype);
+
+f.next();  // Object {value: 2, done: false}
+f.next();  // Object {value: 3, done: false}
+f.next();  // Object {value: undefined, done: true}
+
+f.a // 1
+f.b // 2
+f.c // 3
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>再将F改成构造函数，就可以对它执行new命令了。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* gen() {
+  this.a = 1;
+  yield this.b = 2;
+  yield this.c = 3;
+}
+
+function F() {
+  return gen.call(gen.prototype);
+}
+
+var f = new F();
+
+f.next();  // Object {value: 2, done: false}
+f.next();  // Object {value: 3, done: false}
+f.next();  // Object {value: undefined, done: true}
+
+f.a // 1
+f.b // 2
+f.c // 3
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h2 id="含义"><a href="#含义" class="header-anchor">#</a> 含义</h2> <h3 id="_1-generator-与状态机"><a href="#_1-generator-与状态机" class="header-anchor">#</a> 1. Generator 与状态机</h3> <p>Generator 是实现状态机的最佳结构。比如，下面的clock函数就是一个状态机。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>var ticking = true;
+var clock = function() {
+  if (ticking)
+    console.log('Tick!');
+  else
+    console.log('Tock!');
+  ticking = !ticking;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>上面代码的clock函数一共有两种状态（Tick和Tock），每运行一次，就改变一次状态。这个函数如果用 Generator 实现，就是下面这样。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>var clock = function* () {
+  while (true) {
+    console.log('Tick!');
+    yield;
+    console.log('Tock!');
+    yield;
+  }
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>上面的 Generator 实现与 ES5 实现对比，可以看到少了用来保存状态的外部变量ticking，这样就更简洁，更安全（状态不会被非法篡改）、更符合函数式编程的思想，在写法上也更优雅。Generator 之所以可以不用外部变量保存状态，是因为它本身就包含了一个状态信息，即目前是否处于暂停态。</p> <h3 id="_2-generator-与协程"><a href="#_2-generator-与协程" class="header-anchor">#</a> 2. Generator 与协程</h3> <p>协程（coroutine）是一种程序运行的方式，可以理解成“协作的线程”或“协作的函数”。协程既可以用单线程实现，也可以用多线程实现。前者是一种特殊的子例程，后者是一种特殊的线程。</p> <h4 id="_1-协程与子例程的差异"><a href="#_1-协程与子例程的差异" class="header-anchor">#</a> （1）协程与子例程的差异</h4> <p>传统的“子例程”（subroutine）采用堆栈式“后进先出”的执行方式，只有当调用的子函数完全执行完毕，才会结束执行父函数。协程与其不同，多个线程（单线程情况下，即多个函数）可以并行执行，但是只有一个线程（或函数）处于正在运行的状态，其他线程（或函数）都处于暂停态（suspended），线程（或函数）之间可以交换执行权。也就是说，一个线程（或函数）执行到一半，可以暂停执行，将执行权交给另一个线程（或函数），等到稍后收回执行权的时候，再恢复执行。这种可以并行执行、交换执行权的线程（或函数），就称为协程。</p> <p>从实现上看，在内存中，子例程只使用一个栈（stack），而协程是同时存在多个栈，但只有一个栈是在运行状态，也就是说，协程是以多占用内存为代价，实现多任务的并行。</p> <h4 id="_2-协程与普通线程的差异"><a href="#_2-协程与普通线程的差异" class="header-anchor">#</a> （2）协程与普通线程的差异</h4> <p>不难看出，协程适合用于多任务运行的环境。在这个意义上，它与普通的线程很相似，都有自己的执行上下文、可以分享全局变量。它们的不同之处在于，同一时间可以有多个线程处于运行状态，但是运行的协程只能有一个，其他协程都处于暂停状态。此外，普通的线程是抢先式的，到底哪个线程优先得到资源，必须由运行环境决定，但是协程是合作式的，执行权由协程自己分配。</p> <p>由于 JavaScript 是单线程语言，只能保持一个调用栈。引入协程以后，每个任务可以保持自己的调用栈。这样做的最大好处，就是抛出错误的时候，可以找到原始的调用栈。不至于像异步操作的回调函数那样，一旦出错，原始的调用栈早就结束。</p> <p>Generator 函数是 ES6 对协程的实现，但属于不完全实现。Generator 函数被称为“半协程”（semi-coroutine），意思是只有 Generator 函数的调用者，才能将程序的执行权还给 Generator 函数。如果是完全执行的协程，任何函数都可以让暂停的协程继续执行。</p> <p>如果将 Generator 函数当作协程，完全可以将多个需要互相协作的任务写成 Generator 函数，它们之间使用yield表达式交换控制权。</p> <h3 id="_3-generator-与上下文"><a href="#_3-generator-与上下文" class="header-anchor">#</a> 3. Generator 与上下文</h3> <p>JavaScript 代码运行时，会产生一个全局的上下文环境（context，又称运行环境），包含了当前所有的变量和对象。然后，执行函数（或块级代码）的时候，又会在当前上下文环境的上层，产生一个函数运行的上下文，变成当前（active）的上下文，由此形成一个上下文环境的堆栈（context stack）。</p> <p>这个堆栈是“后进先出”的数据结构，最后产生的上下文环境首先执行完成，退出堆栈，然后再执行完成它下层的上下文，直至所有代码执行完成，堆栈清空。</p> <p>Generator 函数不是这样，它执行产生的上下文环境，一旦遇到yield命令，就会暂时退出堆栈，但是并不消失，里面的所有变量和对象会冻结在当前状态。等到对它执行next命令时，这个上下文环境又会重新加入调用栈，冻结的变量和对象恢复执行。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* gen() {
+  yield 1;
+  return 2;
+}
+
+let g = gen();
+
+console.log(
+  g.next().value,
+  g.next().value,
+);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>上面代码中，第一次执行g.next()时，Generator 函数gen的上下文会加入堆栈，即开始运行gen内部的代码。等遇到yield 1时，gen上下文退出堆栈，内部状态冻结。第二次执行g.next()时，gen上下文重新加入堆栈，变成当前的上下文，重新恢复执行。</p> <h2 id="应用"><a href="#应用" class="header-anchor">#</a> 应用</h2> <p>Generator 可以暂停函数执行，返回任意表达式的值。这种特点使得 Generator 有多种应用场景。</p> <h3 id="_1-异步操作的同步化表达"><a href="#_1-异步操作的同步化表达" class="header-anchor">#</a> （1）异步操作的同步化表达</h3> <p>Generator 函数的暂停执行的效果，意味着可以把异步操作写在yield表达式里面，等到调用next方法时再往后执行。这实际上等同于不需要写回调函数了，因为异步操作的后续操作可以放在yield表达式下面，反正要等到调用next方法时再执行。所以，Generator 函数的一个重要实际意义就是用来处理异步操作，改写回调函数。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* loadUI() {
+  showLoadingScreen();
+  yield loadUIDataAsynchronously();
+  hideLoadingScreen();
+}
+var loader = loadUI();
+// 加载UI
+loader.next()
+
+// 卸载UI
+loader.next()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>上面代码中，第一次调用loadUI函数时，该函数不会执行，仅返回一个遍历器。下一次对该遍历器调用next方法，则会显示Loading界面（showLoadingScreen），并且异步加载数据（loadUIDataAsynchronously）。等到数据加载完成，再一次使用next方法，则会隐藏Loading界面。可以看到，这种写法的好处是所有Loading界面的逻辑，都被封装在一个函数，按部就班非常清晰。</p> <p>Ajax 是典型的异步操作，通过 Generator 函数部署 Ajax 操作，可以用同步的方式表达。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* main() {
+  var result = yield request(&quot;http://some.url&quot;);
+  var resp = JSON.parse(result);
+    console.log(resp.value);
+}
+
+function request(url) {
+  makeAjaxCall(url, function(response){
+    it.next(response);
+  });
+}
+
+var it = main();
+it.next();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>上面代码的main函数，就是通过 Ajax 操作获取数据。可以看到，除了多了一个yield，它几乎与同步操作的写法完全一样。注意，makeAjaxCall函数中的next方法，必须加上response参数，因为yield表达式，本身是没有值的，总是等于undefined。</p> <p>下面是另一个例子，通过 Generator 函数逐行读取文本文件。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* numbers() {
+  let file = new FileReader(&quot;numbers.txt&quot;);
+  try {
+    while(!file.eof) {
+      yield parseInt(file.readLine(), 10);
+    }
+  } finally {
+    file.close();
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>上面代码打开文本文件，使用yield表达式可以手动逐行读取文件。</p> <h3 id="_2-控制流管理"><a href="#_2-控制流管理" class="header-anchor">#</a> （2）控制流管理</h3> <p>如果有一个多步操作非常耗时，采用回调函数，可能会写成下面这样。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>step1(function (value1) {
+  step2(value1, function(value2) {
+    step3(value2, function(value3) {
+      step4(value3, function(value4) {
+        // Do something with value4
+      });
+    });
+  });
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>采用 Promise 改写上面的代码。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>Promise.resolve(step1)
+  .then(step2)
+  .then(step3)
+  .then(step4)
+  .then(function (value4) {
+    // Do something with value4
+  }, function (error) {
+    // Handle any error from step1 through step4
+  })
+  .done();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>上面代码已经把回调函数，改成了直线执行的形式，但是加入了大量 Promise 的语法。Generator 函数可以进一步改善代码运行流程。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* longRunningTask(value1) {
+  try {
+    var value2 = yield step1(value1);
+    var value3 = yield step2(value2);
+    var value4 = yield step3(value3);
+    var value5 = yield step4(value4);
+    // Do something with value4
+  } catch (e) {
+    // Handle any error from step1 through step4
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>然后，使用一个函数，按次序自动执行所有步骤。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>scheduler(longRunningTask(initialValue));
+
+function scheduler(task) {
+  var taskObj = task.next(task.value);
+  // 如果Generator函数未结束，就继续调用
+  if (!taskObj.done) {
+    task.value = taskObj.value
+    scheduler(task);
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>注意，上面这种做法，只适合同步操作，即所有的task都必须是同步的，不能有异步操作。因为这里的代码一得到返回值，就继续往下执行，没有判断异步操作何时完成。如果要控制异步的操作流程，详见后面的《异步操作》一章。</p> <p>下面，利用for...of循环会自动依次执行yield命令的特性，提供一种更一般的控制流管理的方法。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>let steps = [step1Func, step2Func, step3Func];
+
+function* iterateSteps(steps){
+  for (var i=0; i&lt; steps.length; i++){
+    var step = steps[i];
+    yield step();
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>上面代码中，数组steps封装了一个任务的多个步骤，Generator 函数iterateSteps则是依次为这些步骤加上yield命令。</p> <p>将任务分解成步骤之后，还可以将项目分解成多个依次执行的任务。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>let jobs = [job1, job2, job3];
+
+function* iterateJobs(jobs){
+  for (var i=0; i&lt; jobs.length; i++){
+    var job = jobs[i];
+    yield* iterateSteps(job.steps);
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>上面代码中，数组jobs封装了一个项目的多个任务，Generator 函数iterateJobs则是依次为这些任务加上yield*命令。</p> <p>最后，就可以用for...of循环一次性依次执行所有任务的所有步骤。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>for (var step of iterateJobs(jobs)){
+  console.log(step.id);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>再次提醒，上面的做法只能用于所有步骤都是同步操作的情况，不能有异步操作的步骤。如果想要依次执行异步的步骤，必须使用后面的《异步操作》一章介绍的方法。</p> <p>for...of的本质是一个while循环，所以上面的代码实质上执行的是下面的逻辑。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>var it = iterateJobs(jobs);
+var res = it.next();
+
+while (!res.done){
+  var result = res.value;
+  // ...
+  res = it.next();
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="_3-部署-iterator-接口"><a href="#_3-部署-iterator-接口" class="header-anchor">#</a> （3）部署 Iterator 接口</h3> <p>利用 Generator 函数，可以在任意对象上部署 Iterator 接口。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* iterEntries(obj) {
+  let keys = Object.keys(obj);
+  for (let i=0; i &lt; keys.length; i++) {
+    let key = keys[i];
+    yield [key, obj[key]];
+  }
+}
+
+let myObj = { foo: 3, bar: 7 };
+
+for (let [key, value] of iterEntries(myObj)) {
+  console.log(key, value);
+}
+
+// foo 3
+// bar 7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>上述代码中，myObj是一个普通对象，通过iterEntries函数，就有了 Iterator 接口。也就是说，可以在任意对象上部署next方法。</p> <p>下面是一个对数组部署 Iterator 接口的例子，尽管数组原生具有这个接口。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* makeSimpleGenerator(array){
+  var nextIndex = 0;
+
+  while(nextIndex &lt; array.length){
+    yield array[nextIndex++];
+  }
+}
+
+var gen = makeSimpleGenerator(['yo', 'ya']);
+
+gen.next().value // 'yo'
+gen.next().value // 'ya'
+gen.next().done  // true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h3 id="_4-作为数据结构"><a href="#_4-作为数据结构" class="header-anchor">#</a> （4）作为数据结构</h3> <p>Generator 可以看作是数据结构，更确切地说，可以看作是一个数组结构，因为 Generator 函数可以返回一系列的值，这意味着它可以对任意表达式，提供类似数组的接口。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function* doStuff() {
+  yield fs.readFile.bind(null, 'hello.txt');
+  yield fs.readFile.bind(null, 'world.txt');
+  yield fs.readFile.bind(null, 'and-such.txt');
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>上面代码就是依次返回三个函数，但是由于使用了 Generator 函数，导致可以像处理数组那样，处理这三个返回的函数。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>for (task of doStuff()) {
+  // task是一个函数，可以像回调函数那样使用它
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>实际上，如果用 ES5 表达，完全可以用数组模拟 Generator 的这种用法。</p> <div class="language-gen line-numbers-mode"><pre class="language-text"><code>function doStuff() {
+  return [
+    fs.readFile.bind(null, 'hello.txt'),
+    fs.readFile.bind(null, 'world.txt'),
+    fs.readFile.bind(null, 'and-such.txt')
+  ];
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>上面的函数，可以用一模一样的for...of循环处理！两相一比较，就不难看出 Generator 使得数据或者操作，具备了类似数组的接口。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.03709e87.js" defer></script><script src="/assets/js/2.9c41e448.js" defer></script><script src="/assets/js/1.2c8cdafe.js" defer></script><script src="/assets/js/220.e768121c.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>IndexedDB API | Landscape</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="私人博客网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.5149da19.css" as="style"><link rel="preload" href="/assets/js/app.03709e87.js" as="script"><link rel="preload" href="/assets/js/2.9c41e448.js" as="script"><link rel="preload" href="/assets/js/1.2c8cdafe.js" as="script"><link rel="preload" href="/assets/js/134.9edb144c.js" as="script"><link rel="prefetch" href="/assets/js/10.9a78c136.js"><link rel="prefetch" href="/assets/js/100.c9e70424.js"><link rel="prefetch" href="/assets/js/101.7d153ac9.js"><link rel="prefetch" href="/assets/js/102.85de912f.js"><link rel="prefetch" href="/assets/js/103.61b2f7e1.js"><link rel="prefetch" href="/assets/js/104.5a35b1f0.js"><link rel="prefetch" href="/assets/js/105.3b4ecaec.js"><link rel="prefetch" href="/assets/js/106.c442c55b.js"><link rel="prefetch" href="/assets/js/107.a95ebaee.js"><link rel="prefetch" href="/assets/js/108.a1994c22.js"><link rel="prefetch" href="/assets/js/109.60b54124.js"><link rel="prefetch" href="/assets/js/11.8f41bfe2.js"><link rel="prefetch" href="/assets/js/110.9f3397c8.js"><link rel="prefetch" href="/assets/js/111.9801ca03.js"><link rel="prefetch" href="/assets/js/112.ce77dfd6.js"><link rel="prefetch" href="/assets/js/113.7597a04c.js"><link rel="prefetch" href="/assets/js/114.26cf7708.js"><link rel="prefetch" href="/assets/js/115.d974a106.js"><link rel="prefetch" href="/assets/js/116.700143af.js"><link rel="prefetch" href="/assets/js/117.a66165d2.js"><link rel="prefetch" href="/assets/js/118.b31e6990.js"><link rel="prefetch" href="/assets/js/119.5cb9f809.js"><link rel="prefetch" href="/assets/js/12.c51f03c4.js"><link rel="prefetch" href="/assets/js/120.1fd76b91.js"><link rel="prefetch" href="/assets/js/121.d2492484.js"><link rel="prefetch" href="/assets/js/122.d843abd8.js"><link rel="prefetch" href="/assets/js/123.8ac8400b.js"><link rel="prefetch" href="/assets/js/124.a9949254.js"><link rel="prefetch" href="/assets/js/125.8796a7b5.js"><link rel="prefetch" href="/assets/js/126.7f1f78c2.js"><link rel="prefetch" href="/assets/js/127.9cd44447.js"><link rel="prefetch" href="/assets/js/128.b71edd96.js"><link rel="prefetch" href="/assets/js/129.bd3afe44.js"><link rel="prefetch" href="/assets/js/13.63e2250d.js"><link rel="prefetch" href="/assets/js/130.2fa9a027.js"><link rel="prefetch" href="/assets/js/131.c41b0245.js"><link rel="prefetch" href="/assets/js/132.00f91944.js"><link rel="prefetch" href="/assets/js/133.938bdbbf.js"><link rel="prefetch" href="/assets/js/135.07c0f821.js"><link rel="prefetch" href="/assets/js/136.7c89ad8e.js"><link rel="prefetch" href="/assets/js/137.1c2439fa.js"><link rel="prefetch" href="/assets/js/138.ee8a9d1e.js"><link rel="prefetch" href="/assets/js/139.c25fa4da.js"><link rel="prefetch" href="/assets/js/14.39577714.js"><link rel="prefetch" href="/assets/js/140.73aed9e1.js"><link rel="prefetch" href="/assets/js/141.4599df87.js"><link rel="prefetch" href="/assets/js/142.0539f993.js"><link rel="prefetch" href="/assets/js/143.2393d855.js"><link rel="prefetch" href="/assets/js/144.4872f976.js"><link rel="prefetch" href="/assets/js/145.4725cc29.js"><link rel="prefetch" href="/assets/js/146.5ac1ae41.js"><link rel="prefetch" href="/assets/js/147.ee55fe80.js"><link rel="prefetch" href="/assets/js/148.017a60a5.js"><link rel="prefetch" href="/assets/js/149.9275392f.js"><link rel="prefetch" href="/assets/js/15.16a10138.js"><link rel="prefetch" href="/assets/js/150.4f6e39e2.js"><link rel="prefetch" href="/assets/js/151.8112ed38.js"><link rel="prefetch" href="/assets/js/152.9b3892fe.js"><link rel="prefetch" href="/assets/js/153.985dfc78.js"><link rel="prefetch" href="/assets/js/154.c5b2941e.js"><link rel="prefetch" href="/assets/js/155.17e7db46.js"><link rel="prefetch" href="/assets/js/156.18ce8096.js"><link rel="prefetch" href="/assets/js/157.503c9654.js"><link rel="prefetch" href="/assets/js/158.d2a16ef9.js"><link rel="prefetch" href="/assets/js/159.ea946356.js"><link rel="prefetch" href="/assets/js/16.268b7541.js"><link rel="prefetch" href="/assets/js/160.e33ccb84.js"><link rel="prefetch" href="/assets/js/161.00ee3a5e.js"><link rel="prefetch" href="/assets/js/162.2a192fc6.js"><link rel="prefetch" href="/assets/js/163.8ea65891.js"><link rel="prefetch" href="/assets/js/164.f5ba32ea.js"><link rel="prefetch" href="/assets/js/165.d3e0e3bc.js"><link rel="prefetch" href="/assets/js/166.3fb11b83.js"><link rel="prefetch" href="/assets/js/167.d3165489.js"><link rel="prefetch" href="/assets/js/168.b4e4fee5.js"><link rel="prefetch" href="/assets/js/169.48ef06de.js"><link rel="prefetch" href="/assets/js/17.bc320121.js"><link rel="prefetch" href="/assets/js/170.cf8bdfa4.js"><link rel="prefetch" href="/assets/js/171.a15829ec.js"><link rel="prefetch" href="/assets/js/172.7339f3af.js"><link rel="prefetch" href="/assets/js/173.8e7612d5.js"><link rel="prefetch" href="/assets/js/174.57733e3c.js"><link rel="prefetch" href="/assets/js/175.5da89883.js"><link rel="prefetch" href="/assets/js/176.d3088d0b.js"><link rel="prefetch" href="/assets/js/177.77d4f99a.js"><link rel="prefetch" href="/assets/js/178.6f080056.js"><link rel="prefetch" href="/assets/js/179.fd1b6bae.js"><link rel="prefetch" href="/assets/js/18.f25a177b.js"><link rel="prefetch" href="/assets/js/180.947ec3a7.js"><link rel="prefetch" href="/assets/js/181.137f66d8.js"><link rel="prefetch" href="/assets/js/182.a2605386.js"><link rel="prefetch" href="/assets/js/183.e1d41264.js"><link rel="prefetch" href="/assets/js/184.a92813fb.js"><link rel="prefetch" href="/assets/js/185.287a04b2.js"><link rel="prefetch" href="/assets/js/186.7284a85c.js"><link rel="prefetch" href="/assets/js/187.9d46b1fd.js"><link rel="prefetch" href="/assets/js/188.d488ef34.js"><link rel="prefetch" href="/assets/js/189.a4b1c139.js"><link rel="prefetch" href="/assets/js/19.69a9cb43.js"><link rel="prefetch" href="/assets/js/190.b5fc0d1e.js"><link rel="prefetch" href="/assets/js/191.cb3df8ec.js"><link rel="prefetch" href="/assets/js/192.284ab855.js"><link rel="prefetch" href="/assets/js/193.9943ea97.js"><link rel="prefetch" href="/assets/js/194.ca5b0372.js"><link rel="prefetch" href="/assets/js/195.3dd22df1.js"><link rel="prefetch" href="/assets/js/196.2bb20f59.js"><link rel="prefetch" href="/assets/js/197.f68f5cea.js"><link rel="prefetch" href="/assets/js/198.7fe206e3.js"><link rel="prefetch" href="/assets/js/199.dfacca9f.js"><link rel="prefetch" href="/assets/js/20.02a969ac.js"><link rel="prefetch" href="/assets/js/200.a2d258cc.js"><link rel="prefetch" href="/assets/js/201.66f9f3cd.js"><link rel="prefetch" href="/assets/js/202.9a90ff27.js"><link rel="prefetch" href="/assets/js/203.362927aa.js"><link rel="prefetch" href="/assets/js/204.dc472967.js"><link rel="prefetch" href="/assets/js/205.1a5438ac.js"><link rel="prefetch" href="/assets/js/206.dfd0a913.js"><link rel="prefetch" href="/assets/js/207.b291df1e.js"><link rel="prefetch" href="/assets/js/208.c501ea52.js"><link rel="prefetch" href="/assets/js/209.b9bef10a.js"><link rel="prefetch" href="/assets/js/21.de545bd9.js"><link rel="prefetch" href="/assets/js/210.bbe94fe3.js"><link rel="prefetch" href="/assets/js/211.bbccbad7.js"><link rel="prefetch" href="/assets/js/212.b8b0156c.js"><link rel="prefetch" href="/assets/js/213.a611ca63.js"><link rel="prefetch" href="/assets/js/214.ce63df2d.js"><link rel="prefetch" href="/assets/js/215.6e65bdbb.js"><link rel="prefetch" href="/assets/js/216.83d053c2.js"><link rel="prefetch" href="/assets/js/217.f0ff8083.js"><link rel="prefetch" href="/assets/js/218.5e6d306c.js"><link rel="prefetch" href="/assets/js/219.18acb160.js"><link rel="prefetch" href="/assets/js/22.3405b01f.js"><link rel="prefetch" href="/assets/js/220.e768121c.js"><link rel="prefetch" href="/assets/js/221.d02e030a.js"><link rel="prefetch" href="/assets/js/222.17ff9609.js"><link rel="prefetch" href="/assets/js/223.bf07fdde.js"><link rel="prefetch" href="/assets/js/224.58104c7b.js"><link rel="prefetch" href="/assets/js/225.639a8660.js"><link rel="prefetch" href="/assets/js/226.65b0cfbd.js"><link rel="prefetch" href="/assets/js/227.d297a59f.js"><link rel="prefetch" href="/assets/js/228.1a6934d7.js"><link rel="prefetch" href="/assets/js/229.de34422e.js"><link rel="prefetch" href="/assets/js/23.69dc8d94.js"><link rel="prefetch" href="/assets/js/230.4a9af2ca.js"><link rel="prefetch" href="/assets/js/231.f9f87c61.js"><link rel="prefetch" href="/assets/js/232.c9249af0.js"><link rel="prefetch" href="/assets/js/233.e4884b4a.js"><link rel="prefetch" href="/assets/js/234.4263d01e.js"><link rel="prefetch" href="/assets/js/235.36944367.js"><link rel="prefetch" href="/assets/js/236.47acc35d.js"><link rel="prefetch" href="/assets/js/237.1a1ec8d4.js"><link rel="prefetch" href="/assets/js/238.901dae66.js"><link rel="prefetch" href="/assets/js/239.29e6bd75.js"><link rel="prefetch" href="/assets/js/24.a1782a04.js"><link rel="prefetch" href="/assets/js/240.e1a99c00.js"><link rel="prefetch" href="/assets/js/241.21b7b4d5.js"><link rel="prefetch" href="/assets/js/242.c6e8f51d.js"><link rel="prefetch" href="/assets/js/243.b9f7dbb8.js"><link rel="prefetch" href="/assets/js/244.d82e7676.js"><link rel="prefetch" href="/assets/js/245.d6d32bef.js"><link rel="prefetch" href="/assets/js/246.9df785ca.js"><link rel="prefetch" href="/assets/js/247.39361a95.js"><link rel="prefetch" href="/assets/js/248.ded311ae.js"><link rel="prefetch" href="/assets/js/249.ed678461.js"><link rel="prefetch" href="/assets/js/25.e45a6beb.js"><link rel="prefetch" href="/assets/js/250.fbbb1010.js"><link rel="prefetch" href="/assets/js/251.81a4098f.js"><link rel="prefetch" href="/assets/js/252.d01d4352.js"><link rel="prefetch" href="/assets/js/253.ac8e8036.js"><link rel="prefetch" href="/assets/js/254.673d0ac8.js"><link rel="prefetch" href="/assets/js/255.648ca249.js"><link rel="prefetch" href="/assets/js/256.df9e0d06.js"><link rel="prefetch" href="/assets/js/257.2659fd53.js"><link rel="prefetch" href="/assets/js/258.768a5063.js"><link rel="prefetch" href="/assets/js/259.3cafd7d8.js"><link rel="prefetch" href="/assets/js/26.2ddddaf3.js"><link rel="prefetch" href="/assets/js/260.daeab7cd.js"><link rel="prefetch" href="/assets/js/261.750a6b34.js"><link rel="prefetch" href="/assets/js/262.10ad1dea.js"><link rel="prefetch" href="/assets/js/263.3de9e804.js"><link rel="prefetch" href="/assets/js/264.5d8fa025.js"><link rel="prefetch" href="/assets/js/265.2ddc1eb3.js"><link rel="prefetch" href="/assets/js/266.47aaa313.js"><link rel="prefetch" href="/assets/js/267.ec6c5119.js"><link rel="prefetch" href="/assets/js/268.27d2cac0.js"><link rel="prefetch" href="/assets/js/269.654a0297.js"><link rel="prefetch" href="/assets/js/27.ed37a2eb.js"><link rel="prefetch" href="/assets/js/270.68714208.js"><link rel="prefetch" href="/assets/js/271.a112d42c.js"><link rel="prefetch" href="/assets/js/272.a7eb7e21.js"><link rel="prefetch" href="/assets/js/273.8c2b15f1.js"><link rel="prefetch" href="/assets/js/274.1804e4d1.js"><link rel="prefetch" href="/assets/js/275.b7d0b48b.js"><link rel="prefetch" href="/assets/js/276.d5db1108.js"><link rel="prefetch" href="/assets/js/277.26ff02bd.js"><link rel="prefetch" href="/assets/js/278.705c9e2d.js"><link rel="prefetch" href="/assets/js/279.cfa9e5cd.js"><link rel="prefetch" href="/assets/js/28.77c432c4.js"><link rel="prefetch" href="/assets/js/280.9c1589b5.js"><link rel="prefetch" href="/assets/js/281.4ba44106.js"><link rel="prefetch" href="/assets/js/282.72006fe6.js"><link rel="prefetch" href="/assets/js/283.59bfc241.js"><link rel="prefetch" href="/assets/js/284.1a5840e8.js"><link rel="prefetch" href="/assets/js/285.6fc1c24d.js"><link rel="prefetch" href="/assets/js/286.4d77a9b3.js"><link rel="prefetch" href="/assets/js/287.07c79b49.js"><link rel="prefetch" href="/assets/js/29.bf0be342.js"><link rel="prefetch" href="/assets/js/3.e3770c3e.js"><link rel="prefetch" href="/assets/js/30.056fcad8.js"><link rel="prefetch" href="/assets/js/31.7083766f.js"><link rel="prefetch" href="/assets/js/32.cf7012ae.js"><link rel="prefetch" href="/assets/js/33.f1551eac.js"><link rel="prefetch" href="/assets/js/34.0a7ed9f3.js"><link rel="prefetch" href="/assets/js/35.1fedcab6.js"><link rel="prefetch" href="/assets/js/36.f32b5536.js"><link rel="prefetch" href="/assets/js/37.ecf063ae.js"><link rel="prefetch" href="/assets/js/38.ff825fc2.js"><link rel="prefetch" href="/assets/js/39.0d51331a.js"><link rel="prefetch" href="/assets/js/4.07df64b9.js"><link rel="prefetch" href="/assets/js/40.725c83f7.js"><link rel="prefetch" href="/assets/js/41.177d3173.js"><link rel="prefetch" href="/assets/js/42.d79ab1a6.js"><link rel="prefetch" href="/assets/js/43.0843e4ba.js"><link rel="prefetch" href="/assets/js/44.b50ba5e1.js"><link rel="prefetch" href="/assets/js/45.0d8c8534.js"><link rel="prefetch" href="/assets/js/46.9f6a4cc3.js"><link rel="prefetch" href="/assets/js/47.1dc4dd52.js"><link rel="prefetch" href="/assets/js/48.e5b33d10.js"><link rel="prefetch" href="/assets/js/49.f5d38f0d.js"><link rel="prefetch" href="/assets/js/5.315d7655.js"><link rel="prefetch" href="/assets/js/50.957e2a48.js"><link rel="prefetch" href="/assets/js/51.defe65c0.js"><link rel="prefetch" href="/assets/js/52.238cd9b5.js"><link rel="prefetch" href="/assets/js/53.2bd85fef.js"><link rel="prefetch" href="/assets/js/54.e529ff10.js"><link rel="prefetch" href="/assets/js/55.d57343cc.js"><link rel="prefetch" href="/assets/js/56.87d50d47.js"><link rel="prefetch" href="/assets/js/57.40964fa2.js"><link rel="prefetch" href="/assets/js/58.da160219.js"><link rel="prefetch" href="/assets/js/59.2bd1560f.js"><link rel="prefetch" href="/assets/js/6.5fb7fa31.js"><link rel="prefetch" href="/assets/js/60.6fd4af6f.js"><link rel="prefetch" href="/assets/js/61.663f58f0.js"><link rel="prefetch" href="/assets/js/62.33b5cc26.js"><link rel="prefetch" href="/assets/js/63.126f3575.js"><link rel="prefetch" href="/assets/js/64.ae08b65e.js"><link rel="prefetch" href="/assets/js/65.be75da36.js"><link rel="prefetch" href="/assets/js/66.78dade32.js"><link rel="prefetch" href="/assets/js/67.1a890242.js"><link rel="prefetch" href="/assets/js/68.9753a6d4.js"><link rel="prefetch" href="/assets/js/69.82ddc388.js"><link rel="prefetch" href="/assets/js/7.d8f2050a.js"><link rel="prefetch" href="/assets/js/70.660da076.js"><link rel="prefetch" href="/assets/js/71.ca894609.js"><link rel="prefetch" href="/assets/js/72.4be8bf5e.js"><link rel="prefetch" href="/assets/js/73.f7657d8f.js"><link rel="prefetch" href="/assets/js/74.c23c25fb.js"><link rel="prefetch" href="/assets/js/75.e72b6434.js"><link rel="prefetch" href="/assets/js/76.fc8f9bef.js"><link rel="prefetch" href="/assets/js/77.10c38121.js"><link rel="prefetch" href="/assets/js/78.97eca5ed.js"><link rel="prefetch" href="/assets/js/79.628bb0a2.js"><link rel="prefetch" href="/assets/js/80.805d0556.js"><link rel="prefetch" href="/assets/js/81.486955ff.js"><link rel="prefetch" href="/assets/js/82.8a8efc07.js"><link rel="prefetch" href="/assets/js/83.d5c86a91.js"><link rel="prefetch" href="/assets/js/84.81dd68de.js"><link rel="prefetch" href="/assets/js/85.611ac749.js"><link rel="prefetch" href="/assets/js/86.4079cda4.js"><link rel="prefetch" href="/assets/js/87.b32830f7.js"><link rel="prefetch" href="/assets/js/88.340512a5.js"><link rel="prefetch" href="/assets/js/89.89bda9e8.js"><link rel="prefetch" href="/assets/js/90.6310209c.js"><link rel="prefetch" href="/assets/js/91.d92e18eb.js"><link rel="prefetch" href="/assets/js/92.c89608f4.js"><link rel="prefetch" href="/assets/js/93.cd043d25.js"><link rel="prefetch" href="/assets/js/94.5daec904.js"><link rel="prefetch" href="/assets/js/95.8db5b0f6.js"><link rel="prefetch" href="/assets/js/96.6c7b0725.js"><link rel="prefetch" href="/assets/js/97.544da230.js"><link rel="prefetch" href="/assets/js/98.ad5fd138.js"><link rel="prefetch" href="/assets/js/99.48105d1a.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.e3b34f7a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5149da19.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Landscape</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link router-link-active">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/operatingsystem/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link router-link-active">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/operatingsystem/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>IndexedDB API</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#概述" class="sidebar-link">概述</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#基本概念" class="sidebar-link">基本概念</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#_1-数据库" class="sidebar-link">（1）数据库</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#_2-对象仓库" class="sidebar-link">（2）对象仓库</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#_3-数据记录" class="sidebar-link">（3）数据记录</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#_4-索引" class="sidebar-link">（4）索引</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#_5-事务" class="sidebar-link">（5）事务</a></li></ul></li><li><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#操作流程" class="sidebar-link">操作流程</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#_1-打开数据库" class="sidebar-link">1. 打开数据库</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#_2-新建数据库" class="sidebar-link">2. 新建数据库</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#_3-新增数据" class="sidebar-link">3. 新增数据</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#_4-读取数据" class="sidebar-link">4. 读取数据</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#_5-遍历数据" class="sidebar-link">5. 遍历数据</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#_6-更新数据" class="sidebar-link">6. 更新数据</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#_7-删除数据" class="sidebar-link">7. 删除数据</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#_8-使用索引" class="sidebar-link">8. 使用索引</a></li></ul></li><li><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#indexeddb-对象" class="sidebar-link">indexedDB 对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#_1-indexeddb-open" class="sidebar-link">1. indexedDB.open()</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#_2-indexeddb-deletedatabase" class="sidebar-link">2. indexedDB.deleteDatabase()</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#_3-indexeddb-cmp" class="sidebar-link">3. indexedDB.cmp()</a></li></ul></li><li><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#idbrequest-对象" class="sidebar-link">IDBRequest 对象</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#idbdatabase-对象" class="sidebar-link">IDBDatabase 对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#_1-属性" class="sidebar-link">1. 属性</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#_2-方法" class="sidebar-link">2.方法</a></li></ul></li><li><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#idbobjectstore-对象" class="sidebar-link">IDBObjectStore 对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#_1-属性-2" class="sidebar-link">1.  属性</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#_2-方法-2" class="sidebar-link">2. 方法</a></li></ul></li><li><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#idbtransaction-对象" class="sidebar-link">IDBTransaction 对象</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#idbindex-对象" class="sidebar-link">IDBIndex 对象</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#idbcursor-对象" class="sidebar-link">IDBCursor 对象</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/Browsermodel/IndexedDBAPI.html#idbkeyrange-对象" class="sidebar-link">IDBKeyRange 对象</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="indexeddb-api"><a href="#indexeddb-api" class="header-anchor">#</a> IndexedDB API</h1> <h2 id="概述"><a href="#概述" class="header-anchor">#</a> 概述</h2> <p>随着浏览器的功能不断增强，越来越多的网站开始考虑，将大量数据储存在客户端，这样可以减少从服务器获取数据，直接从本地获取数据。</p> <p>现有的浏览器数据储存方案，都不适合储存大量数据：Cookie 的大小不超过 4KB，且每次请求都会发送回服务器；LocalStorage 在 2.5MB 到 10MB 之间（各家浏览器不同），而且不提供搜索功能，不能建立自定义的索引。所以，需要一种新的解决方案，这就是 IndexedDB 诞生的背景。</p> <p>通俗地说，IndexedDB 就是浏览器提供的本地数据库，它可以被网页脚本创建和操作。IndexedDB 允许储存大量数据，提供查找接口，还能建立索引。这些都是 LocalStorage 所不具备的。就数据库类型而言，IndexedDB 不属于关系型数据库（不支持 SQL 查询语句），更接近 NoSQL 数据库。</p> <p>IndexedDB 具有以下特点。</p> <p><strong>（1）键值对储存</strong>。 IndexedDB 内部采用对象仓库（object store）存放数据。所有类型的数据都可以直接存入，包括 JavaScript 对象。对象仓库中，数据以“键值对”的形式保存，每一个数据记录都有对应的主键，主键是独一无二的，不能有重复，否则会抛出一个错误。</p> <p><strong>（2）异步</strong>。 IndexedDB 操作时不会锁死浏览器，用户依然可以进行其他操作，这与 LocalStorage 形成对比，后者的操作是同步的。异步设计是为了防止大量数据的读写，拖慢网页的表现。</p> <p><strong>（3）支持事务</strong>。 IndexedDB 支持事务（transaction），这意味着一系列操作步骤之中，只要有一步失败，整个事务就都取消，数据库回滚到事务发生之前的状态，不存在只改写一部分数据的情况。</p> <p><strong>（4）同源限制</strong>。 IndexedDB 受到同源限制，每一个数据库对应创建它的域名。网页只能访问自身域名下的数据库，而不能访问跨域的数据库。</p> <p><strong>（5）储存空间大</strong>。 IndexedDB 的储存空间比 LocalStorage 大得多，一般来说不少于 250MB，甚至没有上限。</p> <p><strong>（6）支持二进制储存</strong>。 IndexedDB 不仅可以储存字符串，还可以储存二进制数据（ArrayBuffer 对象和 Blob 对象）。</p> <h2 id="基本概念"><a href="#基本概念" class="header-anchor">#</a> 基本概念</h2> <p>IndexedDB 是一个比较复杂的 API，涉及不少概念。它把不同的实体，抽象成一个个对象接口。学习这个 API，就是学习它的各种对象接口。</p> <ul><li>数据库：IDBDatabase 对象</li> <li>对象仓库：IDBObjectStore 对象</li> <li>索引： IDBIndex 对象</li> <li>事务： IDBTransaction 对象</li> <li>操作请求：IDBRequest 对象</li> <li>指针： IDBCursor 对象</li> <li>主键集合：IDBKeyRange 对象</li></ul> <p>下面是一些主要的概念。</p> <h3 id="_1-数据库"><a href="#_1-数据库" class="header-anchor">#</a> （1）数据库</h3> <p>数据库是一系列相关数据的容器。每个域名（严格的说，是协议 + 域名 + 端口）都可以新建任意多个数据库。</p> <p>IndexedDB 数据库有版本的概念。同一个时刻，只能有一个版本的数据库存在。如果要修改数据库结构（新增或删除表、索引或者主键），只能通过升级数据库版本完成。</p> <h3 id="_2-对象仓库"><a href="#_2-对象仓库" class="header-anchor">#</a> （2）对象仓库</h3> <p>每个数据库包含若干个对象仓库（object store）。它类似于关系型数据库的表格。</p> <h3 id="_3-数据记录"><a href="#_3-数据记录" class="header-anchor">#</a> （3）数据记录</h3> <p>对象仓库保存的是数据记录。每条记录类似于关系型数据库的行，但是只有主键和数据体两部分。主键用来建立默认的索引，必须是不同的，否则会报错。主键可以是数据记录里面的一个属性，也可以指定为一个递增的整数编号。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>{ id: 1, text: 'foo' }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>上面的对象中，id属性可以当作主键。</p> <p>数据体可以是任意数据类型，不限于对象。</p> <h3 id="_4-索引"><a href="#_4-索引" class="header-anchor">#</a> （4）索引</h3> <p>为了加速数据的检索，可以在对象仓库里面，为不同的属性建立索引。</p> <h3 id="_5-事务"><a href="#_5-事务" class="header-anchor">#</a> （5）事务</h3> <p>数据记录的读写和删改，都要通过事务完成。事务对象提供error、abort和complete三个事件，用来监听操作结果。</p> <h2 id="操作流程"><a href="#操作流程" class="header-anchor">#</a> 操作流程</h2> <p>IndexedDB 数据库的各种操作，一般是按照下面的流程进行的。这个部分只给出简单的代码示例，用于快速上手，详细的各个对象的 API 放在后文介绍。</p> <h3 id="_1-打开数据库"><a href="#_1-打开数据库" class="header-anchor">#</a> 1. 打开数据库</h3> <p>使用 IndexedDB 的第一步是打开数据库，使用indexedDB.open()方法。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var request = window.indexedDB.open(databaseName, version);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>这个方法接受两个参数，第一个参数是字符串，表示数据库的名字。如果指定的数据库不存在，就会新建数据库。第二个参数是整数，表示数据库的版本。如果省略，打开已有数据库时，默认为当前版本；新建数据库时，默认为1。</p> <p>indexedDB.open()方法返回一个 IDBRequest 对象。这个对象通过三种事件error、success、upgradeneeded，处理打开数据库的操作结果。</p> <h4 id="_1-error-事件"><a href="#_1-error-事件" class="header-anchor">#</a> （1）error 事件</h4> <p>error事件表示打开数据库失败。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>request.onerror = function (event) {
+  console.log('数据库打开报错');
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h4 id="_2-success-事件"><a href="#_2-success-事件" class="header-anchor">#</a> （2）success 事件</h4> <p>success事件表示成功打开数据库。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var db;
+
+request.onsuccess = function (event) {
+  db = request.result;
+  console.log('数据库打开成功');
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>这时，通过request对象的result属性拿到数据库对象。</p> <h4 id="_3-upgradeneeded-事件"><a href="#_3-upgradeneeded-事件" class="header-anchor">#</a> （3）upgradeneeded 事件</h4> <p>如果指定的版本号，大于数据库的实际版本号，就会发生数据库升级事件upgradeneeded。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var db;
+
+request.onupgradeneeded = function (event) {
+  db = event.target.result;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>这时通过事件对象的target.result属性，拿到数据库实例。</p> <h3 id="_2-新建数据库"><a href="#_2-新建数据库" class="header-anchor">#</a> 2. 新建数据库</h3> <p>新建数据库与打开数据库是同一个操作。如果指定的数据库不存在，就会新建。不同之处在于，后续的操作主要在upgradeneeded事件的监听函数里面完成，因为这时版本从无到有，所以会触发这个事件。</p> <p>通常，新建数据库以后，第一件事是新建对象仓库（即新建表）。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>request.onupgradeneeded = function(event) {
+  db = event.target.result;
+  var objectStore = db.createObjectStore('person', { keyPath: 'id' });
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>上面代码中，数据库新建成功以后，新增一张叫做person的表格，主键是id。</p> <p>更好的写法是先判断一下，这张表格是否存在，如果不存在再新建。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>request.onupgradeneeded = function (event) {
+  db = event.target.result;
+  var objectStore;
+  if (!db.objectStoreNames.contains('person')) {
+    objectStore = db.createObjectStore('person', { keyPath: 'id' });
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>主键（key）是默认建立索引的属性。比如，数据记录是{ id: 1, name: '张三' }，那么id属性可以作为主键。主键也可以指定为下一层对象的属性，比如{ foo: { bar: 'baz' } }的foo.bar也可以指定为主键。</p> <p>如果数据记录里面没有合适作为主键的属性，那么可以让 IndexedDB 自动生成主键。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var objectStore = db.createObjectStore(
+  'person',
+  { autoIncrement: true }
+);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>上面代码中，指定主键为一个递增的整数。</p> <p>新建对象仓库以后，下一步可以新建索引。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>request.onupgradeneeded = function(event) {
+  db = event.target.result;
+  var objectStore = db.createObjectStore('person', { keyPath: 'id' });
+  objectStore.createIndex('name', 'name', { unique: false });
+  objectStore.createIndex('email', 'email', { unique: true });
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>上面代码中，IDBObject.createIndex()的三个参数分别为索引名称、索引所在的属性、配置对象（说明该属性是否包含重复的值）。</p> <h3 id="_3-新增数据"><a href="#_3-新增数据" class="header-anchor">#</a> 3. 新增数据</h3> <p>新增数据指的是向对象仓库写入数据记录。这需要通过事务完成。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>function add() {
+  var request = db.transaction(['person'], 'readwrite')
+    .objectStore('person')
+    .add({ id: 1, name: '张三', age: 24, email: 'zhangsan@example.com' });
+
+  request.onsuccess = function (event) {
+    console.log('数据写入成功');
+  };
+
+  request.onerror = function (event) {
+    console.log('数据写入失败');
+  }
+}
+
+add();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>上面代码中，写入数据需要新建一个事务。新建时必须指定表格名称和操作模式（“只读”或“读写”）。新建事务以后，通过IDBTransaction.objectStore(name)方法，拿到 IDBObjectStore 对象，再通过表格对象的add()方法，向表格写入一条记录。</p> <p>写入操作是一个异步操作，通过监听连接对象的success事件和error事件，了解是否写入成功。</p> <h3 id="_4-读取数据"><a href="#_4-读取数据" class="header-anchor">#</a> 4. 读取数据</h3> <p>读取数据也是通过事务完成。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>function read() {
+   var transaction = db.transaction(['person']);
+   var objectStore = transaction.objectStore('person');
+   var request = objectStore.get(1);
+
+   request.onerror = function(event) {
+     console.log('事务失败');
+   };
+
+   request.onsuccess = function( event) {
+      if (request.result) {
+        console.log('Name: ' + request.result.name);
+        console.log('Age: ' + request.result.age);
+        console.log('Email: ' + request.result.email);
+      } else {
+        console.log('未获得数据记录');
+      }
+   };
+}
+
+read();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p>上面代码中，objectStore.get()方法用于读取数据，参数是主键的值。</p> <h3 id="_5-遍历数据"><a href="#_5-遍历数据" class="header-anchor">#</a> 5. 遍历数据</h3> <p>遍历数据表格的所有记录，要使用指针对象 IDBCursor。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>function readAll() {
+  var objectStore = db.transaction('person').objectStore('person');
+
+   objectStore.openCursor().onsuccess = function (event) {
+     var cursor = event.target.result;
+
+     if (cursor) {
+       console.log('Id: ' + cursor.key);
+       console.log('Name: ' + cursor.value.name);
+       console.log('Age: ' + cursor.value.age);
+       console.log('Email: ' + cursor.value.email);
+       cursor.continue();
+    } else {
+      console.log('没有更多数据了！');
+    }
+  };
+}
+
+readAll();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>上面代码中，新建指针对象的openCursor()方法是一个异步操作，所以要监听success事件。</p> <h3 id="_6-更新数据"><a href="#_6-更新数据" class="header-anchor">#</a> 6. 更新数据</h3> <p>更新数据要使用IDBObject.put()方法。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>function update() {
+  var request = db.transaction(['person'], 'readwrite')
+    .objectStore('person')
+    .put({ id: 1, name: '李四', age: 35, email: 'lisi@example.com' });
+
+  request.onsuccess = function (event) {
+    console.log('数据更新成功');
+  };
+
+  request.onerror = function (event) {
+    console.log('数据更新失败');
+  }
+}
+
+update();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>上面代码中，put()方法自动更新了主键为1的记录。</p> <h3 id="_7-删除数据"><a href="#_7-删除数据" class="header-anchor">#</a> 7. 删除数据</h3> <p>IDBObjectStore.delete()方法用于删除记录。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>function remove() {
+  var request = db.transaction(['person'], 'readwrite')
+    .objectStore('person')
+    .delete(1);
+
+  request.onsuccess = function (event) {
+    console.log('数据删除成功');
+  };
+}
+
+remove();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h3 id="_8-使用索引"><a href="#_8-使用索引" class="header-anchor">#</a> 8. 使用索引</h3> <p>索引的意义在于，可以让你搜索任意字段，也就是说从任意字段拿到数据记录。如果不建立索引，默认只能搜索主键（即从主键取值）。</p> <p>假定新建表格的时候，对name字段建立了索引。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>objectStore.createIndex('name', 'name', { unique: false });
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>现在，就可以从name找到对应的数据记录了。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var transaction = db.transaction(['person'], 'readonly');
+var store = transaction.objectStore('person');
+var index = store.index('name');
+var request = index.get('李四');
+
+request.onsuccess = function (e) {
+  var result = e.target.result;
+  if (result) {
+    // ...
+  } else {
+    // ...
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h2 id="indexeddb-对象"><a href="#indexeddb-对象" class="header-anchor">#</a> indexedDB 对象</h2> <p>浏览器原生提供indexedDB对象，作为开发者的操作接口。</p> <h3 id="_1-indexeddb-open"><a href="#_1-indexeddb-open" class="header-anchor">#</a> 1. indexedDB.open()</h3> <p>indexedDB.open()方法用于打开数据库。这是一个异步操作，但是会立刻返回一个 IDBOpenDBRequest 对象。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var openRequest = window.indexedDB.open('test', 1);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>上面代码表示，打开一个名为test、版本为1的数据库。如果该数据库不存在，则会新建该数据库。</p> <p>open()方法的第一个参数是数据库名称，格式为字符串，不可省略；第二个参数是数据库版本，是一个大于0的正整数（0将报错），如果该参数大于当前版本，会触发数据库升级。第二个参数可省略，如果数据库已存在，将打开当前版本的数据库；如果数据库不存在，将创建该版本的数据库，默认版本为1。</p> <p>打开数据库是异步操作，通过各种事件通知客户端。下面是有可能触发的4种事件。</p> <ul><li>success：打开成功。</li> <li>error：打开失败。</li> <li>upgradeneeded：第一次打开该数据库，或者数据库版本发生变化。</li> <li>blocked：上一次的数据库连接还未关闭。</li></ul> <p>第一次打开数据库时，会先触发upgradeneeded事件，然后触发success事件。</p> <p>根据不同的需要，对上面4种事件监听函数。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var openRequest = indexedDB.open('test', 1);
+var db;
+
+openRequest.onupgradeneeded = function (e) {
+  console.log('Upgrading...');
+}
+
+openRequest.onsuccess = function (e) {
+  console.log('Success!');
+  db = openRequest.result;
+}
+
+openRequest.onerror = function (e) {
+  console.log('Error');
+  console.log(e);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>上面代码有两个地方需要注意。首先，open()方法返回的是一个对象（IDBOpenDBRequest），监听函数就定义在这个对象上面。其次，success事件发生后，从openRequest.result属性可以拿到已经打开的IndexedDB数据库对象。</p> <h3 id="_2-indexeddb-deletedatabase"><a href="#_2-indexeddb-deletedatabase" class="header-anchor">#</a> 2. indexedDB.deleteDatabase()</h3> <p>indexedDB.deleteDatabase()方法用于删除一个数据库，参数为数据库的名字。它会立刻返回一个IDBOpenDBRequest对象，然后对数据库执行异步删除。删除操作的结果会通过事件通知，IDBOpenDBRequest对象可以监听以下事件。</p> <ul><li>success：删除成功</li> <li>error：删除报错</li></ul> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var DBDeleteRequest = window.indexedDB.deleteDatabase('demo');
+
+DBDeleteRequest.onerror = function (event) {
+  console.log('Error');
+};
+
+DBDeleteRequest.onsuccess = function (event) {
+  console.log('success');
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>调用deleteDatabase()方法以后，当前数据库的其他已经打开的连接都会接收到versionchange事件。</p> <p>注意，删除不存在的数据库并不会报错。</p> <h3 id="_3-indexeddb-cmp"><a href="#_3-indexeddb-cmp" class="header-anchor">#</a> 3. indexedDB.cmp()</h3> <p>indexedDB.cmp()方法比较两个值是否为 indexedDB 的相同的主键。它返回一个整数，表示比较的结果：0表示相同，1表示第一个主键大于第二个主键，-1表示第一个主键小于第二个主键。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>window.indexedDB.cmp(1, 2) // -1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>注意，这个方法不能用来比较任意的 JavaScript 值。如果参数是布尔值或对象，它会报错。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>window.indexedDB.cmp(1, true) // 报错
+window.indexedDB.cmp({}, {}) // 报错
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="idbrequest-对象"><a href="#idbrequest-对象" class="header-anchor">#</a> IDBRequest 对象</h2> <p>IDBRequest 对象表示打开的数据库连接，indexedDB.open()方法和indexedDB.deleteDatabase()方法会返回这个对象。数据库的操作都是通过这个对象完成的。</p> <p>这个对象的所有操作都是异步操作，要通过readyState属性判断是否完成，如果为pending就表示操作正在进行，如果为done就表示操作完成，可能成功也可能失败。</p> <p>操作完成以后，触发success事件或error事件，这时可以通过result属性和error属性拿到操作结果。如果在pending阶段，就去读取这两个属性，是会报错的。</p> <p>IDBRequest 对象有以下属性。</p> <ul><li><p><code>IDBRequest.readyState</code>：等于pending表示操作正在进行，等于done表示操作正在完成。</p></li> <li><p><code>IDBRequest.result</code>：返回请求的结果。如果请求失败、结果不可用，读取该属性会报错。</p></li> <li><p><code>IDBRequest.error</code>：请求失败时，返回错误对象。</p></li> <li><p><code>IDBRequest.source</code>：返回请求的来源（比如索引对象或 ObjectStore）。</p></li> <li><p><code>IDBRequest.transaction</code>：返回当前请求正在进行的事务，如果不包含事务，返回null。</p></li> <li><p><code>IDBRequest.onsuccess</code>：指定success事件的监听函数。</p></li> <li><p><code>IDBRequest.onerror</code>：指定error事件的监听函数。</p></li></ul> <p>IDBOpenDBRequest 对象继承了 IDBRequest 对象，提供了两个额外的事件监听属性。</p> <ul><li><p><code>IDBOpenDBRequest.onblocked</code>：指定blocked事件（upgradeneeded事件触发时，数据库仍然在使用）的监听函数。</p></li> <li><p><code>IDBOpenDBRequest.onupgradeneeded</code>：upgradeneeded事件的监听函数。</p></li></ul> <h2 id="idbdatabase-对象"><a href="#idbdatabase-对象" class="header-anchor">#</a> IDBDatabase 对象</h2> <p>打开数据成功以后，可以从IDBOpenDBRequest对象的result属性上面，拿到一个IDBDatabase对象，它表示连接的数据库。后面对数据库的操作，都通过这个对象完成。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var db;
+var DBOpenRequest = window.indexedDB.open('demo', 1);
+
+DBOpenRequest.onerror = function (event) {
+  console.log('Error');
+};
+
+DBOpenRequest.onsuccess = function(event) {
+  db = DBOpenRequest.result;
+  // ...
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h3 id="_1-属性"><a href="#_1-属性" class="header-anchor">#</a> 1. 属性</h3> <p>IDBDatabase 对象有以下属性。</p> <ul><li><p><code>IDBDatabase.name</code>：字符串，数据库名称。</p></li> <li><p><code>IDBDatabase.version</code>：整数，数据库版本。数据库第一次创建时，该属性为空字符串。</p></li> <li><p><code>IDBDatabase.objectStoreNames</code>：DOMStringList 对象（字符串的集合），包含当前数据的所有 object store 的名字。</p></li> <li><p><code>IDBDatabase.onabort</code>：指定 abort 事件（事务中止）的监听函数。</p></li> <li><p><code>IDBDatabase.onclose</code>：指定 close 事件（数据库意外关闭）的监听函数。</p></li> <li><p><code>IDBDatabase.onerror</code>：指定 error 事件（访问数据库失败）的监听函数。</p></li> <li><p><code>IDBDatabase.onversionchange</code>：数据库版本变化时触发（发生upgradeneeded事件，或调用indexedDB.deleteDatabase()）。</p></li></ul> <p>下面是objectStoreNames属性的例子。该属性返回一个 DOMStringList 对象，包含了当前数据库所有对象仓库的名称（即表名），可以使用 DOMStringList 对象的contains方法，检查数据库是否包含某个对象仓库。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>if (!db.objectStoreNames.contains('firstOS')) {
+  db.createObjectStore('firstOS');
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>上面代码先判断某个对象仓库是否存在，如果不存在就创建该对象仓库。</p> <h3 id="_2-方法"><a href="#_2-方法" class="header-anchor">#</a> 2.方法</h3> <p>IDBDatabase 对象有以下方法。</p> <ul><li><p><code>IDBDatabase.close()</code>：关闭数据库连接，实际会等所有事务完成后再关闭。</p></li> <li><p><code>IDBDatabase.createObjectStore()</code>：创建存放数据的对象仓库，类似于传统关系型数据库的表格，返回一个 IDBObjectStore 对象。该方法只能在versionchange事件监听函数中调用。</p></li> <li><p><code>IDBDatabase.deleteObjectStore()</code>：删除指定的对象仓库。该方法只能在versionchange事件监听函数中调用。</p></li> <li><p><code>IDBDatabase.transaction()</code>：返回一个 IDBTransaction 事务对象。</p></li></ul> <p>下面是createObjectStore()方法的例子。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var request = window.indexedDB.open('demo', 2);
+
+request.onupgradeneeded = function (event) {
+  var db = event.target.result;
+
+  db.onerror = function(event) {
+    console.log('error');
+  };
+
+  var objectStore = db.createObjectStore('items');
+
+  // ...
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>上面代码创建了一个名为items的对象仓库，如果该对象仓库已经存在，就会抛出一个错误。为了避免出错，需要用到下文的objectStoreNames属性，检查已有哪些对象仓库。</p> <p>createObjectStore()方法还可以接受第二个对象参数，用来设置对象仓库的属性。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>db.createObjectStore('test', { keyPath: 'email' });
+db.createObjectStore('test2', { autoIncrement: true });
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>上面代码中，keyPath属性表示主键（由于主键的值不能重复，所以上例存入之前，必须保证数据的email属性值都是不一样的），默认值为null；autoIncrement属性表示，是否使用自动递增的整数作为主键（第一个数据记录为1，第二个数据记录为2，以此类推），默认为false。一般来说，keyPath和autoIncrement属性只要使用一个就够了，如果两个同时使用，表示主键为递增的整数，且对象不得缺少keyPath指定的属性。</p> <p>下面是deleteObjectStore()方法的例子。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var dbName = 'sampleDB';
+var dbVersion = 2;
+var request = indexedDB.open(dbName, dbVersion);
+
+request.onupgradeneeded = function(e) {
+  var db = request.result;
+  if (e.oldVersion &lt; 1) {
+    db.createObjectStore('store1');
+  }
+
+  if (e.oldVersion &lt; 2) {
+    db.deleteObjectStore('store1');
+    db.createObjectStore('store2');
+  }
+
+  // ...
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>下面是transaction()方法的例子，该方法用于创建一个数据库事务，返回一个 IDBTransaction 对象。向数据库添加数据之前，必须先创建数据库事务。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var t = db.transaction(['items'], 'readwrite');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>transaction()方法接受两个参数：第一个参数是一个数组，里面是所涉及的对象仓库，通常是只有一个；第二个参数是一个表示操作类型的字符串。目前，操作类型只有两种：readonly（只读）和readwrite（读写）。添加数据使用readwrite，读取数据使用readonly。第二个参数是可选的，省略时默认为readonly模式。</p> <h2 id="idbobjectstore-对象"><a href="#idbobjectstore-对象" class="header-anchor">#</a> IDBObjectStore 对象</h2> <p>IDBObjectStore 对象对应一个对象仓库（object store）。IDBDatabase.createObjectStore()方法返回的就是一个 IDBObjectStore 对象。</p> <p>IDBDatabase 对象的transaction()返回一个事务对象，该对象的objectStore()方法返回 IDBObjectStore 对象，因此可以采用下面的链式写法。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>db.transaction(['test'], 'readonly')
+  .objectStore('test')
+  .get(X)
+  .onsuccess = function (e) {}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="_1-属性-2"><a href="#_1-属性-2" class="header-anchor">#</a> 1.  属性</h3> <p>IDBObjectStore 对象有以下属性。</p> <ul><li><p><code>IDBObjectStore.indexNames</code>：返回一个类似数组的对象（DOMStringList），包含了当前对象仓库的所有索引。</p></li> <li><p><code>IDBObjectStore.keyPath</code>：返回当前对象仓库的主键。</p></li> <li><p><code>IDBObjectStore.name</code>：返回当前对象仓库的名称。</p></li> <li><p><code>IDBObjectStore.transaction</code>：返回当前对象仓库所属的事务对象。</p></li> <li><p><code>IDBObjectStore.autoIncrement</code>：布尔值，表示主键是否会自动递增。</p></li></ul> <h3 id="_2-方法-2"><a href="#_2-方法-2" class="header-anchor">#</a> 2. 方法</h3> <p>IDBObjectStore 对象有以下方法。</p> <h4 id="_1-idbobjectstore-add"><a href="#_1-idbobjectstore-add" class="header-anchor">#</a> （1）IDBObjectStore.add()</h4> <p>IDBObjectStore.add()用于向对象仓库添加数据，返回一个 IDBRequest 对象。该方法只用于添加数据，如果主键相同会报错，因此更新数据必须使用put()方法。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>objectStore.add(value, key)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>该方法接受两个参数，第一个参数是键值，第二个参数是主键，该参数可选，如果省略默认为null。</p> <p>创建事务以后，就可以获取对象仓库，然后使用add()方法往里面添加数据了。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var db;
+var DBOpenRequest = window.indexedDB.open('demo', 1);
+
+DBOpenRequest.onsuccess = function (event) {
+  db = DBOpenRequest.result;
+  var transaction = db.transaction(['items'], 'readwrite');
+
+  transaction.oncomplete = function (event) {
+    console.log('transaction success');
+  };
+
+  transaction.onerror = function (event) {
+    console.log('transaction error: ' + transaction.error);
+  };
+
+  var objectStore = transaction.objectStore('items');
+  var objectStoreRequest = objectStore.add({ foo: 1 });
+
+  objectStoreRequest.onsuccess = function (event) {
+    console.log('add data success');
+  };
+
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><h4 id="_2-idbobjectstore-put"><a href="#_2-idbobjectstore-put" class="header-anchor">#</a> （2）IDBObjectStore.put()</h4> <p>IDBObjectStore.put()方法用于更新某个主键对应的数据记录，如果对应的键值不存在，则插入一条新的记录。该方法返回一个 IDBRequest 对象。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>objectStore.put(item, key)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>该方法接受两个参数，第一个参数为新数据，第二个参数为主键，该参数可选，且只在自动递增时才有必要提供，因为那时主键不包含在数据值里面。</p> <h4 id="_3-idbobjectstore-clear"><a href="#_3-idbobjectstore-clear" class="header-anchor">#</a> （3）IDBObjectStore.clear()</h4> <p>IDBObjectStore.clear()删除当前对象仓库的所有记录。该方法返回一个 IDBRequest 对象。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>objectStore.clear()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>该方法不需要参数。</p> <h4 id="_4-idbobjectstore-delete"><a href="#_4-idbobjectstore-delete" class="header-anchor">#</a> （4）IDBObjectStore.delete()</h4> <p>IDBObjectStore.delete()方法用于删除指定主键的记录。该方法返回一个 IDBRequest 对象。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>objectStore.delete(Key)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>该方法的参数为主键的值。</p> <h4 id="_5-idbobjectstore-count"><a href="#_5-idbobjectstore-count" class="header-anchor">#</a> （5）IDBObjectStore.count()</h4> <p>IDBObjectStore.count()方法用于计算记录的数量。该方法返回一个 IDBRequest 对象。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>IDBObjectStore.count(key)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>不带参数时，该方法返回当前对象仓库的所有记录数量。如果主键或 IDBKeyRange 对象作为参数，则返回对应的记录数量。</p> <h4 id="_6-idbobjectstore-getkey"><a href="#_6-idbobjectstore-getkey" class="header-anchor">#</a> （6）IDBObjectStore.getKey()</h4> <p>IDBObjectStore.getKey()用于获取主键。该方法返回一个 IDBRequest 对象。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>objectStore.getKey(key)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>该方法的参数可以是主键值或 IDBKeyRange 对象。</p> <h4 id="_7-idbobjectstore-get"><a href="#_7-idbobjectstore-get" class="header-anchor">#</a> （7）IDBObjectStore.get()</h4> <p>IDBObjectStore.get()用于获取主键对应的数据记录。该方法返回一个 IDBRequest 对象。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>objectStore.get(key)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="_8-idbobjectstore-getall"><a href="#_8-idbobjectstore-getall" class="header-anchor">#</a> （8）IDBObjectStore.getAll()</h4> <p>DBObjectStore.getAll()用于获取对象仓库的记录。该方法返回一个 IDBRequest 对象。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>// 获取所有记录
+objectStore.getAll()
+
+// 获取所有符合指定主键或 IDBKeyRange 的记录
+objectStore.getAll(query)
+
+// 指定获取记录的数量
+objectStore.getAll(query, count)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h4 id="_9-idbobjectstore-getallkeys"><a href="#_9-idbobjectstore-getallkeys" class="header-anchor">#</a> （9）IDBObjectStore.getAllKeys()</h4> <p>IDBObjectStore.getAllKeys()用于获取所有符合条件的主键。该方法返回一个 IDBRequest 对象。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>// 获取所有记录的主键
+objectStore.getAllKeys()
+
+// 获取所有符合条件的主键
+objectStore.getAllKeys(query)
+
+// 指定获取主键的数量
+objectStore.getAllKeys(query, count)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h4 id="_10-idbobjectstore-index"><a href="#_10-idbobjectstore-index" class="header-anchor">#</a> （10）IDBObjectStore.index()</h4> <p>IDBObjectStore.index()方法返回指定名称的索引对象 IDBIndex。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>objectStore.index(name)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>有了索引以后，就可以针对索引所在的属性读取数据。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var t = db.transaction(['people'], 'readonly');
+var store = t.objectStore('people');
+var index = store.index('name');
+
+var request = index.get('foo');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>上面代码打开对象仓库以后，先用index()方法指定获取name属性的索引，然后用get()方法读取某个name属性(foo)对应的数据。如果name属性不是对应唯一值，这时get()方法有可能取回多个数据对象。另外，get()是异步方法，读取成功以后，只能在success事件的监听函数中处理数据。</p> <h4 id="_11-idbobjectstore-createindex"><a href="#_11-idbobjectstore-createindex" class="header-anchor">#</a> （11）IDBObjectStore.createIndex()</h4> <p>IDBObjectStore.createIndex()方法用于新建当前数据库的一个索引。该方法只能在VersionChange监听函数里面调用。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>objectStore.createIndex(indexName, keyPath, objectParameters)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>该方法可以接受三个参数。</p> <ul><li><code>indexName</code>：索引名</li> <li><code>keyPath</code>：主键</li> <li><code>objectParameters</code>：配置对象（可选）</li></ul> <p>第三个参数可以配置以下属性。</p> <ul><li><code>unique</code>：如果设为true，将不允许重复的值</li> <li><code>multiEntry</code>：如果设为true，对于有多个值的主键数组，每个值将在索引里面新建一个条目，否则主键数组对应一个条目。</li></ul> <p>假定对象仓库中的数据记录都是如下的person类型。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var person = {
+  name: name,
+  email: email,
+  created: new Date()
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>可以指定这个对象的某个属性来建立索引。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var store = db.createObjectStore('people', { autoIncrement: true });
+
+store.createIndex('name', 'name', { unique: false });
+store.createIndex('email', 'email', { unique: true });
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>上面代码告诉索引对象，name属性不是唯一值，email属性是唯一值。</p> <h4 id="_12-idbobjectstore-deleteindex"><a href="#_12-idbobjectstore-deleteindex" class="header-anchor">#</a> （12）IDBObjectStore.deleteIndex()</h4> <p>IDBObjectStore.deleteIndex()方法用于删除指定的索引。该方法只能在VersionChange监听函数里面调用。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>objectStore.deleteIndex(indexName)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="_13-idbobjectstore-opencursor"><a href="#_13-idbobjectstore-opencursor" class="header-anchor">#</a> （13）IDBObjectStore.openCursor()</h4> <p>IDBObjectStore.openCursor()用于获取一个指针对象。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>IDBObjectStore.openCursor()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>指针对象可以用来遍历数据。该对象也是异步的，有自己的success和error事件，可以对它们指定监听函数。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var t = db.transaction(['test'], 'readonly');
+var store = t.objectStore('test');
+
+var cursor = store.openCursor();
+
+cursor.onsuccess = function (event) {
+  var res = event.target.result;
+  if (res) {
+    console.log('Key', res.key);
+    console.dir('Data', res.value);
+    res.continue();
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>监听函数接受一个事件对象作为参数，该对象的target.result属性指向当前数据记录。该记录的key和value分别返回主键和键值（即实际存入的数据）。continue()方法将光标移到下一个数据对象，如果当前数据对象已经是最后一个数据了，则光标指向null。</p> <p>openCursor()方法的第一个参数是主键值，或者一个 IDBKeyRange 对象。如果指定该参数，将只处理包含指定主键的记录；如果省略，将处理所有的记录。该方法还可以接受第二个参数，表示遍历方向，默认值为next，其他可能的值为prev、nextunique和prevunique。后两个值表示如果遇到重复值，会自动跳过。</p> <h4 id="_14-idbobjectstore-openkeycursor"><a href="#_14-idbobjectstore-openkeycursor" class="header-anchor">#</a> （14）IDBObjectStore.openKeyCursor()</h4> <p>IDBObjectStore.openKeyCursor()用于获取一个主键指针对象。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>IDBObjectStore.openKeyCursor()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="idbtransaction-对象"><a href="#idbtransaction-对象" class="header-anchor">#</a> IDBTransaction 对象</h2> <p>IDBTransaction 对象用来异步操作数据库事务，所有的读写操作都要通过这个对象进行。</p> <p>IDBDatabase.transaction()方法返回的就是一个 IDBTransaction 对象。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var db;
+var DBOpenRequest = window.indexedDB.open('demo', 1);
+
+DBOpenRequest.onsuccess = function(event) {
+  db = DBOpenRequest.result;
+  var transaction = db.transaction(['demo'], 'readwrite');
+
+  transaction.oncomplete = function (event) {
+    console.log('transaction success');
+  };
+
+  transaction.onerror = function (event) {
+    console.log('transaction error: ' + transaction.error);
+  };
+
+  var objectStore = transaction.objectStore('demo');
+  var objectStoreRequest = objectStore.add({ foo: 1 });
+
+  objectStoreRequest.onsuccess = function (event) {
+    console.log('add data success');
+  };
+
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><p>事务的执行顺序是按照创建的顺序，而不是发出请求的顺序。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var trans1 = db.transaction('foo', 'readwrite');
+var trans2 = db.transaction('foo', 'readwrite');
+var objectStore2 = trans2.objectStore('foo')
+var objectStore1 = trans1.objectStore('foo')
+objectStore2.put('2', 'key');
+objectStore1.put('1', 'key');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>上面代码中，key对应的键值最终是2，而不是1。因为事务trans1先于trans2创建，所以首先执行。</p> <p>注意，事务有可能失败，只有监听到事务的complete事件，才能保证事务操作成功。</p> <p>IDBTransaction 对象有以下属性。</p> <ul><li><p><code>IDBTransaction.db</code>：返回当前事务所在的数据库对象 IDBDatabase。</p></li> <li><p><code>IDBTransaction.error</code>：返回当前事务的错误。如果事务没有结束，或者事务成功结束，或者被手动终止，该方法返回null。</p></li> <li><p><code>IDBTransaction.mode</code>：返回当前事务的模式，默认是readonly（只读），另一个值是readwrite。</p></li> <li><p><code>IDBTransaction.objectStoreNames</code>：返回一个类似数组的对象 DOMStringList，成员是当前事务涉及的对象仓库的名字。</p></li> <li><p><code>IDBTransaction.onabort</code>：指定abort事件（事务中断）的监听函数。</p></li> <li><p><code>IDBTransaction.oncomplete</code>：指定complete事件（事务成功）的监听函数。</p></li> <li><p><code>IDBTransaction.onerror</code>：指定error事件（事务失败）的监听函数。</p></li></ul> <p>IDBTransaction 对象有以下方法。</p> <ul><li><p><code>IDBTransaction.abort()</code>：终止当前事务，回滚所有已经进行的变更。</p></li> <li><p><code>IDBTransaction.objectStore(name)</code>：返回指定名称的对象仓库 IDBObjectStore。</p></li></ul> <h2 id="idbindex-对象"><a href="#idbindex-对象" class="header-anchor">#</a> IDBIndex 对象</h2> <p>IDBIndex 对象代表数据库的索引，通过这个对象可以获取数据库里面的记录。数据记录的主键默认就是带有索引，IDBIndex 对象主要用于通过除主键以外的其他键，建立索引获取对象。</p> <p>IDBIndex 是持久性的键值对存储。只要插入、更新或删除数据记录，引用的对象库中的记录，索引就会自动更新。</p> <p>IDBObjectStore.index()方法可以获取 IDBIndex 对象。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var transaction = db.transaction(['contactsList'], 'readonly');
+var objectStore = transaction.objectStore('contactsList');
+var myIndex = objectStore.index('lName');
+
+myIndex.openCursor().onsuccess = function (event) {
+  var cursor = event.target.result;
+  if (cursor) {
+    var tableRow = document.createElement('tr');
+    tableRow.innerHTML =   '&lt;td&gt;' + cursor.value.id + '&lt;/td&gt;'
+                         + '&lt;td&gt;' + cursor.value.lName + '&lt;/td&gt;'
+                         + '&lt;td&gt;' + cursor.value.fName + '&lt;/td&gt;'
+                         + '&lt;td&gt;' + cursor.value.jTitle + '&lt;/td&gt;'
+                         + '&lt;td&gt;' + cursor.value.company + '&lt;/td&gt;'
+                         + '&lt;td&gt;' + cursor.value.eMail + '&lt;/td&gt;'
+                         + '&lt;td&gt;' + cursor.value.phone + '&lt;/td&gt;'
+                         + '&lt;td&gt;' + cursor.value.age + '&lt;/td&gt;';
+    tableEntry.appendChild(tableRow);
+
+    cursor.continue();
+  } else {
+    console.log('Entries all displayed.');
+  }
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><p>IDBIndex 对象有以下属性。</p> <ul><li><p><code>IDBIndex.name</code>：字符串，索引的名称。</p></li> <li><p><code>IDBIndex.objectStore</code>：索引所在的对象仓库。</p></li> <li><p><code>IDBIndex.keyPath</code>：索引的主键。</p></li> <li><p><code>IDBIndex.multiEntry</code>：布尔值，针对keyPath为数组的情况，如果设为true，创建数组时，每个数组成员都会有一个条目，否则每个数组都只有一个条目。</p></li> <li><p><code>IDBIndex.unique</code>：布尔值，表示创建索引时是否允许相同的主键。
+IDBIndex 对象有以下方法，它们都是异步的，立即返回的都是一个 IDBRequest 对象。</p></li> <li><p><code>IDBIndex.count()</code>：用来获取记录的数量。它可以接受主键或 IDBKeyRange 对象作为参数，这时只返回符合主键的记录数量，否则返回所有记录的数量。</p></li> <li><p><code>IDBIndex.get(key)</code>：用来获取符合指定主键的数据记录。</p></li> <li><p><code>IDBIndex.getKey(key)</code>：用来获取指定的主键。</p></li> <li><p><code>IDBIndex.getAll()</code>：用来获取所有的数据记录。它可以接受两个参数，都是可选的，第一个参数用来指定主键，第二个参数用来指定返回记录的数量。如果省略这两个参数，则返回所有记录。由于获取成功时，浏览器必须生成所有对象，所以对性能有影响。如果数据集比较大，建议使用
+IDBCursor 对象。</p></li> <li><p><code>IDBIndex.getAllKeys()</code>：该方法与IDBIndex.getAll()方法相似，区别是获取所有主键。</p></li> <li><p><code>IDBIndex.openCursor()</code>：用来获取一个 IDBCursor 对象，用来遍历索引里面的所有条目。</p></li> <li><p><code>IDBIndex.openKeyCursor()</code>：该方法与IDBIndex.openCursor()方法相似，区别是遍历所有条目的主键。</p></li></ul> <h2 id="idbcursor-对象"><a href="#idbcursor-对象" class="header-anchor">#</a> IDBCursor 对象</h2> <p>IDBCursor 对象代表指针对象，用来遍历数据仓库（IDBObjectStore）或索引（IDBIndex）的记录。</p> <p>IDBCursor 对象一般通过IDBObjectStore.openCursor()方法获得。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var transaction = db.transaction(['rushAlbumList'], 'readonly');
+var objectStore = transaction.objectStore('rushAlbumList');
+
+objectStore.openCursor(null, 'next').onsuccess = function(event) {
+  var cursor = event.target.result;
+  if (cursor) {
+    var listItem = document.createElement('li');
+      listItem.innerHTML = cursor.value.albumTitle + ', ' + cursor.value.year;
+      list.appendChild(listItem);
+
+      console.log(cursor.source);
+      cursor.continue();
+    } else {
+      console.log('Entries all displayed.');
+    }
+  };
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>IDBCursor 对象的属性。</p> <ul><li><p><code>IDBCursor.source</code>：返回正在遍历的对象仓库或索引。</p></li> <li><p><code>IDBCursor.direction</code>：字符串，表示指针遍历的方向。共有四个可能的值：next（从头开始向后遍历）、nextunique（从头开始向后遍历，重复的值只遍历一次）、prev（从尾部开始向前遍历）、prevunique（从尾部开始向前遍历，重复的值只遍历一次）。该属性通过IDBObjectStore.openCursor()方法的第二个参数指定，一旦指定就不能改变了。</p></li> <li><p><code>IDBCursor.key</code>：返回当前记录的主键。</p></li> <li><p><code>IDBCursor.value</code>：返回当前记录的数据值。</p></li> <li><p><code>IDBCursor.primaryKey</code>：返回当前记录的主键。对于数据仓库（objectStore）来说，这个属性等同于 IDBCursor.key；对于索引，
+IDBCursor.key 返回索引的位置值，该属性返回数据记录的主键。</p></li></ul> <p>IDBCursor 对象有如下方法。</p> <ul><li><p><code>IDBCursor.advance(n)</code>：指针向前移动 n 个位置。</p></li> <li><p><code>IDBCursor.continue()</code>：指针向前移动一个位置。它可以接受一个主键作为参数，这时会跳转到这个主键。</p></li> <li><p><code>IDBCursor.continuePrimaryKey()</code>：该方法需要两个参数，第一个是key，第二个是primaryKey，将指针移到符合这两个参数的位置。</p></li> <li><p><code>IDBCursor.delete()</code>：用来删除当前位置的记录，返回一个 IDBRequest 对象。该方法不会改变指针的位置。</p></li> <li><p><code>IDBCursor.update()</code>：用来更新当前位置的记录，返回一个 IDBRequest 对象。它的参数是要写入数据库的新的值。</p></li></ul> <h2 id="idbkeyrange-对象"><a href="#idbkeyrange-对象" class="header-anchor">#</a> IDBKeyRange 对象</h2> <p>IDBKeyRange 对象代表数据仓库（object store）里面的一组主键。根据这组主键，可以获取数据仓库或索引里面的一组记录。</p> <p>IDBKeyRange 可以只包含一个值，也可以指定上限和下限。它有四个静态方法，用来指定主键的范围。</p> <ul><li><p><code>IDBKeyRange.lowerBound()</code>：指定下限。</p></li> <li><p><code>IDBKeyRange.upperBound()</code>：指定上限。</p></li> <li><p><code>IDBKeyRange.bound()</code>：同时指定上下限。</p></li> <li><p><code>IDBKeyRange.only()</code>：指定只包含一个值。</p></li></ul> <p>下面是一些代码实例。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>// All keys ≤ x
+var r1 = IDBKeyRange.upperBound(x);
+
+// All keys &lt; x
+var r2 = IDBKeyRange.upperBound(x, true);
+
+// All keys ≥ y
+var r3 = IDBKeyRange.lowerBound(y);
+
+// All keys &gt; y
+var r4 = IDBKeyRange.lowerBound(y, true);
+
+// All keys ≥ x &amp;&amp; ≤ y
+var r5 = IDBKeyRange.bound(x, y);
+
+// All keys &gt; x &amp;&amp;&lt; y
+var r6 = IDBKeyRange.bound(x, y, true, true);
+
+// All keys &gt; x &amp;&amp; ≤ y
+var r7 = IDBKeyRange.bound(x, y, true, false);
+
+// All keys ≥ x &amp;&amp;&lt; y
+var r8 = IDBKeyRange.bound(x, y, false, true);
+
+// The key = z
+var r9 = IDBKeyRange.only(z);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><p>IDBKeyRange.lowerBound()、IDBKeyRange.upperBound()、IDBKeyRange.bound()这三个方法默认包括端点值，可以传入一个布尔值，修改这个属性。</p> <p>与之对应，IDBKeyRange 对象有四个只读属性。</p> <ul><li><p><code>IDBKeyRange.lower</code>：返回下限</p></li> <li><p><code>IDBKeyRange.lowerOpen</code>：布尔值，表示下限是否为开区间（即下限是否排除在范围之外）</p></li> <li><p><code>IDBKeyRange.upper</code>：返回上限</p></li> <li><p><code>IDBKeyRange.upperOpen</code>：布尔值，表示上限是否为开区间（即上限是否排除在范围之外）</p></li></ul> <p>IDBKeyRange 实例对象生成以后，将它作为参数输入 IDBObjectStore 或 IDBIndex 对象的openCursor()方法，就可以在所设定的范围内读取数据。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var t = db.transaction(['people'], 'readonly');
+var store = t.objectStore('people');
+var index = store.index('name');
+
+var range = IDBKeyRange.bound('B', 'D');
+
+index.openCursor(range).onsuccess = function (e) {
+  var cursor = e.target.result;
+  if (cursor) {
+    console.log(cursor.key + ':');
+
+    for (var field in cursor.value) {
+      console.log(cursor.value[field]);
+    }
+    cursor.continue();
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>IDBKeyRange 有一个实例方法includes(key)，返回一个布尔值，表示某个主键是否包含在当前这个主键组之内。</p> <div class="language-indexDB line-numbers-mode"><pre class="language-text"><code>var keyRangeValue = IDBKeyRange.bound('A', 'K', false, false);
+
+keyRangeValue.includes('F') // true
+keyRangeValue.includes('W') // false
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.03709e87.js" defer></script><script src="/assets/js/2.9c41e448.js" defer></script><script src="/assets/js/1.2c8cdafe.js" defer></script><script src="/assets/js/134.9edb144c.js" defer></script>
+  </body>
+</html>
