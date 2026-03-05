@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>定时器 | Landscape</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="私人博客网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.5149da19.css" as="style"><link rel="preload" href="/assets/js/app.4259f585.js" as="script"><link rel="preload" href="/assets/js/2.299a7e59.js" as="script"><link rel="preload" href="/assets/js/1.2c8cdafe.js" as="script"><link rel="preload" href="/assets/js/127.f67abbca.js" as="script"><link rel="prefetch" href="/assets/js/10.9a78c136.js"><link rel="prefetch" href="/assets/js/100.b6766e1e.js"><link rel="prefetch" href="/assets/js/101.c7f1d9dd.js"><link rel="prefetch" href="/assets/js/102.cedd5294.js"><link rel="prefetch" href="/assets/js/103.e9aa8a7c.js"><link rel="prefetch" href="/assets/js/104.baec753b.js"><link rel="prefetch" href="/assets/js/105.bd76c252.js"><link rel="prefetch" href="/assets/js/106.cabc4edd.js"><link rel="prefetch" href="/assets/js/107.76207356.js"><link rel="prefetch" href="/assets/js/108.51d28317.js"><link rel="prefetch" href="/assets/js/109.d78769d3.js"><link rel="prefetch" href="/assets/js/11.727c4fbd.js"><link rel="prefetch" href="/assets/js/110.bd32730c.js"><link rel="prefetch" href="/assets/js/111.69beeda4.js"><link rel="prefetch" href="/assets/js/112.400f229d.js"><link rel="prefetch" href="/assets/js/113.723b852a.js"><link rel="prefetch" href="/assets/js/114.5f824686.js"><link rel="prefetch" href="/assets/js/115.5ba7440f.js"><link rel="prefetch" href="/assets/js/116.c930c7f2.js"><link rel="prefetch" href="/assets/js/117.b8b09f35.js"><link rel="prefetch" href="/assets/js/118.3560d43d.js"><link rel="prefetch" href="/assets/js/119.48038778.js"><link rel="prefetch" href="/assets/js/12.c51f03c4.js"><link rel="prefetch" href="/assets/js/120.80ed8a72.js"><link rel="prefetch" href="/assets/js/121.5ae6bf68.js"><link rel="prefetch" href="/assets/js/122.b76eefd4.js"><link rel="prefetch" href="/assets/js/123.b29580e6.js"><link rel="prefetch" href="/assets/js/124.b734bf7f.js"><link rel="prefetch" href="/assets/js/125.49f696bd.js"><link rel="prefetch" href="/assets/js/126.72a292ef.js"><link rel="prefetch" href="/assets/js/128.f79ca2b7.js"><link rel="prefetch" href="/assets/js/129.a6a0a790.js"><link rel="prefetch" href="/assets/js/13.63e2250d.js"><link rel="prefetch" href="/assets/js/130.60dad197.js"><link rel="prefetch" href="/assets/js/131.7b2195bc.js"><link rel="prefetch" href="/assets/js/132.7f6d8f67.js"><link rel="prefetch" href="/assets/js/133.9c545553.js"><link rel="prefetch" href="/assets/js/134.8005f7dc.js"><link rel="prefetch" href="/assets/js/135.132f69eb.js"><link rel="prefetch" href="/assets/js/136.1782a877.js"><link rel="prefetch" href="/assets/js/137.c34ed219.js"><link rel="prefetch" href="/assets/js/138.14f2f2e4.js"><link rel="prefetch" href="/assets/js/139.b9cb6328.js"><link rel="prefetch" href="/assets/js/14.39577714.js"><link rel="prefetch" href="/assets/js/140.9305a634.js"><link rel="prefetch" href="/assets/js/141.181e5aea.js"><link rel="prefetch" href="/assets/js/142.aac96f70.js"><link rel="prefetch" href="/assets/js/143.0d81a01a.js"><link rel="prefetch" href="/assets/js/144.f0e9de1e.js"><link rel="prefetch" href="/assets/js/145.1a6c72f4.js"><link rel="prefetch" href="/assets/js/146.e4e25b5f.js"><link rel="prefetch" href="/assets/js/147.024a4f9c.js"><link rel="prefetch" href="/assets/js/148.eabacc20.js"><link rel="prefetch" href="/assets/js/149.b54940d0.js"><link rel="prefetch" href="/assets/js/15.6941784f.js"><link rel="prefetch" href="/assets/js/150.06499ec2.js"><link rel="prefetch" href="/assets/js/151.671bcb20.js"><link rel="prefetch" href="/assets/js/152.7defa823.js"><link rel="prefetch" href="/assets/js/153.0bfe93ae.js"><link rel="prefetch" href="/assets/js/154.446f8d4f.js"><link rel="prefetch" href="/assets/js/155.2f9d24e7.js"><link rel="prefetch" href="/assets/js/156.46eb9585.js"><link rel="prefetch" href="/assets/js/157.e0c832d4.js"><link rel="prefetch" href="/assets/js/158.8a237594.js"><link rel="prefetch" href="/assets/js/159.f64bd99e.js"><link rel="prefetch" href="/assets/js/16.268b7541.js"><link rel="prefetch" href="/assets/js/160.e77b4831.js"><link rel="prefetch" href="/assets/js/161.b44e0915.js"><link rel="prefetch" href="/assets/js/162.d31ca66c.js"><link rel="prefetch" href="/assets/js/163.52675d10.js"><link rel="prefetch" href="/assets/js/164.1e8c6849.js"><link rel="prefetch" href="/assets/js/165.0208ef20.js"><link rel="prefetch" href="/assets/js/166.c7dff2b5.js"><link rel="prefetch" href="/assets/js/167.c7f95893.js"><link rel="prefetch" href="/assets/js/168.0852104f.js"><link rel="prefetch" href="/assets/js/169.50f31893.js"><link rel="prefetch" href="/assets/js/17.bc320121.js"><link rel="prefetch" href="/assets/js/170.d6749c36.js"><link rel="prefetch" href="/assets/js/171.82ab7dd7.js"><link rel="prefetch" href="/assets/js/172.b211c1a5.js"><link rel="prefetch" href="/assets/js/173.29871d3b.js"><link rel="prefetch" href="/assets/js/174.3c5d9f32.js"><link rel="prefetch" href="/assets/js/175.d6c551ab.js"><link rel="prefetch" href="/assets/js/176.b8bd14fc.js"><link rel="prefetch" href="/assets/js/177.6b7dbe10.js"><link rel="prefetch" href="/assets/js/178.4018c46c.js"><link rel="prefetch" href="/assets/js/179.799f61b3.js"><link rel="prefetch" href="/assets/js/18.f25a177b.js"><link rel="prefetch" href="/assets/js/180.449d082e.js"><link rel="prefetch" href="/assets/js/181.4b34f92f.js"><link rel="prefetch" href="/assets/js/182.d4c8a704.js"><link rel="prefetch" href="/assets/js/183.81244026.js"><link rel="prefetch" href="/assets/js/184.3e9faa38.js"><link rel="prefetch" href="/assets/js/185.f9609064.js"><link rel="prefetch" href="/assets/js/186.95243564.js"><link rel="prefetch" href="/assets/js/187.2f05d35a.js"><link rel="prefetch" href="/assets/js/188.5614a157.js"><link rel="prefetch" href="/assets/js/189.72da3d1f.js"><link rel="prefetch" href="/assets/js/19.69a9cb43.js"><link rel="prefetch" href="/assets/js/190.2f059c2b.js"><link rel="prefetch" href="/assets/js/191.56888514.js"><link rel="prefetch" href="/assets/js/192.48420e12.js"><link rel="prefetch" href="/assets/js/193.3c4a0fa0.js"><link rel="prefetch" href="/assets/js/194.2fcb7438.js"><link rel="prefetch" href="/assets/js/195.557a7077.js"><link rel="prefetch" href="/assets/js/196.112f0f4a.js"><link rel="prefetch" href="/assets/js/197.61bc4a0b.js"><link rel="prefetch" href="/assets/js/198.d1d45401.js"><link rel="prefetch" href="/assets/js/199.9d0cc116.js"><link rel="prefetch" href="/assets/js/20.02a969ac.js"><link rel="prefetch" href="/assets/js/200.42d811b6.js"><link rel="prefetch" href="/assets/js/201.ed26df0f.js"><link rel="prefetch" href="/assets/js/202.aec3643d.js"><link rel="prefetch" href="/assets/js/203.ef5cbd9b.js"><link rel="prefetch" href="/assets/js/204.7c4e9fa8.js"><link rel="prefetch" href="/assets/js/205.81c68cf2.js"><link rel="prefetch" href="/assets/js/206.cb0c0990.js"><link rel="prefetch" href="/assets/js/207.bc6fade6.js"><link rel="prefetch" href="/assets/js/208.51deea7c.js"><link rel="prefetch" href="/assets/js/209.829cfb54.js"><link rel="prefetch" href="/assets/js/21.de545bd9.js"><link rel="prefetch" href="/assets/js/210.b5c088a7.js"><link rel="prefetch" href="/assets/js/211.2f7dcafa.js"><link rel="prefetch" href="/assets/js/212.aa22d4b7.js"><link rel="prefetch" href="/assets/js/213.7d3d8216.js"><link rel="prefetch" href="/assets/js/214.4047b63c.js"><link rel="prefetch" href="/assets/js/215.e895c905.js"><link rel="prefetch" href="/assets/js/216.a2f4cb38.js"><link rel="prefetch" href="/assets/js/217.d7060cb3.js"><link rel="prefetch" href="/assets/js/218.f5731cda.js"><link rel="prefetch" href="/assets/js/219.0bf7ea18.js"><link rel="prefetch" href="/assets/js/22.1b24c789.js"><link rel="prefetch" href="/assets/js/220.0b2ce431.js"><link rel="prefetch" href="/assets/js/221.875ee445.js"><link rel="prefetch" href="/assets/js/222.0ada7f78.js"><link rel="prefetch" href="/assets/js/223.6d08c795.js"><link rel="prefetch" href="/assets/js/224.28fc3748.js"><link rel="prefetch" href="/assets/js/225.ac284564.js"><link rel="prefetch" href="/assets/js/226.3968eedb.js"><link rel="prefetch" href="/assets/js/227.a6bee197.js"><link rel="prefetch" href="/assets/js/228.fbbfdc88.js"><link rel="prefetch" href="/assets/js/229.2f35a3e9.js"><link rel="prefetch" href="/assets/js/23.cbeda6d1.js"><link rel="prefetch" href="/assets/js/230.ee3168a7.js"><link rel="prefetch" href="/assets/js/231.b69b4065.js"><link rel="prefetch" href="/assets/js/232.13267125.js"><link rel="prefetch" href="/assets/js/233.5707923b.js"><link rel="prefetch" href="/assets/js/234.cf10a55a.js"><link rel="prefetch" href="/assets/js/235.85da69da.js"><link rel="prefetch" href="/assets/js/236.2b27fec8.js"><link rel="prefetch" href="/assets/js/237.6dfb78fa.js"><link rel="prefetch" href="/assets/js/238.4aefa570.js"><link rel="prefetch" href="/assets/js/239.3adc140f.js"><link rel="prefetch" href="/assets/js/24.00bec93c.js"><link rel="prefetch" href="/assets/js/240.cbe38f65.js"><link rel="prefetch" href="/assets/js/241.be681059.js"><link rel="prefetch" href="/assets/js/242.245c5022.js"><link rel="prefetch" href="/assets/js/243.e88e6c5e.js"><link rel="prefetch" href="/assets/js/244.20cf6226.js"><link rel="prefetch" href="/assets/js/245.bb5a7b2a.js"><link rel="prefetch" href="/assets/js/246.10666f21.js"><link rel="prefetch" href="/assets/js/247.4ab4d927.js"><link rel="prefetch" href="/assets/js/248.c7726e8e.js"><link rel="prefetch" href="/assets/js/249.db54fbaa.js"><link rel="prefetch" href="/assets/js/25.aa1ff14b.js"><link rel="prefetch" href="/assets/js/250.49c8c59e.js"><link rel="prefetch" href="/assets/js/251.34d4888a.js"><link rel="prefetch" href="/assets/js/252.0ae6c3b8.js"><link rel="prefetch" href="/assets/js/253.a65e7acb.js"><link rel="prefetch" href="/assets/js/254.a32d8834.js"><link rel="prefetch" href="/assets/js/255.09de2e0f.js"><link rel="prefetch" href="/assets/js/256.d4db2445.js"><link rel="prefetch" href="/assets/js/257.08895d5d.js"><link rel="prefetch" href="/assets/js/258.2c26cb87.js"><link rel="prefetch" href="/assets/js/259.77e36db3.js"><link rel="prefetch" href="/assets/js/26.d5fc5191.js"><link rel="prefetch" href="/assets/js/260.1f796460.js"><link rel="prefetch" href="/assets/js/261.956a18f5.js"><link rel="prefetch" href="/assets/js/262.57fa26a3.js"><link rel="prefetch" href="/assets/js/263.1eb5dc53.js"><link rel="prefetch" href="/assets/js/264.7dcf73f0.js"><link rel="prefetch" href="/assets/js/265.7df22b42.js"><link rel="prefetch" href="/assets/js/266.3ceb32c5.js"><link rel="prefetch" href="/assets/js/267.1afa4171.js"><link rel="prefetch" href="/assets/js/268.22f86770.js"><link rel="prefetch" href="/assets/js/269.b284a0fa.js"><link rel="prefetch" href="/assets/js/27.a5bed48c.js"><link rel="prefetch" href="/assets/js/270.06550c93.js"><link rel="prefetch" href="/assets/js/271.02640485.js"><link rel="prefetch" href="/assets/js/272.a8f80395.js"><link rel="prefetch" href="/assets/js/273.68442d34.js"><link rel="prefetch" href="/assets/js/274.a83ba21e.js"><link rel="prefetch" href="/assets/js/275.a0c9deb6.js"><link rel="prefetch" href="/assets/js/276.07af7827.js"><link rel="prefetch" href="/assets/js/277.c7a44e16.js"><link rel="prefetch" href="/assets/js/278.c9c80c6c.js"><link rel="prefetch" href="/assets/js/279.c177870f.js"><link rel="prefetch" href="/assets/js/28.08ec5983.js"><link rel="prefetch" href="/assets/js/280.cb03f1ae.js"><link rel="prefetch" href="/assets/js/281.91d5eead.js"><link rel="prefetch" href="/assets/js/282.866cf957.js"><link rel="prefetch" href="/assets/js/283.8fe10f8d.js"><link rel="prefetch" href="/assets/js/284.441662fb.js"><link rel="prefetch" href="/assets/js/285.99ab772f.js"><link rel="prefetch" href="/assets/js/286.c8ac2fed.js"><link rel="prefetch" href="/assets/js/287.1ee912b6.js"><link rel="prefetch" href="/assets/js/29.62d06cb4.js"><link rel="prefetch" href="/assets/js/3.e3770c3e.js"><link rel="prefetch" href="/assets/js/30.03ca99af.js"><link rel="prefetch" href="/assets/js/31.eadd9b7f.js"><link rel="prefetch" href="/assets/js/32.b0704ec8.js"><link rel="prefetch" href="/assets/js/33.e6acffc2.js"><link rel="prefetch" href="/assets/js/34.1e016020.js"><link rel="prefetch" href="/assets/js/35.62f276e3.js"><link rel="prefetch" href="/assets/js/36.608c5ff6.js"><link rel="prefetch" href="/assets/js/37.649c1c5d.js"><link rel="prefetch" href="/assets/js/38.d91b3ac0.js"><link rel="prefetch" href="/assets/js/39.79eaf9f0.js"><link rel="prefetch" href="/assets/js/4.07df64b9.js"><link rel="prefetch" href="/assets/js/40.8c3d3845.js"><link rel="prefetch" href="/assets/js/41.5685a0cd.js"><link rel="prefetch" href="/assets/js/42.c1ab57fb.js"><link rel="prefetch" href="/assets/js/43.b954c251.js"><link rel="prefetch" href="/assets/js/44.d657ad1d.js"><link rel="prefetch" href="/assets/js/45.4496d452.js"><link rel="prefetch" href="/assets/js/46.926ad8df.js"><link rel="prefetch" href="/assets/js/47.6be08400.js"><link rel="prefetch" href="/assets/js/48.b1fd6940.js"><link rel="prefetch" href="/assets/js/49.f0ac85ee.js"><link rel="prefetch" href="/assets/js/5.315d7655.js"><link rel="prefetch" href="/assets/js/50.d04514e7.js"><link rel="prefetch" href="/assets/js/51.9d75145d.js"><link rel="prefetch" href="/assets/js/52.b016c06f.js"><link rel="prefetch" href="/assets/js/53.04a6c23c.js"><link rel="prefetch" href="/assets/js/54.a9699c91.js"><link rel="prefetch" href="/assets/js/55.8d3cb279.js"><link rel="prefetch" href="/assets/js/56.7ced4a88.js"><link rel="prefetch" href="/assets/js/57.c7186d75.js"><link rel="prefetch" href="/assets/js/58.5257d5cc.js"><link rel="prefetch" href="/assets/js/59.db68cc82.js"><link rel="prefetch" href="/assets/js/6.5fb7fa31.js"><link rel="prefetch" href="/assets/js/60.70f0daf8.js"><link rel="prefetch" href="/assets/js/61.1cbddbfd.js"><link rel="prefetch" href="/assets/js/62.655ed22b.js"><link rel="prefetch" href="/assets/js/63.52c1a201.js"><link rel="prefetch" href="/assets/js/64.ee5f161a.js"><link rel="prefetch" href="/assets/js/65.c0982e2c.js"><link rel="prefetch" href="/assets/js/66.1f15028f.js"><link rel="prefetch" href="/assets/js/67.9039bdb3.js"><link rel="prefetch" href="/assets/js/68.dcbff016.js"><link rel="prefetch" href="/assets/js/69.7f24d5a6.js"><link rel="prefetch" href="/assets/js/7.d8f2050a.js"><link rel="prefetch" href="/assets/js/70.fcd0120a.js"><link rel="prefetch" href="/assets/js/71.74b9afab.js"><link rel="prefetch" href="/assets/js/72.26fd885c.js"><link rel="prefetch" href="/assets/js/73.b6d6035d.js"><link rel="prefetch" href="/assets/js/74.8f195282.js"><link rel="prefetch" href="/assets/js/75.e30a94d2.js"><link rel="prefetch" href="/assets/js/76.7fe5c1a6.js"><link rel="prefetch" href="/assets/js/77.4253ea80.js"><link rel="prefetch" href="/assets/js/78.703cea06.js"><link rel="prefetch" href="/assets/js/79.d9dfc4af.js"><link rel="prefetch" href="/assets/js/80.72fe8d00.js"><link rel="prefetch" href="/assets/js/81.5fa79510.js"><link rel="prefetch" href="/assets/js/82.54623b19.js"><link rel="prefetch" href="/assets/js/83.22a20adb.js"><link rel="prefetch" href="/assets/js/84.15648cb4.js"><link rel="prefetch" href="/assets/js/85.0a15468e.js"><link rel="prefetch" href="/assets/js/86.46c6d645.js"><link rel="prefetch" href="/assets/js/87.1a0a8892.js"><link rel="prefetch" href="/assets/js/88.bffb80c0.js"><link rel="prefetch" href="/assets/js/89.75817206.js"><link rel="prefetch" href="/assets/js/90.4d564d3f.js"><link rel="prefetch" href="/assets/js/91.01888127.js"><link rel="prefetch" href="/assets/js/92.6f0111de.js"><link rel="prefetch" href="/assets/js/93.90b77fc7.js"><link rel="prefetch" href="/assets/js/94.fff4fc1e.js"><link rel="prefetch" href="/assets/js/95.af1bcbe5.js"><link rel="prefetch" href="/assets/js/96.d8bf3fbe.js"><link rel="prefetch" href="/assets/js/97.4d85d266.js"><link rel="prefetch" href="/assets/js/98.3ece59a9.js"><link rel="prefetch" href="/assets/js/99.6827ebdb.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.89026c5a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5149da19.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Landscape</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link router-link-active">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/operatingsystem/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link router-link-active">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/operatingsystem/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>定时器</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/tech/es5/Asynchronous/timer.html#settimeout" class="sidebar-link">setTimeOut</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/Asynchronous/timer.html#setinterval" class="sidebar-link">setInterval</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/Asynchronous/timer.html#cleartimeout-clearinterval" class="sidebar-link">clearTimeout，clearInterval</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/Asynchronous/timer.html#debounce" class="sidebar-link">debounce</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/Asynchronous/timer.html#运行机制" class="sidebar-link">运行机制</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/Asynchronous/timer.html#settimeout-f-0" class="sidebar-link">setTimeout(f, 0)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es5/Asynchronous/timer.html#_1-含义" class="sidebar-link">1. 含义</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/Asynchronous/timer.html#_2-应用" class="sidebar-link">2. 应用</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="定时器"><a href="#定时器" class="header-anchor">#</a> 定时器</h1> <h2 id="settimeout"><a href="#settimeout" class="header-anchor">#</a> setTimeOut</h2> <p>setTimeout函数用来指定某个函数或某段代码，在多少毫秒之后执行。它返回一个整数，表示定时器的编号，以后可以用来取消这个定时器。</p> <div class="language-set line-numbers-mode"><pre class="language-text"><code>var timerId = setTimeout(func|code, delay);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>上面代码中，setTimeout函数接受两个参数，第一个参数func|code是将要推迟执行的函数名或者一段代码，第二个参数delay是推迟执行的毫秒数。</p> <div class="language-set line-numbers-mode"><pre class="language-text"><code>console.log(1);
+setTimeout('console.log(2)',1000);
+console.log(3);
+// 1
+// 3
+// 2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>如果推迟执行的是函数，就直接将函数名，作为setTimeout的参数。</p> <div class="language-set line-numbers-mode"><pre class="language-text"><code>function f() {
+  console.log(2);
+}
+
+setTimeout(f, 1000);
+setTimeout的第二个参数如果省略，则默认为0。
+
+setTimeout(f)
+// 等同于
+setTimeout(f, 0)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>除了前两个参数，setTimeout还允许更多的参数。它们将依次传入推迟执行的函数（回调函数）。</p> <div class="language-set line-numbers-mode"><pre class="language-text"><code>setTimeout(function (a,b) {
+  console.log(a + b);
+}, 1000, 1, 1);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>还有一个需要注意的地方，如果回调函数是对象的方法，那么setTimeout使得方法内部的this关键字指向全局环境，而不是定义时所在的那个对象。</p> <div class="language-set line-numbers-mode"><pre class="language-text"><code>var x = 1;
+
+var obj = {
+  x: 2,
+  y: function () {
+    console.log(this.x);
+  }
+};
+
+setTimeout(obj.y, 1000) // 1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>为了防止出现这个问题，一种解决方法是将obj.y放入一个函数。</p> <div class="language-set line-numbers-mode"><pre class="language-text"><code>var x = 1;
+
+var obj = {
+  x: 2,
+  y: function () {
+    console.log(this.x);
+  }
+};
+
+setTimeout(function () {
+  obj.y();
+}, 1000);
+// 2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>另一种解决方法是，使用bind方法，将obj.y这个方法绑定在obj上面。</p> <div class="language-set line-numbers-mode"><pre class="language-text"><code>var x = 1;
+
+var obj = {
+  x: 2,
+  y: function () {
+    console.log(this.x);
+  }
+};
+
+setTimeout(obj.y.bind(obj), 1000)
+// 2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h2 id="setinterval"><a href="#setinterval" class="header-anchor">#</a> setInterval</h2> <p>setInterval函数的用法与setTimeout完全一致，区别仅仅在于setInterval指定某个任务每隔一段时间就执行一次，也就是无限次的定时执行。</p> <div class="language-set line-numbers-mode"><pre class="language-text"><code>var i = 1
+var timer = setInterval(function() {
+  console.log(2);
+}, 1000)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>其余参考setTimeout。</p> <h2 id="cleartimeout-clearinterval"><a href="#cleartimeout-clearinterval" class="header-anchor">#</a> clearTimeout，clearInterval</h2> <p>setTimeout和setInterval函数，都返回一个整数值，表示计数器编号。将该整数传入clearTimeout和clearInterval函数，就可以取消对应的定时器。</p> <div class="language-set line-numbers-mode"><pre class="language-text"><code>var id1 = setTimeout(f, 1000);
+var id2 = setInterval(f, 1000);
+
+clearTimeout(id1);
+clearInterval(id2);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="debounce"><a href="#debounce" class="header-anchor">#</a> debounce</h2> <p>有时，我们不希望回调函数被频繁调用。比如，用户填入网页输入框的内容，希望通过 Ajax 方法传回服务器，jQuery 的写法如下。</p> <div class="language-set line-numbers-mode"><pre class="language-text"><code>$('textarea').on('keydown', ajaxAction);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>这样写有一个很大的缺点，就是如果用户连续击键，就会连续触发keydown事件，造成大量的 Ajax 通信。</p> <p>debounce（防抖动）。假定两次 Ajax 通信的间隔不得小于2500毫秒，上面的代码可以改写成下面这样。</p> <div class="language-set line-numbers-mode"><pre class="language-text"><code>$('textarea').on('keydown', debounce(ajaxAction, 2500));
+
+function debounce(fn, delay){
+  var timer = null; // 声明计时器
+  return function() {
+    var context = this;
+    var args = arguments;
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      fn.apply(context, args);
+    }, delay);
+  };
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>上面代码中，只要在2500毫秒之内，用户再次击键，就会取消上一次的定时器，然后再新建一个定时器。这样就保证了回调函数之间的调用间隔，至少是2500毫秒。</p> <h2 id="运行机制"><a href="#运行机制" class="header-anchor">#</a> 运行机制</h2> <p>setTimeout和setInterval的运行机制，是将指定的代码移出本轮事件循环，等到下一轮事件循环，再检查是否到了指定时间。如果到了，就执行对应的代码；如果不到，就继续等待。</p> <p>这意味着，setTimeout和setInterval指定的回调函数，必须等到本轮事件循环的所有同步任务都执行完，才会开始执行。由于前面的任务到底需要多少时间执行完，是不确定的，所以没有办法保证，setTimeout和setInterval指定的任务，一定会按照预定时间执行。</p> <div class="language-set line-numbers-mode"><pre class="language-text"><code>setTimeout(someTask, 100);
+veryLongTask();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>上面代码的setTimeout，指定100毫秒以后运行一个任务。但是，如果后面的veryLongTask函数（同步任务）运行时间非常长，过了100毫秒还无法结束，那么被推迟运行的someTask就只有等着，等到veryLongTask运行结束，才轮到它执行。</p> <p>再看一个setInterval的例子。</p> <div class="language-set line-numbers-mode"><pre class="language-text"><code>setInterval(function () {
+  console.log(2);
+}, 1000);
+
+sleep(3000);
+
+function sleep(ms) {
+  var start = Date.now();
+  while ((Date.now() - start) &lt; ms) {
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>上面代码中，setInterval要求每隔1000毫秒，就输出一个2。但是，紧接着的sleep语句需要3000毫秒才能完成，那么setInterval就必须推迟到3000毫秒之后才开始生效。注意，生效后setInterval不会产生累积效应，即不会一下子输出三个2，而是只会输出一个2。</p> <h2 id="settimeout-f-0"><a href="#settimeout-f-0" class="header-anchor">#</a> setTimeout(f, 0)</h2> <h3 id="_1-含义"><a href="#_1-含义" class="header-anchor">#</a> 1. 含义</h3> <p>setTimeout的作用是将代码推迟到指定时间执行，如果指定时间为0，即setTimeout(f, 0)，那么会立刻执行吗？</p> <p>答案是不会。因为上一节说过，必须要等到当前脚本的同步任务，全部处理完以后，才会执行setTimeout指定的回调函数f。也就是说，setTimeout(f, 0)会在下一轮事件循环一开始就执行。</p> <div class="language-set line-numbers-mode"><pre class="language-text"><code>setTimeout(function () {
+  console.log(1);
+}, 0);
+console.log(2);
+// 2
+// 1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>总之，setTimeout(f, 0)这种写法的目的是，尽可能早地执行f，但是并不能保证立刻就执行f。</p> <p>实际上，setTimeout(f, 0)不会真的在0毫秒之后运行，不同的浏览器有不同的实现。以 Edge 浏览器为例，会等到4毫秒之后运行。如果电脑正在使用电池供电，会等到16毫秒之后运行；如果网页不在当前 Tab 页，会推迟到1000毫秒（1秒）之后运行。这样是为了节省系统资源。</p> <h3 id="_2-应用"><a href="#_2-应用" class="header-anchor">#</a> 2. 应用</h3> <p>setTimeout(f, 0)有几个非常重要的用途。它的一大应用是，可以调整事件的发生顺序。比如，网页开发中，某个事件先发生在子元素，然后冒泡到父元素，即子元素的事件回调函数，会早于父元素的事件回调函数触发。如果，想让父元素的事件回调函数先发生，就要用到setTimeout(f, 0)。</p> <div class="language-set line-numbers-mode"><pre class="language-text"><code>// HTML 代码如下
+// &lt;input type=&quot;button&quot; id=&quot;myButton&quot; value=&quot;click&quot;&gt;
+
+var input = document.getElementById('myButton');
+
+input.onclick = function A() {
+  setTimeout(function B() {
+    input.value +=' input';
+  }, 0)
+};
+
+document.body.onclick = function C() {
+  input.value += ' body'
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>另一个应用是，用户自定义的回调函数，通常在浏览器的默认动作之前触发。比如，用户在输入框输入文本，keypress事件会在浏览器接收文本之前触发。因此，下面的回调函数是达不到目的的。</p> <div class="language-set line-numbers-mode"><pre class="language-text"><code>// HTML 代码如下
+// &lt;input type=&quot;text&quot; id=&quot;input-box&quot;&gt;
+
+document.getElementById('input-box').onkeypress = function (event) {
+  this.value = this.value.toUpperCase();
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>上面代码想在用户每次输入文本后，立即将字符转为大写。但是实际上，它只能将本次输入前的字符转为大写，因为浏览器此时还没接收到新的文本，所以this.value取不到最新输入的那个字符。只有用setTimeout改写，上面的代码才能发挥作用。</p> <div class="language-set line-numbers-mode"><pre class="language-text"><code>document.getElementById('input-box').onkeypress = function() {
+  var self = this;
+  setTimeout(function() {
+    self.value = self.value.toUpperCase();
+  }, 0);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>由于setTimeout(f, 0)实际上意味着，将任务放到浏览器最早可得的空闲时段执行，所以那些计算量大、耗时长的任务，常常会被放到几个小部分，分别放到setTimeout(f, 0)里面执行。</p> <div class="language-set line-numbers-mode"><pre class="language-text"><code>var div = document.getElementsByTagName('div')[0];
+
+// 写法一
+for (var i = 0xA00000; i &lt; 0xFFFFFF; i++) {
+  div.style.backgroundColor = '#' + i.toString(16);
+}
+
+// 写法二
+var timer;
+var i=0x100000;
+
+function func() {
+  timer = setTimeout(func, 0);
+  div.style.backgroundColor = '#' + i.toString(16);
+  if (i++ == 0xFFFFFF) clearTimeout(timer);
+}
+
+timer = setTimeout(func, 0);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>上面代码有两种写法，都是改变一个网页元素的背景色。写法一会造成浏览器“堵塞”，因为 JavaScript 执行速度远高于 DOM，会造成大量 DOM 操作“堆积”，而写法二就不会，这就是setTimeout(f, 0)的好处。</p> <p>另一个使用这种技巧的例子是代码高亮的处理。如果代码块很大，一次性处理，可能会对性能造成很大的压力，那么将其分成一个个小块，一次处理一块，比如写成setTimeout(highlightNext, 50)的样子，性能压力就会减轻。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.4259f585.js" defer></script><script src="/assets/js/2.299a7e59.js" defer></script><script src="/assets/js/1.2c8cdafe.js" defer></script><script src="/assets/js/127.f67abbca.js" defer></script>
+  </body>
+</html>

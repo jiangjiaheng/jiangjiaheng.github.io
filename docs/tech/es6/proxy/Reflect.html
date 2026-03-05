@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Reflect | Landscape</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="私人博客网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.5149da19.css" as="style"><link rel="preload" href="/assets/js/app.4259f585.js" as="script"><link rel="preload" href="/assets/js/2.299a7e59.js" as="script"><link rel="preload" href="/assets/js/1.2c8cdafe.js" as="script"><link rel="preload" href="/assets/js/237.6dfb78fa.js" as="script"><link rel="prefetch" href="/assets/js/10.9a78c136.js"><link rel="prefetch" href="/assets/js/100.b6766e1e.js"><link rel="prefetch" href="/assets/js/101.c7f1d9dd.js"><link rel="prefetch" href="/assets/js/102.cedd5294.js"><link rel="prefetch" href="/assets/js/103.e9aa8a7c.js"><link rel="prefetch" href="/assets/js/104.baec753b.js"><link rel="prefetch" href="/assets/js/105.bd76c252.js"><link rel="prefetch" href="/assets/js/106.cabc4edd.js"><link rel="prefetch" href="/assets/js/107.76207356.js"><link rel="prefetch" href="/assets/js/108.51d28317.js"><link rel="prefetch" href="/assets/js/109.d78769d3.js"><link rel="prefetch" href="/assets/js/11.727c4fbd.js"><link rel="prefetch" href="/assets/js/110.bd32730c.js"><link rel="prefetch" href="/assets/js/111.69beeda4.js"><link rel="prefetch" href="/assets/js/112.400f229d.js"><link rel="prefetch" href="/assets/js/113.723b852a.js"><link rel="prefetch" href="/assets/js/114.5f824686.js"><link rel="prefetch" href="/assets/js/115.5ba7440f.js"><link rel="prefetch" href="/assets/js/116.c930c7f2.js"><link rel="prefetch" href="/assets/js/117.b8b09f35.js"><link rel="prefetch" href="/assets/js/118.3560d43d.js"><link rel="prefetch" href="/assets/js/119.48038778.js"><link rel="prefetch" href="/assets/js/12.c51f03c4.js"><link rel="prefetch" href="/assets/js/120.80ed8a72.js"><link rel="prefetch" href="/assets/js/121.5ae6bf68.js"><link rel="prefetch" href="/assets/js/122.b76eefd4.js"><link rel="prefetch" href="/assets/js/123.b29580e6.js"><link rel="prefetch" href="/assets/js/124.b734bf7f.js"><link rel="prefetch" href="/assets/js/125.49f696bd.js"><link rel="prefetch" href="/assets/js/126.72a292ef.js"><link rel="prefetch" href="/assets/js/127.f67abbca.js"><link rel="prefetch" href="/assets/js/128.f79ca2b7.js"><link rel="prefetch" href="/assets/js/129.a6a0a790.js"><link rel="prefetch" href="/assets/js/13.63e2250d.js"><link rel="prefetch" href="/assets/js/130.60dad197.js"><link rel="prefetch" href="/assets/js/131.7b2195bc.js"><link rel="prefetch" href="/assets/js/132.7f6d8f67.js"><link rel="prefetch" href="/assets/js/133.9c545553.js"><link rel="prefetch" href="/assets/js/134.8005f7dc.js"><link rel="prefetch" href="/assets/js/135.132f69eb.js"><link rel="prefetch" href="/assets/js/136.1782a877.js"><link rel="prefetch" href="/assets/js/137.c34ed219.js"><link rel="prefetch" href="/assets/js/138.14f2f2e4.js"><link rel="prefetch" href="/assets/js/139.b9cb6328.js"><link rel="prefetch" href="/assets/js/14.39577714.js"><link rel="prefetch" href="/assets/js/140.9305a634.js"><link rel="prefetch" href="/assets/js/141.181e5aea.js"><link rel="prefetch" href="/assets/js/142.aac96f70.js"><link rel="prefetch" href="/assets/js/143.0d81a01a.js"><link rel="prefetch" href="/assets/js/144.f0e9de1e.js"><link rel="prefetch" href="/assets/js/145.1a6c72f4.js"><link rel="prefetch" href="/assets/js/146.e4e25b5f.js"><link rel="prefetch" href="/assets/js/147.024a4f9c.js"><link rel="prefetch" href="/assets/js/148.eabacc20.js"><link rel="prefetch" href="/assets/js/149.b54940d0.js"><link rel="prefetch" href="/assets/js/15.6941784f.js"><link rel="prefetch" href="/assets/js/150.06499ec2.js"><link rel="prefetch" href="/assets/js/151.671bcb20.js"><link rel="prefetch" href="/assets/js/152.7defa823.js"><link rel="prefetch" href="/assets/js/153.0bfe93ae.js"><link rel="prefetch" href="/assets/js/154.446f8d4f.js"><link rel="prefetch" href="/assets/js/155.2f9d24e7.js"><link rel="prefetch" href="/assets/js/156.46eb9585.js"><link rel="prefetch" href="/assets/js/157.e0c832d4.js"><link rel="prefetch" href="/assets/js/158.8a237594.js"><link rel="prefetch" href="/assets/js/159.f64bd99e.js"><link rel="prefetch" href="/assets/js/16.268b7541.js"><link rel="prefetch" href="/assets/js/160.e77b4831.js"><link rel="prefetch" href="/assets/js/161.b44e0915.js"><link rel="prefetch" href="/assets/js/162.d31ca66c.js"><link rel="prefetch" href="/assets/js/163.52675d10.js"><link rel="prefetch" href="/assets/js/164.1e8c6849.js"><link rel="prefetch" href="/assets/js/165.0208ef20.js"><link rel="prefetch" href="/assets/js/166.c7dff2b5.js"><link rel="prefetch" href="/assets/js/167.c7f95893.js"><link rel="prefetch" href="/assets/js/168.0852104f.js"><link rel="prefetch" href="/assets/js/169.50f31893.js"><link rel="prefetch" href="/assets/js/17.bc320121.js"><link rel="prefetch" href="/assets/js/170.d6749c36.js"><link rel="prefetch" href="/assets/js/171.82ab7dd7.js"><link rel="prefetch" href="/assets/js/172.b211c1a5.js"><link rel="prefetch" href="/assets/js/173.29871d3b.js"><link rel="prefetch" href="/assets/js/174.3c5d9f32.js"><link rel="prefetch" href="/assets/js/175.d6c551ab.js"><link rel="prefetch" href="/assets/js/176.b8bd14fc.js"><link rel="prefetch" href="/assets/js/177.6b7dbe10.js"><link rel="prefetch" href="/assets/js/178.4018c46c.js"><link rel="prefetch" href="/assets/js/179.799f61b3.js"><link rel="prefetch" href="/assets/js/18.f25a177b.js"><link rel="prefetch" href="/assets/js/180.449d082e.js"><link rel="prefetch" href="/assets/js/181.4b34f92f.js"><link rel="prefetch" href="/assets/js/182.d4c8a704.js"><link rel="prefetch" href="/assets/js/183.81244026.js"><link rel="prefetch" href="/assets/js/184.3e9faa38.js"><link rel="prefetch" href="/assets/js/185.f9609064.js"><link rel="prefetch" href="/assets/js/186.95243564.js"><link rel="prefetch" href="/assets/js/187.2f05d35a.js"><link rel="prefetch" href="/assets/js/188.5614a157.js"><link rel="prefetch" href="/assets/js/189.72da3d1f.js"><link rel="prefetch" href="/assets/js/19.69a9cb43.js"><link rel="prefetch" href="/assets/js/190.2f059c2b.js"><link rel="prefetch" href="/assets/js/191.56888514.js"><link rel="prefetch" href="/assets/js/192.48420e12.js"><link rel="prefetch" href="/assets/js/193.3c4a0fa0.js"><link rel="prefetch" href="/assets/js/194.2fcb7438.js"><link rel="prefetch" href="/assets/js/195.557a7077.js"><link rel="prefetch" href="/assets/js/196.112f0f4a.js"><link rel="prefetch" href="/assets/js/197.61bc4a0b.js"><link rel="prefetch" href="/assets/js/198.d1d45401.js"><link rel="prefetch" href="/assets/js/199.9d0cc116.js"><link rel="prefetch" href="/assets/js/20.02a969ac.js"><link rel="prefetch" href="/assets/js/200.42d811b6.js"><link rel="prefetch" href="/assets/js/201.ed26df0f.js"><link rel="prefetch" href="/assets/js/202.aec3643d.js"><link rel="prefetch" href="/assets/js/203.ef5cbd9b.js"><link rel="prefetch" href="/assets/js/204.7c4e9fa8.js"><link rel="prefetch" href="/assets/js/205.81c68cf2.js"><link rel="prefetch" href="/assets/js/206.cb0c0990.js"><link rel="prefetch" href="/assets/js/207.bc6fade6.js"><link rel="prefetch" href="/assets/js/208.51deea7c.js"><link rel="prefetch" href="/assets/js/209.829cfb54.js"><link rel="prefetch" href="/assets/js/21.de545bd9.js"><link rel="prefetch" href="/assets/js/210.b5c088a7.js"><link rel="prefetch" href="/assets/js/211.2f7dcafa.js"><link rel="prefetch" href="/assets/js/212.aa22d4b7.js"><link rel="prefetch" href="/assets/js/213.7d3d8216.js"><link rel="prefetch" href="/assets/js/214.4047b63c.js"><link rel="prefetch" href="/assets/js/215.e895c905.js"><link rel="prefetch" href="/assets/js/216.a2f4cb38.js"><link rel="prefetch" href="/assets/js/217.d7060cb3.js"><link rel="prefetch" href="/assets/js/218.f5731cda.js"><link rel="prefetch" href="/assets/js/219.0bf7ea18.js"><link rel="prefetch" href="/assets/js/22.1b24c789.js"><link rel="prefetch" href="/assets/js/220.0b2ce431.js"><link rel="prefetch" href="/assets/js/221.875ee445.js"><link rel="prefetch" href="/assets/js/222.0ada7f78.js"><link rel="prefetch" href="/assets/js/223.6d08c795.js"><link rel="prefetch" href="/assets/js/224.28fc3748.js"><link rel="prefetch" href="/assets/js/225.ac284564.js"><link rel="prefetch" href="/assets/js/226.3968eedb.js"><link rel="prefetch" href="/assets/js/227.a6bee197.js"><link rel="prefetch" href="/assets/js/228.fbbfdc88.js"><link rel="prefetch" href="/assets/js/229.2f35a3e9.js"><link rel="prefetch" href="/assets/js/23.cbeda6d1.js"><link rel="prefetch" href="/assets/js/230.ee3168a7.js"><link rel="prefetch" href="/assets/js/231.b69b4065.js"><link rel="prefetch" href="/assets/js/232.13267125.js"><link rel="prefetch" href="/assets/js/233.5707923b.js"><link rel="prefetch" href="/assets/js/234.cf10a55a.js"><link rel="prefetch" href="/assets/js/235.85da69da.js"><link rel="prefetch" href="/assets/js/236.2b27fec8.js"><link rel="prefetch" href="/assets/js/238.4aefa570.js"><link rel="prefetch" href="/assets/js/239.3adc140f.js"><link rel="prefetch" href="/assets/js/24.00bec93c.js"><link rel="prefetch" href="/assets/js/240.cbe38f65.js"><link rel="prefetch" href="/assets/js/241.be681059.js"><link rel="prefetch" href="/assets/js/242.245c5022.js"><link rel="prefetch" href="/assets/js/243.e88e6c5e.js"><link rel="prefetch" href="/assets/js/244.20cf6226.js"><link rel="prefetch" href="/assets/js/245.bb5a7b2a.js"><link rel="prefetch" href="/assets/js/246.10666f21.js"><link rel="prefetch" href="/assets/js/247.4ab4d927.js"><link rel="prefetch" href="/assets/js/248.c7726e8e.js"><link rel="prefetch" href="/assets/js/249.db54fbaa.js"><link rel="prefetch" href="/assets/js/25.aa1ff14b.js"><link rel="prefetch" href="/assets/js/250.49c8c59e.js"><link rel="prefetch" href="/assets/js/251.34d4888a.js"><link rel="prefetch" href="/assets/js/252.0ae6c3b8.js"><link rel="prefetch" href="/assets/js/253.a65e7acb.js"><link rel="prefetch" href="/assets/js/254.a32d8834.js"><link rel="prefetch" href="/assets/js/255.09de2e0f.js"><link rel="prefetch" href="/assets/js/256.d4db2445.js"><link rel="prefetch" href="/assets/js/257.08895d5d.js"><link rel="prefetch" href="/assets/js/258.2c26cb87.js"><link rel="prefetch" href="/assets/js/259.77e36db3.js"><link rel="prefetch" href="/assets/js/26.d5fc5191.js"><link rel="prefetch" href="/assets/js/260.1f796460.js"><link rel="prefetch" href="/assets/js/261.956a18f5.js"><link rel="prefetch" href="/assets/js/262.57fa26a3.js"><link rel="prefetch" href="/assets/js/263.1eb5dc53.js"><link rel="prefetch" href="/assets/js/264.7dcf73f0.js"><link rel="prefetch" href="/assets/js/265.7df22b42.js"><link rel="prefetch" href="/assets/js/266.3ceb32c5.js"><link rel="prefetch" href="/assets/js/267.1afa4171.js"><link rel="prefetch" href="/assets/js/268.22f86770.js"><link rel="prefetch" href="/assets/js/269.b284a0fa.js"><link rel="prefetch" href="/assets/js/27.a5bed48c.js"><link rel="prefetch" href="/assets/js/270.06550c93.js"><link rel="prefetch" href="/assets/js/271.02640485.js"><link rel="prefetch" href="/assets/js/272.a8f80395.js"><link rel="prefetch" href="/assets/js/273.68442d34.js"><link rel="prefetch" href="/assets/js/274.a83ba21e.js"><link rel="prefetch" href="/assets/js/275.a0c9deb6.js"><link rel="prefetch" href="/assets/js/276.07af7827.js"><link rel="prefetch" href="/assets/js/277.c7a44e16.js"><link rel="prefetch" href="/assets/js/278.c9c80c6c.js"><link rel="prefetch" href="/assets/js/279.c177870f.js"><link rel="prefetch" href="/assets/js/28.08ec5983.js"><link rel="prefetch" href="/assets/js/280.cb03f1ae.js"><link rel="prefetch" href="/assets/js/281.91d5eead.js"><link rel="prefetch" href="/assets/js/282.866cf957.js"><link rel="prefetch" href="/assets/js/283.8fe10f8d.js"><link rel="prefetch" href="/assets/js/284.441662fb.js"><link rel="prefetch" href="/assets/js/285.99ab772f.js"><link rel="prefetch" href="/assets/js/286.c8ac2fed.js"><link rel="prefetch" href="/assets/js/287.1ee912b6.js"><link rel="prefetch" href="/assets/js/29.62d06cb4.js"><link rel="prefetch" href="/assets/js/3.e3770c3e.js"><link rel="prefetch" href="/assets/js/30.03ca99af.js"><link rel="prefetch" href="/assets/js/31.eadd9b7f.js"><link rel="prefetch" href="/assets/js/32.b0704ec8.js"><link rel="prefetch" href="/assets/js/33.e6acffc2.js"><link rel="prefetch" href="/assets/js/34.1e016020.js"><link rel="prefetch" href="/assets/js/35.62f276e3.js"><link rel="prefetch" href="/assets/js/36.608c5ff6.js"><link rel="prefetch" href="/assets/js/37.649c1c5d.js"><link rel="prefetch" href="/assets/js/38.d91b3ac0.js"><link rel="prefetch" href="/assets/js/39.79eaf9f0.js"><link rel="prefetch" href="/assets/js/4.07df64b9.js"><link rel="prefetch" href="/assets/js/40.8c3d3845.js"><link rel="prefetch" href="/assets/js/41.5685a0cd.js"><link rel="prefetch" href="/assets/js/42.c1ab57fb.js"><link rel="prefetch" href="/assets/js/43.b954c251.js"><link rel="prefetch" href="/assets/js/44.d657ad1d.js"><link rel="prefetch" href="/assets/js/45.4496d452.js"><link rel="prefetch" href="/assets/js/46.926ad8df.js"><link rel="prefetch" href="/assets/js/47.6be08400.js"><link rel="prefetch" href="/assets/js/48.b1fd6940.js"><link rel="prefetch" href="/assets/js/49.f0ac85ee.js"><link rel="prefetch" href="/assets/js/5.315d7655.js"><link rel="prefetch" href="/assets/js/50.d04514e7.js"><link rel="prefetch" href="/assets/js/51.9d75145d.js"><link rel="prefetch" href="/assets/js/52.b016c06f.js"><link rel="prefetch" href="/assets/js/53.04a6c23c.js"><link rel="prefetch" href="/assets/js/54.a9699c91.js"><link rel="prefetch" href="/assets/js/55.8d3cb279.js"><link rel="prefetch" href="/assets/js/56.7ced4a88.js"><link rel="prefetch" href="/assets/js/57.c7186d75.js"><link rel="prefetch" href="/assets/js/58.5257d5cc.js"><link rel="prefetch" href="/assets/js/59.db68cc82.js"><link rel="prefetch" href="/assets/js/6.5fb7fa31.js"><link rel="prefetch" href="/assets/js/60.70f0daf8.js"><link rel="prefetch" href="/assets/js/61.1cbddbfd.js"><link rel="prefetch" href="/assets/js/62.655ed22b.js"><link rel="prefetch" href="/assets/js/63.52c1a201.js"><link rel="prefetch" href="/assets/js/64.ee5f161a.js"><link rel="prefetch" href="/assets/js/65.c0982e2c.js"><link rel="prefetch" href="/assets/js/66.1f15028f.js"><link rel="prefetch" href="/assets/js/67.9039bdb3.js"><link rel="prefetch" href="/assets/js/68.dcbff016.js"><link rel="prefetch" href="/assets/js/69.7f24d5a6.js"><link rel="prefetch" href="/assets/js/7.d8f2050a.js"><link rel="prefetch" href="/assets/js/70.fcd0120a.js"><link rel="prefetch" href="/assets/js/71.74b9afab.js"><link rel="prefetch" href="/assets/js/72.26fd885c.js"><link rel="prefetch" href="/assets/js/73.b6d6035d.js"><link rel="prefetch" href="/assets/js/74.8f195282.js"><link rel="prefetch" href="/assets/js/75.e30a94d2.js"><link rel="prefetch" href="/assets/js/76.7fe5c1a6.js"><link rel="prefetch" href="/assets/js/77.4253ea80.js"><link rel="prefetch" href="/assets/js/78.703cea06.js"><link rel="prefetch" href="/assets/js/79.d9dfc4af.js"><link rel="prefetch" href="/assets/js/80.72fe8d00.js"><link rel="prefetch" href="/assets/js/81.5fa79510.js"><link rel="prefetch" href="/assets/js/82.54623b19.js"><link rel="prefetch" href="/assets/js/83.22a20adb.js"><link rel="prefetch" href="/assets/js/84.15648cb4.js"><link rel="prefetch" href="/assets/js/85.0a15468e.js"><link rel="prefetch" href="/assets/js/86.46c6d645.js"><link rel="prefetch" href="/assets/js/87.1a0a8892.js"><link rel="prefetch" href="/assets/js/88.bffb80c0.js"><link rel="prefetch" href="/assets/js/89.75817206.js"><link rel="prefetch" href="/assets/js/90.4d564d3f.js"><link rel="prefetch" href="/assets/js/91.01888127.js"><link rel="prefetch" href="/assets/js/92.6f0111de.js"><link rel="prefetch" href="/assets/js/93.90b77fc7.js"><link rel="prefetch" href="/assets/js/94.fff4fc1e.js"><link rel="prefetch" href="/assets/js/95.af1bcbe5.js"><link rel="prefetch" href="/assets/js/96.d8bf3fbe.js"><link rel="prefetch" href="/assets/js/97.4d85d266.js"><link rel="prefetch" href="/assets/js/98.3ece59a9.js"><link rel="prefetch" href="/assets/js/99.6827ebdb.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.89026c5a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5149da19.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Landscape</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link router-link-active">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/operatingsystem/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术专区" class="dropdown-title"><span class="title">技术专区</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术专区" class="mobile-dropdown-title"><span class="title">技术专区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link router-link-active">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/operatingsystem/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div><div class="nav-item"><a href="https://github.com/jiangjiaheng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Reflect</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/tech/es6/proxy/Reflect.html#概述" class="sidebar-link">概述</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es6/proxy/Reflect.html#静态方法" class="sidebar-link">静态方法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es6/proxy/Reflect.html#_1-reflect-get-target-name-receiver" class="sidebar-link">1. Reflect.get(target, name, receiver)</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/proxy/Reflect.html#_2-reflect-set-target-name-value-receiver" class="sidebar-link">2. Reflect.set(target, name, value, receiver)</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/proxy/Reflect.html#_3-reflect-has-obj-name" class="sidebar-link">3. Reflect.has(obj, name)</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/proxy/Reflect.html#_4-reflect-deleteproperty-obj-name" class="sidebar-link">4. Reflect.deleteProperty(obj, name)</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/proxy/Reflect.html#_5-reflect-construct-target-args" class="sidebar-link">5. Reflect.construct(target, args)</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/proxy/Reflect.html#_6-reflect-getprototypeof-obj" class="sidebar-link">6. Reflect.getPrototypeOf(obj)</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/proxy/Reflect.html#_7-reflect-setprototypeof-obj-newproto" class="sidebar-link">7. Reflect.setPrototypeOf(obj, newProto)</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/proxy/Reflect.html#_8-reflect-apply-func-thisarg-args" class="sidebar-link">8. Reflect.apply(func, thisArg, args)</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/proxy/Reflect.html#_9-reflect-defineproperty-target-propertykey-attributes" class="sidebar-link">9. Reflect.defineProperty(target, propertyKey, attributes)</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/proxy/Reflect.html#_10-reflect-getownpropertydescriptor-target-propertykey" class="sidebar-link">10. Reflect.getOwnPropertyDescriptor(target, propertyKey)</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/proxy/Reflect.html#_11-reflect-isextensible-target" class="sidebar-link">11. Reflect.isExtensible (target)</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/proxy/Reflect.html#_12-reflect-preventextensions-target" class="sidebar-link">12. Reflect.preventExtensions(target)</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es6/proxy/Reflect.html#_13-reflect-ownkeys-target" class="sidebar-link">13. Reflect.ownKeys (target)</a></li></ul></li><li><a href="/docs/tech/es6/proxy/Reflect.html#实例-使用-proxy-实现观察者模式" class="sidebar-link">实例：使用 Proxy 实现观察者模式</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="reflect"><a href="#reflect" class="header-anchor">#</a> Reflect</h1> <h2 id="概述"><a href="#概述" class="header-anchor">#</a> 概述</h2> <p>Reflect对象与Proxy对象一样，也是 ES6 为了操作对象而提供的新 API。Reflect对象的设计目的有这样几个。</p> <p>（1） 将Object对象的一些明显属于语言内部的方法（比如Object.defineProperty），放到Reflect对象上。现阶段，某些方法同时在Object和Reflect对象上部署，未来的新方法将只部署在Reflect对象上。也就是说，从Reflect对象上可以拿到语言内部的方法。</p> <p>（2） 修改某些Object方法的返回结果，让其变得更合理。比如，Object.defineProperty(obj, name, desc)在无法定义属性时，会抛出一个错误，而Reflect.defineProperty(obj, name, desc)则会返回false。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>// 老写法
+try {
+  Object.defineProperty(target, property, attributes);
+  // success
+} catch (e) {
+  // failure
+}
+
+// 新写法
+if (Reflect.defineProperty(target, property, attributes)) {
+  // success
+} else {
+  // failure
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>（3） 让Object操作都变成函数行为。某些Object操作是命令式，比如name in obj和delete obj[name]，而Reflect.has(obj, name)和Reflect.deleteProperty(obj, name)让它们变成了函数行为。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>// 老写法
+'assign' in Object // true
+
+// 新写法
+Reflect.has(Object, 'assign') // true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>（4）Reflect对象的方法与Proxy对象的方法一一对应，只要是Proxy对象的方法，就能在Reflect对象上找到对应的方法。这就让Proxy对象可以方便地调用对应的Reflect方法，完成默认行为，作为修改行为的基础。也就是说，不管Proxy怎么修改默认行为，你总可以在Reflect上获取默认行为。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>Proxy(target, {
+  set: function(target, name, value, receiver) {
+    var success = Reflect.set(target, name, value, receiver);
+    if (success) {
+      console.log('property ' + name + ' on ' + target + ' set to ' + value);
+    }
+    return success;
+  }
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>上面代码中，Proxy方法拦截target对象的属性赋值行为。它采用Reflect.set方法将值赋值给对象的属性，确保完成原有的行为，然后再部署额外的功能。</p> <p>下面是另一个例子。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>var loggedObj = new Proxy(obj, {
+  get(target, name) {
+    console.log('get', target, name);
+    return Reflect.get(target, name);
+  },
+  deleteProperty(target, name) {
+    console.log('delete' + name);
+    return Reflect.deleteProperty(target, name);
+  },
+  has(target, name) {
+    console.log('has' + name);
+    return Reflect.has(target, name);
+  }
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>上面代码中，每一个Proxy对象的拦截操作（get、delete、has），内部都调用对应的Reflect方法，保证原生行为能够正常执行。添加的工作，就是将每一个操作输出一行日志。</p> <p>有了Reflect对象以后，很多操作会更易读。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>// 老写法
+Function.prototype.apply.call(Math.floor, undefined, [1.75]) // 1
+
+// 新写法
+Reflect.apply(Math.floor, undefined, [1.75]) // 1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="静态方法"><a href="#静态方法" class="header-anchor">#</a> 静态方法</h2> <p>Reflect对象一共有 13 个静态方法。</p> <ul><li>Reflect.apply(target, thisArg, args)</li> <li>Reflect.construct(target, args)</li> <li>Reflect.get(target, name, receiver)</li> <li>Reflect.set(target, name, value, receiver)</li> <li>Reflect.defineProperty(target, name, desc)</li> <li>Reflect.deleteProperty(target, name)</li> <li>Reflect.has(target, name)</li> <li>Reflect.ownKeys(target)</li> <li>Reflect.isExtensible(target)</li> <li>Reflect.preventExtensions(target)</li> <li>Reflect.getOwnPropertyDescriptor(target, name)</li> <li>Reflect.getPrototypeOf(target)</li> <li>Reflect.setPrototypeOf(target, prototype)</li></ul> <p>上面这些方法的作用，大部分与Object对象的同名方法的作用都是相同的，而且它与Proxy对象的方法是一一对应的。下面是对它们的解释。</p> <h3 id="_1-reflect-get-target-name-receiver"><a href="#_1-reflect-get-target-name-receiver" class="header-anchor">#</a> 1. Reflect.get(target, name, receiver)</h3> <p>Reflect.get方法查找并返回target对象的name属性，如果没有该属性，则返回undefined。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>var myObject = {
+  foo: 1,
+  bar: 2,
+  get baz() {
+    return this.foo + this.bar;
+  },
+}
+
+Reflect.get(myObject, 'foo') // 1
+Reflect.get(myObject, 'bar') // 2
+Reflect.get(myObject, 'baz') // 3
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>如果name属性部署了读取函数（getter），则读取函数的this绑定receiver。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>var myObject = {
+  foo: 1,
+  bar: 2,
+  get baz() {
+    return this.foo + this.bar;
+  },
+};
+
+var myReceiverObject = {
+  foo: 4,
+  bar: 4,
+};
+
+Reflect.get(myObject, 'baz', myReceiverObject) // 8
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>如果第一个参数不是对象，Reflect.get方法会报错。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>Reflect.get(1, 'foo') // 报错
+Reflect.get(false, 'foo') // 报错
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_2-reflect-set-target-name-value-receiver"><a href="#_2-reflect-set-target-name-value-receiver" class="header-anchor">#</a> 2. Reflect.set(target, name, value, receiver)</h3> <p>Reflect.set方法设置target对象的name属性等于value。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>var myObject = {
+  foo: 1,
+  set bar(value) {
+    return this.foo = value;
+  },
+}
+
+myObject.foo // 1
+
+Reflect.set(myObject, 'foo', 2);
+myObject.foo // 2
+
+Reflect.set(myObject, 'bar', 3)
+myObject.foo // 3
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>如果name属性设置了赋值函数，则赋值函数的this绑定receiver。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>var myObject = {
+  foo: 4,
+  set bar(value) {
+    return this.foo = value;
+  },
+};
+
+var myReceiverObject = {
+  foo: 0,
+};
+
+Reflect.set(myObject, 'bar', 1, myReceiverObject);
+myObject.foo // 4
+myReceiverObject.foo // 1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>注意，如果 Proxy对象和 Reflect对象联合使用，前者拦截赋值操作，后者完成赋值的默认行为，而且传入了receiver，那么Reflect.set会触发Proxy.defineProperty拦截。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>let p = {
+  a: 'a'
+};
+
+let handler = {
+  set(target, key, value, receiver) {
+    console.log('set');
+    Reflect.set(target, key, value, receiver)
+  },
+  defineProperty(target, key, attribute) {
+    console.log('defineProperty');
+    Reflect.defineProperty(target, key, attribute);
+  }
+};
+
+let obj = new Proxy(p, handler);
+obj.a = 'A';
+// set
+// defineProperty
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>上面代码中，Proxy.set拦截里面使用了Reflect.set，而且传入了receiver，导致触发Proxy.defineProperty拦截。这是因为Proxy.set的receiver参数总是指向当前的 Proxy实例（即上例的obj），而Reflect.set一旦传入receiver，就会将属性赋值到receiver上面（即obj），导致触发defineProperty拦截。如果Reflect.set没有传入receiver，那么就不会触发defineProperty拦截。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>let p = {
+  a: 'a'
+};
+
+let handler = {
+  set(target, key, value, receiver) {
+    console.log('set');
+    Reflect.set(target, key, value)
+  },
+  defineProperty(target, key, attribute) {
+    console.log('defineProperty');
+    Reflect.defineProperty(target, key, attribute);
+  }
+};
+
+let obj = new Proxy(p, handler);
+obj.a = 'A';
+// set
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>如果第一个参数不是对象，Reflect.set会报错。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>Reflect.set(1, 'foo', {}) // 报错
+Reflect.set(false, 'foo', {}) // 报错
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_3-reflect-has-obj-name"><a href="#_3-reflect-has-obj-name" class="header-anchor">#</a> 3. Reflect.has(obj, name)</h3> <p>Reflect.has方法对应name in obj里面的in运算符。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>var myObject = {
+  foo: 1,
+};
+
+// 旧写法
+'foo' in myObject // true
+
+// 新写法
+Reflect.has(myObject, 'foo') // true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>如果Reflect.has()方法的第一个参数不是对象，会报错。</p> <h3 id="_4-reflect-deleteproperty-obj-name"><a href="#_4-reflect-deleteproperty-obj-name" class="header-anchor">#</a> 4. Reflect.deleteProperty(obj, name)</h3> <p>Reflect.deleteProperty方法等同于delete obj[name]，用于删除对象的属性。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>const myObj = { foo: 'bar' };
+
+// 旧写法
+delete myObj.foo;
+
+// 新写法
+Reflect.deleteProperty(myObj, 'foo');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>该方法返回一个布尔值。如果删除成功，或者被删除的属性不存在，返回true；删除失败，被删除的属性依然存在，返回false。</p> <p>如果Reflect.deleteProperty()方法的第一个参数不是对象，会报错。</p> <h3 id="_5-reflect-construct-target-args"><a href="#_5-reflect-construct-target-args" class="header-anchor">#</a> 5. Reflect.construct(target, args)</h3> <p>Reflect.construct方法等同于new target(...args)，这提供了一种不使用new，来调用构造函数的方法。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>function Greeting(name) {
+  this.name = name;
+}
+
+// new 的写法
+const instance = new Greeting('张三');
+
+// Reflect.construct 的写法
+const instance = Reflect.construct(Greeting, ['张三']);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>如果Reflect.construct()方法的第一个参数不是函数，会报错。</p> <h3 id="_6-reflect-getprototypeof-obj"><a href="#_6-reflect-getprototypeof-obj" class="header-anchor">#</a> 6. Reflect.getPrototypeOf(obj)</h3> <p>Reflect.getPrototypeOf方法用于读取对象的__proto__属性，对应Object.getPrototypeOf(obj)。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>const myObj = new FancyThing();
+
+// 旧写法
+Object.getPrototypeOf(myObj) === FancyThing.prototype;
+
+// 新写法
+Reflect.getPrototypeOf(myObj) === FancyThing.prototype;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>Reflect.getPrototypeOf和Object.getPrototypeOf的一个区别是，如果参数不是对象，Object.getPrototypeOf会将这个参数转为对象，然后再运行，而Reflect.getPrototypeOf会报错。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>Object.getPrototypeOf(1) // Number {[[PrimitiveValue]]: 0}
+Reflect.getPrototypeOf(1) // 报错
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_7-reflect-setprototypeof-obj-newproto"><a href="#_7-reflect-setprototypeof-obj-newproto" class="header-anchor">#</a> 7. Reflect.setPrototypeOf(obj, newProto)</h3> <p>Reflect.setPrototypeOf方法用于设置目标对象的原型（prototype），对应Object.setPrototypeOf(obj, newProto)方法。它返回一个布尔值，表示是否设置成功。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>const myObj = {};
+
+// 旧写法
+Object.setPrototypeOf(myObj, Array.prototype);
+
+// 新写法
+Reflect.setPrototypeOf(myObj, Array.prototype);
+
+myObj.length // 0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>如果无法设置目标对象的原型（比如，目标对象禁止扩展），</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>Reflect.setPrototypeOf方法返回false。
+
+Reflect.setPrototypeOf({}, null)
+// true
+Reflect.setPrototypeOf(Object.freeze({}), null)
+// false
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>如果第一个参数不是对象，Object.setPrototypeOf会返回第一个参数本身，而Reflect.setPrototypeOf会报错。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>Object.setPrototypeOf(1, {})
+// 1
+
+Reflect.setPrototypeOf(1, {})
+// TypeError: Reflect.setPrototypeOf called on non-object
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>如果第一个参数是undefined或null，Object.setPrototypeOf和Reflect.setPrototypeOf都会报错。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>Object.setPrototypeOf(null, {})
+// TypeError: Object.setPrototypeOf called on null or undefined
+
+Reflect.setPrototypeOf(null, {})
+// TypeError: Reflect.setPrototypeOf called on non-object
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="_8-reflect-apply-func-thisarg-args"><a href="#_8-reflect-apply-func-thisarg-args" class="header-anchor">#</a> 8. Reflect.apply(func, thisArg, args)</h3> <p>Reflect.apply方法等同于Function.prototype.apply.call(func, thisArg, args)，用于绑定this对象后执行给定函数。</p> <p>一般来说，如果要绑定一个函数的this对象，可以这样写fn.apply(obj, args)，但是如果函数定义了自己的apply方法，就只能写成Function.prototype.apply.call(fn, obj, args)，采用Reflect对象可以简化这种操作。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>const ages = [11, 33, 12, 54, 18, 96];
+
+// 旧写法
+const youngest = Math.min.apply(Math, ages);
+const oldest = Math.max.apply(Math, ages);
+const type = Object.prototype.toString.call(youngest);
+
+// 新写法
+const youngest = Reflect.apply(Math.min, Math, ages);
+const oldest = Reflect.apply(Math.max, Math, ages);
+const type = Reflect.apply(Object.prototype.toString, youngest, []);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h3 id="_9-reflect-defineproperty-target-propertykey-attributes"><a href="#_9-reflect-defineproperty-target-propertykey-attributes" class="header-anchor">#</a> 9. Reflect.defineProperty(target, propertyKey, attributes)</h3> <p>Reflect.defineProperty方法基本等同于Object.defineProperty，用来为对象定义属性。未来，后者会被逐渐废除，请从现在开始就使用Reflect.defineProperty代替它。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>function MyDate() {
+  /*…*/
+}
+
+// 旧写法
+Object.defineProperty(MyDate, 'now', {
+  value: () =&gt; Date.now()
+});
+
+// 新写法
+Reflect.defineProperty(MyDate, 'now', {
+  value: () =&gt; Date.now()
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>如果Reflect.defineProperty的第一个参数不是对象，就会抛出错误，比如Reflect.defineProperty(1, 'foo')。</p> <p>这个方法可以与Proxy.defineProperty配合使用。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>const p = new Proxy({}, {
+  defineProperty(target, prop, descriptor) {
+    console.log(descriptor);
+    return Reflect.defineProperty(target, prop, descriptor);
+  }
+});
+
+p.foo = 'bar';
+// {value: &quot;bar&quot;, writable: true, enumerable: true, configurable: true}
+
+p.foo // &quot;bar&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>上面代码中，Proxy.defineProperty对属性赋值设置了拦截，然后使用Reflect.defineProperty完成了赋值。</p> <h3 id="_10-reflect-getownpropertydescriptor-target-propertykey"><a href="#_10-reflect-getownpropertydescriptor-target-propertykey" class="header-anchor">#</a> 10. Reflect.getOwnPropertyDescriptor(target, propertyKey)</h3> <p>Reflect.getOwnPropertyDescriptor基本等同于Object.getOwnPropertyDescriptor，用于得到指定属性的描述对象，将来会替代掉后者。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>var myObject = {};
+Object.defineProperty(myObject, 'hidden', {
+  value: true,
+  enumerable: false,
+});
+
+// 旧写法
+var theDescriptor = Object.getOwnPropertyDescriptor(myObject, 'hidden');
+
+// 新写法
+var theDescriptor = Reflect.getOwnPropertyDescriptor(myObject, 'hidden');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>Reflect.getOwnPropertyDescriptor和Object.getOwnPropertyDescriptor的一个区别是，如果第一个参数不是对象，Object.getOwnPropertyDescriptor(1, 'foo')不报错，返回undefined，而Reflect.getOwnPropertyDescriptor(1, 'foo')会抛出错误，表示参数非法。</p> <h3 id="_11-reflect-isextensible-target"><a href="#_11-reflect-isextensible-target" class="header-anchor">#</a> 11. Reflect.isExtensible (target)</h3> <p>Reflect.isExtensible方法对应Object.isExtensible，返回一个布尔值，表示当前对象是否可扩展。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>const myObject = {};
+
+// 旧写法
+Object.isExtensible(myObject) // true
+
+// 新写法
+Reflect.isExtensible(myObject) // true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>如果参数不是对象，Object.isExtensible会返回false，因为非对象本来就是不可扩展的，而Reflect.isExtensible会报错。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>Object.isExtensible(1) // false
+Reflect.isExtensible(1) // 报错
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_12-reflect-preventextensions-target"><a href="#_12-reflect-preventextensions-target" class="header-anchor">#</a> 12. Reflect.preventExtensions(target)</h3> <p>Reflect.preventExtensions对应Object.preventExtensions方法，用于让一个对象变为不可扩展。它返回一个布尔值，表示是否操作成功。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>var myObject = {};
+
+// 旧写法
+Object.preventExtensions(myObject) // Object {}
+
+// 新写法
+Reflect.preventExtensions(myObject) // true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>如果参数不是对象，Object.preventExtensions在 ES5 环境报错，在 ES6 环境返回传入的参数，而Reflect.preventExtensions会报错。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>// ES5 环境
+Object.preventExtensions(1) // 报错
+
+// ES6 环境
+Object.preventExtensions(1) // 1
+
+// 新写法
+Reflect.preventExtensions(1) // 报错
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="_13-reflect-ownkeys-target"><a href="#_13-reflect-ownkeys-target" class="header-anchor">#</a> 13. Reflect.ownKeys (target)</h3> <p>Reflect.ownKeys方法用于返回对象的所有属性，基本等同于Object.getOwnPropertyNames与Object.getOwnPropertySymbols之和。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>var myObject = {
+  foo: 1,
+  bar: 2,
+  [Symbol.for('baz')]: 3,
+  [Symbol.for('bing')]: 4,
+};
+
+// 旧写法
+Object.getOwnPropertyNames(myObject)
+// ['foo', 'bar']
+
+Object.getOwnPropertySymbols(myObject)
+//[Symbol(baz), Symbol(bing)]
+
+// 新写法
+Reflect.ownKeys(myObject)
+// ['foo', 'bar', Symbol(baz), Symbol(bing)]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>如果Reflect.ownKeys()方法的第一个参数不是对象，会报错。</p> <h2 id="实例-使用-proxy-实现观察者模式"><a href="#实例-使用-proxy-实现观察者模式" class="header-anchor">#</a> 实例：使用 Proxy 实现观察者模式</h2> <p>观察者模式（Observer mode）指的是函数自动观察数据对象，一旦对象有变化，函数就会自动执行。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>const person = observable({
+  name: '张三',
+  age: 20
+});
+
+function print() {
+  console.log(`${person.name}, ${person.age}`)
+}
+
+observe(print);
+person.name = '李四';
+// 输出
+// 李四, 20
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>上面代码中，数据对象person是观察目标，函数print是观察者。一旦数据对象发生变化，print就会自动执行。</p> <p>下面，使用 Proxy 写一个观察者模式的最简单实现，即实现observable和observe这两个函数。思路是observable函数返回一个原始对象的 Proxy 代理，拦截赋值操作，触发充当观察者的各个函数。</p> <div class="language-pro line-numbers-mode"><pre class="language-text"><code>const queuedObservers = new Set();
+
+const observe = fn =&gt; queuedObservers.add(fn);
+const observable = obj =&gt; new Proxy(obj, {set});
+
+function set(target, key, value, receiver) {
+  const result = Reflect.set(target, key, value, receiver);
+  queuedObservers.forEach(observer =&gt; observer());
+  return result;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>上面代码中，先定义了一个Set集合，所有观察者函数都放进这个集合。然后，observable函数返回原始对象的代理，拦截赋值操作。拦截函数set之中，会自动执行所有观察者。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.4259f585.js" defer></script><script src="/assets/js/2.299a7e59.js" defer></script><script src="/assets/js/1.2c8cdafe.js" defer></script><script src="/assets/js/237.6dfb78fa.js" defer></script>
+  </body>
+</html>
