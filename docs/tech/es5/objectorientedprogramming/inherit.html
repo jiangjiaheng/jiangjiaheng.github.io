@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>对象的继承 | Landscape</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="私人博客网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.34d602cb.css" as="style"><link rel="preload" href="/assets/js/app.e8c9288e.js" as="script"><link rel="preload" href="/assets/js/2.19de91aa.js" as="script"><link rel="preload" href="/assets/js/1.b8c7c4ec.js" as="script"><link rel="preload" href="/assets/js/197.7a392fb6.js" as="script"><link rel="prefetch" href="/assets/js/10.9a78c136.js"><link rel="prefetch" href="/assets/js/100.01b69428.js"><link rel="prefetch" href="/assets/js/101.ccdaa168.js"><link rel="prefetch" href="/assets/js/102.e7c33688.js"><link rel="prefetch" href="/assets/js/103.d20fd322.js"><link rel="prefetch" href="/assets/js/104.4d8b549d.js"><link rel="prefetch" href="/assets/js/105.7519e755.js"><link rel="prefetch" href="/assets/js/106.ad4b4d99.js"><link rel="prefetch" href="/assets/js/107.a619abb3.js"><link rel="prefetch" href="/assets/js/108.1c487a0f.js"><link rel="prefetch" href="/assets/js/109.24f381a6.js"><link rel="prefetch" href="/assets/js/11.727c4fbd.js"><link rel="prefetch" href="/assets/js/110.b006fcb3.js"><link rel="prefetch" href="/assets/js/111.db5dacd5.js"><link rel="prefetch" href="/assets/js/112.e1dd0dbf.js"><link rel="prefetch" href="/assets/js/113.4859da40.js"><link rel="prefetch" href="/assets/js/114.5a75d8ef.js"><link rel="prefetch" href="/assets/js/115.f48e1bc9.js"><link rel="prefetch" href="/assets/js/116.ae5314b8.js"><link rel="prefetch" href="/assets/js/117.a4142df0.js"><link rel="prefetch" href="/assets/js/118.e06e09c1.js"><link rel="prefetch" href="/assets/js/119.5e3d21a5.js"><link rel="prefetch" href="/assets/js/12.c51f03c4.js"><link rel="prefetch" href="/assets/js/120.1b8478cf.js"><link rel="prefetch" href="/assets/js/121.93a1b320.js"><link rel="prefetch" href="/assets/js/122.e7e00d39.js"><link rel="prefetch" href="/assets/js/123.121ad94b.js"><link rel="prefetch" href="/assets/js/124.e26b2718.js"><link rel="prefetch" href="/assets/js/125.9fa1c3f3.js"><link rel="prefetch" href="/assets/js/126.405ff5d8.js"><link rel="prefetch" href="/assets/js/127.1cba4f85.js"><link rel="prefetch" href="/assets/js/128.f8e74642.js"><link rel="prefetch" href="/assets/js/129.51737a9a.js"><link rel="prefetch" href="/assets/js/13.63e2250d.js"><link rel="prefetch" href="/assets/js/130.22c7c947.js"><link rel="prefetch" href="/assets/js/131.082e3934.js"><link rel="prefetch" href="/assets/js/132.627cbf2e.js"><link rel="prefetch" href="/assets/js/133.fc66db1d.js"><link rel="prefetch" href="/assets/js/134.1eb59153.js"><link rel="prefetch" href="/assets/js/135.8074468c.js"><link rel="prefetch" href="/assets/js/136.e91a75a2.js"><link rel="prefetch" href="/assets/js/137.b8b90e19.js"><link rel="prefetch" href="/assets/js/138.5c7fcce7.js"><link rel="prefetch" href="/assets/js/139.431ccd9e.js"><link rel="prefetch" href="/assets/js/14.67a0f1e3.js"><link rel="prefetch" href="/assets/js/140.5591c850.js"><link rel="prefetch" href="/assets/js/141.6eafa5c4.js"><link rel="prefetch" href="/assets/js/142.b8bab2ba.js"><link rel="prefetch" href="/assets/js/143.316a51f7.js"><link rel="prefetch" href="/assets/js/144.8fd00e5a.js"><link rel="prefetch" href="/assets/js/145.59581c2b.js"><link rel="prefetch" href="/assets/js/146.eb2facfa.js"><link rel="prefetch" href="/assets/js/147.4f2e8460.js"><link rel="prefetch" href="/assets/js/148.ee68cd34.js"><link rel="prefetch" href="/assets/js/149.e979abb4.js"><link rel="prefetch" href="/assets/js/15.6941784f.js"><link rel="prefetch" href="/assets/js/150.dabf7b40.js"><link rel="prefetch" href="/assets/js/151.2ad6ae31.js"><link rel="prefetch" href="/assets/js/152.a300c987.js"><link rel="prefetch" href="/assets/js/153.fad6e0fa.js"><link rel="prefetch" href="/assets/js/154.f861d5de.js"><link rel="prefetch" href="/assets/js/155.bf4ac1bb.js"><link rel="prefetch" href="/assets/js/156.e03119ed.js"><link rel="prefetch" href="/assets/js/157.05696850.js"><link rel="prefetch" href="/assets/js/158.4f0e3bdf.js"><link rel="prefetch" href="/assets/js/159.a14e50a8.js"><link rel="prefetch" href="/assets/js/16.268b7541.js"><link rel="prefetch" href="/assets/js/160.21608880.js"><link rel="prefetch" href="/assets/js/161.52762b91.js"><link rel="prefetch" href="/assets/js/162.5089799b.js"><link rel="prefetch" href="/assets/js/163.78122071.js"><link rel="prefetch" href="/assets/js/164.61797a5d.js"><link rel="prefetch" href="/assets/js/165.ade03605.js"><link rel="prefetch" href="/assets/js/166.bc6776f8.js"><link rel="prefetch" href="/assets/js/167.8b1cb686.js"><link rel="prefetch" href="/assets/js/168.56eaab85.js"><link rel="prefetch" href="/assets/js/169.839fb52c.js"><link rel="prefetch" href="/assets/js/17.bc320121.js"><link rel="prefetch" href="/assets/js/170.f5c685da.js"><link rel="prefetch" href="/assets/js/171.46757b58.js"><link rel="prefetch" href="/assets/js/172.696e427f.js"><link rel="prefetch" href="/assets/js/173.d06bba88.js"><link rel="prefetch" href="/assets/js/174.bdab8eb7.js"><link rel="prefetch" href="/assets/js/175.ef1c5c29.js"><link rel="prefetch" href="/assets/js/176.00c913f6.js"><link rel="prefetch" href="/assets/js/177.1d3e0120.js"><link rel="prefetch" href="/assets/js/178.a788bea4.js"><link rel="prefetch" href="/assets/js/179.7d0ba21a.js"><link rel="prefetch" href="/assets/js/18.f25a177b.js"><link rel="prefetch" href="/assets/js/180.412b50aa.js"><link rel="prefetch" href="/assets/js/181.e8778882.js"><link rel="prefetch" href="/assets/js/182.4eca2ecc.js"><link rel="prefetch" href="/assets/js/183.75739501.js"><link rel="prefetch" href="/assets/js/184.4cf18d59.js"><link rel="prefetch" href="/assets/js/185.99a2eb23.js"><link rel="prefetch" href="/assets/js/186.eca197a3.js"><link rel="prefetch" href="/assets/js/187.b6e983ec.js"><link rel="prefetch" href="/assets/js/188.94a77947.js"><link rel="prefetch" href="/assets/js/189.54a2f8ca.js"><link rel="prefetch" href="/assets/js/19.69a9cb43.js"><link rel="prefetch" href="/assets/js/190.fdd2908e.js"><link rel="prefetch" href="/assets/js/191.40123657.js"><link rel="prefetch" href="/assets/js/192.f300c167.js"><link rel="prefetch" href="/assets/js/193.1db98797.js"><link rel="prefetch" href="/assets/js/194.f6b18f95.js"><link rel="prefetch" href="/assets/js/195.3af2a17d.js"><link rel="prefetch" href="/assets/js/196.5caeca0b.js"><link rel="prefetch" href="/assets/js/198.f968af4b.js"><link rel="prefetch" href="/assets/js/199.a6590753.js"><link rel="prefetch" href="/assets/js/20.02a969ac.js"><link rel="prefetch" href="/assets/js/200.9228548b.js"><link rel="prefetch" href="/assets/js/201.ecb9e00d.js"><link rel="prefetch" href="/assets/js/202.a8cfd71d.js"><link rel="prefetch" href="/assets/js/203.cdd6641c.js"><link rel="prefetch" href="/assets/js/204.63cec705.js"><link rel="prefetch" href="/assets/js/205.1a04fad3.js"><link rel="prefetch" href="/assets/js/206.c571e641.js"><link rel="prefetch" href="/assets/js/207.13028d5e.js"><link rel="prefetch" href="/assets/js/208.f70d048e.js"><link rel="prefetch" href="/assets/js/209.40836579.js"><link rel="prefetch" href="/assets/js/21.de545bd9.js"><link rel="prefetch" href="/assets/js/210.ae38c89a.js"><link rel="prefetch" href="/assets/js/211.aedd3c9a.js"><link rel="prefetch" href="/assets/js/212.4f00329b.js"><link rel="prefetch" href="/assets/js/213.0beacf59.js"><link rel="prefetch" href="/assets/js/214.20fcb940.js"><link rel="prefetch" href="/assets/js/215.d2218f2b.js"><link rel="prefetch" href="/assets/js/216.5bfb2a52.js"><link rel="prefetch" href="/assets/js/217.25f1f89a.js"><link rel="prefetch" href="/assets/js/218.9f86ddc4.js"><link rel="prefetch" href="/assets/js/219.dfa4366c.js"><link rel="prefetch" href="/assets/js/22.27a539f2.js"><link rel="prefetch" href="/assets/js/220.b5311c13.js"><link rel="prefetch" href="/assets/js/221.b48c2e95.js"><link rel="prefetch" href="/assets/js/222.1538c015.js"><link rel="prefetch" href="/assets/js/223.cc678d45.js"><link rel="prefetch" href="/assets/js/224.5177563e.js"><link rel="prefetch" href="/assets/js/225.92e57777.js"><link rel="prefetch" href="/assets/js/226.5f2d1d70.js"><link rel="prefetch" href="/assets/js/227.cf3488bc.js"><link rel="prefetch" href="/assets/js/228.cb724655.js"><link rel="prefetch" href="/assets/js/229.756f5937.js"><link rel="prefetch" href="/assets/js/23.ecf0ef9e.js"><link rel="prefetch" href="/assets/js/230.815104ec.js"><link rel="prefetch" href="/assets/js/231.df4393e4.js"><link rel="prefetch" href="/assets/js/232.2219a798.js"><link rel="prefetch" href="/assets/js/233.d2e17668.js"><link rel="prefetch" href="/assets/js/234.36e0c960.js"><link rel="prefetch" href="/assets/js/235.e5543661.js"><link rel="prefetch" href="/assets/js/236.d552de55.js"><link rel="prefetch" href="/assets/js/237.922297a9.js"><link rel="prefetch" href="/assets/js/238.e150d77d.js"><link rel="prefetch" href="/assets/js/239.d956b438.js"><link rel="prefetch" href="/assets/js/24.c5413640.js"><link rel="prefetch" href="/assets/js/240.052555ac.js"><link rel="prefetch" href="/assets/js/241.8676759a.js"><link rel="prefetch" href="/assets/js/242.44a70abf.js"><link rel="prefetch" href="/assets/js/243.009d09c2.js"><link rel="prefetch" href="/assets/js/244.d5b98dfc.js"><link rel="prefetch" href="/assets/js/245.ec193a7c.js"><link rel="prefetch" href="/assets/js/246.6f914502.js"><link rel="prefetch" href="/assets/js/247.e75d1312.js"><link rel="prefetch" href="/assets/js/248.0a08316a.js"><link rel="prefetch" href="/assets/js/249.3d3f59a4.js"><link rel="prefetch" href="/assets/js/25.4f1a089d.js"><link rel="prefetch" href="/assets/js/250.4e09b392.js"><link rel="prefetch" href="/assets/js/251.899f32cb.js"><link rel="prefetch" href="/assets/js/252.dd1e3530.js"><link rel="prefetch" href="/assets/js/253.1a8efb53.js"><link rel="prefetch" href="/assets/js/254.b7ed4ed1.js"><link rel="prefetch" href="/assets/js/255.7b318181.js"><link rel="prefetch" href="/assets/js/256.30b009b8.js"><link rel="prefetch" href="/assets/js/257.ec513f42.js"><link rel="prefetch" href="/assets/js/258.4c6279ab.js"><link rel="prefetch" href="/assets/js/259.5e1850aa.js"><link rel="prefetch" href="/assets/js/26.67b23bcd.js"><link rel="prefetch" href="/assets/js/260.169dffab.js"><link rel="prefetch" href="/assets/js/261.9b38d20b.js"><link rel="prefetch" href="/assets/js/262.1f445e1d.js"><link rel="prefetch" href="/assets/js/263.d41addb8.js"><link rel="prefetch" href="/assets/js/264.ef77bddf.js"><link rel="prefetch" href="/assets/js/265.b83f9904.js"><link rel="prefetch" href="/assets/js/266.a92c527c.js"><link rel="prefetch" href="/assets/js/267.9bda505f.js"><link rel="prefetch" href="/assets/js/268.2314a273.js"><link rel="prefetch" href="/assets/js/269.5743bf8c.js"><link rel="prefetch" href="/assets/js/27.a5bed48c.js"><link rel="prefetch" href="/assets/js/270.63b38ea5.js"><link rel="prefetch" href="/assets/js/271.5597f66d.js"><link rel="prefetch" href="/assets/js/272.a9a9d031.js"><link rel="prefetch" href="/assets/js/273.a580c188.js"><link rel="prefetch" href="/assets/js/274.6c5716d6.js"><link rel="prefetch" href="/assets/js/275.872ad198.js"><link rel="prefetch" href="/assets/js/276.9f16d95d.js"><link rel="prefetch" href="/assets/js/277.0e390e24.js"><link rel="prefetch" href="/assets/js/278.ebe7e4b3.js"><link rel="prefetch" href="/assets/js/279.6b9bc788.js"><link rel="prefetch" href="/assets/js/28.0eff9113.js"><link rel="prefetch" href="/assets/js/280.890d9f75.js"><link rel="prefetch" href="/assets/js/281.c9832843.js"><link rel="prefetch" href="/assets/js/282.836e8b59.js"><link rel="prefetch" href="/assets/js/283.1c4bf24f.js"><link rel="prefetch" href="/assets/js/284.c57537c7.js"><link rel="prefetch" href="/assets/js/285.e45e273a.js"><link rel="prefetch" href="/assets/js/286.b9a0077b.js"><link rel="prefetch" href="/assets/js/287.bd9e2450.js"><link rel="prefetch" href="/assets/js/288.8ee0e84d.js"><link rel="prefetch" href="/assets/js/29.76446300.js"><link rel="prefetch" href="/assets/js/3.e3770c3e.js"><link rel="prefetch" href="/assets/js/30.fcc896cd.js"><link rel="prefetch" href="/assets/js/31.ef6e9335.js"><link rel="prefetch" href="/assets/js/32.065fbe10.js"><link rel="prefetch" href="/assets/js/33.7478b3f1.js"><link rel="prefetch" href="/assets/js/34.7f32219a.js"><link rel="prefetch" href="/assets/js/35.62f276e3.js"><link rel="prefetch" href="/assets/js/36.3de6ebf7.js"><link rel="prefetch" href="/assets/js/37.cbe3112f.js"><link rel="prefetch" href="/assets/js/38.6d5f5cd7.js"><link rel="prefetch" href="/assets/js/39.79eaf9f0.js"><link rel="prefetch" href="/assets/js/4.0ff50b62.js"><link rel="prefetch" href="/assets/js/40.cffed2b1.js"><link rel="prefetch" href="/assets/js/41.07b6445c.js"><link rel="prefetch" href="/assets/js/42.ac73f293.js"><link rel="prefetch" href="/assets/js/43.518654ff.js"><link rel="prefetch" href="/assets/js/44.5260e643.js"><link rel="prefetch" href="/assets/js/45.2414bbae.js"><link rel="prefetch" href="/assets/js/46.a17f3730.js"><link rel="prefetch" href="/assets/js/47.61be273f.js"><link rel="prefetch" href="/assets/js/48.c8884a40.js"><link rel="prefetch" href="/assets/js/49.29b7b0c3.js"><link rel="prefetch" href="/assets/js/5.74550c63.js"><link rel="prefetch" href="/assets/js/50.e74a9859.js"><link rel="prefetch" href="/assets/js/51.22a91662.js"><link rel="prefetch" href="/assets/js/52.6d7d4ab6.js"><link rel="prefetch" href="/assets/js/53.0cc5fb05.js"><link rel="prefetch" href="/assets/js/54.df01b238.js"><link rel="prefetch" href="/assets/js/55.276f7ef8.js"><link rel="prefetch" href="/assets/js/56.e739bfd6.js"><link rel="prefetch" href="/assets/js/57.81e30c0e.js"><link rel="prefetch" href="/assets/js/58.4b56e919.js"><link rel="prefetch" href="/assets/js/59.4c1eb2f5.js"><link rel="prefetch" href="/assets/js/6.78b24c3c.js"><link rel="prefetch" href="/assets/js/60.605f5ac2.js"><link rel="prefetch" href="/assets/js/61.ef64701f.js"><link rel="prefetch" href="/assets/js/62.072b04bb.js"><link rel="prefetch" href="/assets/js/63.4361ebed.js"><link rel="prefetch" href="/assets/js/64.7e5d24ca.js"><link rel="prefetch" href="/assets/js/65.a45184c8.js"><link rel="prefetch" href="/assets/js/66.e5f0ee88.js"><link rel="prefetch" href="/assets/js/67.10add50d.js"><link rel="prefetch" href="/assets/js/68.b769379f.js"><link rel="prefetch" href="/assets/js/69.c207d7cf.js"><link rel="prefetch" href="/assets/js/7.f24ea231.js"><link rel="prefetch" href="/assets/js/70.da8d8ab3.js"><link rel="prefetch" href="/assets/js/71.7a1b67a8.js"><link rel="prefetch" href="/assets/js/72.d592d777.js"><link rel="prefetch" href="/assets/js/73.8d15cfee.js"><link rel="prefetch" href="/assets/js/74.7a55f9a8.js"><link rel="prefetch" href="/assets/js/75.0fd035d7.js"><link rel="prefetch" href="/assets/js/76.e3f3bb61.js"><link rel="prefetch" href="/assets/js/77.43989fd0.js"><link rel="prefetch" href="/assets/js/78.6b2a943a.js"><link rel="prefetch" href="/assets/js/79.53dd9ee0.js"><link rel="prefetch" href="/assets/js/80.6e0837c5.js"><link rel="prefetch" href="/assets/js/81.8c9a0336.js"><link rel="prefetch" href="/assets/js/82.b80090bc.js"><link rel="prefetch" href="/assets/js/83.914f2fe9.js"><link rel="prefetch" href="/assets/js/84.ba991329.js"><link rel="prefetch" href="/assets/js/85.45770660.js"><link rel="prefetch" href="/assets/js/86.6f662152.js"><link rel="prefetch" href="/assets/js/87.d7e8912f.js"><link rel="prefetch" href="/assets/js/88.d42c96c9.js"><link rel="prefetch" href="/assets/js/89.4f980efb.js"><link rel="prefetch" href="/assets/js/90.5740a46a.js"><link rel="prefetch" href="/assets/js/91.7f192947.js"><link rel="prefetch" href="/assets/js/92.c6a7005d.js"><link rel="prefetch" href="/assets/js/93.a19f61ee.js"><link rel="prefetch" href="/assets/js/94.3051aded.js"><link rel="prefetch" href="/assets/js/95.c7de2f3e.js"><link rel="prefetch" href="/assets/js/96.84a8b2f3.js"><link rel="prefetch" href="/assets/js/97.dc56ae66.js"><link rel="prefetch" href="/assets/js/98.6eb15e00.js"><link rel="prefetch" href="/assets/js/99.05624b18.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.657e42b7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.34d602cb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Landscape</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link router-link-active">
+  总览
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><span class="title">技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术" class="mobile-dropdown-title"><span class="title">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/#技术专区" class="nav-link">
+  技术总览
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link router-link-active">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/#读书笔记" class="nav-link">
+  读书总览
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/operatingsystem/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link router-link-active">
+  总览
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><span class="title">技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术" class="mobile-dropdown-title"><span class="title">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/#技术专区" class="nav-link">
+  技术总览
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/skills/" class="nav-link">
+  Skills
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es5/" class="nav-link router-link-active">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tech/sql/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/#读书笔记" class="nav-link">
+  读书总览
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/literature/" class="nav-link">
+  文学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/psychology/" class="nav-link">
+  心理学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/financial/" class="nav-link">
+  理财类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/health/" class="nav-link">
+  养生类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/sociology/" class="nav-link">
+  社会学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/science/" class="nav-link">
+  科学类
+</a></li><li class="dropdown-item"><!----> <a href="/docs/readbook/people/" class="nav-link">
+  人物类
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/operatingsystem/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/docs/mine/" class="nav-link">
+  思想感悟
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>对象的继承</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/tech/es5/objectorientedprogramming/inherit.html#原型对象" class="sidebar-link">原型对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/tech/es5/objectorientedprogramming/inherit.html#_1-构造函数的缺点" class="sidebar-link">1. 构造函数的缺点</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/objectorientedprogramming/inherit.html#_2-prototype属性的作用" class="sidebar-link">2. prototype属性的作用</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/objectorientedprogramming/inherit.html#_3-原型链" class="sidebar-link">3. 原型链</a></li><li class="sidebar-sub-header"><a href="/docs/tech/es5/objectorientedprogramming/inherit.html#_4-constructor属性" class="sidebar-link">4. constructor属性</a></li></ul></li><li><a href="/docs/tech/es5/objectorientedprogramming/inherit.html#instanceof运算符" class="sidebar-link">instanceof运算符</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/objectorientedprogramming/inherit.html#构造函数的继承" class="sidebar-link">构造函数的继承</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/tech/es5/objectorientedprogramming/inherit.html#多重继承" class="sidebar-link">多重继承</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="对象的继承"><a href="#对象的继承" class="header-anchor">#</a> 对象的继承</h1> <h2 id="原型对象"><a href="#原型对象" class="header-anchor">#</a> 原型对象</h2> <h3 id="_1-构造函数的缺点"><a href="#_1-构造函数的缺点" class="header-anchor">#</a> 1. 构造函数的缺点</h3> <p>通过构造函数为实例对象定义属性，虽然很方便，但是有一个缺点。同一个构造函数的多个实例之间，无法共享属性，从而造成对系统资源的浪费。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>function Cat(name, color) {
+  this.name = name;
+  this.color = color;
+  this.meow = function () {
+    console.log('喵喵');
+  };
+}
+
+var cat1 = new Cat('大毛', '白色');
+var cat2 = new Cat('二毛', '黑色');
+
+cat1.meow === cat2.meow
+// false
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h3 id="_2-prototype属性的作用"><a href="#_2-prototype属性的作用" class="header-anchor">#</a> 2. prototype属性的作用</h3> <p>JavaScript 继承机制的设计思想就是，原型对象的所有属性和方法，都能被实例对象共享。也就是说，如果属性和方法定义在原型上，那么所有实例对象就能共享，不仅节省了内存，还体现了实例对象之间的联系。</p> <p>JavaScript 规定，每个函数都有一个prototype属性，指向一个对象。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>function f() {}
+typeof f.prototype // &quot;object&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>对于普通函数来说，该属性基本无用。但是，对于构造函数来说，生成实例的时候，该属性会自动成为实例对象的原型。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>function Animal(name) {
+  this.name = name;
+}
+Animal.prototype.color = 'white';
+
+var cat1 = new Animal('大毛');
+var cat2 = new Animal('二毛');
+
+cat1.color // 'white'
+cat2.color // 'white'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>原型对象的属性不是实例对象自身的属性。只要修改原型对象，变动就立刻会体现在所有实例对象上。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>Animal.prototype.color = 'yellow';
+
+cat1.color // &quot;yellow&quot;
+cat2.color // &quot;yellow&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>如果实例对象自身就有某个属性或方法，它就不会再去原型对象寻找这个属性或方法。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>cat1.color = 'black';
+
+cat1.color // 'black'
+cat2.color // 'yellow'
+Animal.prototype.color // 'yellow';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>总结一下，原型对象的作用，就是定义所有实例对象共享的属性和方法。这也是它被称为原型对象的原因，而实例对象可以视作从原型对象衍生出来的子对象。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>Animal.prototype.walk = function () {
+  console.log(this.name + ' is walking');
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_3-原型链"><a href="#_3-原型链" class="header-anchor">#</a> 3. 原型链</h3> <p>JavaScript 规定，所有对象都有自己的原型对象（prototype）。一方面，任何一个对象，都可以充当其他对象的原型；另一方面，由于原型对象也是对象，所以它也有自己的原型。因此，就会形成一个“原型链”（prototype chain）：对象到原型，再到原型的原型……</p> <p>如果一层层地上溯，所有对象的原型最终都可以上溯到Object.prototype，即Object构造函数的prototype属性。也就是说，所有对象都继承了Object.prototype的属性。这就是所有对象都有valueOf和toString方法的原因，因为这是从Object.prototype继承的。</p> <p>那么，Object.prototype对象有没有它的原型呢？回答是Object.prototype的原型是null。null没有任何属性和方法，也没有自己的原型。因此，原型链的尽头就是null。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>Object.getPrototypeOf(Object.prototype)
+// null
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>举例来说，如果让构造函数的prototype属性指向一个数组，就意味着实例对象可以调用数组方法。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>var MyArray = function () {};
+
+MyArray.prototype = new Array();
+MyArray.prototype.constructor = MyArray;
+
+var mine = new MyArray();
+mine.push(1, 2, 3);
+mine.length // 3
+mine instanceof Array // true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="_4-constructor属性"><a href="#_4-constructor属性" class="header-anchor">#</a> 4. constructor属性</h3> <p>prototype对象有一个constructor属性，默认指向prototype对象所在的构造函数。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>function P() {}
+P.prototype.constructor === P // true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>由于constructor属性定义在prototype对象上面，意味着可以被所有实例对象继承。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>function P() {}
+var p = new P();
+
+p.constructor === P // true
+p.constructor === P.prototype.constructor // true
+p.hasOwnProperty('constructor') // false
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>constructor属性的作用是，可以得知某个实例对象，到底是哪一个构造函数产生的。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>function F() {};
+var f = new F();
+
+f.constructor === F // true
+f.constructor === RegExp // false
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>另一方面，有了constructor属性，就可以从一个实例对象新建另一个实例。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>function Constr() {}
+var x = new Constr();
+
+var y = new x.constructor();
+y instanceof Constr // true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>constructor属性表示原型对象与构造函数之间的关联关系，如果修改了原型对象，一般会同时修改constructor属性，防止引用的时候出错。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.constructor === Person // true
+
+Person.prototype = {
+  method: function () {}
+};
+
+Person.prototype.constructor === Person // false
+Person.prototype.constructor === Object // true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>所以，修改原型对象时，一般要同时修改constructor属性的指向。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>// 坏的写法
+C.prototype = {
+  method1: function (...) { ... },
+  // ...
+};
+
+// 好的写法
+C.prototype = {
+  constructor: C,
+  method1: function (...) { ... },
+  // ...
+};
+
+// 更好的写法
+C.prototype.method1 = function (...) { ... };
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>如果不能确定constructor属性是什么函数，还有一个办法：通过name属性，从实例得到构造函数的名称。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>function Foo() {}
+var f = new Foo();
+f.constructor.name // &quot;Foo&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="instanceof运算符"><a href="#instanceof运算符" class="header-anchor">#</a> instanceof运算符</h2> <p>instanceof运算符返回一个布尔值，表示对象是否为某个构造函数的实例。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>var v = new Vehicle();
+v instanceof Vehicle // true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>由于instanceof检查整个原型链，因此同一个实例对象，可能会对多个构造函数都返回true。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>var d = new Date();
+d instanceof Date // true
+d instanceof Object // true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>由于任意对象（除了null）都是Object的实例，所以instanceof运算符可以判断一个值是否为非null的对象。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>var obj = { foo: 123 };
+obj instanceof Object // true
+
+null instanceof Object // false
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>instanceof运算符的一个用处，是判断值的类型。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>var x = [1, 2, 3];
+var y = {};
+x instanceof Array // true
+y instanceof Object // true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>注意，instanceof运算符只能用于对象，不适用原始类型的值。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>var s = 'hello';
+s instanceof String // false
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>此外，对于undefined和null，instanceOf运算符总是返回false。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>undefined instanceof Object // false
+null instanceof Object // false
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>利用instanceof运算符，还可以巧妙地解决，调用构造函数时，忘了加new命令的问题。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>function Fubar (foo, bar) {
+  if (this instanceof Fubar) {
+    this._foo = foo;
+    this._bar = bar;
+  } else {
+    return new Fubar(foo, bar);
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="构造函数的继承"><a href="#构造函数的继承" class="header-anchor">#</a> 构造函数的继承</h2> <p>让一个构造函数继承另一个构造函数，是非常常见的需求。这可以分成两步实现。第一步是在子类的构造函数中，调用父类的构造函数。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>function Sub(value) {
+  Super.call(this);
+  this.prop = value;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>第二步，是让子类的原型指向父类的原型，这样子类就可以继承父类原型。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>Sub.prototype = Object.create(Super.prototype);
+Sub.prototype.constructor = Sub;
+Sub.prototype.method = '...';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>另外一种写法是Sub.prototype等于一个父类实例。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>Sub.prototype = new Super();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>举例来说，下面是一个Shape构造函数。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>function Shape() {
+  this.x = 0;
+  this.y = 0;
+}
+
+Shape.prototype.move = function (x, y) {
+  this.x += x;
+  this.y += y;
+  console.info('Shape moved.');
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>我们需要让Rectangle构造函数继承Shape。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>// 第一步，子类继承父类的实例
+function Rectangle() {
+  Shape.call(this); // 调用父类构造函数
+}
+// 另一种写法
+function Rectangle() {
+  this.base = Shape;
+  this.base();
+}
+
+// 第二步，子类继承父类的原型
+Rectangle.prototype = Object.create(Shape.prototype);
+Rectangle.prototype.constructor = Rectangle;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>采用这样的写法以后，instanceof运算符会对子类和父类的构造函数，都返回true。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>var rect = new Rectangle();
+
+rect instanceof Rectangle  // true
+rect instanceof Shape  // true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>上面代码中，子类是整体继承父类。有时只需要单个方法的继承，这时可以采用下面的写法。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>ClassB.prototype.print = function() {
+  ClassA.prototype.print.call(this);
+  // some code
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="多重继承"><a href="#多重继承" class="header-anchor">#</a> 多重继承</h2> <p>JavaScript 不提供多重继承功能，即不允许一个对象同时继承多个对象。但是，可以通过变通方法，实现这个功能。</p> <div class="language-obj line-numbers-mode"><pre class="language-text"><code>function M1() {
+  this.hello = 'hello';
+}
+
+function M2() {
+  this.world = 'world';
+}
+
+function S() {
+  M1.call(this);
+  M2.call(this);
+}
+
+// 继承 M1
+S.prototype = Object.create(M1.prototype);
+// 继承链上加入 M2
+Object.assign(S.prototype, M2.prototype);
+
+// 指定构造函数
+S.prototype.constructor = S;
+
+var s = new S();
+s.hello // 'hello'
+s.world // 'world'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p>上面代码中，子类S同时继承了父类M1和M2。这种模式又称为 Mixin（混入）。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.e8c9288e.js" defer></script><script src="/assets/js/2.19de91aa.js" defer></script><script src="/assets/js/1.b8c7c4ec.js" defer></script><script src="/assets/js/197.7a392fb6.js" defer></script>
+  </body>
+</html>
